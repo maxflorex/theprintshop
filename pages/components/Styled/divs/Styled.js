@@ -1,0 +1,123 @@
+import styled from "styled-components";
+
+
+const Column = styled.div`
+   display: grid;
+   grid-template-columns: repeat(1, minmax(0, 1fr));
+   min-height: ${props => props.h};
+   background-color: ${props => props.color};
+   background-image: url(${props => props.img});
+   border-radius: 0.6rem;
+   text-align: ${props => props.align || 'left'};
+   align-content: center;
+   align-items: ${props => props.align || 'start'};
+   padding-top: ${props => props.pt || '4rem'};
+   padding-bottom: ${props => props.pb || '4rem'};
+   gap: ${props => props.gap || '0.5rem'};
+   background-position: ${props => props.position || 'center'};
+   background-size: cover;
+`
+
+const Grid = styled.div`
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   min-height: ${props => props.h};
+   background-color: ${props => props.color};
+   border-radius: 0.6rem;
+   margin-top: ${props => props.mt};
+   margin-bottom: ${props => props.mb};
+   margin-left: ${props => props.ml};
+   margin-right: ${props => props.mr};
+   padding-top: ${props => props.pt};
+   padding-bottom: ${props => props.pb};
+   gap: ${props => props.gap};
+   @media (max-width: 1280px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+   }
+`
+
+const Items = styled.div`
+   display: grid;
+   grid-template-columns: repeat(4, minmax(0, 1fr));
+   min-height: ${props => props.h};
+   background-color: ${props => props.color};
+   gap: 2rem;
+   margin-left: 2rem;
+   margin-right: 2rem;
+   margin-top: ${props => props.mt || '4rem'};
+   margin-bottom: ${props => props.mb || '4rem'};
+   padding-top: ${props => props.pt || '4rem'};
+   padding-bottom: ${props => props.pb || '4rem'};
+   align-items: start;
+   font-family: ${props => props.font || 'Oswald'};
+   font-weight: ${props => props.weight || 100};
+   font-size: ${props => props.size || '1.4rem'};
+   @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   };
+
+`
+
+const Flex = styled.div`
+   display: flex;
+   flex-direction: ${props => props.direction || 'row'};
+   flex-wrap: wrap;
+   background-image: url(${props => props.img});
+   background-position: ${props => props.position || 'center'};
+   background-color: ${props => props.color || 'white'};
+   justify-content: ${props => props.justify || 'space-between'};
+   align-items: ${props => props.align || 'center'};  
+   padding-top: ${props => props.pt || '2rem'};
+   padding-bottom: ${props => props.pb || '2rem'};
+   padding-left: ${props => props.pl || '2rem'};
+   padding-right: ${props => props.pr || '2rem'};
+   margin: ${props => props.m || '2rem'};
+   border-radius: ${props => props.radius ||  '0.6rem'};
+   box-sizing: content-box;
+   min-height: ${props => props.h};
+   gap: ${props => props.gap || '0.5rem'};
+   overflow: hidden;
+   @media (max-width: 1024px) {
+      justify-content: ${props => props.justify || 'center'};
+      flex-direction: ${props => props.direction || 'row'};
+   }
+`
+
+const Hero = styled.div`
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   background-color: ${props => props.color};
+   background-image: url(${props => props.img});
+   background-position: ${props => props.position || 'center'};
+   background-size: cover;
+   justify-content: center;
+   align-items: center;
+   margin-top: ${props => props.mt || '4rem'};
+   margin-bottom: ${props => props.mb || '4rem'};
+   padding-top: ${props => props.pt || '4rem'};
+   padding-bottom: ${props => props.pb || '4rem'};
+   border-radius: 0.6rem;
+   min-height: ${props => props.h};
+   @media (max-width: 1280px) {
+      background-image: url(${props => props.imgMd});
+      display: ${props => props.display};
+   }
+`
+
+const Backdrop = styled.div`
+   width: 100%;
+   height: 100%;
+   backdrop-filter: blur(16px) saturate(180%);
+   -webkit-backdrop-filter: blur(16px) saturate(180%);
+   background-color: rgba(255, 255, 255, 0.75);
+   border: 1px solid rgba(209, 213, 219, 0.3);
+   margin: ${props => props.m};
+   border-radius: 0.6rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+`
+
+export { Flex, Grid, Hero, Backdrop, Items, Column }
