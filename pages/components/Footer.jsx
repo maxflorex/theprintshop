@@ -1,5 +1,5 @@
 import { Flex, Column, Items } from './Styled/divs/Styled';
-import { Title, P } from './Styled/fonts/Styled';
+import { P, Title } from './Styled/fonts/Styled';
 
 function Footer() {
     return (
@@ -9,165 +9,110 @@ function Footer() {
                     <Items mb="0" pt="4rem" mt="6rem">
                         <Column>
                             <Title
-                                size="1rem"
+                                mb="1rem"
                                 color="white"
-                                font="Roboto"
-                                w="300"
+                                align="left"
+                                size="2rem"
                             >
                                 Contact
                             </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 prints@artcaymanco.com
-                            </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            </P>
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 +1(345) 923-2222
-                            </Title>
+                            </P>
                         </Column>
                         <Column>
                             <Title
-                                size="1rem"
+                                mb="1rem"
                                 color="white"
-                                font="Roboto"
-                                w="300"
+                                align="left"
+                                size="2rem"
                             >
                                 Printing
                             </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 Giclee
-                            </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            </P>
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 Framing
-                            </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            </P>
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 Photo Restoration
-                            </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            </P>
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 Test Prints
-                            </Title>
+                            </P>
                         </Column>
                         <Column>
                             <Title
-                                size="1rem"
+                                mb="1rem"
                                 color="white"
-                                font="Roboto"
-                                w="300"
+                                align="left"
+                                size="2rem"
                             >
                                 Artists
                             </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 Discounts
-                            </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            </P>
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 Prices
-                            </Title>
+                            </P>
                         </Column>
                         <Column>
                             <Title
-                                size="1rem"
+                                mb="1rem"
                                 color="white"
-                                font="Roboto"
-                                w="300"
+                                align="left"
+                                size="2rem"
                             >
-                                About The Printshop
+                                The Printshop
                             </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 Our Team
-                            </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            </P>
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 Contact
-                            </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            </P>
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 News
-                            </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            </P>
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 Print Studio
-                            </Title>
-                            <Title
-                                size="1rem"
-                                color="white"
-                                font="Roboto"
-                                w="300"
-                            >
+                            </P>
+                            <P ls="0.05rem" color="white" font="Roboto">
                                 Privacy Policy
-                            </Title>
+                            </P>
                         </Column>
                     </Items>
                 </section>
             </div>
-                <footer>
-                    <Flex m="0" radius="0" color='var(--off1)' pt='1rem' pb='1rem'>
-                        <div>
-                            <P color="black" font="Roboto" w="300" size="1rem">
-                                The Printshop™
-                            </P>
-                        </div>
-                        <div>
-                            <P color="black" font="Roboto" w="300" size="1rem">
-                                Art Cayman Co. - 2022
-                            </P>
-                        </div>
-                    </Flex>
-                </footer>
+            <footer>
+                <Flex m="0" radius="0" color="var(--off1)" pt="1rem" pb="1rem">
+                    <div>
+                        <P
+                            color="black"
+                            font="Roboto"
+                            font="Roboto"
+                            ls="0.05rem"
+                        >
+                            The Printshop™
+                        </P>
+                    </div>
+                    <div>
+                        <P
+                            color="black"
+                            font="Roboto"
+                            font="Roboto"
+                            ls="0.05rem"
+                        >
+                            Art Cayman Co. - 2022
+                        </P>
+                    </div>
+                </Flex>
+            </footer>
         </>
     );
 }

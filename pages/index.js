@@ -4,6 +4,8 @@ import HeroSection from './components/Hero'
 import Navbar from './components/Navbar'
 import Section from './components/Section'
 import Footer from './components/Footer'
+import About from './components/About'
+import Order from './components/Order'
 
 export default function Home() {
   return (
@@ -26,6 +28,8 @@ export default function Home() {
         <HeroSection />
         <Cards />
         <Section />
+        <About />
+        <Order />
       </main>
       <Footer />
     </div>

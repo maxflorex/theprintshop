@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Title = styled.h1`
     font-family: ${props => props.font || 'Oswald'};
-    font-weight: ${props => props.w || 100};
+    font-weight: ${props => props.w || 300};
     font-size: ${props => props.size || '1.4rem'};
     text-transform: ${props => props.transform || 'none'};
     text-align: ${props => props.align || 'center'};
@@ -16,11 +16,15 @@ const Title = styled.h1`
 
 const P = styled.p`
     font-family: ${props => props.font || 'Oswald'};
-    font-weight: ${props => props.w || 100};
-    font-size:  ${props => props.size || '1.4rem'};
-    line-height: 1.6rem;
+    font-weight: ${props => props.w || 300};
+    font-size:  ${props => props.size || '1.2rem'};
+    line-height: 2rem;
     color: ${props => props.color || 'white'};
     margin-top: ${props => props.mt};
+    line-height: ${props => props.lh};
+    @media (max-width: 768px) {
+        text-align: ${props => props.align || 'justify'};
+            }
 `
 
 const Menu = styled.ul`

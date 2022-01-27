@@ -1,6 +1,34 @@
 import styled from "styled-components";
 
 
+const Row = styled.div`
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   min-height: ${props => props.h};
+   background-color: ${props => props.color};
+   background-image: url(${props => props.img});
+   border-radius: ${props => props.radius || '0.6rem'};
+   text-align: ${props => props.align || 'left'};
+   align-content: center;
+   align-items: ${props => props.align || 'start'};
+   padding-top: ${props => props.pt || '4rem'};
+   padding-bottom: ${props => props.pb || '4rem'};
+   gap: ${props => props.gap || '0.6rem'};
+   background-position: ${props => props.position || 'center'};
+   background-size: cover;
+   margin-left: ${props => props.ml};
+   margin-right: ${props => props.mr};
+   margin: ${props => props.m};
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+   padding: ${props => props.p};
+   margin: ${props => props.m};
+   @media (max-width: 1280px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+`
+
 const Column = styled.div`
    display: grid;
    grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -13,9 +41,13 @@ const Column = styled.div`
    align-items: ${props => props.align || 'start'};
    padding-top: ${props => props.pt || '4rem'};
    padding-bottom: ${props => props.pb || '4rem'};
-   gap: ${props => props.gap || '0.5rem'};
+   gap: ${props => props.gap || '0.6rem'};
    background-position: ${props => props.position || 'center'};
    background-size: cover;
+   margin-left: 2rem;
+   margin-right: 2rem;
+   padding: ${props => props.p};
+   margin: ${props => props.m};
 `
 
 const Grid = styled.div`
@@ -24,6 +56,7 @@ const Grid = styled.div`
    min-height: ${props => props.h};
    background-color: ${props => props.color};
    border-radius: 0.6rem;
+   margin: ${props => props.m};
    margin-top: ${props => props.mt};
    margin-bottom: ${props => props.mb};
    margin-left: ${props => props.ml};
@@ -31,8 +64,11 @@ const Grid = styled.div`
    padding-top: ${props => props.pt};
    padding-bottom: ${props => props.pb};
    gap: ${props => props.gap};
+   position: ${props => props.position};
+   padding: ${props => props.p};
    @media (max-width: 1280px) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: ${props => props.gapH};
    }
 `
 
@@ -42,12 +78,14 @@ const Items = styled.div`
    min-height: ${props => props.h};
    background-color: ${props => props.color};
    gap: 2rem;
-   margin-left: 2rem;
-   margin-right: 2rem;
+   margin-left: ${props => props.ml || '4rem'};
+   margin-right: ${props => props.mr || '4rem'};
    margin-top: ${props => props.mt || '4rem'};
    margin-bottom: ${props => props.mb || '4rem'};
    padding-top: ${props => props.pt || '4rem'};
    padding-bottom: ${props => props.pb || '4rem'};
+   padding: ${props => props.p};
+   margin: ${props => props.m};
    align-items: start;
    font-family: ${props => props.font || 'Oswald'};
    font-weight: ${props => props.weight || 100};
@@ -72,10 +110,10 @@ const Flex = styled.div`
    padding-left: ${props => props.pl || '2rem'};
    padding-right: ${props => props.pr || '2rem'};
    margin: ${props => props.m || '2rem'};
-   border-radius: ${props => props.radius ||  '0.6rem'};
+   border-radius: ${props => props.radius || '0.6rem'};
    box-sizing: content-box;
    min-height: ${props => props.h};
-   gap: ${props => props.gap || '0.5rem'};
+   gap: ${props => props.gap || '0.6rem'};
    overflow: hidden;
    @media (max-width: 1024px) {
       justify-content: ${props => props.justify || 'center'};
@@ -95,10 +133,17 @@ const Hero = styled.div`
    align-items: center;
    margin-top: ${props => props.mt || '4rem'};
    margin-bottom: ${props => props.mb || '4rem'};
+   margin-left: ${props => props.ml};
+   margin-right: ${props => props.mr};
    padding-top: ${props => props.pt || '4rem'};
    padding-bottom: ${props => props.pb || '4rem'};
+   padding-left: ${props => props.pl || '4rem'};
+   padding-right: ${props => props.pr || '4rem'};
+   padding: ${props => props.p};
+   margin: ${props => props.m};
    border-radius: 0.6rem;
    min-height: ${props => props.h};
+   position: relative;
    @media (max-width: 1280px) {
       background-image: url(${props => props.imgMd});
       display: ${props => props.display};
@@ -118,6 +163,29 @@ const Backdrop = styled.div`
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding: ${props => props.p};
+   margin: ${props => props.m};
+   border-radius: ${props => props.radius || '0.6rem'};
 `
 
-export { Flex, Grid, Hero, Backdrop, Items, Column }
+const BackdropDark = styled.div`
+   width: 100%;
+   height: 100%;
+
+   backdrop-filter: blur(16px) saturate(180%);
+   -webkit-backdrop-filter: blur(16px) saturate(180%);
+   background-color: rgba(17, 25, 40, 0.75);
+
+   border: 1px solid rgba(255, 255, 255, 0.125);
+   margin: ${props => props.m};
+   border-radius: 0.6rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: ${props => props.p};
+   margin: ${props => props.m};
+   border-radius: ${props => props.radius || '0.6rem'};
+`
+
+export { Flex, Grid, Hero, Backdrop, Items, Column, Row, BackdropDark }

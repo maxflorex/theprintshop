@@ -29,7 +29,7 @@ const Navbar = () => {
                     <li>Framing</li>
                     <li>Services</li>
                     <li className="highlight">Support</li>
-                    <Button transform="uppercase" className="accent">
+                    <Button transform="uppercase" className="accent" font='Oswald'>
                         Order
                     </Button>
                 </Menu>
