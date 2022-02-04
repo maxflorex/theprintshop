@@ -4,7 +4,7 @@ import { Column, Grid, Row } from './Styled/divs/Styled';
 import { P, Title } from './Styled/fonts/Styled';
 
 const link =
-    'https://images.pexels.com/photos/2874998/pexels-photo-2874998.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
+    'https://images.pexels.com/photos/2874998/pexels-photo-2874998.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&width=940';
 
 const About = () => {
     return (

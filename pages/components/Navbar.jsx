@@ -23,20 +23,42 @@ const Navbar = () => {
                     weight="300"
                     ls="0.1rem"
                 >
-                    <li>Canvas</li>
-                    <li>Paper</li>
-                    <li>Aluminum</li>
-                    <li>Framing</li>
-                    <li>Services</li>
-                    <li className="highlight">Support</li>
-                    <Button transform="uppercase" className="accent" font='Oswald'>
+                    <li>
+                        <a href="/products/canvas">Canvas </a>
+                    </li>
+                    <li>
+                        <a href="/products/paper"> Paper </a>
+                    </li>
+                    <li>
+                        <a href="/products/aluminum"> Aluminum </a>
+                    </li>
+                    <li>
+                        <a href="/products/framing"> Framing </a>
+                    </li>
+                    <li>
+                        <a href="/services">Services </a>
+                    </li>
+                    <li className="highlight">
+                        <a href="/support">Support</a>
+                    </li>
+                    <Button
+                        transform="uppercase"
+                        className="accent"
+                        font="Oswald"
+                        href="/order"
+                    >
                         Order
                     </Button>
                 </Menu>
             </div>
             <a href="/">
                 <Image src={logo} />
-                <Title w="400" transform="uppercase" ls="0.4rem" size='1rem'>
+                <Title
+                    width="400"
+                    transform="uppercase"
+                    ls="0.4rem"
+                    size="1rem"
+                >
                     The Printshop
                 </Title>
             </a>

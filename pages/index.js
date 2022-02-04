@@ -6,6 +6,7 @@ import Section from './components/Section'
 import Footer from './components/Footer'
 import About from './components/About'
 import Order from './components/Order'
+import Layout from './components/Layout'
 
 export default function Home() {
   return (
@@ -23,15 +24,14 @@ export default function Home() {
           rel="stylesheet" />
         <title>The Printshop</title>
       </Head>
+
       <main>
-        <Navbar />
         <HeroSection />
         <Cards />
         <Section />
         <About />
         <Order />
       </main>
-      <Footer />
     </div>
   )
 }

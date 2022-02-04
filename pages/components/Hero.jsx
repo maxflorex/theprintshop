@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const HeroSection = () => {
     const link =
-        'https://images.unsplash.com/photo-1604076913837-52ab5629fba9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80';
+        'https://images.unsplash.com/photo-1604076913837-52ab5629fba9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&width=987&q=80';
 
     return (
         <Grid mr="2rem" ml="2rem" gap="2rem">
@@ -23,7 +23,7 @@ const HeroSection = () => {
                 <div className="absolute">
                     <Image
                         src={logo}
-                        alt="logo"w
+                        alt="logo"
                         width={80}
                         height={80}
                         className="heroImg"
@@ -35,7 +35,7 @@ const HeroSection = () => {
                 <Title size="4rem">Fine Art</Title>
                 <Title size="6rem">Printing & Framing</Title>
                 <hr />
-                <P font="Roboto" size="2rem" mt="1.4rem" color="black" w="300" align='center' lh='3.2rem'>
+                <P font="Roboto" size="2rem" mt="1.4rem" color="black" width="300" align='center' lh='3.2rem'>
                     Handcrafted in the{' '}
                     <span className="spotlight">Cayman Islands</span>
                 </P>

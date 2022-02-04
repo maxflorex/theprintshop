@@ -143,7 +143,7 @@ const Hero = styled.div`
    margin: ${props => props.m};
    border-radius: 0.6rem;
    min-height: ${props => props.h};
-   width: ${props => props.w};
+   width: ${props => props.width};
    position: relative;
    @media (max-width: 1280px) {
       background-image: url(${props => props.imgMd});
