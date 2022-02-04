@@ -44,8 +44,8 @@ const Column = styled.div`
    gap: ${props => props.gap || '0.6rem'};
    background-position: ${props => props.position || 'center'};
    background-size: cover;
-   margin-left: 2rem;
-   margin-right: 2rem;
+   margin-left: ${props => props.ml || '2rem'};
+   margin-right: ${props => props.mr || '2rem'};
    padding: ${props => props.p};
    margin: ${props => props.m};
 `
@@ -143,6 +143,7 @@ const Hero = styled.div`
    margin: ${props => props.m};
    border-radius: 0.6rem;
    min-height: ${props => props.h};
+   width: ${props => props.w};
    position: relative;
    @media (max-width: 1280px) {
       background-image: url(${props => props.imgMd});
@@ -166,6 +167,7 @@ const Backdrop = styled.div`
    padding: ${props => props.p};
    margin: ${props => props.m};
    border-radius: ${props => props.radius || '0.6rem'};
+   min-height: ${props => props.h};
 `
 
 const BackdropDark = styled.div`
@@ -175,7 +177,7 @@ const BackdropDark = styled.div`
    backdrop-filter: blur(16px) saturate(180%);
    -webkit-backdrop-filter: blur(16px) saturate(180%);
    background-color: rgba(17, 25, 40, 0.75);
-
+   min-height: ${props => props.h};
    border: 1px solid rgba(255, 255, 255, 0.125);
    margin: ${props => props.m};
    border-radius: 0.6rem;

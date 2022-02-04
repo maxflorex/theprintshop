@@ -23,7 +23,7 @@ const HeroSection = () => {
                 <div className="absolute">
                     <Image
                         src={logo}
-                        alt="logo"
+                        alt="logo"w
                         width={80}
                         height={80}
                         className="heroImg"
