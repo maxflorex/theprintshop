@@ -22,6 +22,7 @@ const P = styled.p`
     color: ${props => props.color || 'white'};
     margin-top: ${props => props.mt};
     line-height: ${props => props.lh};
+    text-align: ${props => props.alignW || 'justify'};
     @media (max-width: 768px) {
         text-align: ${props => props.align || 'justify'};
             }

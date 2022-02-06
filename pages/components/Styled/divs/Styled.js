@@ -95,6 +95,29 @@ const Items = styled.div`
    };
 
 `
+const Items6 = styled.div`
+   display: grid;
+   grid-template-columns: repeat(6, minmax(0, 1fr));
+   min-height: ${props => props.h};
+   background-color: ${props => props.color};
+   gap: 2rem;
+   margin-left: ${props => props.ml || '4rem'};
+   margin-right: ${props => props.mr || '4rem'};
+   margin-top: ${props => props.mt || '4rem'};
+   margin-bottom: ${props => props.mb || '4rem'};
+   padding-top: ${props => props.pt || '4rem'};
+   padding-bottom: ${props => props.pb || '4rem'};
+   padding: ${props => props.p};
+   margin: ${props => props.m};
+   align-items: start;
+   font-family: ${props => props.font || 'Oswald'};
+   font-weight: ${props => props.weight || 100};
+   font-size: ${props => props.size || '1.4rem'};
+   @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   };
+
+`
 
 const Flex = styled.div`
    display: flex;
@@ -145,9 +168,14 @@ const Hero = styled.div`
    min-height: ${props => props.h};
    width: ${props => props.width};
    position: relative;
+   gap: {props => props.gap || '0';}
    @media (max-width: 1280px) {
       background-image: url(${props => props.imgMd});
       display: ${props => props.display};
+   };
+   @media (max-width: 1024px) {
+      width: ${props => props.widthMd};
+
    }
 `
 
@@ -190,4 +218,4 @@ const BackdropDark = styled.div`
    border-radius: ${props => props.radius || '0.6rem'};
 `
 
-export { Flex, Grid, Hero, Backdrop, Items, Column, Row, BackdropDark }
+export { Flex, Grid, Hero, Backdrop, Items, Column, Row, BackdropDark, Items6 }

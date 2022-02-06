@@ -3,7 +3,7 @@ import { P, Title } from './Styled/fonts/Styled';
 
 function Footer() {
     return (
-        <>
+        <div>
             <div className="bg-black">
                 <section>
                     <Items mb="0" pt="4rem" mt="6rem">
@@ -20,8 +20,11 @@ function Footer() {
                                 prints@artcaymanco.com
                             </P>
                             <P ls="0.05rem" color="white" font="Roboto">
-                                +1(345) 923-2222
+                                <a href="tel:+3459232222">+1(345) 923-2222</a>
                             </P>
+                            <p>
+                                <a href="tel:+4733378901">+47 333 78 901</a>
+                            </p>
                         </Column>
                         <Column>
                             <Title
@@ -89,7 +92,7 @@ function Footer() {
                     </Items>
                 </section>
             </div>
-            <footer>
+            <div>
                 <Flex m="0" radius="0" color="var(--off1)" pt="1rem" pb="1rem">
                     <div>
                         <P
@@ -112,8 +115,8 @@ function Footer() {
                         </P>
                     </div>
                 </Flex>
-            </footer>
-        </>
+            </div>
+        </div>
     );
 }
 
