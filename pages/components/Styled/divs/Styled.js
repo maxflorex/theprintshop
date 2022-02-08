@@ -48,6 +48,7 @@ const Column = styled.div`
    margin-right: ${props => props.mr || '2rem'};
    padding: ${props => props.p};
    margin: ${props => props.m};
+   background-attachment: ${props => props.attach}
 `
 
 const Grid = styled.div`
@@ -116,7 +117,34 @@ const Items6 = styled.div`
    @media (max-width: 1024px) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
    };
+`
 
+const Items3 = styled.div`
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   min-height: ${props => props.h};
+   background-color: ${props => props.color};
+   gap: 2rem;
+   margin-left: ${props => props.ml || '4rem'};
+   margin-right: ${props => props.mr || '4rem'};
+   margin-top: ${props => props.mt || '4rem'};
+   margin-bottom: ${props => props.mb || '4rem'};
+   padding-top: ${props => props.pt || '4rem'};
+   padding-bottom: ${props => props.pb || '4rem'};
+   padding: ${props => props.p};
+   margin: ${props => props.m};
+   align-items: start;
+   font-family: ${props => props.font || 'Oswald'};
+   font-weight: ${props => props.weight || 100};
+   font-size: ${props => props.size || '1.4rem'};
+   max-height: ${props => props.maxH};
+   gap: ${props => props.gap};
+   @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   };
+   @media (max-width: 758px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+   };
 `
 
 const Flex = styled.div`
@@ -133,6 +161,7 @@ const Flex = styled.div`
    padding-left: ${props => props.pl || '2rem'};
    padding-right: ${props => props.pr || '2rem'};
    margin: ${props => props.m || '2rem'};
+   padding: ${props => props.p};
    border-radius: ${props => props.radius || '0.6rem'};
    box-sizing: content-box;
    min-height: ${props => props.h};
@@ -168,14 +197,13 @@ const Hero = styled.div`
    min-height: ${props => props.h};
    width: ${props => props.width};
    position: relative;
-   gap: {props => props.gap || '0';}
+   gap: ${props => props.gap || '0'};
    @media (max-width: 1280px) {
       background-image: url(${props => props.imgMd});
       display: ${props => props.display};
    };
    @media (max-width: 1024px) {
       width: ${props => props.widthMd};
-
    }
 `
 
@@ -201,7 +229,6 @@ const Backdrop = styled.div`
 const BackdropDark = styled.div`
    width: 100%;
    height: 100%;
-
    backdrop-filter: blur(16px) saturate(180%);
    -webkit-backdrop-filter: blur(16px) saturate(180%);
    background-color: rgba(17, 25, 40, 0.75);
@@ -218,4 +245,4 @@ const BackdropDark = styled.div`
    border-radius: ${props => props.radius || '0.6rem'};
 `
 
-export { Flex, Grid, Hero, Backdrop, Items, Column, Row, BackdropDark, Items6 }
+export { Flex, Grid, Hero, Backdrop, Items, Column, Row, BackdropDark, Items6, Items3 }

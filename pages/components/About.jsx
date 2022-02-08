@@ -9,7 +9,7 @@ const link =
 const About = () => {
     return (
         <Grid mt="8rem" mb="8rem" mr="2rem" ml="2rem" gap="4rem">
-            <Column>
+            <Column p='2rem'>
                 <Title size="3.2rem" align="left" mb="0.6rem">
                     The Printshop
                 </Title>

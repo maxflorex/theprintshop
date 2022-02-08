@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Flex, Column, Items } from './Styled/divs/Styled';
 import { P, Title } from './Styled/fonts/Styled';
 
@@ -17,14 +18,15 @@ function Footer() {
                                 Contact
                             </Title>
                             <P ls="0.05rem" color="white" font="Roboto">
-                                prints@artcaymanco.com
+                                <Link href="mailto:prints@artcaymanco.com">
+                                    prints@artcaymanco.com
+                                </Link>
                             </P>
                             <P ls="0.05rem" color="white" font="Roboto">
-                                <a href="tel:+3459232222">+1(345) 923-2222</a>
+                                <Link href="tel:+3459232222">
+                                    +1(345) 923-2222
+                                </Link>
                             </P>
-                            <p>
-                                <a href="tel:+4733378901">+47 333 78 901</a>
-                            </p>
                         </Column>
                         <Column>
                             <Title
