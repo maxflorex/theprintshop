@@ -14,6 +14,19 @@ const Title = styled.h1`
     margin-bottom: ${props => props.mb};
     `
 
+const Title2 = styled.h2`
+    font-family: ${props => props.font || 'Oswald'};
+    font-weight: ${props => props.w || 300};
+    font-size: ${props => props.size || '1.4rem'};
+    text-transform: ${props => props.transform || 'none'};
+    text-align: ${props => props.align || 'center'};
+    color: ${props => props.color};
+    letter-spacing: ${props => props.ls};
+    line-height: ${props => props.lh};
+    margin-top: ${props => props.mt};
+    margin-bottom: ${props => props.mb};
+    `
+
 const P = styled.p`
     font-family: ${props => props.font || 'Oswald'};
     font-weight: ${props => props.w || 300};
@@ -47,4 +60,4 @@ const Menu = styled.ul`
 `
 
 
-export { Title, P, Menu }
+export { Title, P, Menu, Title2 }

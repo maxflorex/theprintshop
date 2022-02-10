@@ -61,6 +61,8 @@ const BtnBlack = styled.a`
     cursor: pointer;
     margin-top: ${props => props.mt || '1.4rem'};
     justify-content: center;
+    width: ${props => props.width};
+    margin: ${props => props.m};
     &:hover {
         background-color: var(--accent);
         color: white;

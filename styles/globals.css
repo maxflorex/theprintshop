@@ -15,6 +15,7 @@ body {
     --off3: #c7c7c7;
     --off4: #999999;
     --off5: #6b6b6b;
+    --gradient: linear-gradient(0deg, rgba(0,0,0,0.2102591036414566) 35%, rgba(255,255,255,0) 100%);
 }
 
 * {
@@ -125,3 +126,24 @@ hr {
 .text-white {
     color: white;
 }
+
+.dot {
+    height: 4rem;
+    width: 4rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .color3 {
+      background-color: #C79850;
+  }
+
+  .color2 {
+      background-color: black;
+  }
+
+  .color1 {
+      background-color: white;
+  }
+

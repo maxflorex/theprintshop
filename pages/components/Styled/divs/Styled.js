@@ -48,7 +48,15 @@ const Column = styled.div`
    margin-right: ${props => props.mr || '2rem'};
    padding: ${props => props.p};
    margin: ${props => props.m};
-   background-attachment: ${props => props.attach}
+   background-attachment: ${props => props.attach};
+   width: ${props => props.width};
+   min-height: ${props => props.h};
+   @media (max-width: 1280px) {
+      width: ${props => props.widthMd};
+   },
+   @media (max-width: 758px) {
+      width: ${props => props.widthSm};
+   }
 `
 
 const Grid = styled.div`
@@ -108,6 +116,7 @@ const Items6 = styled.div`
    margin-bottom: ${props => props.mb || '4rem'};
    padding-top: ${props => props.pt || '4rem'};
    padding-bottom: ${props => props.pb || '4rem'};
+   border-radius: ${props => props.radius || '0.6rem'};
    padding: ${props => props.p};
    margin: ${props => props.m};
    align-items: start;
