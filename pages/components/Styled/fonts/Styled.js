@@ -12,6 +12,7 @@ const Title = styled.h1`
     line-height: ${props => props.lh};
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};
+    cursor: ${props => props.cursor};
     `
 
 const Title2 = styled.h2`

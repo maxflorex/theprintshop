@@ -162,6 +162,7 @@ const Flex = styled.div`
    flex-wrap: wrap;
    background-image: url(${props => props.img});
    background-position: ${props => props.position || 'center'};
+   background-size: ${props => props.bgSize};
    background-color: ${props => props.color || 'white'};
    justify-content: ${props => props.justify || 'space-between'};
    align-items: ${props => props.align || 'center'};  
@@ -174,8 +175,11 @@ const Flex = styled.div`
    border-radius: ${props => props.radius || '0.6rem'};
    box-sizing: content-box;
    min-height: ${props => props.h};
+   max-height: ${props => props.hMax};
    gap: ${props => props.gap || '0.6rem'};
    overflow: hidden;
+   cursor: ${props => props.cursor};
+   object-fit: ${props => props.object};
    @media (max-width: 1024px) {
       justify-content: ${props => props.justify || 'center'};
       flex-direction: ${props => props.direction || 'row'};

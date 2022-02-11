@@ -1,4 +1,3 @@
-import React from 'react';
 import { Backdrop, BackdropDark, Column, Hero, Items, Items6, Row, Flex, Items3, Grid } from '../components/Styled/divs/Styled'
 import { P, Title, Title2 } from '../components/Styled/fonts/Styled'
 import Image from 'next/image';
@@ -7,11 +6,28 @@ import { BtnBlack } from '../components/Styled/buttons/Styled'
 import Floaters from '../components/Floaters'
 import Stretchers from '../components/Stretchers'
 import GalleryWrap from '../components/GalleryWrap'
+import Tabs from '../components/Tabs';
+import { useState } from 'react';
+import Carousel, { CarouselItem } from '../components/Carousel';
+
+
+
+const TAB = {
+  'floaters': <Floaters />,
+  'stretchers': <Stretchers />,
+  'wrap': <GalleryWrap />
+}
+
+
+
+
 
 const canvas = () => {
 
   const link = 'https://images.unsplash.com/reserve/O7A9fAvYSXC7NTdz8gLQ_IMGP1039.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2948&q=80'
   const link2 = 'https://images.unsplash.com/photo-1565555334121-4a4f177af7b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'
+
+  const [selectedTab, setSelectedTab] = useState('null');
 
   return (
 
@@ -47,20 +63,8 @@ const canvas = () => {
           ))}
         </Items6>
 
-
-        {/* BUTTONS OR TABS */}
-
-        <Items3 m='2rem' gap='4rem'>
-          <Flex m='0'>Stretcher Bars</Flex>
-          <Flex m='0'>Gallery Wraps</Flex>
-          <Flex m='0'>Floating Frames</Flex>
-        </Items3>
-
-
         {/* COMPONENTS */}
-        <Stretchers />
-        <GalleryWrap />
-        <Floaters />
+
 
 
         <Hero color='none' m='auto'>
@@ -71,14 +75,17 @@ const canvas = () => {
         </Hero>
 
 
+        <Tabs setSelectedTab={setSelectedTab} />
+        {TAB[selectedTab]}
 
 
-        <Items>
-          <Flex m='0' h='25vh' justify='center' img={link}>Service1</Flex>
-          <Flex m='0' h='25vh' justify='center'>Service2</Flex>
-          <Flex m='0' h='25vh' justify='center'>Service3</Flex>
-          <Flex m='0' h='25vh' justify='center'>Service4</Flex>
-        </Items>
+        <Carousel>
+          <CarouselItem>Item 1</CarouselItem>
+          <CarouselItem>Item 2</CarouselItem>
+          <CarouselItem>Item 3</CarouselItem>
+        </Carousel>
+
+
       </section>
     </>
   )

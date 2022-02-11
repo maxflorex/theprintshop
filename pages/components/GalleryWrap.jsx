@@ -6,7 +6,7 @@ import { Title } from "./Styled/fonts/Styled";
 const GalleryWrap = () => {
     return (
         <div>
-            <Column p="4rem" gap="1rem" color="white">
+            <Column p="4rem" gap="1rem">
                 <Title size="3rem">Gallery Wrap Options</Title>
                 <Items m="0" p="0">
                     {dataBorders.map((dataBorders, index) => (
