@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Btn, Button } from './Styled/buttons/Styled';
 import { Column, Flex, Grid } from './Styled/divs/Styled';
+import { useSwipeable } from 'react-swipeable';
+import styled from 'styled-components';
+
+const Item = styled.div`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: var(--off2);
+    color: white;
+    width: 25%;
+`;
 
 export const CarouselItem = ({ children, width }) => {
-    return (
-        <div className="carousel-item" style={{ width: width }}>
-            {children}
-        </div>
-    );
+    return <Item>{children}</Item>;
 };
 
 const Carousel = ({ children }) => {
@@ -38,16 +46,22 @@ const Carousel = ({ children }) => {
         };
     });
 
+    const handlers = useSwipeable({
+        onSwipedLeft: () => updateIndex(activeIndex + 1),
+        onSwipedRight: () => updateIndex(activeIndex - 1),
+    });
+
     return (
         <div className="carousel">
             <div
+                {...handlers}
                 onMouseEnter={() => setPaused(true)}
                 onMouseLeave={() => setPaused(false)}
                 className="inner"
-                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+                style={{ transform: `translateX(-${activeIndex * 25}%)` }}
             >
                 {React.Children.map(children, (child, index) => {
-                    return React.cloneElement(child, { width: '100%' });
+                    return React.cloneElement(child);
                 })}
             </div>
 

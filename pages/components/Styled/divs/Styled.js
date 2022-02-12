@@ -53,7 +53,7 @@ const Column = styled.div`
    min-height: ${props => props.h};
    @media (max-width: 1280px) {
       width: ${props => props.widthMd};
-   },
+   }
    @media (max-width: 758px) {
       width: ${props => props.widthSm};
    }
