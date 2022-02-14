@@ -9,7 +9,7 @@ import GalleryWrap from '../components/GalleryWrap'
 import Tabs from '../components/Tabs';
 import { useState } from 'react';
 import Carousel, { CarouselItem } from '../components/Carousel';
-
+import Infinite from '../components/Infinite'
 
 
 const TAB = {
@@ -86,6 +86,13 @@ const canvas = () => {
           <CarouselItem>Item 4</CarouselItem>
         </Carousel>
 
+        <Column>
+          <Infinite>
+            <img src="https://via.placeholder.com/1600x300" alt="placeholder" />
+            <img src="https://via.placeholder.com/1600x300" alt="placeholder" />
+            <img src="https://via.placeholder.com/1600x300" alt="placeholder" />
+          </Infinite>
+        </Column>
 
       </section>
     </>
