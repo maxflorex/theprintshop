@@ -14,7 +14,7 @@ const Item = styled.div`
     width: 25%;
 `;
 
-export const CarouselItem = ({ children, width }) => {
+export const CarouselItem = ({ children }) => {
     return <Item>{children}</Item>;
 };
 
@@ -31,6 +31,7 @@ const Carousel = ({ children }) => {
 
         setActiveIndex(newIndex);
     };
+
 
     useEffect(() => {
         const interval = setInterval(() => {

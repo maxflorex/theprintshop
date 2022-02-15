@@ -8,8 +8,7 @@ import Stretchers from '../components/Stretchers'
 import GalleryWrap from '../components/GalleryWrap'
 import Tabs from '../components/Tabs';
 import { useState } from 'react';
-import Carousel, { CarouselItem } from '../components/Carousel';
-import Infinite from '../components/Infinite'
+import Infinite from '../components/Infinite';
 
 
 const TAB = {
@@ -17,8 +16,6 @@ const TAB = {
   'stretchers': <Stretchers />,
   'wrap': <GalleryWrap />
 }
-
-
 
 
 
@@ -78,22 +75,7 @@ const canvas = () => {
         <Tabs setSelectedTab={setSelectedTab} />
         {TAB[selectedTab]}
 
-
-        <Carousel>
-          <CarouselItem>Item 1</CarouselItem>
-          <CarouselItem>Item 2</CarouselItem>
-          <CarouselItem>Item 3</CarouselItem>
-          <CarouselItem>Item 4</CarouselItem>
-        </Carousel>
-
-        <Column>
-          <Infinite>
-            <img src="https://via.placeholder.com/1600x300" alt="placeholder" />
-            <img src="https://via.placeholder.com/1600x300" alt="placeholder" />
-            <img src="https://via.placeholder.com/1600x300" alt="placeholder" />
-          </Infinite>
-        </Column>
-
+        <Infinite />
       </section>
     </>
   )

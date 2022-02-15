@@ -35,7 +35,7 @@ const Column = styled.div`
    min-height: ${props => props.h};
    background-color: ${props => props.color};
    background-image: url(${props => props.img});
-   border-radius: 0.6rem;
+   border-radius: ${props => props.radius || '0.6rem'};
    text-align: ${props => props.align || 'left'};
    align-content: center;
    align-items: ${props => props.align || 'start'};
@@ -46,11 +46,14 @@ const Column = styled.div`
    background-size: cover;
    margin-left: ${props => props.ml || '2rem'};
    margin-right: ${props => props.mr || '2rem'};
-   padding: ${props => props.p};
    margin: ${props => props.m};
+   padding: ${props => props.p};
+   padding-top: ${props => props.pt};
+   padding-bottom: ${props => props.pb};
    background-attachment: ${props => props.attach};
    width: ${props => props.width};
    min-height: ${props => props.h};
+   overflow: hidden;
    @media (max-width: 1280px) {
       width: ${props => props.widthMd};
    }

@@ -48,7 +48,7 @@ const Btn = styled.a`
 `
 
 const BtnBlack = styled.a`
-    background-color: black;
+    background-color: ${props => props.bg || 'black'};
     padding: 1rem;
     border-radius: 0.6rem;
     font-family: ${props => props.font || 'Roboto'};
@@ -63,11 +63,13 @@ const BtnBlack = styled.a`
     justify-content: center;
     width: ${props => props.width};
     margin: ${props => props.m};
+    border-radius: ${props => props.radius || '0.6rem'};
     &:hover {
         background-color: var(--accent);
         color: white;
         padding: 1rem;
         border-radius: 0.6rem;
+        background-color: ${props => props.bgH};
     }
     
 `
