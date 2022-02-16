@@ -24,7 +24,7 @@ const canvas = () => {
   const link = 'https://images.unsplash.com/reserve/O7A9fAvYSXC7NTdz8gLQ_IMGP1039.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2948&q=80'
   const link2 = 'https://images.unsplash.com/photo-1565555334121-4a4f177af7b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'
 
-  const [selectedTab, setSelectedTab] = useState('null');
+  const [selectedTab, setSelectedTab] = useState('stretchers');
 
   return (
 
@@ -50,7 +50,7 @@ const canvas = () => {
 
         <Items6 width='100%' color='white' m='2rem' p='0'>
           {dataPrintDetails.map((dataPrintDetails, index) => (
-            <Column gap='1rem' key={index}>
+            <Column gap='1rem' key={index} p='1rem'>
               <Image src={dataPrintDetails.img} objectFit='contain' />
               <div>
                 <Title>{dataPrintDetails.title}</Title>
@@ -72,7 +72,7 @@ const canvas = () => {
         </Hero>
 
 
-        <Tabs setSelectedTab={setSelectedTab} />
+        <Tabs setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
         {TAB[selectedTab]}
 
         <Infinite />

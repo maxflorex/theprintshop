@@ -46,6 +46,8 @@ const Column = styled.div`
    background-size: cover;
    margin-left: ${props => props.ml || '2rem'};
    margin-right: ${props => props.mr || '2rem'};
+   margin-bottom: ${props => props.mb || '2rem'};
+   margin-top: ${props => props.mt || '2rem'};
    margin: ${props => props.m};
    padding: ${props => props.p};
    padding-top: ${props => props.pt};

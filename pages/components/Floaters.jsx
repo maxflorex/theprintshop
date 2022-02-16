@@ -4,7 +4,7 @@ import { Title, Title2 } from './Styled/fonts/Styled';
 import floater1 from '../components/Images/stretchers/outlined-1-floaters.svg';
 import floater2 from '../components/Images/stretchers/outlined-2.floaters.svg';
 const link =
-    'http://www.holtonframes.com/wp-content/uploads/2019/05/1-FL-25in-on-Coy-a-web1200.jpg';
+    'https://cdn.shopify.com/s/files/1/1419/1428/articles/in-the-making-studio-JWEMsn3ES1U-unsplash_1000x.jpg?v=1642594500';
 
 const Floaters = () => {
     return (
@@ -21,10 +21,10 @@ const Floaters = () => {
                         <span className="dot color2"></span>
                         <span className="dot color3"></span>
                     </Flex>
-                    <Flex color="none" justify="center" gap="4rem">
+                    {/* <Flex color="none" justify="center" gap="4rem">
                         <Image src={floater2} objectFit="contain" />
                         <Image src={floater1} objectFit="contain" />
-                    </Flex>
+                    </Flex> */}
                 </Column>
             </Flex>
         </Grid>

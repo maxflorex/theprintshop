@@ -8,7 +8,7 @@ import {
     P,
     Menu,
 } from './Styled/fonts/Styled';
-import { Flex } from './Styled/divs/Styled';
+import { Flex, Hero, Row } from './Styled/divs/Styled';
 import { Button } from './Styled/buttons/Styled';
 import logo from '../../images/tps-logo.svg';
 import Image from 'next/image';
@@ -52,15 +52,17 @@ const Navbar = () => {
                 </Menu>
             </div>
             <a href="/">
-                <Image src={logo} />
-                <Title
-                    width="400"
-                    transform="uppercase"
-                    ls="0.4rem"
-                    size="1rem"
-                >
-                    The Printshop
-                </Title>
+                <Flex m='0' p='0'>
+                    <Image src={logo} />
+                    <Title
+                        width="400"
+                        transform="uppercase"
+                        ls="0.4rem"
+                        size="1rem"
+                    >
+                        The Printshop
+                    </Title>
+                </Flex>
             </a>
         </Flex>
     );

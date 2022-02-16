@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { dataBorders } from "../api/dataBorders";
-import { Column, Items } from "./Styled/divs/Styled";
+import { Column, Items3 } from "./Styled/divs/Styled";
 import { Title } from "./Styled/fonts/Styled";
 
 const GalleryWrap = () => {
     return (
         <div>
-            <Column p="4rem" gap="1rem">
+            <Column p="4rem" gap="2rem">
                 <Title size="3rem">Gallery Wrap Options</Title>
-                <Items m="0" p="0">
+                <Items3 m="0" p="0">
                     {dataBorders.map((dataBorders, index) => (
                         <Column key={index} m="0">
                             <Image src={dataBorders.img} objectFit="contain" />
@@ -19,7 +19,7 @@ const GalleryWrap = () => {
                             </Title>
                         </Column>
                     ))}
-                </Items>
+                </Items3>
             </Column>
         </div>
     );

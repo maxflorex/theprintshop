@@ -10,15 +10,15 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Pagination, Navigation, Autoplay } from 'swiper';
+import { Pagination, Autoplay } from 'swiper';
 import { Column, Hero } from './Styled/divs/Styled';
 import { Title, Title2 } from './Styled/fonts/Styled';
-import Image from 'next/image';
-import { Btn, BtnBlack, Button } from './Styled/buttons/Styled';
+
+const link = 'https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80'
 
 const Infinite = () => {
     return (
-        <Column pt="8rem">
+        <Column pt="8rem" color='var(--off2)' img={link} p='4rem' mt='4rem' attach='fixed'>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={48}
@@ -34,10 +34,12 @@ const Infinite = () => {
                     },
                 }}
                 slidesPerGroup={1}
+                pagination={{
+                    dynamicBullets: true,
+                }}
                 loop={true}
                 loopFillGroupWithBlank={true}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
+                modules={[Autoplay, Pagination]}
                 grabCursor={true}
                 autoplay={{
                     delay: 6000,
@@ -51,26 +53,27 @@ const Infinite = () => {
                             key={index}
                             color="white"
                             width="100%"
-                            m="0"
+                            ml="0"
+                            mr="0"
+                            mt="0"
+                            mb="4rem"
                             p="0"
-                            h="25vh"
                         >
-                            <Column img={data.img} m="0" p='0' radius="0">
-                                <Column color="var(--gradient)" m="0" h="25vh" className='backdrop'/>
-                            </Column>
-                            <Title size="2rem">{data.title}</Title>
-                            <Title2 font="Roboto" size="1rem">
-                                {data.desc}
-                            </Title2>
-                            <BtnBlack
-                                bgH="black"
-                                bg="var(--off2)"
-                                color="var(--off4)"
-                                radius="0"
-                                size="1rem"
-                            >
-                                Know More
-                            </BtnBlack>
+                            <a href={data.link}>
+                                <Column img={data.img} m="0" p="0" radius="0">
+                                    <Column
+                                        color="var(--gradient)"
+                                        m="0"
+                                        h="10vh"
+                                        className="backdrop"
+                                        radius="0"
+                                    />
+                                </Column>
+                                <Title size="2rem">{data.title}</Title>
+                                <Title2 font="Roboto" size="1rem" mb="1rem">
+                                    {data.desc}
+                                </Title2>
+                            </a>
                         </Column>
                     </SwiperSlide>
                 ))}
@@ -80,3 +83,7 @@ const Infinite = () => {
 };
 
 export default Infinite;
+
+
+
+

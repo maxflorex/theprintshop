@@ -5,7 +5,7 @@ import { Title } from "./Styled/fonts/Styled";
 
 const Stretchers = () => {
     return (
-        <Column p="4rem" gap="2rem" attach="fixed" mt="8rem">
+        <Column p="4rem" gap="2rem" attach="fixed">
             <Title size="3rem" mb="2rem">
                 Stretcher Bar Depths
                 
