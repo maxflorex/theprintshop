@@ -56,11 +56,14 @@ const Column = styled.div`
    width: ${props => props.width};
    min-height: ${props => props.h};
    overflow: hidden;
+   position: ${props => props.position};
    @media (max-width: 1280px) {
       width: ${props => props.widthMd};
    }
    @media (max-width: 758px) {
       width: ${props => props.widthSm};
+      position: ${props => props.positionSm};
+      
    }
 `
 
@@ -77,6 +80,8 @@ const Grid = styled.div`
    margin-right: ${props => props.mr};
    padding-top: ${props => props.pt};
    padding-bottom: ${props => props.pb};
+   margin: ${props => props.m};
+   padding: ${props => props.p};
    gap: ${props => props.gap};
    position: ${props => props.position};
    padding: ${props => props.p};
