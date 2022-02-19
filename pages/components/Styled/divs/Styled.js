@@ -57,6 +57,7 @@ const Column = styled.div`
    min-height: ${props => props.h};
    overflow: hidden;
    position: ${props => props.position};
+   opacity: ${props => props.opacity};
    @media (max-width: 1280px) {
       width: ${props => props.widthMd};
    }
@@ -69,6 +70,7 @@ const Column = styled.div`
 
 const Grid = styled.div`
    display: grid;
+   align-content: center;
    grid-template-columns: repeat(2, minmax(0, 1fr));
    min-height: ${props => props.h};
    background-color: ${props => props.color};

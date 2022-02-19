@@ -162,3 +162,9 @@ hr {
     z-index: 999;
     overflow: visible;
 }
+
+.isSticky {
+    opacity: 0.5;
+    transition: 2000ms linear; 
+    heigh: 100vh !important;
+}

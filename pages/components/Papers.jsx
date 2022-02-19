@@ -4,6 +4,7 @@ import { dataPapers } from '../api/dataPapers';
 import { Column, Flex, Grid, Row } from './Styled/divs/Styled';
 import { P, Title, Title2 } from './Styled/fonts/Styled';
 
+
 const Papers = () => {
     // STICKY HEADER
 
@@ -15,19 +16,25 @@ const Papers = () => {
     // });
 
     // const isSticky = (e) => {
-    //     const stick = document.querySelector('.header-section');
+    //     const stick = document.querySelector('.glue');
     //     const scrollTop = window.scrollY;
-    //     scrollTop >= 250
-    //         ? stick.classList.add('is-sticky')
-    //         : stick.classList.remove('is-sticky');
+    //     scrollTop >= '50vh'
+    //         ? stick.classList.add('isSticky')
+    //         : stick.classList.remove('isSticky');
     // };
 
     return (
         <>
             {dataPapers.map((data, index) => (
-                <Column color="none" m="0">
+                <Column color="none" m="0" key={index}>
                     <Grid gap="2rem" ml="2rem" mr="2rem" p="0">
-                        <Column img={data.img} h="85vh" width="100%" m="0" id='sticky'/>
+
+                            <Column
+                                img={data.img}
+                                h="60vh"
+                                width="100%"
+                                m="0"
+                            />
 
                         <Column p="4rem">
                             <Title align="left" size="4rem">
@@ -37,7 +44,7 @@ const Papers = () => {
                                 {data.sub}
                             </Title2>
                             <P color="black" font="Roboto">
-                               {data.desc}
+                                {data.desc}
                             </P>
                             <Column p="0" mt="2rem" ml="0" mr="0">
                                 <table>
