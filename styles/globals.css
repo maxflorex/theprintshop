@@ -165,6 +165,11 @@ hr {
 
 .isSticky {
     opacity: 0.5;
-    transition: 2000ms linear; 
+    transition: 2000ms linear;
     heigh: 100vh !important;
+}
+
+#inset2 {
+    stroke: red;
+    stroke-width: 8px;
 }

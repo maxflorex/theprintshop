@@ -87,6 +87,7 @@ const Grid = styled.div`
    gap: ${props => props.gap};
    position: ${props => props.position};
    padding: ${props => props.p};
+   width: ${props => props.width};
    @media (max-width: 1280px) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
       gap: ${props => props.gapH};
@@ -192,6 +193,7 @@ const Flex = styled.div`
    overflow: hidden;
    cursor: ${props => props.cursor};
    object-fit: ${props => props.object};
+   width: ${props => props.width};
    @media (max-width: 1024px) {
       justify-content: ${props => props.justify || 'center'};
       flex-direction: ${props => props.direction || 'row'};
