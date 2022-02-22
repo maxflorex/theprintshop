@@ -60,10 +60,12 @@ const Column = styled.div`
    opacity: ${props => props.opacity};
    @media (max-width: 1280px) {
       width: ${props => props.widthMd};
+      background-color: ${props => props.colorMd};
    }
    @media (max-width: 758px) {
       width: ${props => props.widthSm};
       position: ${props => props.positionSm};
+      background-color: ${props => props.color || 'inherit'};
       
    }
 `
@@ -197,6 +199,7 @@ const Flex = styled.div`
    @media (max-width: 1024px) {
       justify-content: ${props => props.justify || 'center'};
       flex-direction: ${props => props.direction || 'row'};
+      gap: ${props => props.gapMd || '0'};
    }
 `
 

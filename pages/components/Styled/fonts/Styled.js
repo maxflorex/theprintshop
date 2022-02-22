@@ -13,6 +13,9 @@ const Title = styled.h1`
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};
     cursor: ${props => props.cursor};
+    @media (max-width: 768px) {
+        font-size: ${props => props.sizeSm};
+    }
     `
 
 const Title2 = styled.h2`
@@ -26,6 +29,7 @@ const Title2 = styled.h2`
     line-height: ${props => props.lh};
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};
+    background-color: ${props => props.bgColor};
     `
 
 const P = styled.p`

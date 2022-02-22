@@ -14,6 +14,7 @@ body {
     --off4: #999999;
     --off5: #6b6b6b;
     --gradient: rgba(0, 0, 0, 0.62);
+    --gradient2: rgba(255, 255, 255, 0.20);
 }
 
 * {
@@ -167,9 +168,4 @@ hr {
     opacity: 0.5;
     transition: 2000ms linear;
     heigh: 100vh !important;
-}
-
-#inset2 {
-    stroke: red;
-    stroke-width: 8px;
 }

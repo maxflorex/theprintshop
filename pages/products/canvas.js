@@ -32,7 +32,7 @@ const canvas = () => {
       {/* TITLE & HERO */}
 
       <section>
-        <Hero img={link} imgMd={link2} m='2rem' h='25vh'>
+        <Hero img={link2} imgMd={link2} m='2rem' h='25vh'>
           <Column>
             <Backdrop h='25vh' h='100%' p='4rem'>
               <Title size='4rem'>Canvas</Title>

@@ -11,12 +11,12 @@ const Floaters = () => {
         <Grid>
             <Flex img={link} h="25vh" m="2rem" bgSize='105%' p='4rem'/>
             <Flex ml='0' mr='0' color='none'>
-                <Column color="none" justify="center" pb="2rem" m='auto'>
+                <Column color="none" justify="center" p='0' m='auto'>
                     <Title align="center" size="3rem">
                         Floater Options
                     </Title>
                     <Title2 align="center">Colors Available</Title2>
-                    <Flex justify="center" color="none" gap="4rem" p="0" m="0">
+                    <Flex justify="center" color="none" gap="4rem" p="0" m="0" gapMd='2rem'>
                         <span className="dot color1"></span>
                         <span className="dot color2"></span>
                         <span className="dot color3"></span>
