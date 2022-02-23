@@ -37,7 +37,7 @@ const Column = styled.div`
    background-image: url(${props => props.img});
    border-radius: ${props => props.radius || '0.6rem'};
    text-align: ${props => props.align || 'left'};
-   align-content: center;
+   align-content: ${props => props.ac || 'center'};
    align-items: ${props => props.align || 'start'};
    padding-top: ${props => props.pt || '4rem'};
    padding-bottom: ${props => props.pb || '4rem'};
@@ -55,12 +55,14 @@ const Column = styled.div`
    background-attachment: ${props => props.attach};
    width: ${props => props.width};
    min-height: ${props => props.h};
+   max-height: ${props => props.hMax};
    overflow: hidden;
    position: ${props => props.position};
    opacity: ${props => props.opacity};
    @media (max-width: 1280px) {
       width: ${props => props.widthMd};
       background-color: ${props => props.colorMd};
+      min-height: ${props => props.hMd};
    }
    @media (max-width: 758px) {
       width: ${props => props.widthSm};
@@ -72,9 +74,10 @@ const Column = styled.div`
 
 const Grid = styled.div`
    display: grid;
-   align-content: center;
+   align-content: ${props => props.ac || 'center'};
    grid-template-columns: repeat(2, minmax(0, 1fr));
    min-height: ${props => props.h};
+   background-image: url(${props => props.img});
    background-color: ${props => props.color};
    border-radius: 0.6rem;
    margin: ${props => props.m};
@@ -93,6 +96,15 @@ const Grid = styled.div`
    @media (max-width: 1280px) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
       gap: ${props => props.gapH};
+      width: ${props => props.widthMd};
+      background-color: ${props => props.colorMd};
+      min-height: ${props => props.hMd};
+   }
+   @media (max-width: 758px) {
+      width: ${props => props.widthSm};
+      position: ${props => props.positionSm};
+      background-color: ${props => props.color || 'inherit'};
+      
    }
 `
 
@@ -188,7 +200,7 @@ const Flex = styled.div`
    margin: ${props => props.m || '2rem'};
    padding: ${props => props.p};
    border-radius: ${props => props.radius || '0.6rem'};
-   box-sizing: content-box;
+   box-sizing: border-box;
    min-height: ${props => props.h};
    max-height: ${props => props.hMax};
    gap: ${props => props.gap || '0.6rem'};
@@ -196,8 +208,10 @@ const Flex = styled.div`
    cursor: ${props => props.cursor};
    object-fit: ${props => props.object};
    width: ${props => props.width};
+   margin-left: ${props => props.ml || '2rem'};
+   margin-right: ${props => props.mr || '2rem'};
    @media (max-width: 1024px) {
-      justify-content: ${props => props.justify || 'center'};
+      justify-content: ${props => props.justifyMd || 'center'};
       flex-direction: ${props => props.direction || 'row'};
       gap: ${props => props.gapMd || '0'};
    }

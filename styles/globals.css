@@ -5,8 +5,9 @@ body {
 }
 
 :root {
-    --color: #ff4500;
-    --color2: #8a2500;
+    --color: #29abe2;
+    --color2: #eb088c;
+    --color3: #fcee21;
     --accent: #eb088c;
     --off1: #f5f5f5;
     --off2: #dedede;

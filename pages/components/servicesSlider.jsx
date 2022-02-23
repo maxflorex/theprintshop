@@ -59,7 +59,7 @@ const ServicesSlider = () => {
                             p="0"
                         >
                             <a href={data.link}>
-                                <Column img={data.img} m="0" p="0" radius="0">
+                                <Column img={data.bg} m="0" p="0" radius="0">
                                     <Column
                                         color="var(--gradient)"
                                         m="0"
