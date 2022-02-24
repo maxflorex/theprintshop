@@ -65,7 +65,7 @@ const BtnBlack = styled.a`
     margin: ${props => props.m};
     border-radius: ${props => props.radius || '0.6rem'};
     &:hover {
-        background-color: var(--accent);
+        background-color: ${props => props.bgH || 'var(--accent)'};
         color: white;
         padding: 1rem;
         border-radius: 0.6rem;

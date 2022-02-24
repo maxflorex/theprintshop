@@ -19,8 +19,8 @@ const services = () => {
             <Column img={data.img} h='60vh' />
             <Title size='2rem'>{data.title}</Title>
             <Title2 font='Roboto'>{data.desc}</Title2>
-            <Flex m='auto' p='1rem'>
-              <BiRightArrow />
+            <Flex m='auto' p='1rem' with='100%' color='none'>
+              <BiRightArrow style={{margin: 'auto'}} />
             </Flex>
           </Column>
         ))}

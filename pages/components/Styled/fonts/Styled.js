@@ -16,6 +16,9 @@ const Title = styled.h1`
     @media (max-width: 768px) {
         font-size: ${props => props.sizeSm};
     }
+    &:hover{
+        color: ${props => props.color};
+    }
     `
 
 const Title2 = styled.h2`
@@ -43,8 +46,8 @@ const P = styled.p`
     text-align: ${props => props.alignW || 'justify'};
     @media (max-width: 768px) {
         text-align: ${props => props.align || 'justify'};
-            }
-`
+    }
+    `
 
 const Menu = styled.ul`
     font-family: ${props => props.font || 'Oswald'};
@@ -54,6 +57,7 @@ const Menu = styled.ul`
     align-items: center;
     list-style: none;
     gap: 2rem;
+    font-weight: ${props => props.w || 300};
     font-size: ${props => props.size || '1rem'};
     font-weight: ${props => props.weight || 100};
     font-family: ${props => props.font || 'Oswald'};

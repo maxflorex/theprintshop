@@ -24,6 +24,10 @@ const SInput = styled.input`
     &:focus{
         outline: ${props => props.outline || 'solid 1px var(--color)'};
         background-color: ${props => props.colorF};
+    }
+    &:hover{
+        background-color: ${props => props.colorH};
+        cursor: ${props => props.cursor}
     }   
     `
 
@@ -68,5 +72,19 @@ const SOption = styled.option`
     margin-bottom: ${props => props.mb};
 `
 
+const SLabel = styled.label`
+    font-family: ${props => props.font || 'Oswald'};
+    font-weight: ${props => props.w || 300};
+    font-size: ${props => props.size || '1rem'};
+    text-transform: ${props => props.transform || 'none'};
+    text-align: ${props => props.align || 'center'};
+    color: ${props => props.color};
+    letter-spacing: ${props => props.ls};
+    line-height: ${props => props.lh};
+    margin-top: ${props => props.mt};
+    margin-bottom: ${props => props.mb};
+    background-color: ${props => props.bgColor};
+    `
 
-export { SForm, SInput, SSelect, SOption }
+
+export { SForm, SInput, SSelect, SOption, SLabel }

@@ -66,7 +66,7 @@ const Carousel = ({ children }) => {
                 })}
             </div>
 
-            <Flex gap="2rem" mt="2rem" color="none" justify="center">
+            <Flex gap="2rem" color="none" justify="center" mt='2rem' mb='2rem'>
                 <Flex m="0" p="0" color="none" justify="end">
                     <Button
                         onClick={() => {

@@ -14,7 +14,7 @@ const HeroSection = () => {
                 mt="0"
                 mb="0"
                 img={link}
-                h="80vh"
+                h="85vh"
                 display="none"
                 pt="0"
                 pb="0"

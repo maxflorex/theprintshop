@@ -5,8 +5,8 @@ import { BtnBlack } from './Styled/buttons/Styled';
 const Section = () => {
     return (
         <Column img="https://images.unsplash.com/photo-1550275994-2bc88dc68637?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&width=987&q=80">
-            <Grid mt="0" gap="4rem" mr="4rem" ml="4rem">
-                <Flex h="25vh" p="0" m="0" color='none'>
+            <Grid p="0" gap="4rem" mr="4rem" ml="4rem" mt='0' mb='0'>
+                <Flex h="25vh" pt="0" pb='0' mt="0" color='none'>
                     <Backdrop className='shadow'>
                         <Title size="3.2rem">Hand-picked Art Papers</Title>
                         <P size="1.2rem" color="black" font="Roboto">
@@ -18,7 +18,7 @@ const Section = () => {
                 <Flex
                     h="25vh"
                     p="0"
-                    m="0"
+                    mt="0"
                     color='none'
                 >
                     <Backdrop className='shadow'>

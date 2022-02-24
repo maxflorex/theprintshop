@@ -1,3 +1,4 @@
+import { PromiseProvider } from "mongoose";
 import styled from "styled-components";
 
 
@@ -197,7 +198,7 @@ const Flex = styled.div`
    padding-bottom: ${props => props.pb || '2rem'};
    padding-left: ${props => props.pl || '2rem'};
    padding-right: ${props => props.pr || '2rem'};
-   margin: ${props => props.m || '2rem'};
+   margin: ${props => props.m};
    padding: ${props => props.p};
    border-radius: ${props => props.radius || '0.6rem'};
    box-sizing: border-box;
@@ -210,10 +211,18 @@ const Flex = styled.div`
    width: ${props => props.width};
    margin-left: ${props => props.ml || '2rem'};
    margin-right: ${props => props.mr || '2rem'};
+   border-bottom: ${props =>props.borderb};
+   margin-top: ${props => props.mt};
+   margin-bottom: ${props => props.mb};
    @media (max-width: 1024px) {
       justify-content: ${props => props.justifyMd || 'center'};
       flex-direction: ${props => props.direction || 'row'};
+      background-color: ${props => props.colorMd};
       gap: ${props => props.gapMd || '0'};
+   }
+   &:hover{
+      background-color: ${props => props.colorH};
+      cursor: ${props => props.cursor};
    }
 `
 

@@ -97,22 +97,12 @@ function Footer() {
             <div>
                 <Flex m="0" radius="0" color="var(--off1)" pt="1rem" pb="1rem">
                     <div>
-                        <P
-                            color="black"
-                            font="Roboto"
-                            font="Roboto"
-                            ls="0.05rem"
-                        >
+                        <P color="black" font="Roboto" ls="0.05rem">
                             The Printshop™
                         </P>
                     </div>
                     <div>
-                        <P
-                            color="black"
-                            font="Roboto"
-                            font="Roboto"
-                            ls="0.05rem"
-                        >
+                        <P color="black" font="Roboto" ls="0.05rem">
                             Art Cayman Co. - 2022
                         </P>
                     </div>
