@@ -51,18 +51,18 @@ const aluminum = () => {
                 </Items6>
             </section>
             <section>
-                <Column width='50%' m='auto'>
+                <Column m='auto'>
                     <Title size='2rem'>Available Surfaces</Title>
                     <Title2 font='Roboto'>Select between one of our finishes</Title2>
-                    <Row gap='4rem'>
-                        <Column p='0' m='0' color='white' gap='0' className='bg-white'>
+                    <Row>
+                        <Column p='0' m='2rem' color='white' gap='0' className='bg-white'>
                             <Image src={reflection1} />
                             <Flex color='none' p='2rem' m='0'>
                                 <Title size='3rem'>Gloss</Title>
                                 <P color='black' font='Roboto'>• High Reflection / Vivid Colors</P>
                             </Flex>
                         </Column>
-                        <Column p='0' m='0' color='white' gap='0' className='bg-white'>
+                        <Column p='0' m='2rem' color='white' gap='0' className='bg-white'>
                             <Image src={reflection2} />
                             <Flex color='none' p='2rem' m='0'>
                                 <Title size='3rem'>Satin</Title>
@@ -73,7 +73,7 @@ const aluminum = () => {
                 </Column>
             </section>
             <section>
-                <Hero color='none' m='auto'>
+                <Hero color='none' m='auto' p='0'>
 
                     <BtnBlack m='auto' font='Oswald'>
                         Place an Order now
@@ -81,8 +81,8 @@ const aluminum = () => {
                 </Hero>
             </section>
             <section>
-                <Column p='4rem'>
-                    <Title size='2rem'>Wall Display Option</Title>
+                <Column p='4rem' mt='2rem'>
+                    <Title size='2rem' pt='2rem'>Wall Display Option</Title>
                     <Title2 font='Roboto'>We offer a variety of contemporary ways to hang and display your MetalPrints.</Title2>
                     <Grid justify='center' width='50%' gap='4rem' m='auto' pt='2rem'>
                         <Image objectFit='contain' src={inset1} />

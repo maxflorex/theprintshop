@@ -13,20 +13,20 @@ const Form = () => {
 
     return (
         <Column m="auto">
-            <SForm>
+            <SForm className="nameAndEmail">
                 <Grid gap="2rem" gapH="2rem">
                     <SInput
                         type="text"
-                        id="fname"
-                        name="fname"
+                        id="name"
+                        name="name"
                         placeholder="Name"
                         // outline='none'
                         colorV="var(--color2)"
                     />
                     <SInput
                         type="text"
-                        id="femail"
-                        name="femail"
+                        id="email"
+                        name="email"
                         placeholder="Email"
                     />
                 </Grid>
@@ -66,16 +66,13 @@ const Form = () => {
                 ) : (
                     ''
                 )}
-                <Flex color='transparent'>
+                <Flex color="transparent">
                     <SInput
                         type="submit"
-                        id="femail"
-                        name="femail"
-                        placeholder="Email"
                         w="auto"
                         m="auto"
-                        colorH='var(--color)'
-                        cursor='pointer'
+                        colorH="var(--color)"
+                        cursor="pointer"
                     />
                 </Flex>
             </SForm>

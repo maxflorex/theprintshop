@@ -35,7 +35,6 @@ const Navbar = () => {
                     </li>
                     <Button
                         transform="uppercase"
-                        className="accent"
                         font="Oswald"
                         href="/order"
                     >
@@ -51,6 +50,8 @@ const Navbar = () => {
                     </Title>
                 </Flex>
             </a>
+
+
         </Flex>
     );
 };
