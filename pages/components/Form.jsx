@@ -5,15 +5,41 @@ import { Title } from './Styled/fonts/Styled';
 import { data } from '../api/dataServices';
 import FormCanvas from './FormCanvas';
 import { SForm, SInput } from './Styled/forms/Styled';
+import { colRefOrder } from '../firebase';
+import { addDoc, serverTimestamp } from 'firebase/firestore';
 
 const Form = () => {
-    const [inUseForm, setInUseForm] = useState('Canvas');
+    // const [inUseForm, setInUseForm] = useState('Canvas');
 
-    console.log(inUseForm);
+    const [contactInfo, setContactInfo] = useState({ name: '', email: '' });
+
+    // const empty = contactInfo({ name: '', email: '' });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        addDoc(colRefOrder, {
+            title: contactInfo.name,
+            email: contactInfo.email,
+            createdAt: serverTimestamp(),
+        }).then(() => {
+            setContactInfo({ name: '', email: '' });
+            alert('Message sent!');
+        });
+    };
+
+    const handleChange = (e) => {
+        setContactInfo({
+            ...contactInfo,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    // console.log(form.target)
 
     return (
         <Column m="auto">
-            <SForm className="nameAndEmail">
+            {/* <SForm className="nameAndEmail">
                 <Grid gap="2rem" gapH="2rem">
                     <SInput
                         type="text"
@@ -75,7 +101,37 @@ const Form = () => {
                         cursor="pointer"
                     />
                 </Flex>
-            </SForm>
+            </SForm> */}
+            <form onSubmit={handleSubmit} id="orderForm">
+                <Column>
+                    <input
+                        type="text"
+                        name="name"
+                        required
+                        placeholder="name"
+                        value={contactInfo.name}
+                        onChange={handleChange}
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="email"
+                        value={contactInfo.email}
+                        onChange={handleChange}
+                    />
+
+                    {contactInfo.name === '' || contactInfo.email === '' ? (
+                        <button disabled>
+                            {contactInfo.name === '' && contactInfo.email === ''
+                                ? 'Type Order'
+                                : 'Typing '}
+                        </button>
+                    ) : (
+                        <button>Add new entry</button>
+                    )}
+                </Column>
+            </form>
         </Column>
     );
 };

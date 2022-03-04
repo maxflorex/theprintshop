@@ -15,7 +15,7 @@ const FormCanvas = () => {
             <Items6 m="0" p="0" color="transparent">
                 {dataBorders.map((data, index) => (
                     <Flex color="white" mr="0" ml="0" gapMd='1rem'>
-                        <SLabel for={index}>{data.title}</SLabel>
+                        <SLabel>{data.title}</SLabel>
                         <SInput
                             type="radio"
                             id={index}
