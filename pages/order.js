@@ -8,7 +8,7 @@ import acc from '../images/tps-logo-bw.svg'
 const order = () => {
 
   return (<section>
-    <Title size='4rem' mt='4rem'>Place an Order</Title>
+    <Title size='4rem' m='4rem'>Place an Order</Title>
     <Form />
   </section>
   )

@@ -45,7 +45,7 @@ onSnapshot(q, (snapshot) => {
     snapshot.docs.forEach((doc) => {
         orders.push({ ...doc.data(), id: doc.id })
     })
-    console.log(orders)
+    // console.log(orders)
 })
 
 

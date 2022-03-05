@@ -12,6 +12,7 @@ const Title = styled.h1`
     line-height: ${props => props.lh};
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};
+    margin: ${props => props.m};
     cursor: ${props => props.cursor};
     @media (max-width: 768px) {
         font-size: ${props => props.sizeSm};

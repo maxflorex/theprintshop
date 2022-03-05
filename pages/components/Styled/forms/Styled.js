@@ -6,7 +6,7 @@ const SForm = styled.form`
 `
 
 const SInput = styled.input`
-    border: none;
+    border: solid white 1px;
     width: ${props => props.w || '100%'};
     margin: ${props => props.m};
     padding: ${props => props.p || '2rem'};
@@ -22,12 +22,42 @@ const SInput = styled.input`
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};
     &:focus{
-        outline: ${props => props.outline || 'solid 1px var(--color)'};
+        outline: none;
         background-color: ${props => props.colorF};
+        border: solid var(--off3) 1px;
     }
     &:hover{
         background-color: ${props => props.colorH};
         cursor: ${props => props.cursor}
+    }   
+    `
+
+
+const SButton = styled.input`
+    border: none;
+    width: ${props => props.w || 'auto'};
+    margin: ${props => props.m || 'auto'};
+    padding: ${props => props.p || '2rem'};
+    border-radius: 0.6rem;
+    font-family: ${props => props.font || 'Roboto'};
+    font-weight: ${props => props.w || 'auto'};
+    font-size: ${props => props.size || '1rem'};
+    text-transform: ${props => props.transform || 'none'};
+    text-align: ${props => props.align || 'center'};
+    color: ${props => props.color};
+    letter-spacing: ${props => props.ls};
+    line-height: ${props => props.lh};
+    margin-top: ${props => props.mt};
+    margin-bottom: ${props => props.mb};
+    background-color: var(--off2);
+    &:focus{
+        outline: none;
+        background-color: ${props => props.colorF};
+        border: solid var(--off3) 1px;
+    }
+    &:hover{
+        background-color: ${props => props.colorH || 'var(--color)'};
+        cursor: 'pointer'
     }   
     `
 
@@ -87,4 +117,4 @@ const SLabel = styled.label`
     `
 
 
-export { SForm, SInput, SSelect, SOption, SLabel }
+export { SForm, SInput, SSelect, SOption, SLabel, SButton }

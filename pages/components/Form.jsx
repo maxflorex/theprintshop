@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
 import { Column, Flex, Grid } from './Styled/divs/Styled';
-
 import { Title } from './Styled/fonts/Styled';
 import { data } from '../api/dataServices';
 import FormCanvas from './FormCanvas';
-import { SForm, SInput } from './Styled/forms/Styled';
+import { SForm, SInput, SButton } from './Styled/forms/Styled';
 import { colRefOrder } from '../firebase';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 
 const Form = () => {
-    // const [inUseForm, setInUseForm] = useState('Canvas');
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    // FORM VALUE STATES
     const [contactInfo, setContactInfo] = useState({ name: '', email: '' });
 
-    // const empty = contactInfo({ name: '', email: '' });
+    // DISTRUCTURE THE STATE VALUES FOR LATER USE
+    const { name, email } = contactInfo;
 
+    // ON SUBMIT EVENT
     const handleSubmit = (e) => {
         e.preventDefault();
 
         addDoc(colRefOrder, {
-            title: contactInfo.name,
-            email: contactInfo.email,
+            title: name,
+            email: email,
             createdAt: serverTimestamp(),
         }).then(() => {
             setContactInfo({ name: '', email: '' });
@@ -28,6 +30,7 @@ const Form = () => {
         });
     };
 
+    // ON CHANGE EVENT
     const handleChange = (e) => {
         setContactInfo({
             ...contactInfo,
@@ -35,28 +38,38 @@ const Form = () => {
         });
     };
 
-    // console.log(form.target)
+    const empty = '';
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     return (
-        <Column m="auto">
-            {/* <SForm className="nameAndEmail">
-                <Grid gap="2rem" gapH="2rem">
+        <>
+            <SForm onSubmit={handleSubmit}>
+                <Grid gap="2rem">
                     <SInput
                         type="text"
-                        id="name"
-                        name="name"
                         placeholder="Name"
-                        // outline='none'
-                        colorV="var(--color2)"
+                        name='name'
+                        value={name}
+                        onChange={handleChange}
+                        required
                     />
                     <SInput
-                        type="text"
-                        id="email"
-                        name="email"
+                        type="email"
                         placeholder="Email"
+                        name= 'email'
+                        value={email}
+                        onChange={handleChange}
+                        required
                     />
                 </Grid>
-                <Flex
+                <Column m='0'>
+                    <SButton
+                        type="submit"
+                    />
+                </Column>
+
+                {/* <Flex
                     p="0"
                     color="transparent"
                     mt="0"
@@ -80,8 +93,9 @@ const Form = () => {
                             </Title>
                         </Flex>
                     ))}
-                </Flex>
-                {inUseForm === 0 ? (
+                </Flex> */}
+
+                {/* {inUseForm === 0 ? (
                     <FormCanvas />
                 ) : inUseForm === 1 ? (
                     <Title mt="4rem">Framing Form</Title>
@@ -91,25 +105,17 @@ const Form = () => {
                     <Title mt="4rem">Aluminum Form</Title>
                 ) : (
                     ''
-                )}
-                <Flex color="transparent">
-                    <SInput
-                        type="submit"
-                        w="auto"
-                        m="auto"
-                        colorH="var(--color)"
-                        cursor="pointer"
-                    />
-                </Flex>
-            </SForm> */}
-            <form onSubmit={handleSubmit} id="orderForm">
+                )} */}
+            </SForm>
+
+            {/* <form onSubmit={handleSubmit}
                 <Column>
                     <input
                         type="text"
                         name="name"
                         required
                         placeholder="name"
-                        value={contactInfo.name}
+                        value={name}
                         onChange={handleChange}
                     />
                     <input
@@ -117,22 +123,25 @@ const Form = () => {
                         name="email"
                         required
                         placeholder="email"
-                        value={contactInfo.email}
+                        value={email}
                         onChange={handleChange}
                     />
 
-                    {contactInfo.name === '' || contactInfo.email === '' ? (
-                        <button disabled>
-                            {contactInfo.name === '' && contactInfo.email === ''
-                                ? 'Type Order'
-                                : 'Typing '}
-                        </button>
-                    ) : (
-                        <button>Add new entry</button>
-                    )}
+                    {
+                        (name,
+                        email === empty ? (
+                            <button disabled>
+                                {name || email === !empty
+                                    ? 'Typing...'
+                                    : 'Type new order'}
+                            </button>
+                        ) : (
+                            <button>Send new order</button>
+                        ))
+                    }
                 </Column>
-            </form>
-        </Column>
+            </form> */}
+        </>
     );
 };
 
