@@ -7,7 +7,7 @@ const TabsFrames = ({ setSelectedTab, selectedTab }) => {
     const selected = selectedTab;
 
     return (
-        <Items3 m="2rem" gap="0" p="0">
+        <Items3 m="2rem" gap="2rem" p="0">
             <Flex
                 className="bg-white"
                 color={`${selected === 'black' ? 'var(--off2)' : 'white'}`}

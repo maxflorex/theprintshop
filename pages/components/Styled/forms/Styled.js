@@ -6,7 +6,7 @@ const SForm = styled.form`
 `
 
 const SInput = styled.input`
-    border: solid white 1px;
+    border: solid var(--off1) 1px;
     width: ${props => props.w || '100%'};
     margin: ${props => props.m};
     padding: ${props => props.p || '2rem'};
@@ -34,7 +34,7 @@ const SInput = styled.input`
 
 
 const SButton = styled.input`
-    border: none;
+    border: solid var(--off1) 1px;
     width: ${props => props.w || 'auto'};
     margin: ${props => props.m || 'auto'};
     padding: ${props => props.p || '2rem'};

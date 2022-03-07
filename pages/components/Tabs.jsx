@@ -9,7 +9,7 @@ const Tabs = ({ setSelectedTab, selectedTab }) => {
     const selected  = selectedTab
 
     return (
-        <Items3 m="0" gap="0" p='0'>
+        <Items3 m="0" gap="2rem" p='0'>
    
             <Flex className='bg-white' color={`${selected === 'stretchers' ? 'var(--off2)' : 'white'}`} cursor='pointer' m="0" onClick={() => setSelectedTab('stretchers')}>
                 <Title size="2rem">Stretcher Bars</Title>
