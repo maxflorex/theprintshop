@@ -23,12 +23,25 @@ const Form = () => {
         borders: '',
         stretchers: '',
         floaters: '',
-        qty: 1,
+        qty: '',
+        instructions: '',
+        wide: '',
+        tall: '',
     });
 
     // DISTRUCTURE THE STATE VALUES FOR LATER USE
-    const { name, email, medium, borders, stretchers, floaters, qty } =
-        contactInfo;
+    const {
+        name,
+        email,
+        medium,
+        borders,
+        stretchers,
+        floaters,
+        qty,
+        instructions,
+        tall,
+        wide,
+    } = contactInfo;
 
     // ON SUBMIT EVENT
     const handleSubmit = (e) => {
@@ -42,9 +55,13 @@ const Form = () => {
             stretchers: stretchers,
             floaters: floaters,
             qty: qty,
+            tall: tall,
+            wide: wide,
+            instructions: instructions,
             createdAt: serverTimestamp(),
         }).then(() => {
             alert('Message sent!');
+            setInUseForm(null);
             setContactInfo({
                 name: '',
                 email: '',
@@ -52,7 +69,10 @@ const Form = () => {
                 borders: '',
                 stretchers: '',
                 floaters: '',
-                qty: 1,
+                qty: '',
+                instructions: '',
+                wide: '',
+                tall: '',
             });
         });
     };
@@ -65,10 +85,8 @@ const Form = () => {
         });
     };
 
-
     // USE EFFECT
 
-    
     useEffect(() => {
         medium = inUseForm;
         borders = isBorder;
@@ -133,6 +151,9 @@ const Form = () => {
                         setStretchers={setStretchers}
                         setIsFloaters={setIsFloaters}
                         qty={qty}
+                        wide={wide}
+                        tall={tall}
+                        instructions={instructions}
                         handleChange={handleChange}
                     />
                 ) : inUseForm === 'Framing' ? (
@@ -148,7 +169,23 @@ const Form = () => {
                 {/* ----------------------------------------------- */}
 
                 <Column m="0">
-                    <SButton type="submit" />
+                    {(email,
+                    name,
+                    medium,
+                    borders,
+                    stretchers,
+                    floaters,
+                    qty,
+                    wide,
+                    tall) !== '' ? (
+                        <SButton type="submit" value='Place Order'/>
+                    ) : (
+                        <SButton
+                            type="submit"
+                            value="Complete Form"
+                            disabled
+                        />
+                    )}
                 </Column>
             </SForm>
         </>

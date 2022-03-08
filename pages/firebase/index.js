@@ -20,6 +20,8 @@ import {
     serverTimestamp
 } from 'firebase/firestore'
 
+import { getStorage } from 'firebase/storage'
+
 
 
 
@@ -63,5 +65,8 @@ onSnapshot(q, (snapshot) => {
 //             form.reset()
 //         })
 // })
+
+// FIREBASE CLOUD STORAGE
+export const storage = getStorage(app)
 
 export default { colRefOrder }

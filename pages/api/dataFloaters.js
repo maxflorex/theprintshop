@@ -1,14 +1,14 @@
 export const dataFloaters = [
     {
-        title: 'black',
+        title: 'White',
         color: 'dot color1',
     },
     {
-        title: 'white',
+        title: 'Black',
         color: 'dot color2',
     },
     {
-        title: 'natural',
+        title: 'Natural',
         color: 'dot color3',
     },
     {

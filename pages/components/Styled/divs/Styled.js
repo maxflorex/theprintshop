@@ -240,10 +240,12 @@ const Flex = styled.div`
    margin-bottom: ${props => props.mb};
    margin: ${props => props.m};
    @media (max-width: 1024px) {
+      margin: ${props => props.mMd || 'inherit'};
       justify-content: ${props => props.justifyMd || 'center'};
       flex-direction: ${props => props.direction || 'row'};
       background-color: ${props => props.colorMd};
       gap: ${props => props.gapMd || '0'};
+
    }
    &:hover{
       background-color: ${props => props.colorH};
