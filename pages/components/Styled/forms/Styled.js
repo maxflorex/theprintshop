@@ -88,8 +88,8 @@ const SButton = styled.input`
     letter-spacing: ${props => props.ls};
     line-height: ${props => props.lh};
     margin-top: ${props => props.mt};
-    margin-bottom: ${props => props.mb};
-    background-color: var(--off2);
+    margin-bottom: ${props => props.mb};    
+    background-color:${props => props.bgColor ||' var(--off2)'};
     &:focus{
         outline: none;
         background-color: ${props => props.colorF};

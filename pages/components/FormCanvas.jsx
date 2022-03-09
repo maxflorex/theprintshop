@@ -11,6 +11,7 @@ import { ref, uploadBytesResumable } from 'firebase/storage';
 
 const FormCanvas = ({
     setIsBorder,
+    isBorder,
     setStretchers,
     setIsFloaters,
     qty,
@@ -47,19 +48,20 @@ const FormCanvas = ({
     const upload = (e) => {
         let file = e.target.files[0];
         // CREATE REF
-        let fileRef = ref(storage, file.name)
+        let fileRef = ref(storage, file.name);
         // UPLOAD TASK
-        const uploadTask = uploadBytesResumable(fileRef, file)
+        const uploadTask = uploadBytesResumable(fileRef, file);
         // TRACK PROGRESS
         uploadTask.on('state_changed', (snapshot) => {
-            const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-            console.log('Upload is' + progress + '% done')
-        })
+            const progress = Math.round(
+                (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+            );
+            console.log('Upload is' + progress + '% done');
+        });
         // PREV FN
-        setSelectedImage(file)
-    }
+        setSelectedImage(file);
+    };
 
- 
     return (
         <>
             {/* ----------------------------------------------- */}
@@ -86,12 +88,14 @@ const FormCanvas = ({
                 <Items6 mt="2rem" ml="0" mr="0" p="0" color="transparent">
                     {dataBorders.map((data, index) => (
                         <Flex
-                            color="white"
                             mr="0"
                             ml="0"
                             gapMd="1rem"
                             key={index}
                             cursor="pointer"
+                            colorF="var(--accent)"
+                            colora="var(--accent)"
+                            className="bg-white"
                             onClick={() => setIsBorder(data.title)}
                         >
                             <Title>{data.title}</Title>
@@ -125,12 +129,14 @@ const FormCanvas = ({
                 <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
                     {dataStretchers.map((data, index) => (
                         <Flex
-                            color="white"
                             mr="0"
                             ml="0"
                             gapMd="1rem"
                             key={index}
                             cursor="pointer"
+                            colorF="var(--accent)"
+                            colora="var(--accent)"
+                            className="bg-white"
                             onClick={() => setStretchers(data.title)}
                         >
                             <Title>{data.title}</Title>
@@ -232,7 +238,7 @@ const FormCanvas = ({
                             min="1"
                             max="200"
                             onChange={handleChange}
-                            placeholder='0'
+                            placeholder="0"
                             required
                             p="1.6rem"
                         />
@@ -250,7 +256,7 @@ const FormCanvas = ({
                             min="1"
                             max="200"
                             onChange={handleChange}
-                            placeholder='0'
+                            placeholder="0"
                             required
                             p="1.6rem"
                         />
@@ -289,7 +295,11 @@ const FormCanvas = ({
                         <img
                             src={imageUrl}
                             alt={selectedImage}
-                            style={{ maxHeight: '8rem', maxWidth: '8rem', margin: 'auto' }}
+                            style={{
+                                maxHeight: '8rem',
+                                maxWidth: '8rem',
+                                margin: 'auto',
+                            }}
                         />
                         <Title font="Roboto" size="1rem">
                             {selectedImage === null ? '' : selectedImage.name}

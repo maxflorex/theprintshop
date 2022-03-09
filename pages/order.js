@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from './components/Form';
 import { Flex } from './components/Styled/divs/Styled';
 import { Title } from './components/Styled/fonts/Styled';
 import Image from 'next/image';
 import acc from '../images/tps-logo-bw.svg'
+import Account from './Account';
+
 
 const order = () => {
+  const [isAuth, setIsAuth] = useState(null)
 
   return (<section>
-    <Title size='4rem' m='4rem'>Place an Order</Title>
-    <Form />
+    <Account setIsAuth={setIsAuth} />
+    {isAuth === null ? '' :  <Form />}
   </section>
   )
 }

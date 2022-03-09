@@ -240,7 +240,7 @@ const Flex = styled.div`
    margin-bottom: ${props => props.mb};
    margin: ${props => props.m};
    @media (max-width: 1024px) {
-      margin: ${props => props.mMd || 'inherit'};
+      margin: ${props => props.mMd};
       justify-content: ${props => props.justifyMd || 'center'};
       flex-direction: ${props => props.direction || 'row'};
       background-color: ${props => props.colorMd};
@@ -250,6 +250,13 @@ const Flex = styled.div`
    &:hover{
       background-color: ${props => props.colorH};
       cursor: ${props => props.cursor};
+   }
+   &:focus{
+      background-color: ${props => props.colorf}; 
+      outline : 'solid red 1px' ;
+   }
+   &:active{
+      background-color: ${props => props.colora};  
    }
 `
 

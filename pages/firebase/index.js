@@ -21,6 +21,7 @@ import {
 } from 'firebase/firestore'
 
 import { getStorage } from 'firebase/storage'
+import { getAuth } from 'firebase/auth'
 
 
 
@@ -68,6 +69,10 @@ onSnapshot(q, (snapshot) => {
 
 // FIREBASE CLOUD STORAGE
 export const storage = getStorage(app)
+
+// AUTHENTIFICATION
+
+export const auth = getAuth(app)
 
 
 

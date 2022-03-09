@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Column, Flex, Grid, Items4 } from './Styled/divs/Styled';
+import { Column, Flex, Grid, Items, Items4 } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';
 import { data } from '../api/dataServices';
 import FormCanvas from './FormCanvas';
@@ -99,6 +99,7 @@ const Form = () => {
 
     return (
         <>
+            <Title size='4rem' m='4rem'>Place an Order</Title>
             <SForm onSubmit={handleSubmit}>
                 {/* ----------------------------------------------- */}
 
@@ -123,16 +124,17 @@ const Form = () => {
 
                 {/* ----------------------------------------------- */}
 
-                <Items4 mt="2rem" mb="2rem">
+                <Items m='0' >
                     {data.map((data, index) => (
                         <Flex
                             m="0"
-                            colorH="var(--off3)"
-                            color="var(--off2)"
                             key={index}
                             cursor="pointer"
                             p="1rem"
                             justify="center"
+                            colorF="var(--accent)"
+                            colora="var(--accent)"
+                            color="var(--off2)"
                             onClick={() => setInUseForm(data.title)}
                         >
                             <Title font="Roboto" size="1rem" m="0">
@@ -140,7 +142,7 @@ const Form = () => {
                             </Title>
                         </Flex>
                     ))}
-                </Items4>
+                </Items>
 
                 {/* ----------------------------------------------- */}
 
@@ -154,6 +156,7 @@ const Form = () => {
                         tall={tall}
                         instructions={instructions}
                         handleChange={handleChange}
+                        isBorder={isBorder}
                     />
                 ) : inUseForm === 'Framing' ? (
                     <Title mt="4rem">Framing Form</Title>
@@ -177,13 +180,9 @@ const Form = () => {
                     qty,
                     wide,
                     tall) !== '' ? (
-                        <SButton type="submit" value='Place Order'/>
+                        <SButton type="submit" value="Place Order" />
                     ) : (
-                        <SButton
-                            type="submit"
-                            value="Complete Form"
-                            disabled
-                        />
+                        <SButton type="submit" value="Complete Form" disabled />
                     )}
                 </Column>
             </SForm>
