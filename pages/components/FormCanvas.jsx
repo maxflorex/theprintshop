@@ -7,6 +7,7 @@ import { FiChevronDown, FiDownloadCloud } from 'react-icons/fi';
 import { dataStretchers } from '../api/dataStretchers';
 import { dataFloaters } from '../api/dataFloaters';
 import { storage } from '../firebase';
+import { ref, uploadBytesResumable } from 'firebase/storage';
 
 const FormCanvas = ({
     setIsBorder,
@@ -40,6 +41,23 @@ const FormCanvas = ({
     }, [selectedImage]);
 
     let txt = selectedImage === null ? 'Upload your image' : 'Image Uploaded!';
+
+    // FIREBASE STORAGE
+
+    const upload = (e) => {
+        let file = e.target.files[0];
+        // CREATE REF
+        let fileRef = ref(storage, file.name)
+        // UPLOAD TASK
+        const uploadTask = uploadBytesResumable(fileRef, file)
+        // TRACK PROGRESS
+        uploadTask.on('state_changed', (snapshot) => {
+            const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+            console.log('Upload is' + progress + '% done')
+        })
+        // PREV FN
+        setSelectedImage(file)
+    }
 
  
     return (
@@ -263,9 +281,7 @@ const FormCanvas = ({
                                 name="files"
                                 accept="image/png, image/jpeg"
                                 style={{ display: 'none' }}
-                                onChange={(e) =>
-                                    setSelectedImage(e.target.files[0])
-                                }
+                                onChange={upload}
                             />
                         </div>
                     </Flex>

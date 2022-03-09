@@ -69,4 +69,7 @@ onSnapshot(q, (snapshot) => {
 // FIREBASE CLOUD STORAGE
 export const storage = getStorage(app)
 
+
+
+
 export default { colRefOrder }

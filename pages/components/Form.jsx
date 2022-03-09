@@ -127,7 +127,6 @@ const Form = () => {
                     {data.map((data, index) => (
                         <Flex
                             m="0"
-                            p="2rem"
                             colorH="var(--off3)"
                             color="var(--off2)"
                             key={index}
