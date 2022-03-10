@@ -21,18 +21,16 @@ const FormCanvas = ({
     handleChange,
 }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
-
     const [isOpenSb, setIsOpenSb] = useState(false);
-    const toggleSb = () => setIsOpenSb(!isOpenSb);
-
     const [isOpenF, setIsOpenF] = useState(false);
-    const toggleF = () => setIsOpenF(!isOpenF);
+    const [isOpenC, setIsOpenC] = useState(false);
 
+    // UPLOAD FILES
     const uploadFiles = () => {
         document.getElementById('files').click();
     };
 
+    // PREVIEW IMAGE UPLOADED
     const [selectedImage, setSelectedImage] = useState(null);
     const [imageUrl, setImageUrl] = useState(null);
     useEffect(() => {
@@ -44,7 +42,6 @@ const FormCanvas = ({
     let txt = selectedImage === null ? 'Upload your image' : 'Image Uploaded!';
 
     // FIREBASE STORAGE
-
     const upload = (e) => {
         let file = e.target.files[0];
         // CREATE REF
@@ -67,19 +64,27 @@ const FormCanvas = ({
             {/* ----------------------------------------------- */}
             {/* TAB - BORDERS */}
             <Flex
-                m="0"
-                p="0 "
-                mb="2rem"
                 color="none"
+                m="0"
+                p="0"
                 bb="solid var(--off3) 1px"
                 radius="0"
-                justify="start"
-                gap="0"
+                colorH="var(--off2)"
+                cursor="pointer"
+                onClick={() => setIsOpen(!isOpen)}
             >
-                <Title m="2rem" cursor="pointer" onClick={toggle}>
-                    Select Borders
-                </Title>
-                <FiChevronDown />
+                <Flex
+                    m="0"
+                    p="0 "
+                    mb="2rem"
+                    color="none"
+                    justify="start"
+                    gap="0"
+                >
+                    <Title m="2rem">Select Borders</Title>
+                    <FiChevronDown />
+                </Flex>
+                <Title font='Roboto' size='1rem'mr='2rem' w='400'>Default: Mirrored</Title>
             </Flex>
 
             {/* TAB - BORDERS - CONTENT */}
@@ -113,21 +118,28 @@ const FormCanvas = ({
 
             {/* ----------------------------------------------- */}
             {/* TAB - STRETCHER BARS */}
-
             <Flex
-                m="0"
-                p="0 "
-                mb="2rem"
                 color="none"
+                m="0"
+                p="0"
                 bb="solid var(--off3) 1px"
                 radius="0"
-                justify="start"
-                gap="0"
+                colorH="var(--off2)"
+                cursor="pointer"
+                onClick={() => setIsOpenSb(!isOpenSb)}
             >
-                <Title m="2rem" cursor="pointer" onClick={toggleSb}>
-                    Select Stretchers
-                </Title>
-                <FiChevronDown />
+                <Flex
+                    m="0"
+                    p="0 "
+                    mb="2rem"
+                    color="none"
+                    justify="start"
+                    gap="0"
+                >
+                    <Title m="2rem">Select Stretchers</Title>
+                    <FiChevronDown />
+                </Flex>
+                <Title font='Roboto' size='1rem'mr='2rem' w='400'>Default: 1.5"</Title>
             </Flex>
 
             {/* TAB - STRETCHER BARS -CONTENT */}
@@ -167,19 +179,27 @@ const FormCanvas = ({
             {/* TAB - FLOATERS */}
 
             <Flex
-                m="0"
-                p="0 "
-                mb="2rem"
                 color="none"
+                m="0"
+                p="0"
                 bb="solid var(--off3) 1px"
                 radius="0"
-                justify="start"
-                gap="0"
+                colorH="var(--off2)"
+                cursor="pointer"
+                onClick={() => setIsOpenF(!isOpenF)}
             >
-                <Title m="2rem" cursor="pointer" onClick={toggleF}>
-                    Select Floaters
-                </Title>
-                <FiChevronDown />
+                <Flex
+                    m="0"
+                    p="0 "
+                    mb="2rem"
+                    color="none"
+                    justify="start"
+                    gap="0"
+                >
+                    <Title m="2rem">Select Floaters</Title>
+                    <FiChevronDown />
+                </Flex>
+                <Title font='Roboto' size='1rem'mr='2rem' w='400'>Default: No Floaters</Title>
             </Flex>
 
             {/* TAB - FLOATERSS -CONTENT */}
@@ -208,11 +228,47 @@ const FormCanvas = ({
 
             {/* ----------------------------------------------- */}
             {/* QTY / INSTRUCTIONS / FILE */}
-           <Instructions qty={qty} handleChange={handleChange} wide={wide} tall={tall} txt={txt} uploadFiles={uploadFiles} upload={upload} imageUrl={imageUrl} selectedImage={selectedImage} instructions={instructions}  />
+
+            <Flex
+                color="none"
+                m="0"
+                p="0"
+                bb="solid var(--off3) 1px"
+                radius="0"
+                colorH="var(--off2)"
+                cursor="pointer"
+                onClick={() => setIsOpenC(!isOpenC)}
+            >
+                <Flex
+                    m="0"
+                    p="0 "
+                    mb="2rem"
+                    color="none"
+                    justify="start"
+                    gap="0"
+                >
+                    <Title m="2rem">Select Size & Quantity</Title>
+                    <FiChevronDown />
+                </Flex>
+                <Title font='Roboto' size='1rem'mr='2rem' w='400'>Complete to Order</Title>
+            </Flex>
+
+            {isOpenC && (
+                <Instructions
+                    qty={qty}
+                    handleChange={handleChange}
+                    wide={wide}
+                    tall={tall}
+                    txt={txt}
+                    uploadFiles={uploadFiles}
+                    upload={upload}
+                    imageUrl={imageUrl}
+                    selectedImage={selectedImage}
+                    instructions={instructions}
+                />
+            )}
         </>
     );
 };
 
 export default FormCanvas;
-
-    

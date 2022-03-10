@@ -1,6 +1,6 @@
-import { Column, Flex } from "./Styled/divs/Styled";
-import { Title } from "./Styled/fonts/Styled";
-import { SInput, STextArea } from "./Styled/forms/Styled";
+import { Column, Flex } from './Styled/divs/Styled';
+import { Title } from './Styled/fonts/Styled';
+import { SInput, STextArea } from './Styled/forms/Styled';
 import { FiDownloadCloud } from 'react-icons/fi';
 
 const Instructions = ({
@@ -17,14 +17,7 @@ const Instructions = ({
 }) => {
     return (
         <div>
-            <Flex
-                color="var(--off2)"
-                p="2rem"
-                mt="6rem"
-                mb="0"
-                gap="4rem"
-                mMd="0"
-            >
+            <Flex color="var(--off2)" p="2rem" m="2rem" gap="4rem" mMd="0">
                 <Flex color="none" m="0" p="0" align="flex-start" gapMd="1rem">
                     <div>
                         <label htmlFor="qty">

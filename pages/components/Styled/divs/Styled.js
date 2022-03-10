@@ -40,6 +40,7 @@ const Column = styled.div`
    text-align: ${props => props.align || 'left'};
    align-content: ${props => props.ac || 'center'};
    align-items: ${props => props.align || 'start'};
+   justify-items: ${props => props.items};
    padding-top: ${props => props.pt || '4rem'};
    padding-bottom: ${props => props.pb || '4rem'};
    gap: ${props => props.gap || '0.6rem'};
@@ -70,7 +71,10 @@ const Column = styled.div`
       width: ${props => props.widthSm};
       position: ${props => props.positionSm};
       background-color: ${props => props.color || 'inherit'};
-      
+   }
+   &:hover{
+      background-color: ${props => props.colorH};
+      cursor: ${props => props.cursor}
    }
 `
 
@@ -234,7 +238,7 @@ const Flex = styled.div`
    cursor: ${props => props.cursor};
    object-fit: ${props => props.object};
    width: ${props => props.width};
-   border-bottom: ${props =>props.borderb};
+   border-bottom: ${props => props.borderb};
    margin-left: ${props => props.ml || '2rem'};
    margin-right: ${props => props.mr || '2rem'};
    margin-top: ${props => props.mt};

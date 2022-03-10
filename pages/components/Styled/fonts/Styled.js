@@ -12,6 +12,8 @@ const Title = styled.h1`
     line-height: ${props => props.lh};
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};
+    margin-left: ${props => props.ml};
+    margin-right: ${props => props.mr};
     margin: ${props => props.m};
     cursor: ${props => props.cursor};
     @media (max-width: 768px) {
