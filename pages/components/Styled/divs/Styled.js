@@ -60,6 +60,7 @@ const Column = styled.div`
    overflow: hidden;
    position: ${props => props.position};
    opacity: ${props => props.opacity};
+   object-fit: ${props => props.object};
    @media (max-width: 1280px) {
       width: ${props => props.widthMd};
       background-color: ${props => props.colorMd};

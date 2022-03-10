@@ -51,7 +51,7 @@ const Form = () => {
             name: name,
             email: email,
             medium: medium,
-            boders: borders,
+            borders: borders,
             stretchers: stretchers,
             floaters: floaters,
             qty: qty,
@@ -99,7 +99,7 @@ const Form = () => {
 
     return (
         <>
-            <Title size='4rem' m='4rem'>Place an Order</Title>
+            <Title size='4rem' m='2rem'>Place an Order</Title>
             <SForm onSubmit={handleSubmit}>
                 {/* ----------------------------------------------- */}
 

@@ -17,7 +17,8 @@ import {
     orderBy,
     onSnapshot,
     addDoc,
-    serverTimestamp
+    serverTimestamp,
+    getDocs
 } from 'firebase/firestore'
 
 import { getStorage } from 'firebase/storage'
@@ -71,9 +72,12 @@ onSnapshot(q, (snapshot) => {
 export const storage = getStorage(app)
 
 // AUTHENTIFICATION
-
 export const auth = getAuth(app)
 
+// GET ELEMENTS FROM DATABASE  
+export const getOrders = () => {
+    getDocs(colRefOrder)
+}
 
 
 

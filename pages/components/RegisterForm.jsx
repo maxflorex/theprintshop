@@ -10,7 +10,14 @@ export function RegisterForm({
     register,
     setOpenRegForm,
     openRegForm,
-}) {
+}) 
+
+{
+
+    const handleClick = () => {
+        register()
+        setOpenRegForm(!openRegForm)
+    }
     
     return (
         <div>
@@ -42,7 +49,7 @@ export function RegisterForm({
                         gap="2rem"
                         gapMd="2rem"
                     >
-                        <BtnBlack onClick={register}>
+                        <BtnBlack onClick={handleClick}>
                             Sign Up
                         </BtnBlack>
                         <BtnBlack onClick={() => setOpenRegForm(!openRegForm)}>
