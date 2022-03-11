@@ -21,6 +21,7 @@ import {
 } from 'firebase/firestore';
 import OrderPreview from './OrderPreview';
 import { FiFileText } from 'react-icons/fi';
+import Form from './Form';
 
 const link =
     'https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80';
@@ -76,11 +77,6 @@ function App({ setIsAuth }) {
         setLoginEmail('');
         setLoginPassword('');
     };
-
-    // USEEFFECT
-    useEffect(() => {
-        return setIsAuth(user);
-    });
 
     // GET DATA TO DISPLAY ORDER
     useEffect(() => {
@@ -220,13 +216,13 @@ function App({ setIsAuth }) {
                 </Column>
             )}
 
-            
+            {/* FORM */}
 
+            {user !== null && <Form user={user} />}
         </Column>
     );
 }
 
 export default App;
-
 
 // USER CONTEXT

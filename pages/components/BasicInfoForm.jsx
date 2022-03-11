@@ -1,13 +1,16 @@
 import React from 'react';
 import { Grid } from './Styled/divs/Styled';
+import { Title } from './Styled/fonts/Styled';
 import { SInput } from './Styled/forms/Styled';
 
-export function BasicInfoForm({ name, handleChange, email }) {
+export function BasicInfoForm({ name, handleChange, user }) {
+    console.log(user);
+
     return (
         <Grid gap="2rem">
             <SInput
                 type="text"
-                placeholder="Name"
+                placeholder="Enter a name..."
                 name="name"
                 value={name}
                 onChange={handleChange}
@@ -17,9 +20,9 @@ export function BasicInfoForm({ name, handleChange, email }) {
                 type="email"
                 placeholder="Email"
                 name="email"
-                value={email}
-                onChange={handleChange}
-                required
+                value={user.email}
+                bg="var(--off2)"
+                disabled
             />
         </Grid>
     );

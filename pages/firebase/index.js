@@ -37,6 +37,7 @@ export const db = getFirestore()
 
 // COLLECTIONS REF
 export const colRefOrder = collection(db, 'orders')
+export const colRefPaper = collection(db, 'ordersPaper')
 
 
 // QUERIES
@@ -49,24 +50,7 @@ onSnapshot(q, (snapshot) => {
     snapshot.docs.forEach((doc) => {
         orders.push({ ...doc.data(), id: doc.id })
     })
-    // console.log(orders)
 })
-
-
-// ADDING DOCUMENTS  < --- USE THE HANDLECHANGE METHOD IN REACT AND THIS ONE FOR HTML
-// const form = document.getElementById('form')
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault()
-
-//     addDoc(colRefOrder, {
-//         name: form.name.value,
-//         email: form.email.value,
-//         createdAt: serverTimestamp()
-//     })
-//         .then(() => {
-//             form.reset()
-//         })
-// })
 
 // FIREBASE CLOUD STORAGE
 export const storage = getStorage(app)
@@ -79,6 +63,6 @@ export const getOrders = () => {
     getDocs(colRefOrder)
 }
 
-
-
-export default { colRefOrder }
+export const getOrdersPaper = () => {
+    getDocs(colRefPaper)
+}

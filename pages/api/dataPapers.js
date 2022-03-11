@@ -8,7 +8,7 @@ export const dataPapers = [
     {
         id: 1,
         img: link1,
-        title: 'Satin Paper.',
+        title: 'Satin Paper',
         sub: '- Photo Luster',
         desc: 'Anything but commonplace. A photo paper but something more. A silky finish playfully teasing the light. A delicate texture alive and mercurial. A quicksand image dragging you ever deeper into imagination. For images that will be seen, shared, and cherished Vibrance Luster is a celebration and the icing on the cake.',
         size: '64X480 inches',
@@ -19,7 +19,7 @@ export const dataPapers = [
     {
         id: 2,
         img: link2,
-        title: 'Matte Paper.',
+        title: 'Matte Paper',
         sub: '- Texturized / Watercolor',
         desc: 'The eye lingers and scans, decoding the traveled depths of an image that seems to float just above the surface of comprehension.  A change of perspective.  Shadow and light. With unparalleled dimensionality and generous saturations 600MT offers all the luxury of Breathing Color’s archival papers at a décor price.  Our most robustly textured watercolor paper for a sumptuous display that resists scuffing and flaking like no other.',
         size: '44X480 (Inches)',
@@ -30,7 +30,7 @@ export const dataPapers = [
     {
         id: 3,
         img: link3,
-        title: 'High Gloss.',
+        title: 'High Gloss',
         sub: '- Metallic Paper',
         desc: 'Anything but commonplace. A photo paper but something more. A silky finish playfully teasing the light. A delicate texture alive and mercurial. A quicksand image dragging you ever deeper into imagination. For images that will be seen, shared, and cherished Vibrance Luster is a celebration and the icing on the cake.',
         size: '44X480 inches',

@@ -21,6 +21,7 @@ const SInput = styled.input`
     line-height: ${props => props.lh};
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};
+    background-color: ${props => props.bg};
     &:focus{
         outline: none;
         background-color: ${props => props.colorF};

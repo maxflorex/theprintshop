@@ -14,7 +14,16 @@ const Instructions = ({
     imageUrl,
     selectedImage,
     instructions,
+    handleChange2,
 }) => {
+
+
+    const handles = () => {
+        handleChange();
+        handleChange2();
+    }
+
+
     return (
         <div>
             <Flex color="var(--off2)" p="2rem" m="2rem" gap="4rem" mMd="0">
@@ -138,7 +147,7 @@ const Instructions = ({
                         cols="1000"
                         name="instructions"
                         value={instructions}
-                        onChange={handleChange}
+                        onChange={handles}
                         placeholder="Send a message"
                     />
                 </Flex>

@@ -3,12 +3,16 @@ import React, { useEffect, useState } from 'react';
 import { Column, Flex, Grid, Items } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';
 import { data } from '../api/dataServices';
-import FormCanvas from './FormCanvas';
+import FormCanvas from './Forms/FormCanvas';
 import { SForm, SInput, SButton } from './Styled/forms/Styled';
 import { colRefOrder } from '../firebase';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
+import FormFraming from './Forms/FormFraming';
+import FromPaper from './Forms/FromPaper';
+import FormAluminum from './Forms/FormAluminum';
+import { Button } from './Styled/buttons/Styled';
 
-const Form = () => {
+const Form = ({ user }) => {
     const [inUseForm, setInUseForm] = useState(null);
     const [isBorder, setIsBorder] = useState(null);
     const [isStretchers, setStretchers] = useState(null);
@@ -93,9 +97,9 @@ const Form = () => {
         borders = isBorder;
         stretchers = isStretchers;
         floaters = isFloaters;
+        email = user.email;
         console.log(qty, medium, borders, stretchers, floaters);
     });
-
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -107,9 +111,15 @@ const Form = () => {
             <SForm onSubmit={handleSubmit}>
                 {/* ----------------------------------------------- */}
 
-               <BasicInfoForm   name={name} handleChange={handleChange} email={email}  />
+                <BasicInfoForm
+                    name={name}
+                    handleChange={handleChange}
+                    email={email}
+                    user={user}
+                />
 
                 {/* ----------------------------------------------- */}
+                {/* TABS MEDIUM */}
 
                 <Items m="0">
                     {data.map((data, index) => (
@@ -132,7 +142,7 @@ const Form = () => {
                 </Items>
 
                 {/* ----------------------------------------------- */}
-
+                {/* TABS MEDIUM CONTENT */}
                 {inUseForm === 'Canvas' ? (
                     <FormCanvas
                         setIsBorder={setIsBorder}
@@ -146,19 +156,19 @@ const Form = () => {
                         isBorder={isBorder}
                     />
                 ) : inUseForm === 'Framing' ? (
-                    <Title mt="4rem">Framing Form</Title>
+                    <FormFraming />
                 ) : inUseForm === 'Paper' ? (
-                    <Title mt="4rem">Paper Form</Title>
+                    <FromPaper user={user} />
                 ) : inUseForm === 'Aluminum' ? (
-                    <Title mt="4rem">Aluminum Form</Title>
+                    <FormAluminum />
                 ) : (
                     ''
                 )}
 
                 {/* ----------------------------------------------- */}
-
+                {/* SUBMIT FORM */}
                 <Column m="0">
-                    {(email,
+                    {/* {(email,
                     name,
                     medium,
                     borders,
@@ -166,11 +176,11 @@ const Form = () => {
                     floaters,
                     qty,
                     wide,
-                    tall) !== '' ? (
-                        <SButton type="submit" value="Place Order" />
-                    ) : (
+                    tall) !== '' ? ( */}
+                    <Button onClick={handleChange} value="Place Order" />
+                    {/* ) : (
                         <SButton type="submit" value="Complete Form" disabled />
-                    )}
+                    )} */}
                 </Column>
             </SForm>
         </>
@@ -178,4 +188,3 @@ const Form = () => {
 };
 
 export default Form;
-

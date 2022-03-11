@@ -1,20 +1,18 @@
 import { createContext, useContext } from "react";
 
-const tryContext = createContext()
+const TryContext = createContext()
 
-export const tryContexWrapper = ({children}) => {
-    let tryValue = {
-        value: 42
-    }
+export const TryContexWrapper = ({children}) => {
+    let tryValue = 42
 
     return (
-        <tryContext.Provider value={tryValue}>
+        <TryContext.Provider value={tryValue}>
             {children}
-        </tryContext.Provider>
+        </TryContext.Provider>
     )
 }
 
-export const useTryContext = () => {
-    return useContext(tryContext)
+export const UseTryContext = () => {
+    return useContext(TryContext)
 }
 
