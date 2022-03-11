@@ -1,5 +1,6 @@
+import { BasicInfoForm } from './BasicInfoForm';
 import React, { useEffect, useState } from 'react';
-import { Column, Flex, Grid, Items, Items4 } from './Styled/divs/Styled';
+import { Column, Flex, Grid, Items } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';
 import { data } from '../api/dataServices';
 import FormCanvas from './FormCanvas';
@@ -100,32 +101,17 @@ const Form = () => {
 
     return (
         <>
-            <Title size='4rem' m='2rem'>Place an Order</Title>
+            <Title size="4rem" m="2rem">
+                Place an Order
+            </Title>
             <SForm onSubmit={handleSubmit}>
                 {/* ----------------------------------------------- */}
 
-                <Grid gap="2rem">
-                    <SInput
-                        type="text"
-                        placeholder="Name"
-                        name="name"
-                        value={name}
-                        onChange={handleChange}
-                        required
-                    />
-                    <SInput
-                        type="email"
-                        placeholder="Email"
-                        name="email"
-                        value={email}
-                        onChange={handleChange}
-                        required
-                    />
-                </Grid>
+               <BasicInfoForm   name={name} handleChange={handleChange} email={email}  />
 
                 {/* ----------------------------------------------- */}
 
-                <Items m='0' >
+                <Items m="0">
                     {data.map((data, index) => (
                         <Flex
                             m="0"
@@ -192,3 +178,4 @@ const Form = () => {
 };
 
 export default Form;
+

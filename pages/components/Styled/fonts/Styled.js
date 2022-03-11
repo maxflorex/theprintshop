@@ -52,6 +52,20 @@ const P = styled.p`
     }
     `
 
+const Para = styled.p`
+    font-family: ${props => props.font || 'Oswald'};
+    font-weight: ${props => props.w || 300};
+    font-size:  ${props => props.size || '1.2rem'};
+    line-height: 2rem;
+    color: ${props => props.color || 'white'};
+    margin-top: ${props => props.mt};
+    line-height: ${props => props.lh};
+    text-align: ${props => props.alignW || 'justify'};
+    @media (max-width: 768px) {
+        text-align: ${props => props.align || 'justify'};
+    }
+    `
+
 const Menu = styled.ul`
     font-family: ${props => props.font || 'Oswald'};
     display: flex;
@@ -72,4 +86,4 @@ const Menu = styled.ul`
 `
 
 
-export { Title, P, Menu, Title2 }
+export { Title, P, Menu, Title2, Para }

@@ -1,12 +1,9 @@
 import Head from 'next/head'
 import Cards from './components/Cards'
 import HeroSection from './components/Hero'
-import Navbar from './components/Navbar'
 import Section from './components/Section'
-import Footer from './components/Footer'
 import About from './components/About'
 import Order from './components/Order'
-import Layout from './components/Layout'
 
 export default function Home() {
   return (

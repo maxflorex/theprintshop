@@ -161,30 +161,6 @@ const Items6 = styled.div`
    };
 `
 
-const Items4 = styled.div`
-   display: grid;
-   grid-template-columns: repeat(4, minmax(0, 1fr));
-   min-height: ${props => props.h};
-   background-color: ${props => props.color};
-   gap: ${props => props.gap || '2rem'};
-   margin-left: ${props => props.ml};
-   margin-right: ${props => props.mr};
-   margin-top: ${props => props.mt};
-   margin-bottom: ${props => props.mb};
-   padding-top: ${props => props.pt};
-   padding-bottom: ${props => props.pb};
-   border-radius: ${props => props.radius || '0.6rem'};
-   padding: ${props => props.p};
-   margin: ${props => props.m};
-   align-items: start;
-   font-family: ${props => props.font || 'Oswald'};
-   font-weight: ${props => props.weight || 100};
-   font-size: ${props => props.size || '1.4rem'};
-   @media (max-width: 1024px) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-   };
-`
-
 const Items3 = styled.div`
    display: grid;
    grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -337,4 +313,4 @@ const BackdropDark = styled.div`
    border-radius: ${props => props.radius || '0.6rem'};
 `
 
-export { Flex, Grid, Hero, Backdrop, Items, Column, Row, BackdropDark, Items6, Items3, Items4 }
+export { Flex, Grid, Hero, Backdrop, Items, Column, Row, BackdropDark, Items6, Items3 }

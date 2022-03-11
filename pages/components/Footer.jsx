@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Flex, Column, Items } from './Styled/divs/Styled';
-import { P, Title } from './Styled/fonts/Styled';
+import { P, Title, Para } from './Styled/fonts/Styled';
 
 function Footer() {
     return (
@@ -17,16 +17,16 @@ function Footer() {
                             >
                                 Contact
                             </Title>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 <Link href="mailto:prints@artcaymanco.com">
                                     prints@artcaymanco.com
                                 </Link>
-                            </P>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            </Para>
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 <Link href="tel:+3459232222">
                                     +1(345) 923-2222
                                 </Link>
-                            </P>
+                            </Para>
                         </Column>
                         <Column>
                             <Title
@@ -37,18 +37,18 @@ function Footer() {
                             >
                                 Printing
                             </Title>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 Giclee
-                            </P>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            </Para>
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 Framing
-                            </P>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            </Para>
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 Photo Restoration
-                            </P>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            </Para>
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 Test Prints
-                            </P>
+                            </Para>
                         </Column>
                         <Column>
                             <Title
@@ -59,12 +59,12 @@ function Footer() {
                             >
                                 Artists
                             </Title>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 Discounts
-                            </P>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            </Para>
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 Prices
-                            </P>
+                            </Para>
                         </Column>
                         <Column>
                             <Title
@@ -75,21 +75,21 @@ function Footer() {
                             >
                                 The Printshop
                             </Title>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 Our Team
-                            </P>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            </Para>
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 Contact
-                            </P>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            </Para>
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 News
-                            </P>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            </Para>
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 Print Studio
-                            </P>
-                            <P ls="0.05rem" color="white" font="Roboto">
+                            </Para>
+                            <Para ls="0.05rem" color="white" font="Roboto">
                                 Privacy Policy
-                            </P>
+                            </Para>
                         </Column>
                     </Items>
                 </section>
@@ -97,14 +97,14 @@ function Footer() {
             <div>
                 <Flex m="0" radius="0" color="var(--off1)" pt="1rem" pb="1rem">
                     <div>
-                        <P color="black" font="Roboto" ls="0.05rem">
+                        <Para color="black" font="Roboto" ls="0.05rem">
                             The Printshop™
-                        </P>
+                        </Para>
                     </div>
                     <div>
-                        <P color="black" font="Roboto" ls="0.05rem">
+                        <Para color="black" font="Roboto" ls="0.05rem">
                             Art Cayman Co. - 2022
-                        </P>
+                        </Para>
                     </div>
                 </Flex>
             </div>
