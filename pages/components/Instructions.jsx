@@ -14,14 +14,7 @@ const Instructions = ({
     imageUrl,
     selectedImage,
     instructions,
-    handleChange2,
 }) => {
-
-
-    const handles = () => {
-        handleChange();
-        handleChange2();
-    }
 
 
     return (
@@ -147,7 +140,7 @@ const Instructions = ({
                         cols="1000"
                         name="instructions"
                         value={instructions}
-                        onChange={handles}
+                        onChange={handleChange}
                         placeholder="Send a message"
                     />
                 </Flex>

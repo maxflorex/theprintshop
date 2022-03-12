@@ -5,7 +5,7 @@ import {
     onAuthStateChanged,
     signOut,
 } from 'firebase/auth';
-import { auth, colRefOrder } from '../firebase/index';
+import { auth, colRefOrder, colRefPaper } from '../firebase/config';
 import { Column, Flex } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';
 import { SButton, SForm, SInput } from './Styled/forms/Styled';
@@ -19,7 +19,8 @@ import {
     query,
     where,
 } from 'firebase/firestore';
-import OrderPreview from './OrderPreview';
+import OrderPreview from './OrderPreviews/OrderPreview';
+import OrderPreviewP from './OrderPreviews/OrderPreviewP';
 import { FiFileText } from 'react-icons/fi';
 import Form from './Form';
 
@@ -34,6 +35,7 @@ function App({ setIsAuth }) {
     const [user, setUser] = useState({});
     const [openRegForm, setOpenRegForm] = useState(false);
     const [myOrders, setMyOrders] = useState([]);
+    const [myOrdersP, setMyOrdersP] = useState([]);
     const [showOrders, setShowOrders] = useState(true);
 
     // PREVENTS USER TO AUTOMATICALLY LOGOUT
@@ -83,6 +85,18 @@ function App({ setIsAuth }) {
         const getOrders = async () => {
             const data = await getDocs(colRefOrder);
             setMyOrders(
+                data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+            );
+        };
+        getOrders();
+    }, []);
+
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    useEffect(() => {
+        const getOrders = async () => {
+            const data = await getDocs(colRefPaper);
+            setMyOrdersP(
                 data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
             );
         };
@@ -203,6 +217,27 @@ function App({ setIsAuth }) {
                                         borders={order.borders}
                                         stretchers={order.stretchers}
                                         floaters={order.floaters}
+                                        qty={order.qty}
+                                        w={order.wide}
+                                        h={order.tall}
+                                        message={order.instructions}
+                                        date={order.createdAt}
+                                    />
+                                )}
+                            </div>
+                        );
+                    })}
+                    {myOrdersP.map((order) => {
+                        return (
+                            <div key={order.id}>
+                                {user?.email === order.email && (
+                                    <OrderPreviewP
+                                        name={order.name}
+                                        email={order.email}
+                                        type={order.type}
+                                        laminate={order.laminate}
+                                        mounts={order.mounts}
+                                        framing={order.framing}
                                         qty={order.qty}
                                         w={order.wide}
                                         h={order.tall}

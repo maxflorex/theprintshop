@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { dataBorders } from '../../api/dataBorders';
-import { Column, Flex, Items, Items3, Items6, Row } from '../Styled/divs/Styled';
-import { Title } from '../Styled/fonts/Styled';
+import { dataBorders } from '../../../api/dataBorders';
+import { Column, Flex, Items, Items3, Items6, Row } from '../../Styled/divs/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 import { FiChevronDown, FiDownloadCloud } from 'react-icons/fi';
-import { dataStretchers } from '../../api/dataStretchers';
-import { dataFloaters } from '../../api/dataFloaters';
-import { storage } from '../../firebase/config';
+import { dataStretchers } from '../../../api/dataStretchers';
+import { dataFloaters } from '../../../api/dataFloaters';
+import { storage } from '../../../firebase/index';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import Image from 'next/image';
-import Instructions from '../Instructions';
+import Instructions from '../../Instructions';
 
 const FormCanvas = ({
     setIsBorder,

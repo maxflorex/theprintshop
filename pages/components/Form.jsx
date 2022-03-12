@@ -5,11 +5,11 @@ import { Title } from './Styled/fonts/Styled';
 import { data } from '../api/dataServices';
 import FormCanvas from './Forms/FormCanvas';
 import { SForm, SInput, SButton } from './Styled/forms/Styled';
-import { colRefOrder } from '../firebase';
+import { colRefOrder } from '../firebase/config';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
-import FormFraming from './Forms/FormFraming';
-import FromPaper from './Forms/FromPaper';
-import FormAluminum from './Forms/FormAluminum';
+import FormFraming from './Forms/Framing/FormFraming';
+import FormPaper from './Forms/Paper/FormPaper';
+import FormAluminum from './Forms/Aluminum/FormAluminum';
 import { Button } from './Styled/buttons/Styled';
 
 const Form = ({ user }) => {
@@ -106,7 +106,7 @@ const Form = ({ user }) => {
     return (
         <>
             <Title size="4rem" m="2rem">
-                Place an Order
+                Place an Order POLOLO
             </Title>
             <SForm onSubmit={handleSubmit}>
                 {/* ----------------------------------------------- */}
@@ -158,7 +158,7 @@ const Form = ({ user }) => {
                 ) : inUseForm === 'Framing' ? (
                     <FormFraming />
                 ) : inUseForm === 'Paper' ? (
-                    <FromPaper user={user} />
+                    <FormPaper user={user} />
                 ) : inUseForm === 'Aluminum' ? (
                     <FormAluminum />
                 ) : (
@@ -168,19 +168,9 @@ const Form = ({ user }) => {
                 {/* ----------------------------------------------- */}
                 {/* SUBMIT FORM */}
                 <Column m="0">
-                    {/* {(email,
-                    name,
-                    medium,
-                    borders,
-                    stretchers,
-                    floaters,
-                    qty,
-                    wide,
-                    tall) !== '' ? ( */}
-                    <Button onClick={handleChange} value="Place Order" />
-                    {/* ) : (
-                        <SButton type="submit" value="Complete Form" disabled />
-                    )} */}
+                    {inUseForm === 'Canvas' && (
+                        <SButton onClick={handleSubmit} value="Place Order" />
+                    )}
                 </Column>
             </SForm>
         </>
