@@ -38,6 +38,8 @@ export const db = getFirestore()
 // COLLECTIONS REF
 export const colRefOrder = collection(db, 'orders')
 export const colRefPaper = collection(db, 'ordersPaper')
+export const colRefFraming = collection(db, 'ordersFraming')
+export const colRefAluminum = collection(db, 'ordersAluminum')
 
 
 // QUERIES
@@ -65,4 +67,12 @@ export const getOrders = () => {
 
 export const getOrdersPaper = () => {
     getDocs(colRefPaper)
+}
+
+export const getOrdersFraming = () => {
+    getDocs(colRefFraming)
+}
+
+export const getOrdersAluminum = () => {
+    getDocs(colRefAluminum)
 }

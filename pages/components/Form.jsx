@@ -156,11 +156,11 @@ const Form = ({ user }) => {
                         isBorder={isBorder}
                     />
                 ) : inUseForm === 'Framing' ? (
-                    <FormFraming />
+                    <FormFraming  user={user} />
                 ) : inUseForm === 'Paper' ? (
                     <FormPaper user={user} />
                 ) : inUseForm === 'Aluminum' ? (
-                    <FormAluminum />
+                    <FormAluminum user={user}/>
                 ) : (
                     ''
                 )}

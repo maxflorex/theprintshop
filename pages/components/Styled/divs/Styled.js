@@ -1,4 +1,3 @@
-import { PromiseProvider } from "mongoose";
 import styled from "styled-components";
 
 
@@ -25,6 +24,7 @@ const Row = styled.div`
    height: 100%;
    padding: ${props => props.p};
    margin: ${props => props.m};
+   width: ${props => props.width};
    @media (max-width: 1280px) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
@@ -166,7 +166,7 @@ const Items3 = styled.div`
    grid-template-columns: repeat(3, minmax(0, 1fr));
    min-height: ${props => props.h};
    background-color: ${props => props.color};
-   gap: 2rem;
+   gap: ${props => props.gap || '2rem'};
    margin-left: ${props => props.ml || '4rem'};
    margin-right: ${props => props.mr || '4rem'};
    margin-top: ${props => props.mt || '4rem'};
