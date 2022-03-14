@@ -1,13 +1,14 @@
 import React from 'react';
 import { Flex } from '../Styled/divs/Styled';
 
-const OrderPreview = ({
+const OrderPreviewF = ({
     name,
     email,
-    medium,
-    borders,
-    stretchers,
-    floaters,
+    color,
+    moulding,
+    glass,
+    mat,
+    matW,
     qty,
     h,
     w,
@@ -21,10 +22,11 @@ const OrderPreview = ({
                     <tr>
                         <th>Order Placed by</th>
                         <th>Email</th>
-                        <th>Medium</th>
-                        <th>Borders</th>
-                        <th>Stretchers</th>
-                        <th>Floaters</th>
+                        <th>Color</th>
+                        <th>Moulding</th>
+                        <th>Glass</th>
+                        <th>Mat</th>
+                        <th>Mat Width</th>
                         <th>Quantity</th>
                         <th>Height</th>
                         <th>Width</th>
@@ -36,10 +38,11 @@ const OrderPreview = ({
                     <tr>
                         <td data-label='Order Placed By'>{name}</td>
                         <td data-label='Email'>{email}</td>
-                        <td data-label='Medium'>{medium}</td>
-                        <td data-label='Borders'>{borders}</td>
-                        <td data-label='Stretchers'>{stretchers}</td>
-                        <td data-label='Floters'>{floaters}</td>
+                        <td data-label='Color'>{color}</td>
+                        <td data-label='Moulding'>{moulding}</td>
+                        <td data-label='Glass'>{glass}</td>
+                        <td data-label='Mat'>{mat}</td>
+                        <td data-label='Mat Width'>{matW}</td>
                         <td data-label='Quantity'>{qty}</td>
                         <td data-label='Height'>{h}</td>
                         <td data-label='Width'>{w}</td>
@@ -52,4 +55,4 @@ const OrderPreview = ({
     );
 };
 
-export default OrderPreview;
+export default OrderPreviewF;

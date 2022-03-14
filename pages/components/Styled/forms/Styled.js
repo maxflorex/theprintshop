@@ -6,7 +6,7 @@ const SForm = styled.form`
 `
 
 const SInput = styled.input`
-    border: solid var(--off1) 1px;
+    border: ${props => props.border || 'solid var(--off1) 1px'};
     width: ${props => props.w || '100%'};
     margin: ${props => props.m};
     padding: ${props => props.p || '2rem'};
@@ -91,6 +91,7 @@ const SButton = styled.input`
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};    
     background-color:${props => props.bgColor ||' var(--off2)'};
+    cursor: 'pointer';
     &:focus{
         outline: none;
         background-color: ${props => props.colorF};

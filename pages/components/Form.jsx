@@ -1,6 +1,6 @@
 import { BasicInfoForm } from './BasicInfoForm';
 import React, { useEffect, useState } from 'react';
-import { Column, Flex, Grid, Items } from './Styled/divs/Styled';
+import { Column, Flex, FlexItems, Grid, Items } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';
 import { data } from '../api/dataServices';
 import FormCanvas from './Forms/Canvas/FormCanvas';
@@ -16,6 +16,7 @@ const Form = ({ user }) => {
     const [isBorder, setIsBorder] = useState(null);
     const [isStretchers, setStretchers] = useState(null);
     const [isFloaters, setIsFloaters] = useState(null);
+    const [formName, setFormName] = useState(null);
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -66,6 +67,7 @@ const Form = ({ user }) => {
         }).then(() => {
             alert('Message sent!');
             setInUseForm(null);
+            setFormName('');
             setContactInfo({
                 name: '',
                 email: '',
@@ -92,6 +94,7 @@ const Form = ({ user }) => {
     // USE EFFECT
 
     useEffect(() => {
+        name = formName;
         medium = inUseForm;
         borders = isBorder;
         stretchers = isStretchers;
@@ -111,10 +114,11 @@ const Form = ({ user }) => {
                 {/* ----------------------------------------------- */}
 
                 <BasicInfoForm
-                    name={name}
                     handleChange={handleChange}
                     email={email}
                     user={user}
+                    setFormName={setFormName}
+                    formName={formName}
                 />
 
                 {/* ----------------------------------------------- */}
@@ -122,21 +126,18 @@ const Form = ({ user }) => {
 
                 <Items m="0">
                     {data.map((data, index) => (
-                        <Flex
-                            m="0"
+                        <FlexItems
                             key={index}
-                            cursor="pointer"
                             p="1rem"
-                            justify="center"
-                            colorF="var(--accent)"
-                            colora="var(--accent)"
-                            color="var(--off2)"
+                            color={`${
+                                inUseForm === data.title
+                                    ? 'var(--off2)'
+                                    : 'white'
+                            }`}
                             onClick={() => setInUseForm(data.title)}
                         >
-                            <Title font="Roboto" size="1rem" m="0">
-                                {data.title}
-                            </Title>
-                        </Flex>
+                            <Title m="0">{data.title}</Title>
+                        </FlexItems>
                     ))}
                 </Items>
 
@@ -145,33 +146,38 @@ const Form = ({ user }) => {
                 {inUseForm === 'Canvas' ? (
                     <FormCanvas
                         setIsBorder={setIsBorder}
+                        isBorder={isBorder}
                         setStretchers={setStretchers}
+                        isStretchers={isStretchers}
                         setIsFloaters={setIsFloaters}
+                        isFloaters={isFloaters}
                         qty={qty}
                         wide={wide}
                         tall={tall}
                         instructions={instructions}
                         handleChange={handleChange}
-                        isBorder={isBorder}
                         handleSubmit={handleSubmit}
                         setInUseForm={setInUseForm}
                     />
                 ) : inUseForm === 'Framing' ? (
                     <FormFraming
                         user={user}
-                        myName={name}
+                        setFormName={setFormName}
+                        formName={formName}
                         setInUseForm={setInUseForm}
                     />
                 ) : inUseForm === 'Paper' ? (
                     <FormPaper
                         user={user}
-                        myName={name}
+                        setFormName={setFormName}
+                        formName={formName}
                         setInUseForm={setInUseForm}
                     />
                 ) : inUseForm === 'Aluminum' ? (
                     <FormAluminum
                         user={user}
-                        myName={name}
+                        setFormName={setFormName}
+                        formName={formName}
                         setInUseForm={setInUseForm}
                     />
                 ) : (

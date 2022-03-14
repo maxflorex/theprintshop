@@ -16,10 +16,13 @@ import { storage } from '../../../firebase/config';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import Image from 'next/image';
 import Instructions from '../../Instructions';
-import { SButton } from '../../Styled/forms/Styled';
+import { Button, BtnBlack } from '../../Styled/buttons/Styled';
 
 const FormCanvas = ({
     setIsBorder,
+    isBorder,
+    isFloaters,
+    isStretchers,
     setStretchers,
     setIsFloaters,
     qty,
@@ -104,7 +107,13 @@ const FormCanvas = ({
                 <Items6 mt="2rem" ml="0" mr="0" p="0" color="transparent">
                     {dataBorders.map((data, index) => (
                         <FlexItems
-                             p="1rem"
+                            key={index}
+                            color={`${
+                                isBorder === data.title
+                                    ? 'var(--off2)'
+                                    : 'white'
+                            }`}
+                            p="1rem"
                             onClick={() => setIsBorder(data.title)}
                         >
                             <Title mb="2rem">{data.title}</Title>
@@ -156,6 +165,11 @@ const FormCanvas = ({
                     {dataStretchers.map((data, index) => (
                         <FlexItems
                             key={index}
+                            color={`${
+                                isStretchers === data.title
+                                    ? 'var(--off2)'
+                                    : 'white'
+                            }`}
                             onClick={() => setStretchers(data.title)}
                         >
                             <Title style={{ padding: '2rem' }}>
@@ -216,8 +230,12 @@ const FormCanvas = ({
                     {dataFloaters.map((data, index) => (
                         <FlexItems
                             key={index}
-                            p='2rem'
-                            color='none'
+                            p="2rem"
+                            color={`${
+                                isFloaters === data.title
+                                    ? 'var(--off2)'
+                                    : 'none'
+                            }`}
                             onClick={() => setIsFloaters(data.title)}
                         >
                             <Column m="auto" p="0" align="centre">
@@ -273,9 +291,10 @@ const FormCanvas = ({
             )}
 
             {/* SUBMIT FORM */}
-
             <Column m="0">
-                <SButton onClick={handleSubmit} value="Place Order" />
+                <BtnBlack onClick={handleSubmit} m="auto">
+                    Submit Order
+                </BtnBlack>
             </Column>
         </>
     );

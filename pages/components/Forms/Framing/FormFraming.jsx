@@ -9,8 +9,9 @@ import { ref, uploadBytesResumable } from 'firebase/storage';
 import { SButton, SForm } from '../../Styled/forms/Styled';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import { dataFraming } from '../../../api/dataFraming';
+import { BtnBlack } from '../../Styled/buttons/Styled';
 
-const FormFraming = ({ user, myName, setInUseForm }) => {
+const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
     const [isColor, setIsColor] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMFL, setIsOpenMFL] = useState(false);
@@ -105,6 +106,7 @@ const FormFraming = ({ user, myName, setInUseForm }) => {
         }).then(() => {
             alert('Message sent!');
             setInUseForm(null);
+            setFormName('');
             setContactInfo({
                 name: '',
                 email: '',
@@ -131,7 +133,7 @@ const FormFraming = ({ user, myName, setInUseForm }) => {
 
     // USE EFFECT
     useEffect(() => {
-        name = myName;
+        name = formName;
         moulding = isMoulding;
         glass = isGlass;
         mat = isMat;
@@ -181,9 +183,13 @@ const FormFraming = ({ user, myName, setInUseForm }) => {
                     <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
                         {dataFraming[0].color.map((data, index) => (
                             <FlexItems
-                                p="2rem"
-                                color="none"
                                 key={index}
+                                p="2rem"
+                                color={`${
+                                    isColor === data.color
+                                        ? 'var(--off2)'
+                                        : 'none'
+                                }`}
                                 onClick={() => setIsColor(data.color)}
                             >
                                 <Column
@@ -203,7 +209,11 @@ const FormFraming = ({ user, myName, setInUseForm }) => {
                             <FlexItems
                                 key={index}
                                 p="2rem"
-                                color="none"
+                                color={`${
+                                    isMoulding === data.title
+                                        ? 'var(--off2)'
+                                        : 'none'
+                                }`}
                                 onClick={() => setIsMoulding(data.title)}
                             >
                                 <Column
@@ -263,8 +273,13 @@ const FormFraming = ({ user, myName, setInUseForm }) => {
                         <Title mb="2rem">Select Glass Type</Title>
                         {dataFraming[1].glass.map((data, index) => (
                             <FlexItems
-                                p="2rem"
                                 key={index}
+                                color={`${
+                                    isGlass === data.reflection
+                                        ? 'var(--off2)'
+                                        : 'white'
+                                }`}
+                                p="2rem"
                                 onClick={() => setIsGlass(data.reflection)}
                             >
                                 <Title>{data.title}</Title>
@@ -285,8 +300,13 @@ const FormFraming = ({ user, myName, setInUseForm }) => {
                         <Title mb="2rem"> Select Matting</Title>
                         {dataFraming[3].mat.map((data, index) => (
                             <FlexItems
-                                p="1rem"
                                 key={index}
+                                color={`${
+                                    isMat === data.color
+                                        ? 'var(--off2)'
+                                        : 'white'
+                                }`}
+                                p="1rem"
                                 onClick={() => setIsMat(data.color)}
                             >
                                 <Title m="1rem">{data.color}</Title>
@@ -305,6 +325,11 @@ const FormFraming = ({ user, myName, setInUseForm }) => {
                         {dataFraming[3].size.map((data, index) => (
                             <FlexItems
                                 key={index}
+                                color={`${
+                                    isMatW === data.width
+                                        ? 'var(--off2)'
+                                        : 'white'
+                                }`}
                                 p="1rem"
                                 onClick={() => setIsMatW(data.width)}
                             >
@@ -358,7 +383,9 @@ const FormFraming = ({ user, myName, setInUseForm }) => {
                 />
             )}
             <Column m="0">
-                <SButton onClick={handleSubmit} value="Place Order" />
+                <BtnBlack onClick={handleSubmit} m="auto">
+                    Submit Order
+                </BtnBlack>
             </Column>
         </div>
     );

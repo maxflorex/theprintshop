@@ -167,83 +167,56 @@ hr {
 
 /* TABLE STYLES */
 
-.dataTable {
-    display: block;
-    width: 100%;
-    margin: 1em 0;
+
+.table{
+	width: 100%;
+	border-collapse: collapse;
 }
 
-.dataTable thead,
-.dataTable tbody,
-.dataTable thead tr,
-.dataTable th {
-    display: block;
+.table td,.table th{
+  padding: 1rem;
+  border:1px solid var(--off2);
+  text-align: center;
+  font-size: 1rem;
 }
 
-.dataTable thead {
-    float: left;
+.table th{
+	background-color: var(--off2);
+	color: black;
 }
 
-.dataTable tbody {
-    width: auto;
-    position: relative;
-    overflow-x: auto;
+.table tbody tr:nth-child(even){
+	background-color: var(--off2);
 }
 
-.dataTable td,
-.dataTable th {
-    padding: 0.625em;
-    line-height: 1.5em;
-    border-bottom: 1px dashed #ccc;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
+/*RESPONSIVE*/
 
-.dataTable th {
-    text-align: left;
-    background: var(--off2);
-    border-bottom: 1px solid var(--off3);
-}
+@media(max-width: 1280px){
+	.table thead{
+		display: none;
+	}
 
-.dataTable tbody tr {
-    display: table-cell;
-}
-
-.dataTable tbody td {
-    display: block;
-}
-
-.dataTable tr:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.07);
-}
-
-@media screen and (min-width: 50em) {
-    .dataTable {
-        display: table;
-    }
-
-    .dataTable thead {
-        display: table-header-group;
-        float: none;
-    }
-
-    .dataTable tbody {
-        display: table-row-group;
-    }
-
-    .dataTable thead tr,
-    .dataTable tbody tr {
-        display: table-row;
-    }
-
-    .dataTable th,
-    .dataTable tbody td {
-        display: table-cell;
-    }
-
-    .dataTable td,
-    .dataTable th {
-        width: auto;
-    }
+	.table, .table tbody, .table tr, .table td{
+		display: block;
+		width: 100%;
+	}
+	.table tr{
+		margin-bottom:15px;
+	}
+	.table td{
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+		position: relative;
+	}
+	.table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
 }

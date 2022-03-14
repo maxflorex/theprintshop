@@ -18,6 +18,7 @@ const Title = styled.h1`
     cursor: ${props => props.cursor};
     @media (max-width: 768px) {
         font-size: ${props => props.sizeSm};
+        display: ${props => props.displaymD};
     }
     &:hover{
         color: ${props => props.color};
@@ -63,6 +64,7 @@ const Para = styled.p`
     text-align: ${props => props.alignW || 'justify'};
     @media (max-width: 768px) {
         text-align: ${props => props.align || 'justify'};
+        display: ${props => props.displayMd};
     }
     `
 

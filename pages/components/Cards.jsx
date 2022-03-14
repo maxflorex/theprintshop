@@ -24,9 +24,9 @@ const Cards = () => {
                     className="bg-white rounded"
                     align="center"
                 >
-                    <Flex m="0" p="1rem">
+
                         <Title size="2.4rem">{data.title}</Title>
-                    </Flex>
+
                     <Column m="0" img={data.bg} mt="0" radius="0">
                         <Column align="center" m="0" p="0">
                             <Image

@@ -34,14 +34,14 @@ const canvas = () => {
       <section>
         <Hero img={link2} imgMd={link2} m='2rem' h='25vh'>
           <Column>
-            <Backdrop h='25vh' h='100%' p='4rem'>
+            <Backdrop h='25vh' w='100%' p='4rem'>
               <Title size='4rem'>Canvas</Title>
             </Backdrop>
           </Column>
         </Hero>
       </section>
       <section>
-        <Hero m='2rem' width='50%' gap='2rem' m='auto' widthMd='100%'>
+        <Hero width='50%' gap='2rem' m='auto' widthMd='100%'>
           <Title size='2rem'>We produce the highest quality Canvas Prints available.</Title>
           <P color='dark' font='Roboto' alignW='center'>With Bay Photo's Canvas Prints, you can display your photos like fine art. Canvas Prints can be made from prints on Professional Photo Papers bonded onto museum quality canvas, or Fine Art Prints printed directly onto the canvas material. The resulting prints can then be stretched and stapled onto a wood artists stretcher bar frame, mounted on gatorfoam board, or delivered loose (unmounted).</P>
         </Hero>
@@ -61,7 +61,6 @@ const canvas = () => {
         </Items6>
 
         {/* COMPONENTS */}
-
 
 
         <Hero color='none' m='auto'>

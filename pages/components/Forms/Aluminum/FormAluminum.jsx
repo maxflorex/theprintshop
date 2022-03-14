@@ -10,8 +10,9 @@ import { SButton, SForm } from '../../Styled/forms/Styled';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import { dataFraming } from '../../../api/dataFraming';
 import { dataAluminum } from '../../../api/dataAluminum';
+import { BtnBlack } from '../../Styled/buttons/Styled';
 
-const FormAluminum = ({ user, myName, inUseForm }) => {
+const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
     const [isFinish, setIsFinish] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMFL, setIsOpenMFL] = useState(false);
@@ -72,7 +73,7 @@ const FormAluminum = ({ user, myName, inUseForm }) => {
 
     // ON SUBMIT EVENT
     const handleSubmit = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
         addDoc(colRefAluminum, {
             name: name,
@@ -86,7 +87,8 @@ const FormAluminum = ({ user, myName, inUseForm }) => {
             createdAt: serverTimestamp(),
         }).then(() => {
             alert('Message sent!');
-            inUseForm(null);
+            setFormName('');
+            setInUseForm(null);
             setContactInfo({
                 name: '',
                 email: '',
@@ -110,7 +112,7 @@ const FormAluminum = ({ user, myName, inUseForm }) => {
 
     // USE EFFECT
     useEffect(() => {
-        name = myName;
+        name = formName;
         inset = isInset;
         finish = isFinish;
         email = user.email;
@@ -163,6 +165,11 @@ const FormAluminum = ({ user, myName, inUseForm }) => {
                         {dataAluminum[0].surface.map((data, index) => (
                             <FlexItems
                                 key={index}
+                                color={`${
+                                    isFinish === data.title
+                                        ? 'var(--off2)'
+                                        : 'white'
+                                }`}
                                 onClick={() => setIsFinish(data.title)}
                             >
                                 <Title m="1rem">{data.title}</Title>
@@ -216,7 +223,11 @@ const FormAluminum = ({ user, myName, inUseForm }) => {
                         {dataAluminum[1].inset.map((data, index) => (
                             <FlexItems
                                 p="2rem"
-                                color="none"
+                                color={`${
+                                    isInset === data.title
+                                        ? 'var(--off2)'
+                                        : 'none'
+                                }`}
                                 key={index}
                                 onClick={() => setIsInset(data.title)}
                             >
@@ -271,7 +282,9 @@ const FormAluminum = ({ user, myName, inUseForm }) => {
                 />
             )}
             <Column m="0">
-                <SButton onClick={handleSubmit} value="Place Order" />
+                <BtnBlack onClick={handleSubmit} m="auto">
+                    Submit Order
+                </BtnBlack>
             </Column>
         </div>
     );

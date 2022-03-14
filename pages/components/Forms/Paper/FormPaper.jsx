@@ -12,8 +12,9 @@ import Instructions from '../../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import { SButton, SForm } from '../../Styled/forms/Styled';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
+import { BtnBlack } from '../../Styled/buttons/Styled';
 
-const FromPaper = ({ user, myName, setInUseForm }) => {
+const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
     const [isType, setIsType] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMFL, setIsOpenMFL] = useState(false);
@@ -105,6 +106,7 @@ const FromPaper = ({ user, myName, setInUseForm }) => {
         }).then(() => {
             alert('Message sent!');
             setInUseForm(null);
+            setFormName('');
             setContactInfo({
                 name: '',
                 email: '',
@@ -130,7 +132,7 @@ const FromPaper = ({ user, myName, setInUseForm }) => {
 
     // USE EFFECT
     useEffect(() => {
-        name = myName;
+        name = formName;
         mounts = isMounted;
         framing = isFramed;
         laminate = isLaminated;
@@ -176,6 +178,11 @@ const FromPaper = ({ user, myName, setInUseForm }) => {
                     {dataPapers.map((data, index) => (
                         <FlexItems
                             key={index}
+                            color={`${
+                                isType === data.title
+                                    ? 'var(--off2)'
+                                    : 'white'
+                            }`}
                             p="1rem"
                             onClick={() => setIsType(data.title)}
                         >
@@ -225,13 +232,25 @@ const FromPaper = ({ user, myName, setInUseForm }) => {
             {/* TAB - MFL - CONTENT */}
 
             {isOpenMFL && (
-                <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent" gap='0'>
+                <Items3
+                    mt="2rem"
+                    ml="0"
+                    mr="0"
+                    p="0"
+                    color="transparent"
+                    gap="0"
+                >
                     {/* #1 */}
                     <Column m="0" color="none" gap="1rem" p="2rem">
                         <Title mb="2rem"> Select Frames</Title>
                         {dataFloaters.map((data, index) => (
                             <FlexItems
                                 key={index}
+                                color={`${
+                                    isFramed === data.title
+                                        ? 'var(--off2)'
+                                        : 'white'
+                                }`}
                                 p="2rem"
                                 onClick={() => setIsFramed(data.title)}
                             >
@@ -251,6 +270,11 @@ const FromPaper = ({ user, myName, setInUseForm }) => {
                         {dataMounts.map((data, index) => (
                             <FlexItems
                                 key={index}
+                                color={`${
+                                    isMounted === data.title
+                                        ? 'var(--off2)'
+                                        : 'white'
+                                }`}
                                 p="2rem"
                                 onClick={() => setIsMounted(data.title)}
                             >
@@ -270,6 +294,11 @@ const FromPaper = ({ user, myName, setInUseForm }) => {
                         {dataLamination.map((data, index) => (
                             <FlexItems
                                 key={index}
+                                color={`${
+                                    isLaminated === data.title
+                                        ? 'var(--off2)'
+                                        : 'white'
+                                }`}
                                 p="2rem"
                                 onClick={() => setIsLaminated(data.title)}
                             >
@@ -321,7 +350,9 @@ const FromPaper = ({ user, myName, setInUseForm }) => {
                 />
             )}
             <Column m="0">
-                <SButton onClick={handleSubmit} value="Place Order" />
+                <BtnBlack onClick={handleSubmit} m="auto">
+                    Submit Order
+                </BtnBlack>
             </Column>
         </div>
     );

@@ -2,16 +2,17 @@ import React from 'react';
 import { Grid } from './Styled/divs/Styled';
 import { SInput } from './Styled/forms/Styled';
 
-export function BasicInfoForm({ name, handleChange, user }) {
+export function BasicInfoForm({ user, setFormName, formName }) {
     return (
         <Grid gap="2rem">
             <SInput
                 type="text"
                 placeholder="Enter a name..."
-                name="name"
-                value={name}
                 required
-                onChange={handleChange}
+                onChange={(e) => {
+                    setFormName(e.target.value);
+                }}
+                value={formName}
             />
             <SInput
                 type="email"
