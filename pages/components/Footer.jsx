@@ -3,7 +3,7 @@ import { Title, Para } from './Styled/fonts/Styled';
 
 function Footer() {
     return (
-        <footer>
+        <div>
             <div className="bg-black">
                 <section>
                     <Items mb="0" pt="4rem" mt="6rem">
@@ -107,7 +107,7 @@ function Footer() {
                     </div>
                 </Flex>
             </div>
-        </footer>
+        </div>
     );
 }
 

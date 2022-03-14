@@ -241,6 +241,60 @@ const Flex = styled.div`
    }
 `
 
+const FlexItems = styled.div`
+   display: flex;
+   flex-direction: ${props => props.direction || 'row'};
+   flex-wrap: wrap;
+   background-image: url(${props => props.img});
+   background-position: ${props => props.position || 'center'};
+   background-size: ${props => props.bgSize};
+   background-color: ${props => props.color || 'white'};
+   justify-content: ${props => props.justify || 'space-between'};
+   align-items: ${props => props.align || 'center'};  
+   padding-top: ${props => props.pt || '0'};
+   padding-bottom: ${props => props.pb || '0'};
+   padding-left: ${props => props.pl || '0'};
+   padding-right: ${props => props.pr || '0'};
+   padding: ${props => props.p};
+   border-radius: ${props => props.radius || '0.6rem'};
+   border-bottom: ${props => props.bb};
+   box-sizing: border-box;
+   min-height: ${props => props.h};
+   max-height: ${props => props.hMax};
+   gap: ${props => props.gap || '0.6rem'};
+   overflow: hidden;
+   cursor: ${props => props.cursor || 'pointer'};
+   object-fit: ${props => props.object};
+   width: ${props => props.width};
+   border-bottom: ${props => props.borderb};
+   margin-left: ${props => props.ml || '0'};
+   margin-right: ${props => props.mr || '0'};
+   margin-top: ${props => props.mt};
+   margin-bottom: ${props => props.mb};
+   margin: ${props => props.m};
+   @media (max-width: 1024px) {
+      margin: ${props => props.mMd};
+      justify-content: ${props => props.justifyMd || 'center'};
+      flex-direction: ${props => props.direction || 'row'};
+      background-color: ${props => props.colorMd};
+      gap: ${props => props.gapMd || '1rem'};
+
+   }
+   &:hover{
+      background-color: ${props => props.colorH || 'var(--off2)'};
+      cursor: ${props => props.cursor};
+      box-shadow: rgba(50, 50, 93, 0.2) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.1) 0px 1px 3px -1px;
+   }
+   &:focus{
+      background-color: ${props => props.colorf || 'var(--accent)'}; 
+      outline : 'solid red 1px' ;
+   }
+   &:active{
+      background-color: ${props => props.colora || 'var(--accent)'};  
+   }
+`
+
 const Hero = styled.div`
    display: flex;
    flex-wrap: wrap;
@@ -313,4 +367,4 @@ const BackdropDark = styled.div`
    border-radius: ${props => props.radius || '0.6rem'};
 `
 
-export { Flex, Grid, Hero, Backdrop, Items, Column, Row, BackdropDark, Items6, Items3 }
+export { Flex, Grid, Hero, Backdrop, Items, Column, Row, BackdropDark, Items6, Items3, FlexItems }

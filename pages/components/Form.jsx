@@ -16,7 +16,6 @@ const Form = ({ user }) => {
     const [isBorder, setIsBorder] = useState(null);
     const [isStretchers, setStretchers] = useState(null);
     const [isFloaters, setIsFloaters] = useState(null);
-    const [isName, setIsName] = useState('');
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -116,7 +115,6 @@ const Form = ({ user }) => {
                     handleChange={handleChange}
                     email={email}
                     user={user}
-                    setIsName={setIsName}
                 />
 
                 {/* ----------------------------------------------- */}
@@ -156,13 +154,26 @@ const Form = ({ user }) => {
                         handleChange={handleChange}
                         isBorder={isBorder}
                         handleSubmit={handleSubmit}
+                        setInUseForm={setInUseForm}
                     />
                 ) : inUseForm === 'Framing' ? (
-                    <FormFraming user={user} myName={name} />
+                    <FormFraming
+                        user={user}
+                        myName={name}
+                        setInUseForm={setInUseForm}
+                    />
                 ) : inUseForm === 'Paper' ? (
-                    <FormPaper user={user} myName={name} />
+                    <FormPaper
+                        user={user}
+                        myName={name}
+                        setInUseForm={setInUseForm}
+                    />
                 ) : inUseForm === 'Aluminum' ? (
-                    <FormAluminum user={user} myName={name} />
+                    <FormAluminum
+                        user={user}
+                        myName={name}
+                        setInUseForm={setInUseForm}
+                    />
                 ) : (
                     ''
                 )}

@@ -82,6 +82,9 @@ export const dataFraming = [
         ],
         size: [
             {
+                width: 'None'
+            },
+            {
                 width: '1"'
             },
             {

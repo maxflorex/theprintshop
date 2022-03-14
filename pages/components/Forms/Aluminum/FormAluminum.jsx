@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import {
-    colRefAluminum,
-    storage,
-} from '../../../firebase/config';
-import { Column, Flex, Items3, Row } from '../../Styled/divs/Styled';
+import { colRefAluminum, storage } from '../../../firebase/config';
+import { Column, Flex, FlexItems, Items3, Row } from '../../Styled/divs/Styled';
 import { Para, Title } from '../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
 import Image from 'next/image';
@@ -14,8 +11,7 @@ import { addDoc, serverTimestamp } from 'firebase/firestore';
 import { dataFraming } from '../../../api/dataFraming';
 import { dataAluminum } from '../../../api/dataAluminum';
 
-const FormAluminum = ({ user, myName }) => {
-    const [inUseForm, setInUseForm] = useState(null);
+const FormAluminum = ({ user, myName, inUseForm }) => {
     const [isFinish, setIsFinish] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMFL, setIsOpenMFL] = useState(false);
@@ -90,7 +86,7 @@ const FormAluminum = ({ user, myName }) => {
             createdAt: serverTimestamp(),
         }).then(() => {
             alert('Message sent!');
-            setInUseForm(null);
+            inUseForm(null);
             setContactInfo({
                 name: '',
                 email: '',
@@ -124,8 +120,8 @@ const FormAluminum = ({ user, myName }) => {
 
     return (
         <div>
-            {/* ----------------------------------------------- */}
             {/* TAB - FINISH*/}
+
             <Flex
                 color="none"
                 m="0"
@@ -165,34 +161,20 @@ const FormAluminum = ({ user, myName }) => {
                         width="75%"
                     >
                         {dataAluminum[0].surface.map((data, index) => (
-                            <Flex
-                                mr="0"
-                                ml="0"
+                            <FlexItems
                                 key={index}
-                                cursor="pointer"
-                                colorF="var(--accent)"
-                                colora="var(--accent)"
-                                colorH="var(--off2)"
-                                className="bg-white"
-                                p="4rem"
                                 onClick={() => setIsFinish(data.title)}
                             >
-                                <Column
-                                    m="auto"
-                                    color="none"
-                                    p="0"
-                                    justify="space-between"
-                                >
-                                    <Title m="1rem">{data.title}</Title>
-                                    <Image src={data.img} />
-                                </Column>
-                            </Flex>
+                                <Title m="1rem">{data.title}</Title>
+                                <Image src={data.img} />
+                            </FlexItems>
                         ))}
                     </Row>
                 </div>
             )}
-            {/* ----------------------------------------------- */}
+
             {/* TAB - INSET FRAME */}
+
             <Flex
                 color="none"
                 m="0"
@@ -232,34 +214,20 @@ const FormAluminum = ({ user, myName }) => {
                         width="75%"
                     >
                         {dataAluminum[1].inset.map((data, index) => (
-                            <Flex
-                                mr="0"
-                                ml="0"
+                            <FlexItems
+                                p="2rem"
+                                color="none"
                                 key={index}
-                                cursor="pointer"
-                                colorF="var(--accent)"
-                                colora="var(--accent)"
-                                colorH="var(--off2)"
-                                className="bg-white"
-                                p="4rem"
                                 onClick={() => setIsInset(data.title)}
                             >
-                                <Column
-                                    m="auto"
-                                    color="none"
-                                    p="0"
-                                    justify="space-between"
-                                >
-                                    <Title m="1rem">{data.title}</Title>
-                                    <Image src={data.img} />
-                                </Column>
-                            </Flex>
+                                <Title m="1rem">{data.title}</Title>
+                                <Image src={data.img} />
+                            </FlexItems>
                         ))}
                     </Row>
                 </div>
             )}
 
-            {/* ----------------------------------------------- */}
             {/* QTY / INSTRUCTIONS / FILE */}
 
             <Flex

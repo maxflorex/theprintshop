@@ -3,10 +3,10 @@ import { dataBorders } from '../../../api/dataBorders';
 import {
     Column,
     Flex,
+    FlexItems,
     Items,
     Items3,
     Items6,
-    Row,
 } from '../../Styled/divs/Styled';
 import { Title } from '../../Styled/fonts/Styled';
 import { FiChevronDown, FiDownloadCloud } from 'react-icons/fi';
@@ -70,8 +70,8 @@ const FormCanvas = ({
 
     return (
         <>
-            {/* ----------------------------------------------- */}
             {/* TAB - BORDERS */}
+
             <Flex
                 color="none"
                 m="0"
@@ -103,32 +103,26 @@ const FormCanvas = ({
             {isOpen && (
                 <Items6 mt="2rem" ml="0" mr="0" p="0" color="transparent">
                     {dataBorders.map((data, index) => (
-                        <Flex
-                            mr="0"
-                            ml="0"
-                            gapMd="1rem"
-                            key={index}
-                            cursor="pointer"
-                            colorF="var(--accent)"
-                            colora="var(--accent)"
-                            className="bg-white"
-                            p="1rem"
+                        <FlexItems
+                             p="1rem"
                             onClick={() => setIsBorder(data.title)}
                         >
-                            <Title m="1rem">{data.title}</Title>
-                            <Image
-                                src={data.img}
-                                objectFit="cover"
-                                height={800}
-                                width={800}
-                            />
-                        </Flex>
+                            <Title mb="2rem">{data.title}</Title>
+                            <div style={{ margin: '-2rem' }}>
+                                <Image
+                                    src={data.img}
+                                    objectFit="cover"
+                                    height={800}
+                                    width={800}
+                                />
+                            </div>
+                        </FlexItems>
                     ))}
                 </Items6>
             )}
 
-            {/* ----------------------------------------------- */}
             {/* TAB - STRETCHER BARS */}
+
             <Flex
                 color="none"
                 m="0"
@@ -160,35 +154,33 @@ const FormCanvas = ({
             {isOpenSb && (
                 <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
                     {dataStretchers.map((data, index) => (
-                        <Flex
-                            mr="0"
-                            ml="0"
-                            gapMd="1rem"
+                        <FlexItems
                             key={index}
-                            cursor="pointer"
-                            colorF="var(--accent)"
-                            colora="var(--accent)"
-                            className="bg-white"
                             onClick={() => setStretchers(data.title)}
                         >
-                            <Title>{data.title}</Title>
+                            <Title style={{ padding: '2rem' }}>
+                                {data.title}
+                            </Title>
                             <Flex
                                 m="0"
-                                p="0"
                                 color="none"
-                                width="80%"
+                                width="70%"
                                 hMax="8rem"
                                 justify="end"
                                 justifyMd="end"
                             >
-                                <Image src={data.img2} objectFit="contain" />
+                                <div style={{ margin: '-1rem' }}>
+                                    <Image
+                                        src={data.img2}
+                                        objectFit="contain"
+                                    />
+                                </div>
                             </Flex>
-                        </Flex>
+                        </FlexItems>
                     ))}
                 </Items3>
             )}
 
-            {/* ----------------------------------------------- */}
             {/* TAB - FLOATERS */}
 
             <Flex
@@ -222,26 +214,21 @@ const FormCanvas = ({
             {isOpenF && (
                 <Items mt="2rem" ml="0" mr="0" p="0" color="transparent">
                     {dataFloaters.map((data, index) => (
-                        <Flex
-                            color="none"
-                            colorH="var(--off2)"
-                            mr="0"
-                            ml="0"
-                            gapMd="1rem"
+                        <FlexItems
                             key={index}
-                            cursor="pointer"
+                            p='2rem'
+                            color='none'
                             onClick={() => setIsFloaters(data.title)}
                         >
                             <Column m="auto" p="0" align="centre">
                                 <span className={data.color}></span>
                                 <Title>{data.title}</Title>
                             </Column>
-                        </Flex>
+                        </FlexItems>
                     ))}
                 </Items>
             )}
 
-            {/* ----------------------------------------------- */}
             {/* QTY / INSTRUCTIONS / FILE */}
 
             <Flex
@@ -284,8 +271,9 @@ const FormCanvas = ({
                     instructions={instructions}
                 />
             )}
-            {/* ----------------------------------------------- */}
+
             {/* SUBMIT FORM */}
+
             <Column m="0">
                 <SButton onClick={handleSubmit} value="Place Order" />
             </Column>

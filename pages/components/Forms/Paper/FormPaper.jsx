@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { colRefPaper, storage } from '../../../firebase/config';
-import { Column, Flex, Items3 } from '../../Styled/divs/Styled';
+import { Column, Flex, FlexItems, Items3 } from '../../Styled/divs/Styled';
 import { Title } from '../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
 import { dataPapers } from '../../../api/dataPapers';
@@ -11,11 +11,9 @@ import { dataLamination } from '../../../api/dataLamination';
 import Instructions from '../../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import { SButton, SForm } from '../../Styled/forms/Styled';
-import { Button } from '../../Styled/buttons/Styled';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 
-const FromPaper = ({ user, myName }) => {
-    const [inUseForm, setInUseForm] = useState(null);
+const FromPaper = ({ user, myName, setInUseForm }) => {
     const [isType, setIsType] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMFL, setIsOpenMFL] = useState(false);
@@ -145,7 +143,6 @@ const FromPaper = ({ user, myName }) => {
     return (
         <div>
             {/* ----------------------------------------------- */}
-            {/* TAB - TYPES */}
             <Flex
                 color="none"
                 m="0"
@@ -177,41 +174,28 @@ const FromPaper = ({ user, myName }) => {
             {isOpen && (
                 <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
                     {dataPapers.map((data, index) => (
-                        <Flex
-                            mr="0"
-                            ml="0"
-                            gapMd="1rem"
+                        <FlexItems
                             key={index}
-                            cursor="pointer"
-                            colorF="var(--accent)"
-                            colora="var(--accent)"
-                            className="bg-white"
                             p="1rem"
                             onClick={() => setIsType(data.title)}
                         >
-                            <Flex
-                                m="auto"
-                                color="none"
-                                p="0"
-                                justify="space-between"
-                            >
-                                <Title m="1rem">{data.title}</Title>
-                                <Title size="1rem" m="1rem" font="Roboto">
-                                    {data.finish}
-                                </Title>
-                            </Flex>
+                            <Title m="1rem">{data.title}</Title>
+                            <Title size="1rem" m="1rem" font="Roboto">
+                                {data.finish}
+                            </Title>
+
                             <Image
                                 src={data.img}
                                 objectFit="cover"
                                 height={400}
                                 width={800}
                             />
-                        </Flex>
+                        </FlexItems>
                     ))}
                 </Items3>
             )}
             {/* ----------------------------------------------- */}
-            {/* TAB - MFL */}
+
             <Flex
                 color="none"
                 m="0"
@@ -241,37 +225,18 @@ const FromPaper = ({ user, myName }) => {
             {/* TAB - MFL - CONTENT */}
 
             {isOpenMFL && (
-                <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
+                <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent" gap='0'>
                     {/* #1 */}
-                    <Column
-                        m="0"
-                        color="none"
-                        justify="center"
-                        gap="1rem"
-                        p="2rem"
-                    >
+                    <Column m="0" color="none" gap="1rem" p="2rem">
                         <Title mb="2rem"> Select Frames</Title>
                         {dataFloaters.map((data, index) => (
-                            <Flex
-                                mr="0"
-                                ml="0"
+                            <FlexItems
                                 key={index}
-                                cursor="pointer"
-                                colorF="var(--accent)"
-                                colora="var(--accent)"
-                                className="bg-white"
-                                p="1rem"
+                                p="2rem"
                                 onClick={() => setIsFramed(data.title)}
                             >
-                                <Flex
-                                    m="auto"
-                                    color="none"
-                                    p="0"
-                                    justify="space-between"
-                                >
-                                    <Title m="1rem">{data.title}</Title>
-                                </Flex>
-                            </Flex>
+                                <Title>{data.title}</Title>
+                            </FlexItems>
                         ))}
                     </Column>
                     {/* #2 */}
@@ -284,27 +249,13 @@ const FromPaper = ({ user, myName }) => {
                     >
                         <Title mb="2rem"> Select Mount</Title>
                         {dataMounts.map((data, index) => (
-                            <Flex
-                                mr="0"
-                                ml="0"
-                                gapMd="1rem"
+                            <FlexItems
                                 key={index}
-                                cursor="pointer"
-                                colorF="var(--accent)"
-                                colora="var(--accent)"
-                                className="bg-white"
-                                p="1rem"
+                                p="2rem"
                                 onClick={() => setIsMounted(data.title)}
                             >
-                                <Flex
-                                    m="auto"
-                                    color="none"
-                                    p="0"
-                                    justify="space-between"
-                                >
-                                    <Title m="1rem">{data.title}</Title>
-                                </Flex>
-                            </Flex>
+                                <Title>{data.title}</Title>
+                            </FlexItems>
                         ))}
                     </Column>
                     {/* #3 */}
@@ -317,34 +268,18 @@ const FromPaper = ({ user, myName }) => {
                     >
                         <Title mb="2rem"> Select Lamination</Title>
                         {dataLamination.map((data, index) => (
-                            <Flex
-                                mr="0"
-                                ml="0"
-                                gapMd="1rem"
+                            <FlexItems
                                 key={index}
-                                cursor="pointer"
-                                colorF="var(--accent)"
-                                colora="var(--accent)"
-                                className="bg-white"
-                                p="1rem"
+                                p="2rem"
                                 onClick={() => setIsLaminated(data.title)}
                             >
-                                <Flex
-                                    m="auto"
-                                    color="none"
-                                    p="0"
-                                    justify="space-between"
-                                >
-                                    <Title m="1rem">{data.title}</Title>
-                                </Flex>
-                            </Flex>
+                                <Title>{data.title}</Title>
+                            </FlexItems>
                         ))}
                     </Column>
                 </Items3>
             )}
             {/* ----------------------------------------------- */}
-            {/* QTY / INSTRUCTIONS / FILE */}
-
             <Flex
                 color="none"
                 m="0"
