@@ -10,7 +10,7 @@ import { SButton, SForm } from '../../Styled/forms/Styled';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import { dataFraming } from '../../../api/dataFraming';
 
-const FormFraming = ({ user }) => {
+const FormFraming = ({ user, myName }) => {
     const [inUseForm, setInUseForm] = useState(null);
     const [isColor, setIsColor] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -133,6 +133,7 @@ const FormFraming = ({ user }) => {
 
     // USE EFFECT
     useEffect(() => {
+        name = myName
         moulding = isMoulding;
         glass = isGlass;
         mat = isMat;

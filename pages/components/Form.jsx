@@ -3,20 +3,20 @@ import React, { useEffect, useState } from 'react';
 import { Column, Flex, Grid, Items } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';
 import { data } from '../api/dataServices';
-import FormCanvas from './Forms/FormCanvas';
+import FormCanvas from './Forms/Canvas/FormCanvas';
 import { SForm, SInput, SButton } from './Styled/forms/Styled';
 import { colRefOrder } from '../firebase/config';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import FormFraming from './Forms/Framing/FormFraming';
 import FormPaper from './Forms/Paper/FormPaper';
 import FormAluminum from './Forms/Aluminum/FormAluminum';
-import { Button } from './Styled/buttons/Styled';
 
 const Form = ({ user }) => {
     const [inUseForm, setInUseForm] = useState(null);
     const [isBorder, setIsBorder] = useState(null);
     const [isStretchers, setStretchers] = useState(null);
     const [isFloaters, setIsFloaters] = useState(null);
+    const [isName, setIsName] = useState('');
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -106,9 +106,9 @@ const Form = ({ user }) => {
     return (
         <>
             <Title size="4rem" m="2rem">
-                Place an Order POLOLO
+                Place an Order
             </Title>
-            <SForm onSubmit={handleSubmit}>
+            <SForm>
                 {/* ----------------------------------------------- */}
 
                 <BasicInfoForm
@@ -116,6 +116,7 @@ const Form = ({ user }) => {
                     handleChange={handleChange}
                     email={email}
                     user={user}
+                    setIsName={setIsName}
                 />
 
                 {/* ----------------------------------------------- */}
@@ -154,24 +155,17 @@ const Form = ({ user }) => {
                         instructions={instructions}
                         handleChange={handleChange}
                         isBorder={isBorder}
+                        handleSubmit={handleSubmit}
                     />
                 ) : inUseForm === 'Framing' ? (
-                    <FormFraming  user={user} />
+                    <FormFraming user={user} myName={name} />
                 ) : inUseForm === 'Paper' ? (
-                    <FormPaper user={user} />
+                    <FormPaper user={user} myName={name} />
                 ) : inUseForm === 'Aluminum' ? (
-                    <FormAluminum user={user}/>
+                    <FormAluminum user={user} myName={name} />
                 ) : (
                     ''
                 )}
-
-                {/* ----------------------------------------------- */}
-                {/* SUBMIT FORM */}
-                <Column m="0">
-                    {inUseForm === 'Canvas' && (
-                        <SButton onClick={handleSubmit} value="Place Order" />
-                    )}
-                </Column>
             </SForm>
         </>
     );

@@ -14,7 +14,7 @@ import { addDoc, serverTimestamp } from 'firebase/firestore';
 import { dataFraming } from '../../../api/dataFraming';
 import { dataAluminum } from '../../../api/dataAluminum';
 
-const FormAluminum = ({ user }) => {
+const FormAluminum = ({ user, myName }) => {
     const [inUseForm, setInUseForm] = useState(null);
     const [isFinish, setIsFinish] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -114,6 +114,7 @@ const FormAluminum = ({ user }) => {
 
     // USE EFFECT
     useEffect(() => {
+        name = myName;
         inset = isInset;
         finish = isFinish;
         email = user.email;

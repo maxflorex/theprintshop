@@ -14,7 +14,7 @@ import { SButton, SForm } from '../../Styled/forms/Styled';
 import { Button } from '../../Styled/buttons/Styled';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 
-const FromPaper = ({ user }) => {
+const FromPaper = ({ user, myName }) => {
     const [inUseForm, setInUseForm] = useState(null);
     const [isType, setIsType] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -132,6 +132,7 @@ const FromPaper = ({ user }) => {
 
     // USE EFFECT
     useEffect(() => {
+        name = myName;
         mounts = isMounted;
         framing = isFramed;
         laminate = isLaminated;
@@ -384,7 +385,7 @@ const FromPaper = ({ user }) => {
                     instructions={instructions}
                 />
             )}
-            <Column m='0'>
+            <Column m="0">
                 <SButton onClick={handleSubmit} value="Place Order" />
             </Column>
         </div>

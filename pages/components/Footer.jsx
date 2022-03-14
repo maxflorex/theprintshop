@@ -1,10 +1,9 @@
-import Link from 'next/link';
 import { Flex, Column, Items } from './Styled/divs/Styled';
-import { P, Title, Para } from './Styled/fonts/Styled';
+import { Title, Para } from './Styled/fonts/Styled';
 
 function Footer() {
     return (
-        <div>
+        <footer>
             <div className="bg-black">
                 <section>
                     <Items mb="0" pt="4rem" mt="6rem">
@@ -18,14 +17,14 @@ function Footer() {
                                 Contact
                             </Title>
                             <Para ls="0.05rem" color="white" font="Roboto">
-                                <Link href="mailto:prints@artcaymanco.com">
+                                <a href="mailto:prints@artcaymanco.com">
                                     prints@artcaymanco.com
-                                </Link>
+                                </a>
                             </Para>
                             <Para ls="0.05rem" color="white" font="Roboto">
-                                <Link href="tel:+3459232222">
+                                <a href="tel:+3459232222">
                                     +1(345) 923-2222
-                                </Link>
+                                </a>
                             </Para>
                         </Column>
                         <Column>
@@ -108,7 +107,7 @@ function Footer() {
                     </div>
                 </Flex>
             </div>
-        </div>
+        </footer>
     );
 }
 

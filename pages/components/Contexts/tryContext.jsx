@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 const TryContext = createContext()
 
-export const TryContexWrapper = ({children}) => {
+export const TryContextWrapper = ({children}) => {
     let tryValue = 42
 
     return (

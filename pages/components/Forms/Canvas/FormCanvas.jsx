@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { dataBorders } from '../../../api/dataBorders';
-import { Column, Flex, Items, Items3, Items6, Row } from '../../Styled/divs/Styled';
+import {
+    Column,
+    Flex,
+    Items,
+    Items3,
+    Items6,
+    Row,
+} from '../../Styled/divs/Styled';
 import { Title } from '../../Styled/fonts/Styled';
 import { FiChevronDown, FiDownloadCloud } from 'react-icons/fi';
 import { dataStretchers } from '../../../api/dataStretchers';
 import { dataFloaters } from '../../../api/dataFloaters';
-import { storage } from '../../../firebase/index';
+import { storage } from '../../../firebase/config';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import Image from 'next/image';
 import Instructions from '../../Instructions';
+import { SButton } from '../../Styled/forms/Styled';
 
 const FormCanvas = ({
     setIsBorder,
@@ -19,6 +27,7 @@ const FormCanvas = ({
     tall,
     instructions,
     handleChange,
+    handleSubmit,
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenSb, setIsOpenSb] = useState(false);
@@ -59,8 +68,6 @@ const FormCanvas = ({
         setSelectedImage(file);
     };
 
-     
-
     return (
         <>
             {/* ----------------------------------------------- */}
@@ -86,7 +93,9 @@ const FormCanvas = ({
                     <Title m="2rem">Select Borders</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font='Roboto' size='1rem'mr='2rem' w='400'>Default: Mirrored</Title>
+                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                    Default: Mirrored
+                </Title>
             </Flex>
 
             {/* TAB - BORDERS - CONTENT */}
@@ -141,7 +150,9 @@ const FormCanvas = ({
                     <Title m="2rem">Select Stretchers</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font='Roboto' size='1rem'mr='2rem' w='400'>Default: 1.5"</Title>
+                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                    Default: 1.5"
+                </Title>
             </Flex>
 
             {/* TAB - STRETCHER BARS -CONTENT */}
@@ -201,7 +212,9 @@ const FormCanvas = ({
                     <Title m="2rem">Select Floaters</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font='Roboto' size='1rem'mr='2rem' w='400'>Default: No Floaters</Title>
+                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                    Default: No Floaters
+                </Title>
             </Flex>
 
             {/* TAB - FLOATERSS -CONTENT */}
@@ -252,7 +265,9 @@ const FormCanvas = ({
                     <Title m="2rem">Select Size & Quantity</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font='Roboto' size='1rem'mr='2rem' w='400'>Complete to Order</Title>
+                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                    Complete to Order
+                </Title>
             </Flex>
 
             {isOpenC && (
@@ -269,6 +284,11 @@ const FormCanvas = ({
                     instructions={instructions}
                 />
             )}
+            {/* ----------------------------------------------- */}
+            {/* SUBMIT FORM */}
+            <Column m="0">
+                <SButton onClick={handleSubmit} value="Place Order" />
+            </Column>
         </>
     );
 };

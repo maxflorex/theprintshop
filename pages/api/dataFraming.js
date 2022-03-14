@@ -9,18 +9,18 @@ export const dataFraming = [
     {
         color: [
             {
-                color: 'Black',
+                color: 'White',
                 frame: frame4,
                 img: 'dot color2'
             },
             {
-                color: 'White',
-                frame: frame5,
+                color: 'Black',
+                frame: frame6,
                 img: 'dot color1'
             },
             {
                 color: 'Natural',
-                frame: frame6,
+                frame: frame5,
                 img: 'dot color3'
             },
         ]
