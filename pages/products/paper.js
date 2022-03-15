@@ -3,7 +3,7 @@ import React from 'react';
 import { dataPrintDetailPaper } from '../api/dataPrintDetails';
 import Papers from '../components/Papers';
 import { Backdrop, Column, Hero, Items6 } from '../components/Styled/divs/Styled';
-import { P, Title } from '../components/Styled/fonts/Styled';
+import { Para,  Title } from '../components/Styled/fonts/Styled';
 
 const paper = () => {
 
@@ -25,8 +25,8 @@ const paper = () => {
       </section>
       <section>
         <Hero m='auto' width='50%' gap='2rem' widthMd='100%'>
-          <Title size='2rem'>Professional quality for discerning photographers.</Title>
-          <P color='dark' font='Roboto' alignW='center'>Bay Photo Lab has been providing professional photographers with the highest quality prints, mounting, and photo finishing services for nearly 45 years, so you can trust us when it comes to making the best prints possible from your images. We offer the largest range of sizes, including custom sizes, as well as a large variety of texture, coating, and other options to enhance the appearance of your prints.</P>
+          <Title size='2rem'>Museum Quality Fine Art Prints</Title>
+          <Para color='dark' font='Roboto' alignW='center'>The Printshop by ACC, has been providing professional and enthusiasts enthusiasts in the Cayman Islands with the highest quality prints, mounting, and photo finishing services, so you can trust us when it comes to making the best prints possible from your images. We offer the largest range of sizes, including custom sizes, as well as a large variety of texture, coating, and other options to enhance the appearance of your prints.</Para>
         </Hero>
 
         {/* DETAILS OF PRODUCT */}
@@ -37,7 +37,7 @@ const paper = () => {
               <Image src={dataPrintDetailPaper.img} objectFit='contain' />
               <div>
                 <Title>{dataPrintDetailPaper.title}</Title>
-                <P color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailPaper.sub}</P>
+                <Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailPaper.sub}</Para>
               </div>
             </Column>
           ))}

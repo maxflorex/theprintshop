@@ -32,7 +32,7 @@ export const dataPapers = [
         img: link3,
         title: 'High Gloss',
         sub: '- Metallic Paper',
-        desc: 'Anything but commonplace. A photo paper but something more. A silky finish playfully teasing the light. A delicate texture alive and mercurial. A quicksand image dragging you ever deeper into imagination. For images that will be seen, shared, and cherished Vibrance Luster is a celebration and the icing on the cake.',
+        desc: 'Reimagine your photography.  Print on a photo paper that conveys more than what you see on the glowing screen.  For black and white, high contrast, landscape, and dramatic portraiture Vibrance Metallic adds the finest edge and a hint of flair.  Serious yet expressive, powerful and breathtaking, a little bit of shimmer, sure to engage.',
         size: '44X480 inches',
         weight: '255GSM',
         finish: 'Gloss / Pearlescent',

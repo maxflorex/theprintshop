@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import { dataPrintDetailAluminum } from '../api/dataPrintDetails';
 import { Backdrop, Column, Hero, Items6, Flex, Row, Grid } from '../components/Styled/divs/Styled';
-import { P, Title, Title2 } from '../components/Styled/fonts/Styled';
+import { Para, Title, Title2 } from '../components/Styled/fonts/Styled';
 import reflection1 from '../components/Images/reflections/mx-reflection-gloss.jpg'
 import reflection2 from '../components/Images/reflections/mx-reflection-satin.jpg'
 import inset1 from '../components/Images/inset/inset-01.svg'
@@ -13,16 +13,13 @@ import { BtnBlack } from '../components/Styled/buttons/Styled';
 
 const aluminum = () => {
     const link = 'https://images.unsplash.com/photo-1612504200882-d29bf3f2cc13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1056&q=80'
-    const link2 = 'https://images.unsplash.com/photo-1565555334121-4a4f177af7b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'
-
-
 
     return (
         <>
             {/* TITLE & HERO */}
 
             <section>
-                <Hero img={link} imgMd={link2} m='2rem' h='25vh'>
+                <Hero img={link} imgMd={link} m='2rem' h='25vh'>
                     <Column>
                         <Backdrop w='100%' p='4rem'>
                             <Title size='4rem'>Aluminum Prints</Title>
@@ -32,8 +29,8 @@ const aluminum = () => {
             </section>
             <section>
                 <Hero width='50%' gap='2rem' m='auto' widthMd='100%'>
-                    <Title size='2rem'>We produce the highest quality Canvas Prints available.</Title>
-                    <P color='dark' font='Roboto' alignW='center'>With Bay Photo's Canvas Prints, you can display your photos like fine art. Canvas Prints can be made from prints on Professional Photo Papers bonded onto museum quality canvas, or Fine Art Prints printed directly onto the canvas material. The resulting prints can then be stretched and stapled onto a wood artists stretcher bar frame, mounted on gatorfoam board, or delivered loose (unmounted).</P>
+                    <Title size='2rem'>State  Of The Art Images</Title>
+                    <Para color='dark' font='Roboto' alignW='center'>Get the most modern aluminum prints with us! Take advantage of the eye-popping vibrance and definition that's only possible though this medium. With up to three different finishes to select from; get the best look for your photography or artwork of your choice and showcase it like a pro</Para>
                 </Hero>
 
                 {/* DETAILS OF PRODUCT */}
@@ -44,7 +41,7 @@ const aluminum = () => {
                             <Image src={dataPrintDetailAluminum.img} objectFit='contain' />
                             <div>
                                 <Title>{dataPrintDetailAluminum.title}</Title>
-                                <P color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailAluminum.sub}</P>
+                                <Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailAluminum.sub}</Para>
                             </div>
                         </Column>
                     ))}
@@ -59,14 +56,14 @@ const aluminum = () => {
                             <Image src={reflection1} />
                             <Flex color='none' p='2rem' m='0'>
                                 <Title size='3rem'>Gloss</Title>
-                                <P color='black' font='Roboto'>• High Reflection / Vivid Colors</P>
+                                <Para color='black' font='Roboto'>• High Reflection / Vivid Colors</Para>
                             </Flex>
                         </Column>
                         <Column p='0' m='2rem' color='white' gap='0' className='bg-white'>
                             <Image src={reflection2} />
                             <Flex color='none' p='2rem' m='0'>
                                 <Title size='3rem'>Satin</Title>
-                                <P color='black' font='Roboto'>• Low Reflection / Great Contrast</P>
+                                <Para color='black' font='Roboto'>• Low Reflection / Great Contrast</Para>
                             </Flex>
                         </Column>
                     </Row>

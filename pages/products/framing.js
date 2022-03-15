@@ -4,7 +4,7 @@ import { dataPrintDetailFraming } from '../api/dataPrintDetails';
 import BlackFrames from '../components/BlackFrames';
 import NaturalFrames from '../components/NaturalFrames';
 import { Backdrop, Column, Flex, Hero, Items3, Items6, Row } from '../components/Styled/divs/Styled';
-import { P, Title, Title2 } from '../components/Styled/fonts/Styled';
+import { Para, Title, Title2 } from '../components/Styled/fonts/Styled';
 import WhiteFrames from '../components/WhiteFrames';
 import TabsFrames from '../components/TabsFrames';
 import Floaters from '../components/Floaters'
@@ -34,7 +34,7 @@ const framing = () => {
 			{/* TITLE & HERO */}
 
 			<section>
-				<Hero img={link} imgMd={link2} m='2rem' h='25vh'>
+				<Hero img={link} imgMd={link} m='2rem' h='25vh'>
 					<Column>
 						<Backdrop w='100%' p='4rem'>
 							<Title size='4rem'>Custom Framing</Title>
@@ -44,8 +44,8 @@ const framing = () => {
 			</section>
 			<section>
 				<Hero width='50%' gap='2rem' m='auto' widthMd='100%'>
-					<Title size='2rem'>We produce the highest quality Canvas Prints available.</Title>
-					<P color='dark' font='Roboto' alignW='center'>With Bay Photo's Canvas Prints, you can display your photos like fine art. Canvas Prints can be made from prints on Professional Photo Papers bonded onto museum quality canvas, or Fine Art Prints printed directly onto the canvas material. The resulting prints can then be stretched and stapled onto a wood artists stretcher bar frame, mounted on gatorfoam board, or delivered loose (unmounted).</P>
+					<Title size='2rem'>Proffessional Quality Fine Art Framing</Title>
+					<Para color='dark' font='Roboto' alignW='center'>Get your pictures framed with the bests! Choose between moulding and floaters frames for your canvas up to three colors (Custom moulding types on request). From old and trusted glass to acrylic (Regular and Nonreflective) to enhance the longevity of your beloved piece of art or photo.</Para>
 				</Hero>
 
 				{/* DETAILS OF PRODUCT */}
@@ -56,7 +56,7 @@ const framing = () => {
 							<Image src={dataPrintDetailFraming.img} objectFit='contain' />
 							<div>
 								<Title>{dataPrintDetailFraming.title}</Title>
-								<P color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailFraming.sub}</P>
+								<Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailFraming.sub}</Para>
 							</div>
 						</Column>
 					))}

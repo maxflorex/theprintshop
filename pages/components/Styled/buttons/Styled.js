@@ -48,22 +48,6 @@ const Btn = styled.a`
 `
 
 const BtnBlack = styled.a`
-    /* background-color: ${props => props.bg || 'black'};
-    padding: 1rem;
-    border-radius: 0.6rem;
-    font-family: ${props => props.font || 'Roboto'};
-    font-weight: ${props => props.weight || 300};
-    font-size: ${props => props.size || '1rem'};
-    text-transform: ${props => props.transform || 'uppercase'};
-    text-align: ${props => props.align || 'center'};
-    color: ${props => props.color || 'white'};
-    letter-spacing: ${props => props.ls || '0.06rem'};  
-    cursor: pointer;
-    margin-top: ${props => props.mt || '1.4rem'};
-    justify-content: center;
-    width: ${props => props.width};
-    margin: ${props => props.m};
-    border-radius: ${props => props.radius || '0.6rem'}; */
     background-color: ${props => props.bg || 'black'};
     padding: 1rem;
     border-radius: 0.6rem;
@@ -76,7 +60,9 @@ const BtnBlack = styled.a`
     letter-spacing: ${props => props.ls || '0.06rem'};
     cursor: pointer;
     margin-top: ${props => props.mt || '1.4rem'};
+    margin: ${props => props.m};
     position: ${props => props.position};
+    
     &:hover {
         background-color: ${props => props.bgH || 'var(--accent)'};
         color: white;
