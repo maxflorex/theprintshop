@@ -17,14 +17,14 @@ const paper = () => {
       <section>
         <Hero img={link} imgMd={link2} m='2rem' h='25vh'>
           <Column>
-            <Backdrop h='25vh' h='100%' p='4rem'>
+            <Backdrop w='100%' p='4rem' >
               <Title size='4rem'>Fine Art Papers</Title>
             </Backdrop>
           </Column>
         </Hero>
       </section>
       <section>
-        <Hero m='2rem' width='50%' gap='2rem' m='auto' widthMd='100%'>
+        <Hero m='auto' width='50%' gap='2rem' widthMd='100%'>
           <Title size='2rem'>Professional quality for discerning photographers.</Title>
           <P color='dark' font='Roboto' alignW='center'>Bay Photo Lab has been providing professional photographers with the highest quality prints, mounting, and photo finishing services for nearly 45 years, so you can trust us when it comes to making the best prints possible from your images. We offer the largest range of sizes, including custom sizes, as well as a large variety of texture, coating, and other options to enhance the appearance of your prints.</P>
         </Hero>
@@ -45,7 +45,7 @@ const paper = () => {
 
         {/* PAPER DETAILS */}
 
-        <Papers/>
+        <Papers />
       </section>
     </>
   );

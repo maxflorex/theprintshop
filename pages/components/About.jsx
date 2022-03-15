@@ -25,7 +25,7 @@ const About = () => {
                     be locally own & operated.
                 </P>
                 <BtnBlack bg='var(--off2)'>
-                    <a href="">
+                    <a href="/order">
                         <Title size="1.4rem" color='black' colorH='white'>
                             Make an Order
                         </Title>

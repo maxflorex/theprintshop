@@ -6,22 +6,6 @@ import { P, Title, Title2 } from './Styled/fonts/Styled';
 
 
 const Papers = () => {
-    // STICKY HEADER
-
-    // useEffect(() => {
-    //     window.addEventListener('scroll', isSticky);
-    //     return () => {
-    //         window.removeEventListener('scroll', isSticky);
-    //     };
-    // });
-
-    // const isSticky = (e) => {
-    //     const stick = document.querySelector('.glue');
-    //     const scrollTop = window.scrollY;
-    //     scrollTop >= '50vh'
-    //         ? stick.classList.add('isSticky')
-    //         : stick.classList.remove('isSticky');
-    // };
 
     return (
         <>

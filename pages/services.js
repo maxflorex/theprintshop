@@ -1,33 +1,35 @@
-import React from 'react';
-import { Column, Items3, Flex } from './components/Styled/divs/Styled';
-import { Title, Title2 } from './components/Styled/fonts/Styled';
+import React, { useState } from 'react';
+import { Column, Items3, Flex, BackdropDark } from './components/Styled/divs/Styled';
+import { Para, Title, Title2 } from './components/Styled/fonts/Styled';
 import { slides } from './api/dataOtherServices';
 import { BiRightArrow } from "react-icons/bi";
 import ServicesSlider from './components/servicesSlider';
-import { UseTryContext } from './components/Contexts/tryContext';
+import { BtnBlack } from './components/Styled/buttons/Styled'
 
 const services = () => {
 
-	const myContext = UseTryContext
+	const link = 'https://images.unsplash.com/photo-1580824469841-49c0f1401393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80'
 
-	console.log(myContext)
-
-	const link = 'https://images.unsplash.com/photo-1537346439163-eafb59bdc400?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80'
+	const [onHover, setOnHover] = useState(null)
 
 	return <>
-		{/* <Title>This is my value {myContext.value}</Title> */}
 		<section>
 			<Items3 m='0' p='0'>
 
 				{slides.map((data, index) => (
 
-					<Column m='0' p='0' key={index}>
-						<Column img={data.img} h='60vh' />
-						<Title size='2rem'>{data.title}</Title>
-						<Title2 font='Roboto'>{data.desc}</Title2>
-						<Flex m='auto' p='1rem' with='100%' color='none'>
-							<BiRightArrow style={{ margin: 'auto' }} />
-						</Flex>
+
+					<Column m='0' p='0' key={index} onMouseEnter={() => setOnHover(data.title)} onMouseLeave={() => setOnHover(null)}>
+						{onHover !== data.title ? (
+							(<Column img={data.img} h='40vh'>
+								<Title size='2rem'>{data.title}</Title>
+							</Column>)
+						) : (<Column img={link} h='40vh' p='4rem' gap='2rem'>
+							<Title size='2rem' color='white'>{data.title}</Title>
+							<Para m='auto'>{data.desc}</Para>
+							<BtnBlack m='auto'>Contact Us</BtnBlack>
+						</Column>)}
+
 					</Column>
 				))}
 			</Items3>

@@ -320,6 +320,7 @@ const Hero = styled.div`
    width: ${props => props.width};
    position: relative;
    gap: ${props => props.gap || '0'};
+   background-attachment: ${props => props.attach};
    @media (max-width: 1280px) {
       background-image: url(${props => props.imgMd});
       display: ${props => props.display};
@@ -346,6 +347,7 @@ const Backdrop = styled.div`
    margin: ${props => props.m};
    border-radius: ${props => props.radius || '0.6rem'};
    min-height: ${props => props.h};
+   display: ${props => props.display};
 `
 
 const BackdropDark = styled.div`
@@ -365,6 +367,10 @@ const BackdropDark = styled.div`
    padding: ${props => props.p};
    margin: ${props => props.m};
    border-radius: ${props => props.radius || '0.6rem'};
+   display: ${props => props.display};
+   &:hover {
+      display: ${props => props.displayH};
+   }
 `
 
 export { Flex, Grid, Hero, Backdrop, Items, Column, Row, BackdropDark, Items6, Items3, FlexItems }

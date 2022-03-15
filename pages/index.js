@@ -3,7 +3,7 @@ import Cards from './components/Cards'
 import HeroSection from './components/Hero'
 import Section from './components/Section'
 import About from './components/About'
-import Order from './components/Order'
+import SameDayPrint from './components/SameDayPrint'
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
         <Cards />
         <Section />
         <About />
-        <Order />
+        <SameDayPrint />
       </main>
     </div>
   )

@@ -1,4 +1,4 @@
-import { Backdrop, BackdropDark, Column, Hero, Items, Items6, Row, Flex, Items3, Grid } from '../components/Styled/divs/Styled'
+import { Backdrop, BackdropDark, Column, Hero, Items6} from '../components/Styled/divs/Styled'
 import { P, Title, Title2 } from '../components/Styled/fonts/Styled'
 import Image from 'next/image';
 import { dataPrintDetails } from '../api/dataPrintDetails';
@@ -21,8 +21,7 @@ const TAB = {
 
 const canvas = () => {
 
-  const link = 'https://images.unsplash.com/photo-1575743106679-ca06346681c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80'
-  const link2 = 'https://images.unsplash.com/photo-1565555334121-4a4f177af7b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'
+  const link = 'https://images.unsplash.com/photo-1525116848140-a3b75fdf4eb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80'
 
   const [selectedTab, setSelectedTab] = useState('stretchers');
 
@@ -32,9 +31,9 @@ const canvas = () => {
       {/* TITLE & HERO */}
 
       <section>
-        <Hero img={link2} imgMd={link2} m='2rem' h='25vh'>
+        <Hero img={link} imgMd={link} m='2rem' h='25vh'>
           <Column>
-            <Backdrop h='25vh' w='100%' p='4rem'>
+          <Backdrop w='100%' p='4rem'>
               <Title size='4rem'>Canvas</Title>
             </Backdrop>
           </Column>

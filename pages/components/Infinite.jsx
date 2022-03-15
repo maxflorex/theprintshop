@@ -70,9 +70,6 @@ const Infinite = () => {
                                     />
                                 </Column>
                                 <Title size="2rem">{data.title}</Title>
-                                <Title2 font="Roboto" size="1rem" mb="1rem">
-                                    {data.desc}
-                                </Title2>
                             </a>
                         </Column>
                     </SwiperSlide>

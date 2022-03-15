@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { dataBorders } from "../api/dataBorders";
-import { Column, Items3 } from "./Styled/divs/Styled";
-import { Title } from "./Styled/fonts/Styled";
+import Image from 'next/image';
+import { dataBorders } from '../api/dataBorders';
+import { Column, Items3 } from './Styled/divs/Styled';
+import { Title } from './Styled/fonts/Styled';
 
 const GalleryWrap = () => {
     return (
@@ -12,7 +12,6 @@ const GalleryWrap = () => {
                     {dataBorders.map((dataBorders, index) => (
                         <Column key={index} m="0">
                             <Image src={dataBorders.img} objectFit="contain" />
-
                             <Title size="1rem">Border Style</Title>
                             <Title size="2rem" font="Roboto">
                                 {dataBorders.title}
