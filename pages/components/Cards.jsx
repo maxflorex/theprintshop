@@ -2,20 +2,14 @@ import {
     Flex,
     Items,
     Column,
-    Grid,
     Row,
-    BackdropDark,
-    FlexItems,
     Backdrop,
 } from './Styled/divs/Styled';
 import { data } from '../api/dataServices';
-import { P, Title } from './Styled/fonts/Styled';
+import { Title } from './Styled/fonts/Styled';
 import Image from 'next/image';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-
-const link =
-    'https://images.unsplash.com/photo-1540275994-cdc89cd1948f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&width=987&q=80';
 
 const Cards = () => {
     const [inUseCard, setInUseCard] = useState(null);
@@ -24,6 +18,8 @@ const Cards = () => {
         show: { display: 'block' },
         hide: { display: 'none' },
     };
+
+    const colorOpa = 'rgba(0, 0, 0, 0.7)';
 
     return (
         <Items mr="2rem" ml="2rem" p="0">
@@ -39,7 +35,7 @@ const Cards = () => {
                     >
                         <Title size="2rem">{data.title}</Title>
 
-                        <Column m="0" img={data.bg} radius="0" p="0" h="10rem">
+                        <Column m="0" img={data.bg} radius="0" p="0" h="10rem"> 
                             <motion.div
                                 animate={
                                     inUseCard === data.title ? 'show' : 'hide'

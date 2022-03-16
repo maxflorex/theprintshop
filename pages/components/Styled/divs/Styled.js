@@ -66,6 +66,7 @@ const Column = styled.div`
       width: ${props => props.widthMd};
       background-color: ${props => props.colorMd};
       min-height: ${props => props.hMd};
+      background-image: url(${props => props.imgMd});
    }
    @media (max-width: 758px) {
       width: ${props => props.widthSm};
@@ -324,6 +325,7 @@ const Hero = styled.div`
    @media (max-width: 1280px) {
       background-image: url(${props => props.imgMd});
       display: ${props => props.display};
+      background-color: ${props => props.colorMd};
    };
    @media (max-width: 1024px) {
       width: ${props => props.widthMd};

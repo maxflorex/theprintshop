@@ -22,9 +22,7 @@ function Footer() {
                                 </a>
                             </Para>
                             <Para ls="0.05rem" color="white" font="Roboto">
-                                <a href="tel:+3459232222">
-                                    +1(345) 923-2222
-                                </a>
+                                <a href="tel:+3459232222">+1(345) 923-2222</a>
                             </Para>
                         </Column>
                         <Column>
@@ -36,18 +34,26 @@ function Footer() {
                             >
                                 Printing
                             </Title>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                Giclee
-                            </Para>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                Framing
-                            </Para>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                Photo Restoration
-                            </Para>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                Test Prints
-                            </Para>
+                            <a href="/products/canvas">
+                                <Para ls="0.05rem" color="white" font="Roboto">
+                                    Canvas
+                                </Para>
+                            </a>
+                            <a href="/products/framing">
+                                <Para ls="0.05rem" color="white" font="Roboto">
+                                    Framing
+                                </Para>
+                            </a>
+                            <a href="/products/paper">
+                                <Para ls="0.05rem" color="white" font="Roboto">
+                                    Fine Art Papers
+                                </Para>
+                            </a>
+                            <a href="/products/aluminum">
+                                <Para ls="0.05rem" color="white" font="Roboto">
+                                    Aluminum
+                                </Para>
+                            </a>
                         </Column>
                         <Column>
                             <Title
@@ -58,12 +64,16 @@ function Footer() {
                             >
                                 Artists
                             </Title>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                Discounts
-                            </Para>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                Prices
-                            </Para>
+                            <a href="/contact">
+                                <Para ls="0.05rem" color="white" font="Roboto">
+                                    Discounts
+                                </Para>
+                            </a>
+                            <a href="/contact">
+                                <Para ls="0.05rem" color="white" font="Roboto">
+                                    Prices
+                                </Para>
+                            </a>
                         </Column>
                         <Column>
                             <Title
@@ -74,21 +84,26 @@ function Footer() {
                             >
                                 The Printshop
                             </Title>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                Our Team
-                            </Para>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                Contact
-                            </Para>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                News
-                            </Para>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                Print Studio
-                            </Para>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                Privacy Policy
-                            </Para>
+                            <a href="/about">
+                                <Para ls="0.05rem" color="white" font="Roboto">
+                                    Our Team
+                                </Para>
+                            </a>
+                            <a href="/contact">
+                                <Para ls="0.05rem" color="white" font="Roboto">
+                                    Contact
+                                </Para>
+                            </a>
+                            <a href="/news">
+                                <Para ls="0.05rem" color="white" font="Roboto">
+                                    News
+                                </Para>
+                            </a>
+                            <a href="/privacy-policy">
+                                <Para ls="0.05rem" color="white" font="Roboto">
+                                    Privacy Policy
+                                </Para>
+                            </a>
                         </Column>
                     </Items>
                 </section>

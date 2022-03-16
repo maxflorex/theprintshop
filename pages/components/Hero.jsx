@@ -1,25 +1,25 @@
-import { Hero, Grid, Items, Backdrop } from './Styled/divs/Styled';
+import { Hero, Grid, Items, Backdrop, Column } from './Styled/divs/Styled';
 import { P, Para, Title } from './Styled/fonts/Styled';
 import { Btn, BtnBlack, Button } from './Styled/buttons/Styled';
 import logo from '../../images/tps-logo.svg';
 import Image from 'next/image';
 
 const HeroSection = () => {
-    
-    const link =
-        'https://images.unsplash.com/photo-1604076913837-52ab5629fba9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&width=987&q=80';
+    const link = '/_MX82804.jpg';
+    const link2 = '/aluminum/_MX82768.jpg';
+    const colorOpa = 'rgba(0, 0, 0, 0.7)';
 
     return (
         <Grid mr="2rem" ml="2rem" gap="2rem">
             <Hero
                 mt="0"
                 mb="0"
-                img={link}
+                img={link2}
                 h="85vh"
                 display="none"
                 pt="0"
                 pb="0"
-                position="relative"
+                position="center"
             >
                 <div className="absolute">
                     <Image
@@ -32,26 +32,27 @@ const HeroSection = () => {
                 </div>
             </Hero>
 
-            <Hero mt="0" mb="0" imgMd={link} h="80vh" pt="0" pb="0">
-                <Title size="2rem">Fine Art</Title>
-                <Title size="4rem">Printing & Framing</Title>
-                <Para
-                    font="Roboto"
-                    size="1.6rem"
-                    mt="1rem"
-                    color="black"
-                    width="300"
-                    align="center"
-                    displayMd="none"
-                >
-                    Handcrafted in the{' '}
-                    <span className="spotlight">Cayman Islands</span>
-                </Para>
-                `{' '}
-                <BtnBlack transform="uppercase" ls="0.2rem">
-                    Know More
-                </BtnBlack>
-            </Hero>
+            <Column imgMd={link} m='0' p='0' attach='fixed'>
+                <Hero mt="0" mb="0" h="80vh" pt="0" pb="0" colorMd={colorOpa}>
+                    <Title size="2rem" colorMd='white'>Fine Art</Title>
+                    <Title size="4rem" colorMd='white'>Printing & Framing</Title>
+                    <Para
+                        font="Roboto"
+                        size="1.6rem"
+                        mt="1rem"
+                        color="black"
+                        width="300"
+                        align="center"
+                        displayMd="none"
+                    >
+                        Handcrafted in the{' '}
+                        <span className="spotlight">Cayman Islands</span>
+                    </Para>
+                    <BtnBlack transform="uppercase" ls="0.2rem">
+                        Know More
+                    </BtnBlack>
+                </Hero>
+            </Column>
         </Grid>
     );
 };

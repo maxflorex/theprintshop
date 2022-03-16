@@ -40,6 +40,7 @@ export const colRefOrder = collection(db, 'orders')
 export const colRefPaper = collection(db, 'ordersPaper')
 export const colRefFraming = collection(db, 'ordersFraming')
 export const colRefAluminum = collection(db, 'ordersAluminum')
+export const colMessages = collection(db, 'messages')
 
 
 // QUERIES

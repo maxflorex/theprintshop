@@ -1,5 +1,5 @@
 import React from 'react';
-import { Btn, BtnBlack, Button } from './Styled/buttons/Styled';
+import { Btn, BtnBlack, BtnS, Button } from './Styled/buttons/Styled';
 import { BackdropDark, Column, Hero, Flex, Grid } from './Styled/divs/Styled';
 import { P, Title } from './Styled/fonts/Styled';
 
@@ -26,12 +26,8 @@ const SameDayPrint = () => {
                     same day
                 </P>
                 <Grid gap="2rem" gapH="0.4rem">
-                    <Btn>
-                        <a href="/order">MAKE A RUSH ORDER</a>
-                    </Btn>
-                    <BtnBlack>
-                        <a href="/order">GET AN ORDER</a>
-                    </BtnBlack>
+                    <BtnS a href="/order">MAKE A RUSH ORDER</BtnS>
+                    <BtnBlack href="/order">GET AN ORDER</BtnBlack>
                 </Grid>
             </BackdropDark>
         </Hero>

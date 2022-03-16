@@ -7,7 +7,13 @@ import Image from 'next/image';
 
 const Navbar = () => {
     return (
-        <Flex p='0' colorMd='transparent' mt='2rem' mb='2rem' color='transparent'> 
+        <Flex
+            p="0"
+            colorMd="transparent"
+            mt="2rem"
+            mb="2rem"
+            color="transparent"
+        >
             <div>
                 <Menu
                     transform="uppercase"
@@ -30,11 +36,7 @@ const Navbar = () => {
                     <li>
                         <a href="/services">Services </a>
                     </li>
-                    <Button
-                        transform="uppercase"
-                        font="Oswald"
-                        href="/order"
-                    >
+                    <Button transform="uppercase" font="Oswald" href="/order">
                         Order
                     </Button>
                     <li>
@@ -43,15 +45,19 @@ const Navbar = () => {
                 </Menu>
             </div>
             <a href="/">
-                <Flex m="0" p="0" colorMd='transparent' justify='end' color='transparent'>
+                <Flex
+                    m="0"
+                    p="0"
+                    colorMd="transparent"
+                    justify="end"
+                    color="transparent"
+                >
                     {/* <Image src={logo} /> */}
                     <Title color="black" font="Roboto" ls="0.05rem">
                         The Printshop™
                     </Title>
                 </Flex>
             </a>
-
-
         </Flex>
     );
 };

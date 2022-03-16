@@ -14,7 +14,7 @@ const link = 'https://images.unsplash.com/photo-1550275994-2bc88dc68637?ixlib=rb
 
 const Section = () => {
     return (
-        <Column img={link}p='0' m='2rem'  attach='fixed'>
+        <Column img={link} imgMd={link} p='0' m='2rem'  attach='fixed'>
             <BackdropDark>
                 <Row gap="4rem" p="4rem">
                     <Backdrop p="4rem">

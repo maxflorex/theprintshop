@@ -1,7 +1,7 @@
 import React from 'react';
-import { Btn, BtnBlack } from './Styled/buttons/Styled';
+import { BtnBlack } from './Styled/buttons/Styled';
 import { Column, Flex, Grid, Row } from './Styled/divs/Styled';
-import { P, Title } from './Styled/fonts/Styled';
+import { Para, Title } from './Styled/fonts/Styled';
 
 const link =
     'https://images.pexels.com/photos/2874998/pexels-photo-2874998.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&width=940';
@@ -13,17 +13,17 @@ const About = () => {
                 <Title size="3.2rem" align="left" mb="0.6rem">
                     The Printshop
                 </Title>
-                <P color="black" font="Roboto">
+                <Para color="black" font="Roboto">
                     We are The Printshop™, your professional fine art ptinting
                     company. From canvas prints to mesmerizing aluminum prints;
                     We've got you covered. We Specialize in faster turnarounds
                     (Including same day service) and supreme museum quality.
-                </P>
-                <P color="black" font="Roboto">
+                </Para>
+                <Para color="black" font="Roboto">
                     Based in Grand Cayman, Cayman Islands. You can find us in
                     any of our locations from 7 Mile Beach to West Bay. Proud to
                     be locally own & operated.
-                </P>
+                </Para>
                 <BtnBlack bg='var(--off2)'>
                     <a href="/order">
                         <Title size="1.4rem" color='black' colorH='white'>

@@ -4,6 +4,7 @@ import { dataPrintDetailPaper } from '../api/dataPrintDetails';
 import Papers from '../components/Papers';
 import { Backdrop, Column, Hero, Items6 } from '../components/Styled/divs/Styled';
 import { Para,  Title } from '../components/Styled/fonts/Styled';
+import Infinite from '../components/Infinite';
 
 const paper = () => {
 
@@ -46,6 +47,7 @@ const paper = () => {
         {/* PAPER DETAILS */}
 
         <Papers />
+        <Infinite />
       </section>
     </>
   );
