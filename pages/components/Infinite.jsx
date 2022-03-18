@@ -48,9 +48,8 @@ const Infinite = () => {
                 className="mySwiper"
             >
                 {slides.map((data, index) => (
-                    <SwiperSlide>
-                        <Column
-                            key={index}
+                    <SwiperSlide  key={index}>
+                        <Column                           
                             color="white"
                             width="100%"
                             ml="0"

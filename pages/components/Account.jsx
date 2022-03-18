@@ -195,7 +195,7 @@ function App({ setIsAuth }) {
                                 bg="var(--accent)"
                                 onClick={() => setOpenRegForm(!openRegForm)}
                             >
-                                Create User
+                                Need an account?
                             </BtnBlack>
                         </Flex>
                     </Column>

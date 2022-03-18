@@ -52,8 +52,8 @@ export function RegisterForm({
                         <BtnBlack onClick={handleClick}>
                             Sign Up
                         </BtnBlack>
-                        <BtnBlack onClick={() => setOpenRegForm(!openRegForm)}>
-                            Login
+                        <BtnBlack bg='var(--color)' onClick={() => setOpenRegForm(!openRegForm)}>
+                            Already registered?
                         </BtnBlack>
                     </Flex>
                 </Column>

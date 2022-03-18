@@ -9,6 +9,7 @@ import GalleryWrap from '../components/GalleryWrap'
 import Tabs from '../components/Tabs';
 import { useState } from 'react';
 import Infinite from '../components/Infinite';
+import ListAll from '../components/ListAll';
 
 
 const TAB = {
@@ -31,6 +32,7 @@ const canvas = () => {
 			{/* TITLE & HERO */}
 
 			<section>
+				<ListAll />
 				<Hero img={link} imgMd={link} m='2rem' h='25vh'>
 					<Column>
 						<Backdrop w='100%' p='4rem'>
@@ -61,13 +63,13 @@ const canvas = () => {
 
 				{/* COMPONENTS */}
 
-	
-					<Flex m='auto' color='none' justify='center' pt='2rem' pb='4rem'>
-						<BtnBlack m='auto' font='Oswald' p='0' href='/order'>
-							PLACE AN ORDER
-						</BtnBlack>
-					</Flex>
-	
+
+				<Flex m='auto' color='none' justify='center' pt='2rem' pb='4rem'>
+					<BtnBlack m='auto' font='Oswald' p='0' href='/order'>
+						PLACE AN ORDER
+					</BtnBlack>
+				</Flex>
+
 
 
 				<Tabs setSelectedTab={setSelectedTab} selectedTab={selectedTab} />

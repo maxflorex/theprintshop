@@ -1,7 +1,7 @@
 import React from 'react';
 import { Title, Menu } from './Styled/fonts/Styled';
 import { Flex } from './Styled/divs/Styled';
-import { Button } from './Styled/buttons/Styled';
+import { ButtonS } from './Styled/buttons/Styled';
 import logo from '../../images/tps-logo.svg';
 import Image from 'next/image';
 
@@ -36,9 +36,15 @@ const Navbar = () => {
                     <li>
                         <a href="/services">Services </a>
                     </li>
-                    <Button transform="uppercase" font="Oswald" href="/order">
-                        Order
-                    </Button>
+                    <li>
+                        <ButtonS
+                            transform="uppercase"
+                            font="Oswald"
+                            href="/order"
+                        >
+                            Order
+                        </ButtonS>
+                    </li>
                     <li>
                         <a href="/support">Support</a>
                     </li>

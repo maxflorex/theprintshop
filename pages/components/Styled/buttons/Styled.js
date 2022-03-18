@@ -24,6 +24,31 @@ const Button = styled.a`
     }
     
 `
+
+const ButtonS = styled.a`
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--off2);
+    padding: 1rem;
+    border-radius: 0.6rem;
+    font-family: ${props => props.font || 'Roboto'};
+    font-weight: ${props => props.weight || 300};
+    font-size: ${props => props.size || '1rem'};
+    text-transform: ${props => props.transform || 'none'};
+    text-align: ${props => props.align || 'centere'};
+    color: ${props => props.color};
+    letter-spacing: ${props => props.ls || '0.06rem'}; 
+    cursor: pointer ;
+    &:hover {
+        border-style: solid;
+        border-width: 1px;
+        border-color: var(--accent);
+        color: var(--accent);
+        padding: 1rem;
+        border-radius: 0.6rem;
+    }
+    
+`
 const Btn = styled.a`
     background-color: var(--accent);
     padding: 1rem;
@@ -95,4 +120,4 @@ const BtnBlack = styled.a`
     
 `
 
-export { Button, Btn, BtnBlack, BtnS }
+export { Button, Btn, BtnBlack, BtnS, ButtonS }

@@ -21,10 +21,9 @@ import {
     getDocs
 } from 'firebase/firestore'
 
-import { getStorage } from 'firebase/storage'
+import { getDownloadURL, getStorage, listAll, ref } from 'firebase/storage'
 import { getAuth } from 'firebase/auth'
-
-
+import { useEffect } from "react";
 
 
 // INIT FIREBASE
@@ -35,12 +34,46 @@ export const app = initializeApp(firebaseConfig);
 export const db = getFirestore()
 
 
+// FIREBASE CLOUD STORAGE
+export const storage = getStorage(app)
+
+
+
 // COLLECTIONS REF
 export const colRefOrder = collection(db, 'orders')
 export const colRefPaper = collection(db, 'ordersPaper')
 export const colRefFraming = collection(db, 'ordersFraming')
 export const colRefAluminum = collection(db, 'ordersAluminum')
 export const colMessages = collection(db, 'messages')
+
+export const gsAluminumRef = ref(storage, 'canvas/')
+
+
+
+// LIST ALL FILES
+
+// listAll(gsAluminumRef)
+//     .then((res) => {
+//         res.prefixes.forEach((folderRef) => {
+//             console.log(folderRef)
+
+//         })
+//         res.items.forEach((itemRef) => {
+//             getDownloadURL(itemRef)
+//                 .then((url) => {
+//                     console.log(url)
+//                 })
+//         })
+//     })
+//     .catch((error) => {
+//         console.log(error)
+//     })
+
+
+
+// WORKING WITH THE URLS
+
+
 
 
 // QUERIES
@@ -55,8 +88,6 @@ onSnapshot(q, (snapshot) => {
     })
 })
 
-// FIREBASE CLOUD STORAGE
-export const storage = getStorage(app)
 
 // AUTHENTIFICATION
 export const auth = getAuth(app)
