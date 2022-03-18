@@ -167,58 +167,61 @@ hr {
 
 /* TABLE STYLES */
 
-
-.table{
-	width: 100%;
-	border-collapse: collapse;
+.table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.table td,.table th{
-  padding: 1rem;
-  border:1px solid var(--off2);
-  text-align: center;
-  font-size: 1rem;
+.table td,
+.table th {
+    padding: 1rem;
+    border: 1px solid var(--off2);
+    text-align: center;
+    font-size: 1rem;
 }
 
-.table th{
-	background-color: var(--off2);
-	color: black;
+.table th {
+    background-color: var(--off2);
+    color: black;
 }
 
-.table tbody tr:nth-child(even){
-	background-color: var(--off2);
+.table tbody tr:nth-child(even) {
+    background-color: var(--off2);
 }
 
 /*RESPONSIVE*/
 
-@media(max-width: 1280px){
-	.table thead{
-		display: none;
-	}
+@media (max-width: 1280px) {
+    .table thead {
+        display: none;
+    }
 
-	.table, .table tbody, .table tr, .table td{
-		display: block;
-		width: 100%;
-	}
-	.table tr{
-		margin-bottom:15px;
-	}
-	.table td{
-		text-align: right;
-		padding-left: 50%;
-		text-align: right;
-		position: relative;
-	}
-	.table td::before{
-		content: attr(data-label);
-		position: absolute;
-		left:0;
-		width: 50%;
-		padding-left:15px;
-		font-size:15px;
-		font-weight: bold;
-		text-align: left;
-	}
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+    .table tr {
+        margin-bottom: 15px;
+    }
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
 }
 
 /* DISPLAY */
@@ -226,7 +229,36 @@ hr {
 .hide {
     display: none;
 }
-    
+
 .show {
     display: block;
+}
+
+/* MODAL */
+
+.backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.backdrop img {
+    max-width: 80vw;
+    max-height: 80vh;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imageGallery {
+    border-radius: 0.6rem;
 }

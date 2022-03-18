@@ -109,6 +109,7 @@ const BtnBlack = styled.a`
     margin-top: ${props => props.mt || '1.4rem'};
     margin: ${props => props.m};
     position: ${props => props.position};
+    box-sizing: content-box ;
     
     &:hover {
         background-color: ${props => props.bgH || 'var(--accent)'};

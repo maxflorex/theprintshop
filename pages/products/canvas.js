@@ -9,7 +9,9 @@ import GalleryWrap from '../components/GalleryWrap'
 import Tabs from '../components/Tabs';
 import { useState } from 'react';
 import Infinite from '../components/Infinite';
-import ListAll from '../components/ListAll';
+
+import Modal from '../components/Modal';
+import GalleryAluminum from '../components/Galleries/GalleryAluminum';
 
 
 const TAB = {
@@ -25,6 +27,10 @@ const canvas = () => {
 	const link = 'https://images.unsplash.com/photo-1525116848140-a3b75fdf4eb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80'
 
 	const [selectedTab, setSelectedTab] = useState('stretchers');
+	const [selectedImg, setSelectedImg] = useState(null)
+
+	console.log(selectedImg)
+
 
 	return (
 
@@ -32,7 +38,6 @@ const canvas = () => {
 			{/* TITLE & HERO */}
 
 			<section>
-				<ListAll />
 				<Hero img={link} imgMd={link} m='2rem' h='25vh'>
 					<Column>
 						<Backdrop w='100%' p='4rem'>
@@ -76,6 +81,9 @@ const canvas = () => {
 				{TAB[selectedTab]}
 
 				<Infinite />
+				
+				<GalleryAluminum selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+				{selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
 			</section>
 		</>
 	)
