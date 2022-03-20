@@ -11,7 +11,8 @@ import { useState } from 'react';
 import Infinite from '../components/Infinite';
 
 import Modal from '../components/Modal';
-import GalleryAluminum from '../components/Galleries/GalleryAluminum';
+import GalleryCanvas from '../components/Galleries/GalleryCanvas';
+
 
 
 const TAB = {
@@ -81,8 +82,8 @@ const canvas = () => {
 				{TAB[selectedTab]}
 
 				<Infinite />
-				
-				<GalleryAluminum selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+
+				<GalleryCanvas selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
 				{selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
 			</section>
 		</>

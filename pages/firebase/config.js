@@ -46,34 +46,8 @@ export const colRefFraming = collection(db, 'ordersFraming')
 export const colRefAluminum = collection(db, 'ordersAluminum')
 export const colMessages = collection(db, 'messages')
 
-export const gsAluminumRef = ref(storage, 'canvas/')
-
-
-
-// LIST ALL FILES
-
-// listAll(gsAluminumRef)
-//     .then((res) => {
-//         res.prefixes.forEach((folderRef) => {
-//             console.log(folderRef)
-
-//         })
-//         res.items.forEach((itemRef) => {
-//             getDownloadURL(itemRef)
-//                 .then((url) => {
-//                     console.log(url)
-//                 })
-//         })
-//     })
-//     .catch((error) => {
-//         console.log(error)
-//     })
-
-
-
-// WORKING WITH THE URLS
-
-
+export const gsCanvasRef = ref(storage, 'canvas/')
+export const gsAluminumRef = ref(storage, 'aluminum/')
 
 
 // QUERIES

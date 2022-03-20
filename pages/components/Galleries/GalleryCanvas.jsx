@@ -1,18 +1,18 @@
 import { getDownloadURL, listAll } from 'firebase/storage';
 import { useEffect, useState } from 'react';
-import { gsAluminumRef, gsCanvasRef, storage } from '../../firebase/config';
+import {  gsCanvasRef,  storage } from '../../firebase/config';
 import { Column, Items6 } from '../Styled/divs/Styled';
 import Image from 'next/image';
 import { Title } from '../Styled/fonts/Styled';
 
-function GalleryAluminum({ setSelectedImg }) {
+function GalleryCanvas({ setSelectedImg }) {
     // STATES TO PULL OUT THE DATA
     const [dataAluminum, setDataAluminum] = useState([]);
     const [image, setImage] = useState('');
 
     // LIST ALL THE ITEMS
     useEffect(() => {
-        listAll(gsAluminumRef).then((res) => {
+        listAll(gsCanvasRef).then((res) => {
             res.items.forEach((item) => {
                 getDownloadURL(item).then((url) => {
                     setImage(url);
@@ -45,4 +45,4 @@ function GalleryAluminum({ setSelectedImg }) {
     );
 }
 
-export default GalleryAluminum;
+export default GalleryCanvas;

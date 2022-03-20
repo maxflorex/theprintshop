@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { dataPrintDetailAluminum } from '../api/dataPrintDetails';
 import { Backdrop, Column, Hero, Items6, Flex, Row, Grid } from '../components/Styled/divs/Styled';
 import { Para, Title, Title2 } from '../components/Styled/fonts/Styled';
@@ -9,9 +9,13 @@ import inset1 from '../components/Images/inset/inset-01.svg'
 import inset2 from '../components/Images/inset/inset-02-01.svg'
 import Infinite from '../components/Infinite'
 import { BtnBlack } from '../components/Styled/buttons/Styled';
+import GalleryAluminum from '../components/Galleries/GalleryAluminum';
+import Modal from '../components/Modal';
 
 
 const aluminum = () => {
+	const [selectedImg, setSelectedImg] = useState(null)
+
     const link = 'https://images.unsplash.com/photo-1612504200882-d29bf3f2cc13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1056&q=80'
 
     return (
@@ -87,6 +91,9 @@ const aluminum = () => {
                     </Grid>
                 </Column>
                 <Infinite />
+
+                <GalleryAluminum selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+				{selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
             </section>
         </>
     );

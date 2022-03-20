@@ -16,7 +16,7 @@ const services = () => {
 		<section>
 			<Column p='2rem' attach='fixed'>
 				<Title size='4rem'>Other Services</Title>
-				<Para color='black' m='auto' font='Roboto'><span style={{fontWeight:'600'}}>We do a lot more than awesome prints!</span> Hover over the cards to know more about our services</Para>
+				<Para color='black' m='auto' font='Roboto'><span style={{ fontWeight: '600' }}>We do a lot more than awesome prints!</span> Hover over the cards to know more about our services</Para>
 			</Column>
 			<Items3 m='2rem' p='0'>
 
@@ -28,7 +28,7 @@ const services = () => {
 									<Title size='2rem' color='white' align='center' m='auto'>{data.title}</Title>
 								</Flex>
 							</Flex>)
-						) : (<Column img={data.img} h='40vh' m='0' gap='2rem' p='0'>
+						) : (<Flex img={data.img} h='40vh' m='0' gap='2rem' p='0'>
 							<BackdropDark h='40vh' m='0' p='4rem'>
 								<Flex color='none' p='0' m='0' justify='start'>
 
@@ -37,7 +37,7 @@ const services = () => {
 									<BtnBlack bg='var(--accent)' bgH='var(--color)'>CONTACT US</BtnBlack>
 								</Flex>
 							</BackdropDark>
-						</Column>)}
+						</Flex>)}
 					</Column>
 				))}
 			</Items3>
