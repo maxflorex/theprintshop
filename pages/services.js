@@ -3,8 +3,8 @@ import { Column, Items3, Flex, BackdropDark } from './components/Styled/divs/Sty
 import { Para, Title, Title2 } from './components/Styled/fonts/Styled';
 import { slides } from './api/dataOtherServices';
 import { BiRightArrow } from "react-icons/bi";
-import ServicesSlider from './components/ServicesSlider';
 import { BtnBlack } from './components/Styled/buttons/Styled'
+import Carousel from './components/Carousel';
 
 const services = () => {
 
@@ -19,7 +19,6 @@ const services = () => {
 				<Para color='black' m='auto' font='Roboto'><span style={{ fontWeight: '600' }}>We do a lot more than awesome prints!</span> Hover over the cards to know more about our services</Para>
 			</Column>
 			<Items3 m='2rem' p='0'>
-
 				{slides.map((data, index) => (
 					<Column m='0' p='0' key={index} onMouseEnter={() => setOnHover(data.title)} onMouseLeave={() => setOnHover(null)}>
 						{onHover !== data.title ? (
@@ -34,16 +33,16 @@ const services = () => {
 
 									<Title size='2rem' color='white'>{data.title}</Title>
 									<Para m='auto' font='Roboto'>{data.desc}</Para>
-									<BtnBlack bg='var(--accent)' bgH='var(--color)'>CONTACT US</BtnBlack>
+									<BtnBlack bg='var(--accent)' bgH='var(--color)' href='/contact'>CONTACT US</BtnBlack>
 								</Flex>
 							</BackdropDark>
 						</Flex>)}
 					</Column>
 				))}
 			</Items3>
-		</section>
-		<section>
-			<ServicesSlider />
+			<div style={{ margin: '6rem 0' }}>
+				<Carousel />
+			</div>
 		</section>
 	</>;
 };

@@ -7,7 +7,7 @@ import Image from 'next/image';
 const HeroSection = () => {
     const link = '/_MX82804.jpg';
     const link2 = '/aluminum/_MX82768.jpg';
-    const colorOpa = 'rgba(0, 0, 0, 0.7)';
+    const colorOpa = 'rgba(0, 0, 0, 0.5)';
 
     return (
         <Grid mr="2rem" ml="2rem" gap="2rem">
@@ -33,7 +33,7 @@ const HeroSection = () => {
             </Hero>
 
             <Column imgMd={link} m='0' p='0' attach='fixed'>
-                <Hero mt="0" mb="0" h="80vh" pt="0" pb="0" colorMd={colorOpa}>
+                <Hero mt="0" mb="0" h="80vh" hMd='60vh' pt="0" pb="0" colorMd={colorOpa}>
                     <Title size="2rem" colorMd='white'>Fine Art</Title>
                     <Title size="4rem" colorMd='white'>Printing & Framing</Title>
                     <Para

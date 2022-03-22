@@ -23,17 +23,16 @@ function GalleryCanvas({ setSelectedImg }) {
     }, [listAll]);
 
     return (
-        <Column>
-            <Title size='3rem' mb='1rem'>Product Gallery</Title>
+        <>
+            <Title size='3rem' mb='1rem' mt='6rem'>Product Gallery</Title>
             <Items6 p='0'>
                 {dataAluminum.map((val, index) => (
                     <Image
                         key={index}
                         src={val}
                         alt={val}
-                        width={1}
-                        height={1}
-                        layout="responsive"
+                        width={100}
+                        height={200}
                         objectFit="cover"
                         style={{ borderRadius: '0.6rem' }}
                         className="imageGallery"
@@ -41,7 +40,7 @@ function GalleryCanvas({ setSelectedImg }) {
                     />
                 ))}
             </Items6>
-        </Column>
+        </>
     );
 }
 

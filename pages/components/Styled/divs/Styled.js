@@ -27,7 +27,12 @@ const Row = styled.div`
    width: ${props => props.width};
    @media (max-width: 1280px) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
+      width: ${props => props.wMd};
+      margin: ${props => props.mMd};
+   }
+   @media (max-width: 758px) {
+      width: ${props => props.wSm};
+   }
 `
 
 const Column = styled.div`
@@ -187,6 +192,7 @@ const Items3 = styled.div`
    };
    @media (max-width: 758px) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: ${props => props.gapSm};
    };
 `
 
@@ -317,7 +323,7 @@ const Hero = styled.div`
    padding: ${props => props.p};
    margin: ${props => props.m};
    border-radius: 0.6rem;
-   min-height: ${props => props.h};
+   height: ${props => props.h};
    width: ${props => props.width};
    position: relative;
    gap: ${props => props.gap || '0'};
@@ -326,6 +332,7 @@ const Hero = styled.div`
       background-image: url(${props => props.imgMd});
       display: ${props => props.display};
       background-color: ${props => props.colorMd};
+      height: ${props => props.hMd};
    };
    @media (max-width: 1024px) {
       width: ${props => props.widthMd};

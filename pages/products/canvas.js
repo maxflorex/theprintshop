@@ -8,10 +8,9 @@ import Stretchers from '../components/Stretchers'
 import GalleryWrap from '../components/GalleryWrap'
 import Tabs from '../components/Tabs';
 import { useState } from 'react';
-import Infinite from '../components/Infinite';
-
 import Modal from '../components/Modal';
 import GalleryCanvas from '../components/Galleries/GalleryCanvas';
+import Carousel from '../components/CarouselOtherServices';
 
 
 
@@ -29,9 +28,6 @@ const canvas = () => {
 
 	const [selectedTab, setSelectedTab] = useState('stretchers');
 	const [selectedImg, setSelectedImg] = useState(null)
-
-	console.log(selectedImg)
-
 
 	return (
 
@@ -81,7 +77,7 @@ const canvas = () => {
 				<Tabs setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
 				{TAB[selectedTab]}
 
-				<Infinite />
+				<Carousel />
 
 				<GalleryCanvas selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
 				{selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}

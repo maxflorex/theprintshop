@@ -1,30 +1,41 @@
-import { Slideshow, Slide, TextSlide } from './Slideshow';
+import { Slideshow, Slide } from './Slideshow';
 import img1 from './Images/reflections/mx-reflection-gloss.jpg';
 import img2 from './Images/reflections/mx-reflection-satin.jpg';
 import Image from 'next/image';
+import { Column, Flex } from './Styled/divs/Styled';
+import { data } from '../api/dataServices';
+import { Title } from './Styled/fonts/Styled';
+import { dataPrintDetails } from '../api/dataPrintDetails';
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from './UserWindow';
+
+const bg =
+    'https://images.unsplash.com/photo-1618367588411-d9a90fefa881?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80';
 
 const Carousel = () => {
     return (
-        <main>
-            <h1>Productos Destacados</h1>
-            <Slideshow navigation={true}>
-
-                <Slide>
-                    <Image src={img1} alt="" />
-                    <TextSlide>
-                        <p>1% descuento en productos Apple</p>
-                    </TextSlide>
-                </Slide>
-
-                <Slide>
-                    <Image src={img2} alt="" />
-                    <TextSlide>
-                        <p>2% descuento en productos Apple</p>
-                    </TextSlide>
-                </Slide>
-
-            </Slideshow>
-        </main>
+        <container>
+            <Column img={bg} imgMd={bg} p="4rem" attach="fixed" gap="2rem">
+                <Slideshow navigation={true}>
+                    {data.map((data, index) => (
+                        <Slide key={index}>
+                            <a href={data.link}>
+                                <Column color="white" p="0">
+                                    <Title size="2rem">{data.title}</Title>
+                                    <Image
+                                        src={data.bg}
+                                        alt={data.title}
+                                        width={200}
+                                        height={100}
+                                        objectFit="cover"
+                                    />
+                                </Column>
+                            </a>
+                        </Slide>
+                    ))}
+                </Slideshow>
+            </Column>
+        </container>
     );
 };
 

@@ -8,10 +8,10 @@ const GalleryWrap = () => {
         <div>
             <Column p="4rem" gap="2rem">
                 <Title size="3rem">Gallery Wrap Options</Title>
-                <Items3 m="0" p="0">
+                <Items3 m="0" p="0" gapSm='0'>
                     {dataBorders.map((dataBorders, index) => (
-                        <Column key={index} m="0">
-                            <Image src={dataBorders.img} objectFit="contain" />
+                        <Column key={index} m="0" p='2rem'>
+                            <Image src={dataBorders.img} objectFit="contain" width={200} height={200} />
                             <Title size="1rem">Border Style</Title>
                             <Title size="2rem" font="Roboto">
                                 {dataBorders.title}

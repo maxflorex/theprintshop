@@ -7,14 +7,14 @@ import reflection1 from '../components/Images/reflections/mx-reflection-gloss.jp
 import reflection2 from '../components/Images/reflections/mx-reflection-satin.jpg'
 import inset1 from '../components/Images/inset/inset-01.svg'
 import inset2 from '../components/Images/inset/inset-02-01.svg'
-import Infinite from '../components/Infinite'
 import { BtnBlack } from '../components/Styled/buttons/Styled';
 import GalleryAluminum from '../components/Galleries/GalleryAluminum';
 import Modal from '../components/Modal';
+import Carousel from '../components/Carousel';
 
 
 const aluminum = () => {
-	const [selectedImg, setSelectedImg] = useState(null)
+    const [selectedImg, setSelectedImg] = useState(null)
 
     const link = 'https://images.unsplash.com/photo-1612504200882-d29bf3f2cc13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1056&q=80'
 
@@ -55,7 +55,7 @@ const aluminum = () => {
                 <Column m='auto'>
                     <Title size='2rem'>Available Surfaces</Title>
                     <Title2 font='Roboto'>Select between one of our finishes</Title2>
-                    <Row>
+                    <Row wMd='50%' wSm='100%' m='auto'>
                         <Column p='0' m='2rem' color='white' gap='0' className='bg-white'>
                             <Image src={reflection1} />
                             <Flex color='none' p='2rem' m='0'>
@@ -75,9 +75,8 @@ const aluminum = () => {
             </section>
             <section>
                 <Hero color='none' m='auto' p='0'>
-
-                    <BtnBlack m='auto' font='Oswald'>
-                        Place an Order now
+                    <BtnBlack m='auto' font='Oswald' href='/order'>
+                        PLACE AN ORDER NOW
                     </BtnBlack>
                 </Hero>
             </section>
@@ -90,10 +89,10 @@ const aluminum = () => {
                         <Image objectFit='contain' src={inset2} />
                     </Grid>
                 </Column>
-                <Infinite />
+                <Carousel />
 
                 <GalleryAluminum selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-				{selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
+                {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
             </section>
         </>
     );

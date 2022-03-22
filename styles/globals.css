@@ -43,6 +43,10 @@ a {
     color: inherit;
 }
 
+a:hover {
+    color: var(--accent)
+}
+
 .highlight {
     position: relative;
     background-color: var(--off1);
@@ -152,18 +156,6 @@ hr {
     color: var(--accent);
 }
 
-/*  */
-
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-pagination {
-    bottom: 0;
-    z-index: 999;
-    overflow: visible;
-}
 
 /* TABLE STYLES */
 
@@ -247,6 +239,7 @@ hr {
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
 }
 .backdrop img {
     max-width: 80vw;
@@ -263,27 +256,7 @@ hr {
     border-radius: 0.6rem;
 }
 
-/* Slideshow */
-
-.slideshow {
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 500px;
-  }
-  
-  .slideshowSlider {
-    white-space: nowrap;
-    transition: ease 1000ms;
-  }
-  
-  .slide {
-    display: inline-block;
-  
-    height: 400px;
-    width: 100%;
-    border-radius: 40px;
-  }
-  
+ 
   /* Buttons */
   
   .slideshowDots {

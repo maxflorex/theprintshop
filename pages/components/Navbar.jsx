@@ -36,15 +36,9 @@ const Navbar = () => {
                     <li>
                         <a href="/services">Services </a>
                     </li>
-                    <li>
-                        <ButtonS
-                            transform="uppercase"
-                            font="Oswald"
-                            href="/order"
-                        >
-                            Order
-                        </ButtonS>
-                    </li>
+                    <ButtonS transform="uppercase" font="Oswald" href="/order">
+                        Order
+                    </ButtonS>
                     <li>
                         <a href="/support">Support</a>
                     </li>

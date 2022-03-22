@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Column, Flex, Row } from './components/Styled/divs/Styled'
 import { Para, Title } from './components/Styled/fonts/Styled'
 import { SButton, SForm, SInput, STextArea } from './components/Styled/forms/Styled'
-import ServicesSlider from './components/servicesSlider'
 import { colMessages } from './firebase/config'
 import { addDoc, serverTimestamp } from 'firebase/firestore'
 import { BtnBlack, Button } from './components/Styled/buttons/Styled'
@@ -76,7 +75,6 @@ const contact = () => {
 					</Flex>
 				</Column>
 			</Row>
-			<ServicesSlider />
 		</section>
 	)
 }

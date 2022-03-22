@@ -31,9 +31,8 @@ function GalleryAluminum({ setSelectedImg }) {
                         key={index}
                         src={val}
                         alt={val}
-                        width={1}
-                        height={1}
-                        layout="responsive"
+                        width={100}
+                        height={200}
                         objectFit="cover"
                         style={{ borderRadius: '0.6rem' }}
                         className="imageGallery"

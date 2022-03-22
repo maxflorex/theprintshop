@@ -15,6 +15,7 @@ const Papers = () => {
 
                             <Column
                                 img={data.img}
+                                imgMd={data.img}
                                 h="60vh"
                                 width="100%"
                                 m="0"

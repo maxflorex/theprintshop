@@ -25,7 +25,7 @@ const SameDayPrint = () => {
                     In a rush? You can count on us to get your prints done the
                     same day
                 </P>
-                <Grid gap="2rem" gapH="0.4rem">
+                <Grid gap="2rem" gapH="0.4rem" color='none'>
                     <BtnS a href="/order">MAKE A RUSH ORDER</BtnS>
                     <BtnBlack href="/order">GET AN ORDER</BtnBlack>
                 </Grid>

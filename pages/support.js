@@ -1,6 +1,7 @@
 import { dataFaq } from './api/dataFaq';
 import { Column, Flex, Grid } from './components/Styled/divs/Styled';
 import { Title } from './components/Styled/fonts/Styled'
+import Carousel from './components/Carousel'
 
 import Faq from './components/Faq';
 
@@ -12,7 +13,7 @@ const support = () => {
 
 	return <section>
 		<Grid mt='0' gap='0' ac='start'>
-			<Column img={bg} h='100%' hMd='40vh' hMax='80vh' mt='0' />
+			<Column img={bg} imgMd={bg} h='100%' hMd='40vh' hMax='80vh' mt='0' />
 			<Column mt='0' mb='0' gap='0'>
 				<Title size='4rem' mb='2rem'>Frequently Asked Questions</Title>
 				{dataFaq.map((data, index) => (
@@ -27,6 +28,10 @@ const support = () => {
 				))}
 			</Column>
 		</Grid>
+		<div style={{margin: '6rem 0'}}>
+			<Carousel />
+		</div>
+
 	</section>;
 };
 

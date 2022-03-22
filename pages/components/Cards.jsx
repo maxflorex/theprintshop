@@ -1,10 +1,4 @@
-import {
-    Flex,
-    Items,
-    Column,
-    Row,
-    Backdrop,
-} from './Styled/divs/Styled';
+import { Flex, Items, Column, Row, Backdrop } from './Styled/divs/Styled';
 import { data } from '../api/dataServices';
 import { Title } from './Styled/fonts/Styled';
 import Image from 'next/image';
@@ -19,7 +13,7 @@ const Cards = () => {
         hide: { display: 'none' },
     };
 
-    const colorOpa = 'rgba(0, 0, 0, 0.7)';
+    const colorOpa = 'rgba(0, 0, 0, 0.4)';
 
     return (
         <Items mr="2rem" ml="2rem" p="0">
@@ -35,30 +29,41 @@ const Cards = () => {
                     >
                         <Title size="2rem">{data.title}</Title>
 
-                        <Column m="0" img={data.bg} radius="0" p="0" h="10rem"> 
-                            <motion.div
-                                animate={
-                                    inUseCard === data.title ? 'show' : 'hide'
-                                }
-                                variants={variants}
-                            >
-                                <Backdrop
-                                    align="center"
-                                    m="0"
-                                    p="0"
-                                    radius="0"
-                                    h="10rem"
+                        <Column
+                            m="0"
+                            img={data.bg}
+                            imgMd={data.bg}
+                            radius="0"
+                            p="0"
+                        >
+                            <Column m='0' p='0' color={colorOpa}  h="10rem" radius='0'>
+                                
+                                <motion.div
+                                    animate={
+                                        inUseCard === data.title
+                                            ? 'show'
+                                            : 'hide'
+                                    }
+                                    variants={variants}
                                 >
-                                    <Flex color="none" m="0" p="0">
-                                        <Image
-                                            src={data.image}
-                                            alt={data.title}
-                                            width={100}
-                                            height={60}
-                                        />
-                                    </Flex>
-                                </Backdrop>
-                            </motion.div>
+                                    <Backdrop
+                                        align="center"
+                                        m="0"
+                                        p="0"
+                                        radius="0"
+                                        h="10rem"
+                                    >
+                                        <Flex color="none" m="0" p="0">
+                                            <Image
+                                                src={data.image}
+                                                alt={data.title}
+                                                width={100}
+                                                height={60}
+                                            />
+                                        </Flex>
+                                    </Backdrop>
+                                </motion.div>
+                            </Column>
                         </Column>
                     </Row>
                 </a>

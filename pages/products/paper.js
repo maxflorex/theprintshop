@@ -3,20 +3,19 @@ import React from 'react';
 import { dataPrintDetailPaper } from '../api/dataPrintDetails';
 import Papers from '../components/Papers';
 import { Backdrop, Column, Hero, Items6 } from '../components/Styled/divs/Styled';
-import { Para,  Title } from '../components/Styled/fonts/Styled';
-import Infinite from '../components/Infinite';
+import { Para, Title } from '../components/Styled/fonts/Styled';
+import Carousel from '../components/CarouselOtherServices';
 
 const paper = () => {
 
   const link = 'https://images.unsplash.com/photo-1479009956747-647858cb2b07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80'
-  const link2 = 'https://images.unsplash.com/photo-1565555334121-4a4f177af7b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'
 
   return (
     <>
       {/* TITLE & HERO */}
 
       <section>
-        <Hero img={link} imgMd={link2} m='2rem' h='25vh'>
+        <Hero img={link} imgMd={link} m='2rem' h='25vh'>
           <Column>
             <Backdrop w='100%' p='4rem' >
               <Title size='4rem'>Fine Art Papers</Title>
@@ -47,7 +46,8 @@ const paper = () => {
         {/* PAPER DETAILS */}
 
         <Papers />
-        <Infinite />
+        <Carousel />
+
       </section>
     </>
   );

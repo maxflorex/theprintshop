@@ -10,7 +10,6 @@ import TabsFrames from '../components/TabsFrames';
 import Floaters from '../components/Floaters'
 import { BtnBlack } from '../components/Styled/buttons/Styled';
 import Mats from '../components/Mats';
-import Infinite from '../components/Infinite';
 
 
 
@@ -80,14 +79,13 @@ const framing = () => {
 			</section>
 			<section>
 				<Hero color='none' m='auto'>
-					<BtnBlack m='auto' font='Oswald'>
-						Place an Order now
+					<BtnBlack m='auto' font='Oswald' href='/order'>
+						PLACE AN ORDER NOW
 					</BtnBlack>
 				</Hero>
 			</section>
 			<section>
 				<Mats />
-				<Infinite />
 			</section>
 		</>
 	);
