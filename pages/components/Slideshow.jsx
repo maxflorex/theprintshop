@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import styled from 'styled-components';
 import { Title } from './Styled/fonts/Styled';
-import userWindow, { useMediaQuery } from './UserWindow';
 
 const Slideshow = ({
     children,

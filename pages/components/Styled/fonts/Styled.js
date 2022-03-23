@@ -18,6 +18,7 @@ const Title = styled.h1`
     cursor: ${props => props.cursor};
     @media (max-width: 1280px) {
         color: ${props => props.colorMd};
+        font-size: ${props => props.sizeMd};
     }
     @media (max-width: 768px) {
         font-size: ${props => props.sizeSm};

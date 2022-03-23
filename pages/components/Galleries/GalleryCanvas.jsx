@@ -20,7 +20,7 @@ function GalleryCanvas({ setSelectedImg }) {
                 });
             });
         });
-    }, [listAll]);
+    }, []);
 
     return (
         <>

@@ -63,7 +63,7 @@ const Column = styled.div`
    width: ${props => props.width};
    min-height: ${props => props.h};
    max-height: ${props => props.hMax};
-   overflow: hidden;
+   overflow: ${props => props.overflow || 'hidden'};
    position: ${props => props.position};
    opacity: ${props => props.opacity};
    object-fit: ${props => props.object};
@@ -323,7 +323,7 @@ const Hero = styled.div`
    padding: ${props => props.p};
    margin: ${props => props.m};
    border-radius: 0.6rem;
-   height: ${props => props.h};
+   min-height: ${props => props.h};
    width: ${props => props.width};
    position: relative;
    gap: ${props => props.gap || '0'};

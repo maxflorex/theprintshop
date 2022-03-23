@@ -20,7 +20,7 @@ const Error = () => {
                     <Title size="6rem" color="white">
                         Oh no!
                     </Title>
-                    <Para>This page doesn't exist</Para>
+                    <Para>This page doesn&apos;t exist</Para>
                     <BtnS href="/">Home</BtnS>
                 </BackdropDark>
             </Column>

@@ -28,7 +28,7 @@ const Faq = ({ question, answers, link, img }) => {
                         style={{ borderLeft: '1px solid var(--off3)', transitionDuration: '5s' }}
                         onMouseLeave={() => setAnswer(false)}
                     >
-                        <Image src={img} style={{margin: '2rem'}}/>
+                        <Image src={img} alt={img} style={{margin: '2rem'}}/>
                         <Title font="Roboto" lh="2rem">
                             {answers}
                         </Title>

@@ -11,7 +11,7 @@ const BlackFrames = () => {
     return (
         <section>
             <Column width="75%" m="auto">
-                <Image src={bigframe} objectFit="contain" />
+                <Image src={bigframe} alt={bigframe} objectFit="contain" />
             </Column>
             <FrameSizes />
         </section>

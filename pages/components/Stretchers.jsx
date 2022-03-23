@@ -20,7 +20,7 @@ const Stretchers = () => {
                             m="auto"
                             p="0"
                         >
-                            <Image src={dataStretchers.img} objectFit="cover" />
+                            <Image src={dataStretchers.img} alt={dataStretchers.title} objectFit="cover" />
                         </Column>
                         <Title>{dataStretchers.title}</Title>
                     </Column>

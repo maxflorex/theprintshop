@@ -6,7 +6,7 @@ import { BiRightArrow } from "react-icons/bi";
 import { BtnBlack } from './components/Styled/buttons/Styled'
 import Carousel from './components/Carousel';
 
-const services = () => {
+const Services = () => {
 
 	const colorOpa = 'rgba(0, 0, 0, 0.5)'
 
@@ -47,4 +47,4 @@ const services = () => {
 	</>;
 };
 
-export default services;
+export default Services;

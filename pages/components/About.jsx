@@ -16,20 +16,19 @@ const About = () => {
                 <Para color="black" font="Roboto">
                     We are The Printshop™, your professional fine art ptinting
                     company. From canvas prints to mesmerizing aluminum prints;
-                    We've got you covered. We Specialize in faster turnarounds
-                    (Including same day service) and supreme museum quality.
+                    We&apos;ve got you covered. We Specialize in faster
+                    turnarounds (Including same day service) and supreme museum
+                    quality.
                 </Para>
                 <Para color="black" font="Roboto">
                     Based in Grand Cayman, Cayman Islands. You can find us in
                     any of our locations from 7 Mile Beach to West Bay. Proud to
                     be locally own & operated.
                 </Para>
-                <BtnBlack bg='var(--off2)'>
-                    <a href="/order">
-                        <Title size="1.4rem" color='black' colorH='white'>
-                            Make an Order
-                        </Title>
-                    </a>
+                <BtnBlack bg="var(--off2)">
+                    <Title size="1.4rem" color="black" colorH="white">
+                        Make an Order
+                    </Title>
                 </BtnBlack>
             </Column>
             <Column m="0" img={link} mt="0" radius="0" p="0" />

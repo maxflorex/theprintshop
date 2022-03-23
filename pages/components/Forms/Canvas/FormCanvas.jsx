@@ -119,7 +119,8 @@ const FormCanvas = ({
                             <Title mb="2rem">{data.title}</Title>
                             <div style={{ margin: '-2rem' }}>
                                 <Image
-                                    src={data.img}
+                                    src={data.img} 
+                                    alt={data.title}
                                     objectFit="cover"
                                     height={800}
                                     width={800}
@@ -154,7 +155,7 @@ const FormCanvas = ({
                     <FiChevronDown />
                 </Flex>
                 <Title font="Roboto" size="1rem" mr="2rem" w="400">
-                    Default: 1.5"
+                    Default: 1.5&quot;
                 </Title>
             </Flex>
 
@@ -187,6 +188,7 @@ const FormCanvas = ({
                                     <Image
                                         src={data.img2}
                                         objectFit="contain"
+                                        alt={data.title}
                                     />
                                 </div>
                             </Flex>

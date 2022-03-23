@@ -173,7 +173,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                                 onClick={() => setIsFinish(data.title)}
                             >
                                 <Title m="1rem">{data.title}</Title>
-                                <Image src={data.img} />
+                                <Image src={data.img} alt={data.title} />
                             </FlexItems>
                         ))}
                     </Row>
@@ -232,7 +232,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                                 onClick={() => setIsInset(data.title)}
                             >
                                 <Title m="1rem">{data.title}</Title>
-                                <Image src={data.img} />
+                                <Image src={data.img} alt={data.title} />
                             </FlexItems>
                         ))}
                     </Row>

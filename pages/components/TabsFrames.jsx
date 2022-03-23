@@ -10,6 +10,7 @@ const TabsFrames = ({ setSelectedTab, selectedTab }) => {
         <Items3 m="2rem" gap="2rem" p="0">
             <Flex
                 className="bg-white"
+                justifyMd='space-between'
                 color={`${selected === 'black' ? 'var(--off2)' : 'white'}`}
                 cursor="pointer"
                 m="0"
@@ -21,6 +22,7 @@ const TabsFrames = ({ setSelectedTab, selectedTab }) => {
             </Flex>
             <Flex
                 className="bg-white"
+                justifyMd='space-between'
                 color={`${selected === 'white' ? 'var(--off2)' : 'white'}`}
                 cursor="pointer"
                 m="0"
@@ -31,6 +33,7 @@ const TabsFrames = ({ setSelectedTab, selectedTab }) => {
             </Flex>
             <Flex
                 className="bg-white"
+                justifyMd='space-between'
                 color={`${selected === 'natural' ? 'var(--off2)' : 'white'}`}
                 cursor="pointer"
                 m="0"
@@ -43,6 +46,5 @@ const TabsFrames = ({ setSelectedTab, selectedTab }) => {
     );
 };
 
-// lassName={`${!frameTab ? "bg-black" : "bg-white"}`}
 
 export default TabsFrames;

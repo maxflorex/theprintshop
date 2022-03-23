@@ -1,11 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Title, Menu } from './Styled/fonts/Styled';
 import { Flex } from './Styled/divs/Styled';
 import { ButtonS } from './Styled/buttons/Styled';
-import logo from '../../images/tps-logo.svg';
-import Image from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
+import Modal from './Menu/Modal';
+import { FiMenu } from 'react-icons/fi';
+import { UseMediaQuery } from './UseMediaQuery';
+import Link from 'next/link';
 
 const Navbar = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const close = () => setModalOpen(false);
+    const open = () => setModalOpen(true);
+
+    // const isSmall = UseMediaQuery(768);
+
+    // const variants = isSmall
+    //     ? {
+    //           animate: {
+    //               opacity: 1,
+    //               scale: 1,
+    //           },
+    //           exit: {
+    //               opacity: 0,
+    //               scale: 0,
+    //           },
+    //       }
+    //     : {
+    //           animate: {
+    //               opacity: 0,
+    //               scale: 0,
+    //           },
+    //           exit: {
+    //               opacity: 0,
+    //               scale: 0,
+    //           },
+    //       };
+
     return (
         <Flex
             p="0"
@@ -13,6 +45,7 @@ const Navbar = () => {
             mt="2rem"
             mb="2rem"
             color="transparent"
+            justifyMd="space-between"
         >
             <div>
                 <Menu
@@ -22,29 +55,54 @@ const Navbar = () => {
                     size="1rem"
                 >
                     <li>
-                        <a href="/products/canvas">Canvas </a>
+                        <Link href="/products/canvas">Canvas </Link>
                     </li>
                     <li>
-                        <a href="/products/paper"> Paper </a>
+                        <Link href="/products/paper"> Paper </Link>
                     </li>
                     <li>
-                        <a href="/products/aluminum"> Aluminum </a>
+                        <Link href="/products/aluminum"> Aluminum </Link>
                     </li>
                     <li>
-                        <a href="/products/framing"> Framing </a>
+                        <Link href="/products/framing"> Framing </Link>
                     </li>
                     <li>
-                        <a href="/services">Services </a>
+                        <Link href="/services">Services </Link>
                     </li>
                     <ButtonS transform="uppercase" font="Oswald" href="/order">
                         Order
                     </ButtonS>
                     <li>
-                        <a href="/support">Support</a>
+                        <Link href="/support">Support</Link>
                     </li>
                 </Menu>
+                <div className="burger">
+                    <motion.a
+                        whileHover={{ scale: 2 }}
+                        onClick={() => (modalOpen ? close() : open())}
+                    >
+                        <FiMenu
+                            style={{ cursor: 'pointer', fontSize: '2rem' }}
+                        />
+                    </motion.a>
+                    <AnimatePresence
+                        // Disable any initial animations on children that
+                        // are present when the component is first rendered
+                        initial={false}
+                        // Only render one component at a time.
+                        // The exiting component will finish its exit
+                        // animation before entering component is rendered
+                        exitBeforeEnter={true}
+                        // Fires when all exiting nodes have completed animating out
+                        onExitComplete={() => null}
+                    >
+                        {modalOpen && (
+                            <Modal modalOpen={modalOpen} handleClose={close} />
+                        )}
+                    </AnimatePresence>
+                </div>
             </div>
-            <a href="/">
+            <Link href="/">
                 <Flex
                     m="0"
                     p="0"
@@ -57,7 +115,7 @@ const Navbar = () => {
                         The Printshop™
                     </Title>
                 </Flex>
-            </a>
+            </Link>
         </Flex>
     );
 };

@@ -6,7 +6,7 @@ import { Backdrop, Column, Hero, Items6 } from '../components/Styled/divs/Styled
 import { Para, Title } from '../components/Styled/fonts/Styled';
 import Carousel from '../components/CarouselOtherServices';
 
-const paper = () => {
+const Paper = () => {
 
   const link = 'https://images.unsplash.com/photo-1479009956747-647858cb2b07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80'
 
@@ -34,7 +34,7 @@ const paper = () => {
         <Items6 width='100%' color='white' m='2rem' p='0'>
           {dataPrintDetailPaper.map((dataPrintDetailPaper, index) => (
             <Column gap='1rem' key={index} p='1rem'>
-              <Image src={dataPrintDetailPaper.img} objectFit='contain' />
+              <Image src={dataPrintDetailPaper.img} alt={dataPrintDetailPaper.title} objectFit='contain' />
               <div>
                 <Title>{dataPrintDetailPaper.title}</Title>
                 <Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailPaper.sub}</Para>
@@ -53,4 +53,4 @@ const paper = () => {
   );
 };
 
-export default paper;
+export default Paper;

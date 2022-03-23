@@ -20,7 +20,7 @@ function GalleryAluminum({ setSelectedImg }) {
                 });
             });
         });
-    }, [listAll]);
+    }, []);
 
     return (
         <Column>

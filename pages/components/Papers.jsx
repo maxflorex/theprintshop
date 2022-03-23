@@ -17,6 +17,7 @@ const Papers = () => {
                                 img={data.img}
                                 imgMd={data.img}
                                 h="60vh"
+                                hMd='40vh'
                                 width="100%"
                                 m="0"
                             />

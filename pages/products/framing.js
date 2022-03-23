@@ -20,7 +20,7 @@ const TAB = {
 }
 
 
-const framing = () => {
+const Framing = () => {
 	const link = 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80'
 	const link2 = 'https://images.unsplash.com/photo-1565555334121-4a4f177af7b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'
 	const link3 = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80'
@@ -53,7 +53,7 @@ const framing = () => {
 				<Items6 width='100%' color='white' m='2rem' p='0'>
 					{dataPrintDetailFraming.map((dataPrintDetailFraming, index) => (
 						<Column gap='1rem' key={index} p='1rem'>
-							<Image src={dataPrintDetailFraming.img} objectFit='contain' />
+							<Image src={dataPrintDetailFraming.img} alt={dataPrintDetailFraming.title} objectFit='contain' />
 							<div>
 								<Title>{dataPrintDetailFraming.title}</Title>
 								<Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailFraming.sub}</Para>
@@ -91,4 +91,4 @@ const framing = () => {
 	);
 };
 
-export default framing;
+export default Framing;

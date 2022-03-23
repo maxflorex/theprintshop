@@ -179,9 +179,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                         <FlexItems
                             key={index}
                             color={`${
-                                isType === data.title
-                                    ? 'var(--off2)'
-                                    : 'white'
+                                isType === data.title ? 'var(--off2)' : 'white'
                             }`}
                             p="1rem"
                             onClick={() => setIsType(data.title)}
@@ -192,6 +190,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                             </Title>
 
                             <Image
+                                alt={data.title}
                                 src={data.img}
                                 objectFit="cover"
                                 height={400}

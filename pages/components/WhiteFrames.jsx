@@ -9,7 +9,7 @@ const WhiteFrames = () => {
     return (
         <section>
             <Column width="75%" m="auto">
-                <Image src={bigframeN} objectFit="contain" />
+                <Image src={bigframeN} alt={bigframeN} objectFit="contain" />
             </Column>
             <FrameSizes />
         </section>
