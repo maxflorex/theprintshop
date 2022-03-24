@@ -48,7 +48,7 @@ const HeroSection = () => {
                         Handcrafted in the{' '}
                         <span className="spotlight">Cayman Islands</span>
                     </Para>
-                    <BtnBlack transform="uppercase" ls="0.2rem">
+                    <BtnBlack transform="uppercase" ls="0.2rem" href='/about'>
                         Know More
                     </BtnBlack>
                 </Hero>

@@ -4,6 +4,7 @@ import { Title } from './Styled/fonts/Styled';
 import Image from 'next/image';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Cards = () => {
     const [inUseCard, setInUseCard] = useState(null);
@@ -18,7 +19,7 @@ const Cards = () => {
     return (
         <Items mr="2rem" ml="2rem" p="0">
             {data.map((data, index) => (
-                <a key={index} href={data.link}>
+                <Link key={index} href={data.link}>
                     <Row
                         p="0"
                         m="0"
@@ -66,7 +67,7 @@ const Cards = () => {
                             </Column>
                         </Column>
                     </Row>
-                </a>
+                </Link>
             ))}
         </Items>
     );

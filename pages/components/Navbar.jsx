@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { Title, Menu } from './Styled/fonts/Styled';
 import { Flex } from './Styled/divs/Styled';
 import { ButtonS } from './Styled/buttons/Styled';
+<<<<<<< Updated upstream
 import { AnimatePresence, motion } from 'framer-motion';
 import Modal from './Menu/Modal';
 import { FiMenu } from 'react-icons/fi';
+=======
+>>>>>>> Stashed changes
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -44,10 +47,15 @@ const Navbar = () => {
                     <li>
                         <Link href="/services">Services </Link>
                     </li>
-                    <ButtonS transform="uppercase" font="Oswald" href="/order">
-                        Order
-                    </ButtonS>
                     <li>
+<<<<<<< Updated upstream
+=======
+                        <Link href="/order" passHref>
+                            <ButtonS font='Oswald'>ORDER</ButtonS>
+                        </Link>
+                    </li>
+                    <li>
+>>>>>>> Stashed changes
                         <Link href="/support">Support</Link>
                     </li>
                 </Menu>

@@ -2,6 +2,7 @@ import React from 'react';
 import { BtnBlack } from './Styled/buttons/Styled';
 import { Column, Flex, Grid, Row } from './Styled/divs/Styled';
 import { Para, Title } from './Styled/fonts/Styled';
+import Link from 'next/link';
 
 const link =
     'https://images.pexels.com/photos/2874998/pexels-photo-2874998.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&width=940';
@@ -25,10 +26,19 @@ const About = () => {
                     any of our locations from 7 Mile Beach to West Bay. Proud to
                     be locally own & operated.
                 </Para>
+<<<<<<< Updated upstream
                 <BtnBlack bg="var(--off2)">
                     <Title size="1.4rem" color="black" colorH="white">
                         Make an Order
                     </Title>
+=======
+                <BtnBlack bg='var(--off2)'>
+                    <Link href="/order">
+                        <Title size="1.4rem" color='black' colorH='white'>
+                            Make an Order
+                        </Title>
+                    </Link>
+>>>>>>> Stashed changes
                 </BtnBlack>
             </Column>
             <Column m="0" img={link} mt="0" radius="0" p="0" />

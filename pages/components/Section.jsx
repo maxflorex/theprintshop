@@ -9,6 +9,7 @@ import {
 } from './Styled/divs/Styled';
 import { Title, P, Para } from './Styled/fonts/Styled';
 import { BtnBlack, Button } from './Styled/buttons/Styled';
+import Link from 'next/link';
 
 const link =
     'https://images.unsplash.com/photo-1550275994-2bc88dc68637?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&width=987&q=80';
@@ -28,7 +29,13 @@ const Section = () => {
                         >
                             Museum Quality
                         </Para>
+<<<<<<< Updated upstream
                         <BtnBlack href="/products/paper">Know more</BtnBlack>
+=======
+                        <Link href="/products/paper" passHref>
+                            <BtnBlack>Know more</BtnBlack>
+                        </Link>
+>>>>>>> Stashed changes
                     </Backdrop>
 
                     <Backdrop className="shadow" p="4rem">
@@ -41,7 +48,13 @@ const Section = () => {
                         >
                             Get the best deals and fastest turnarounds
                         </Para>
+<<<<<<< Updated upstream
                         <BtnBlack href="/contact">Know more</BtnBlack>
+=======
+                        <Link href="/contact" passHref>
+                            <BtnBlack>Know more</BtnBlack>
+                        </Link>
+>>>>>>> Stashed changes
                     </Backdrop>
                 </Row>
             </BackdropDark>
