@@ -4,21 +4,18 @@ import { Column, Flex } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';
 import { SForm, SInput } from './Styled/forms/Styled';
 
-export function RegisterForm({
+function RegisterForm({
     setRegisterEmail,
     setRegisterPassword,
     register,
     setOpenRegForm,
     openRegForm,
-}) 
-
-{
-
+}) {
     const handleClick = () => {
-        register()
-        setOpenRegForm(!openRegForm)
-    }
-    
+        register();
+        setOpenRegForm(!openRegForm);
+    };
+
     return (
         <div>
             <SForm>
@@ -49,10 +46,11 @@ export function RegisterForm({
                         gap="2rem"
                         gapMd="2rem"
                     >
-                        <BtnBlack onClick={handleClick}>
-                            Sign Up
-                        </BtnBlack>
-                        <BtnBlack bg='var(--color)' onClick={() => setOpenRegForm(!openRegForm)}>
+                        <BtnBlack onClick={handleClick}>Sign Up</BtnBlack>
+                        <BtnBlack
+                            bg="var(--color)"
+                            onClick={() => setOpenRegForm(!openRegForm)}
+                        >
                             Already registered?
                         </BtnBlack>
                     </Flex>
@@ -61,3 +59,5 @@ export function RegisterForm({
         </div>
     );
 }
+
+export default RegisterForm;
