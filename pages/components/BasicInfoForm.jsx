@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from './Styled/divs/Styled';
 import { SInput } from './Styled/forms/Styled';
 
-export function BasicInfoForm({ user, setFormName, formName }) {
+function BasicInfoForm({ user, setFormName, formName }) {
     return (
         <Grid gap="2rem">
             <SInput
@@ -25,3 +25,5 @@ export function BasicInfoForm({ user, setFormName, formName }) {
         </Grid>
     );
 }
+
+export default BasicInfoForm

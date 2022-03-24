@@ -5,7 +5,6 @@ import { ButtonS } from './Styled/buttons/Styled';
 import { AnimatePresence, motion } from 'framer-motion';
 import Modal from './Menu/Modal';
 import { FiMenu } from 'react-icons/fi';
-import { UseMediaQuery } from './UseMediaQuery';
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -13,30 +12,6 @@ const Navbar = () => {
 
     const close = () => setModalOpen(false);
     const open = () => setModalOpen(true);
-
-    // const isSmall = UseMediaQuery(768);
-
-    // const variants = isSmall
-    //     ? {
-    //           animate: {
-    //               opacity: 1,
-    //               scale: 1,
-    //           },
-    //           exit: {
-    //               opacity: 0,
-    //               scale: 0,
-    //           },
-    //       }
-    //     : {
-    //           animate: {
-    //               opacity: 0,
-    //               scale: 0,
-    //           },
-    //           exit: {
-    //               opacity: 0,
-    //               scale: 0,
-    //           },
-    //       };
 
     return (
         <Flex

@@ -1,4 +1,4 @@
-import { BasicInfoForm } from './BasicInfoForm';
+import BasicInfoForm from './BasicInfoForm';
 import React, { useEffect, useState } from 'react';
 import { Column, Flex, FlexItems, Grid, Items } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';

@@ -18,12 +18,12 @@ function Footer() {
                                 Contact
                             </Title>
                             <Para ls="0.05rem" color="white" font="Roboto">
-                                <Link href="mailto:prints@artcaymanco.com">
+                                <Link passHref href="mailto:prints@artcaymanco.com">
                                     prints@artcaymanco.com
                                 </Link>
                             </Para>
                             <Para ls="0.05rem" color="white" font="Roboto">
-                                <Link href="tel:+3459232222">+1(345) 923-2222</Link>
+                                <Link passHref href="tel:+3459232222">+1(345) 923-2222</Link>
                             </Para>
                         </Column>
                         <Column>
@@ -35,22 +35,22 @@ function Footer() {
                             >
                                 Printing
                             </Title>
-                            <Link href="/products/canvas">
+                            <Link passHref href="/products/canvas">
                                 <Para ls="0.05rem" color="white" font="Roboto">
                                     Canvas
                                 </Para>
                             </Link>
-                            <Link href="/products/framing">
+                            <Link passHref href="/products/framing">
                                 <Para ls="0.05rem" color="white" font="Roboto">
                                     Framing
                                 </Para>
                             </Link>
-                            <Link href="/products/paper">
+                            <Link passHref href="/products/paper">
                                 <Para ls="0.05rem" color="white" font="Roboto">
                                     Fine Art Papers
                                 </Para>
                             </Link>
-                            <Link href="/products/aluminum">
+                            <Link passHref href="/products/aluminum">
                                 <Para ls="0.05rem" color="white" font="Roboto">
                                     Aluminum
                                 </Para>
@@ -65,12 +65,12 @@ function Footer() {
                             >
                                 Artists
                             </Title>
-                            <Link href="/contact">
+                            <Link passHref href="/contact">
                                 <Para ls="0.05rem" color="white" font="Roboto">
                                     Discounts
                                 </Para>
                             </Link>
-                            <Link href="/contact">
+                            <Link passHref href="/contact">
                                 <Para ls="0.05rem" color="white" font="Roboto">
                                     Prices
                                 </Para>
@@ -85,22 +85,22 @@ function Footer() {
                             >
                                 The Printshop
                             </Title>
-                            <Link href="/about">
+                            <Link passHref href="/about">
                                 <Para ls="0.05rem" color="white" font="Roboto">
                                     About Us
                                 </Para>
                             </Link>
-                            <Link href="/contact">
+                            <Link passHref href="/contact">
                                 <Para ls="0.05rem" color="white" font="Roboto">
                                     Contact
                                 </Para>
                             </Link>
-                            <Link href="/news">
+                            <Link passHref href="/news">
                                 <Para ls="0.05rem" color="white" font="Roboto">
                                     News
                                 </Para>
                             </Link>
-                            <Link href="/privacy-policy">
+                            <Link passHref href="/privacy-policy">
                                 <Para ls="0.05rem" color="white" font="Roboto">
                                     Privacy Policy
                                 </Para>

@@ -25,7 +25,7 @@ const Button = styled.a`
     
 `
 
-const ButtonS = styled.button`
+const ButtonS = styled.a`
     border-style: solid;
     border-width: 1px;
     border-color: var(--off2);

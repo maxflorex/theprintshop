@@ -4,7 +4,7 @@ import { Column, Flex } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';
 import { SForm, SInput } from './Styled/forms/Styled';
 
-export function RegisterForm({
+function RegisterForm({
     setRegisterEmail,
     setRegisterPassword,
     register,
@@ -61,3 +61,5 @@ export function RegisterForm({
         </div>
     );
 }
+
+export default RegisterForm
