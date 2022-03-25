@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^6.2.1",
     "firebase": "^9.6.7",
     "framer-motion": "^6.2.8",
     "mongodb": "^4.4.0",
@@ -25,7 +26,7 @@
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8"
   },
-  "engines": { 
-    "node": "17.6.0" 
-  } 
+  "engines": {
+    "node": "17.6.0"
+  }
 }

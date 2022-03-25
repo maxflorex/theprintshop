@@ -21,6 +21,7 @@ module.exports = {
       '/about': { page: '/about' },
       '/contact': { page: '/contact' },
       '/privacy-policy': { page: '/privacy-policy' },
+      '/404': { page: '/404' },
     }
   },
   webpack(config) {
