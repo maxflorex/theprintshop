@@ -1,4 +1,4 @@
-import { Slideshow, Slide } from './Slideshow';
+import Slideshow, {Slide } from './Slideshow';
 import Image from 'next/image';
 import { Column, Flex } from './Styled/divs/Styled';
 import { data } from '../api/dataServices';

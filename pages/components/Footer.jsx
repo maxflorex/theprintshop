@@ -17,13 +17,25 @@ function Footer() {
                             >
                                 Contact
                             </Title>
-                            <Para ls="0.05rem" color="white" font="Roboto">
+                            <Para
+                                ls="0.05rem"
+                                color="white"
+                                font="Roboto"
+                                style={{ cursor: 'pointer' }}
+                            >
                                 <Link href="mailto:prints@artcaymanco.com">
                                     prints@artcaymanco.com
                                 </Link>
                             </Para>
-                            <Para ls="0.05rem" color="white" font="Roboto">
-                                <Link href="tel:+3459232222">+1(345) 923-2222</Link>
+                            <Para
+                                ls="0.05rem"
+                                color="white"
+                                font="Roboto"
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <Link href="tel:+3459232222">
+                                    +1(345) 923-2222
+                                </Link>
                             </Para>
                         </Column>
                         <Column>
@@ -36,22 +48,42 @@ function Footer() {
                                 Printing
                             </Title>
                             <Link href="/products/canvas">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para
+                                    ls="0.05rem"
+                                    color="white"
+                                    font="Roboto"
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     Canvas
                                 </Para>
                             </Link>
                             <Link href="/products/framing">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para
+                                    ls="0.05rem"
+                                    color="white"
+                                    font="Roboto"
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     Framing
                                 </Para>
                             </Link>
                             <Link href="/products/paper">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para
+                                    ls="0.05rem"
+                                    color="white"
+                                    font="Roboto"
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     Fine Art Papers
                                 </Para>
                             </Link>
                             <Link href="/products/aluminum">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para
+                                    ls="0.05rem"
+                                    color="white"
+                                    font="Roboto"
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     Aluminum
                                 </Para>
                             </Link>
@@ -66,12 +98,22 @@ function Footer() {
                                 Artists
                             </Title>
                             <Link href="/contact">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para
+                                    ls="0.05rem"
+                                    color="white"
+                                    font="Roboto"
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     Discounts
                                 </Para>
                             </Link>
                             <Link href="/contact">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para
+                                    ls="0.05rem"
+                                    color="white"
+                                    font="Roboto"
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     Prices
                                 </Para>
                             </Link>
@@ -86,22 +128,42 @@ function Footer() {
                                 The Printshop
                             </Title>
                             <Link href="/about">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para
+                                    ls="0.05rem"
+                                    color="white"
+                                    font="Roboto"
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     About Us
                                 </Para>
                             </Link>
                             <Link href="/contact">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para
+                                    ls="0.05rem"
+                                    color="white"
+                                    font="Roboto"
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     Contact
                                 </Para>
                             </Link>
                             <Link href="/news">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para
+                                    ls="0.05rem"
+                                    color="white"
+                                    font="Roboto"
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     News
                                 </Para>
                             </Link>
                             <Link href="/privacy-policy">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para
+                                    ls="0.05rem"
+                                    color="white"
+                                    font="Roboto"
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     Privacy Policy
                                 </Para>
                             </Link>

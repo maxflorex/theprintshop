@@ -115,7 +115,7 @@ const SlideContainer = styled.div`
     flex-wrap: nowrap;
 `;
 
-const Slide = styled.div`
+export const Slide = styled.div`
     overflow: hidden;
     transition: 0.8s ease all;
     z-index: 10;
@@ -174,4 +174,4 @@ const Btn = styled.button`
     ${(props) => (props.right ? 'right: 0' : 'left: 0')}
 `;
 
-export { Slideshow, Slide };
+export default Slideshow

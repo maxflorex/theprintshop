@@ -5,7 +5,7 @@ import { ButtonS } from './Styled/buttons/Styled';
 import { AnimatePresence, motion } from 'framer-motion';
 import Modal from './Menu/Modal';
 import { FiMenu } from 'react-icons/fi';
-import { UseMediaQuery } from './UseMediaQuery';
+import UseMediaQuery from './UseMediaQuery';
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -13,30 +13,6 @@ const Navbar = () => {
 
     const close = () => setModalOpen(false);
     const open = () => setModalOpen(true);
-
-    // const isSmall = UseMediaQuery(768);
-
-    // const variants = isSmall
-    //     ? {
-    //           animate: {
-    //               opacity: 1,
-    //               scale: 1,
-    //           },
-    //           exit: {
-    //               opacity: 0,
-    //               scale: 0,
-    //           },
-    //       }
-    //     : {
-    //           animate: {
-    //               opacity: 0,
-    //               scale: 0,
-    //           },
-    //           exit: {
-    //               opacity: 0,
-    //               scale: 0,
-    //           },
-    //       };
 
     return (
         <Flex
@@ -69,9 +45,13 @@ const Navbar = () => {
                     <li>
                         <Link href="/services">Services </Link>
                     </li>
-                    <ButtonS transform="uppercase" font="Oswald" href="/order">
-                        Order
-                    </ButtonS>
+                    <li>
+                        <Link href="/order" passHref>
+                            <ButtonS transform="uppercase" font="Oswald">
+                                Order
+                            </ButtonS>
+                        </Link>
+                    </li>
                     <li>
                         <Link href="/support">Support</Link>
                     </li>
@@ -111,7 +91,7 @@ const Navbar = () => {
                     color="transparent"
                 >
                     {/* <Image src={logo} /> */}
-                    <Title color="black" font="Roboto" ls="0.05rem">
+                    <Title color="black" font="Roboto" ls="0.05rem" style={{cursor: 'pointer'}}>
                         The Printshop™
                     </Title>
                 </Flex>
