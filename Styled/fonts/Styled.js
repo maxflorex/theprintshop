@@ -73,6 +73,9 @@ const Para = styled.p`
         display: ${props => props.displayMd};
         color: ${props => props.colorSm};
     }
+    &:hover {
+        cursor: ${props => props.cursor}
+    }
     `
 
 const Menu = styled.ul`

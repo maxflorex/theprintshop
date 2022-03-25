@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { colRefFraming, colRefPaper, storage } from '../../../../firebase/config';
-import { Column, Flex, FlexItems, Items3, Row } from '../../../../Styled/divs/Styled';
-import { Title } from '../../../../Styled/fonts/Styled';
+import { colRefPaper, storage } from '../../../firebase/config';
+import { Column, Flex, FlexItems, Items3 } from '../../../Styled/divs/Styled';
+import { Title } from '../../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
 import Image from 'next/image';
-import Instructions from '../../Instructions';
+import Instructions from '../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
-import { dataFraming } from '../../../api/dataFraming';
-import { BtnBlack } from '../../../../Styled/buttons/Styled';
+import { BtnBlack } from '../../../Styled/buttons/Styled';
+import { dataPapers } from '../../../pages/api/dataPapers';
+import { dataFloaters } from '../../../pages/api/dataFloaters';
+import { dataMounts } from '../../../pages/api/dataMounts';
+import { dataLamination } from '../../../pages/api/dataLamination';
 
-const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
-    const [isColor, setIsColor] = useState(null);
+const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
+    const [isType, setIsType] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMFL, setIsOpenMFL] = useState(false);
     const [isOpenC, setIsOpenC] = useState(false);
-    const [isGlass, setIsGlass] = useState('');
-    const [isMoulding, setIsMoulding] = useState('');
-    const [isMat, setIsMat] = useState('');
-    const [isMatW, setIsMatW] = useState('');
+    const [isFramed, setIsFramed] = useState('');
+    const [isMounted, setIsMounted] = useState('');
+    const [isLaminated, setIsLaminated] = useState('');
 
     // UPLOAD FILES
     const uploadFiles = () => {
@@ -60,11 +62,10 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
     const [contactInfo, setContactInfo] = useState({
         name: '',
         email: '',
-        color: '',
-        moulding: '',
-        glass: '',
-        mat: '',
-        matw: '',
+        type: '',
+        mounts: '',
+        framing: '',
+        laminate: '',
         qty: '',
         tall: '',
         wide: '',
@@ -75,11 +76,10 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
     const {
         name,
         email,
-        color,
-        moulding,
-        glass,
-        mat,
-        matw,
+        type,
+        mounts,
+        framing,
+        laminate,
         qty,
         instructions,
         tall,
@@ -89,14 +89,14 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
     // ON SUBMIT EVENT
     const handleSubmit = (e) => {
         e.preventDefault();
-        addDoc(colRefFraming, {
+
+        addDoc(colRefPaper, {
             name: name,
             email: email,
-            color: color,
-            moulding: moulding,
-            glass: glass,
-            mat: mat,
-            matw: matw,
+            type: type,
+            mounts: mounts,
+            framing: framing,
+            laminate: laminate,
             qty: qty,
             tall: tall,
             wide: wide,
@@ -109,11 +109,10 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
             setContactInfo({
                 name: '',
                 email: '',
-                color: '',
-                moulding: '',
-                glass: '',
-                mat: '',
-                matw: '',
+                type: '',
+                mounts: '',
+                framing: '',
+                laminate: '',
                 qty: '',
                 tall: '',
                 wide: '',
@@ -133,22 +132,18 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
     // USE EFFECT
     useEffect(() => {
         name = formName;
-        moulding = isMoulding;
-        glass = isGlass;
-        mat = isMat;
-        matw = isMatW;
-        color = isColor;
+        mounts = isMounted;
+        framing = isFramed;
+        laminate = isLaminated;
+        type = isType;
         email = user.email;
-        console.log(moulding, glass, mat, color);
+        console.log(mounts, framing, laminate, type);
         // console.log(qty, medium, borders, stretchers, floaters);
     });
-
-    console.log(dataFraming[0].color);
 
     return (
         <div>
             {/* ----------------------------------------------- */}
-            {/* TAB - COLORS & SIZE */}
             <Flex
                 color="none"
                 m="0"
@@ -167,70 +162,45 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                     justify="start"
                     gap="0"
                 >
-                    <Title m="2rem">Select Framing Color & Size</Title>
+                    <Title m="2rem">Select Paper Type</Title>
                     <FiChevronDown />
                 </Flex>
                 <Title font="Roboto" size="1rem" mr="2rem" w="400">
-                    Default: None
+                    Default: Photo Luster
                 </Title>
             </Flex>
 
-            {/* TAB - COLORS & SIZE - CONTENT */}
+            {/* TAB - TYPES - CONTENT */}
 
             {isOpen && (
-                <Flex p="0" color="transparent" gap="0rem">
-                    <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
-                        {dataFraming[0].color.map((data, index) => (
-                            <FlexItems
-                                key={index}
-                                p="2rem"
-                                color={`${
-                                    isColor === data.color
-                                        ? 'var(--off2)'
-                                        : 'none'
-                                }`}
-                                onClick={() => setIsColor(data.color)}
-                            >
-                                <Column
-                                    m="auto"
-                                    p="0"
-                                    align="centre"
-                                    color="none"
-                                >
-                                    <Image src={data.frame} />
-                                    <Title>{data.color}</Title>
-                                </Column>
-                            </FlexItems>
-                        ))}
-                    </Items3>
-                    <Items3 m="auto" p="0" color="transparent">
-                        {dataFraming[2].moulding.map((data, index) => (
-                            <FlexItems
-                                key={index}
-                                p="2rem"
-                                color={`${
-                                    isMoulding === data.title
-                                        ? 'var(--off2)'
-                                        : 'none'
-                                }`}
-                                onClick={() => setIsMoulding(data.title)}
-                            >
-                                <Column
-                                    m="auto"
-                                    p="0"
-                                    align="centre"
-                                    color="none"
-                                >
-                                    <Image src={data.img} />
-                                    <Title>{data.title}</Title>
-                                </Column>
-                            </FlexItems>
-                        ))}
-                    </Items3>
-                </Flex>
+                <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
+                    {dataPapers.map((data, index) => (
+                        <FlexItems
+                            key={index}
+                            color={`${
+                                isType === data.title ? 'var(--off2)' : 'white'
+                            }`}
+                            p="1rem"
+                            onClick={() => setIsType(data.title)}
+                        >
+                            <Title m="1rem">{data.title}</Title>
+                            <Title size="1rem" m="1rem" font="Roboto">
+                                {data.finish}
+                            </Title>
+
+                            <Image
+                                alt={data.title}
+                                src={data.img}
+                                objectFit="cover"
+                                height={400}
+                                width={800}
+                            />
+                        </FlexItems>
+                    ))}
+                </Items3>
             )}
             {/* ----------------------------------------------- */}
-            {/* TAB - GLASS & MATING */}
+
             <Flex
                 color="none"
                 m="0"
@@ -249,7 +219,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                     justify="start"
                     gap="0"
                 >
-                    <Title m="2rem">Select Glass & Mating</Title>
+                    <Title m="2rem">Select Mount / Framing / Lamination</Title>
                     <FiChevronDown />
                 </Flex>
                 <Title font="Roboto" size="1rem" mr="2rem" w="400">
@@ -257,34 +227,32 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                 </Title>
             </Flex>
 
-            {/* TAB - GLASS & MATING - CONTENT */}
+            {/* TAB - MFL - CONTENT */}
 
             {isOpenMFL && (
-                <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
+                <Items3
+                    mt="2rem"
+                    ml="0"
+                    mr="0"
+                    p="0"
+                    color="transparent"
+                    gap="0"
+                >
                     {/* #1 */}
-                    <Column
-                        m="0"
-                        color="none"
-                        justify="center"
-                        gap="1rem"
-                        p="2rem"
-                    >
-                        <Title mb="2rem">Select Glass Type</Title>
-                        {dataFraming[1].glass.map((data, index) => (
+                    <Column m="0" color="none" gap="1rem" p="2rem">
+                        <Title mb="2rem"> Select Frames</Title>
+                        {dataFloaters.map((data, index) => (
                             <FlexItems
                                 key={index}
                                 color={`${
-                                    isGlass === data.reflection
+                                    isFramed === data.title
                                         ? 'var(--off2)'
                                         : 'white'
                                 }`}
                                 p="2rem"
-                                onClick={() => setIsGlass(data.reflection)}
+                                onClick={() => setIsFramed(data.title)}
                             >
                                 <Title>{data.title}</Title>
-                                <Title font="Roboto" size="1rem">
-                                    {data.reflection}
-                                </Title>
                             </FlexItems>
                         ))}
                     </Column>
@@ -296,19 +264,19 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                         gap="1rem"
                         p="2rem"
                     >
-                        <Title mb="2rem"> Select Matting</Title>
-                        {dataFraming[3].mat.map((data, index) => (
+                        <Title mb="2rem"> Select Mount</Title>
+                        {dataMounts.map((data, index) => (
                             <FlexItems
                                 key={index}
                                 color={`${
-                                    isMat === data.color
+                                    isMounted === data.title
                                         ? 'var(--off2)'
                                         : 'white'
                                 }`}
-                                p="1rem"
-                                onClick={() => setIsMat(data.color)}
+                                p="2rem"
+                                onClick={() => setIsMounted(data.title)}
                             >
-                                <Title m="1rem">{data.color}</Title>
+                                <Title>{data.title}</Title>
                             </FlexItems>
                         ))}
                     </Column>
@@ -320,27 +288,25 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                         gap="1rem"
                         p="2rem"
                     >
-                        <Title mb="2rem"> Select Matting Width</Title>
-                        {dataFraming[3].size.map((data, index) => (
+                        <Title mb="2rem"> Select Lamination</Title>
+                        {dataLamination.map((data, index) => (
                             <FlexItems
                                 key={index}
                                 color={`${
-                                    isMatW === data.width
+                                    isLaminated === data.title
                                         ? 'var(--off2)'
                                         : 'white'
                                 }`}
-                                p="1rem"
-                                onClick={() => setIsMatW(data.width)}
+                                p="2rem"
+                                onClick={() => setIsLaminated(data.title)}
                             >
-                                <Title m="1rem">{data.width}</Title>
+                                <Title>{data.title}</Title>
                             </FlexItems>
                         ))}
                     </Column>
                 </Items3>
             )}
             {/* ----------------------------------------------- */}
-            {/* QTY / INSTRUCTIONS / FILE */}
-
             <Flex
                 color="none"
                 m="0"
@@ -390,4 +356,4 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
     );
 };
 
-export default FormFraming;
+export default FromPaper;

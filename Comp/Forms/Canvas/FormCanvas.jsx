@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { dataBorders } from '../../../api/dataBorders';
+
 import {
     Column,
     Flex,
@@ -7,16 +7,18 @@ import {
     Items,
     Items3,
     Items6,
-} from '../../../../Styled/divs/Styled';
-import { Title } from '../../../../Styled/fonts/Styled';
+} from '../../../Styled/divs/Styled';
+import { Title } from '../../../Styled/fonts/Styled';
 import { FiChevronDown, FiDownloadCloud } from 'react-icons/fi';
-import { dataStretchers } from '../../../api/dataStretchers';
-import { dataFloaters } from '../../../api/dataFloaters';
-import { storage } from '../../../../firebase/config';
+
+import { storage } from '../../../firebase/config';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import Image from 'next/image';
-import Instructions from '../../Instructions';
-import { Button, BtnBlack } from '../../../../Styled/buttons/Styled';
+import Instructions from '../Instructions';
+import { Button, BtnBlack } from '../../../Styled/buttons/Styled';
+import { dataBorders } from '../../../pages/api/dataBorders';
+import { dataStretchers } from '../../../pages/api/dataStretchers';
+import { dataFloaters } from '../../../pages/api/dataFloaters';
 
 const FormCanvas = ({
     setIsBorder,
@@ -119,7 +121,7 @@ const FormCanvas = ({
                             <Title mb="2rem">{data.title}</Title>
                             <div style={{ margin: '-2rem' }}>
                                 <Image
-                                    src={data.img} 
+                                    src={data.img}
                                     alt={data.title}
                                     objectFit="cover"
                                     height={800}

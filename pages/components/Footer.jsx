@@ -17,12 +17,12 @@ function Footer() {
                             >
                                 Contact
                             </Title>
-                            <Para ls="0.05rem" color="white" font="Roboto">
+                            <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                 <Link passHref href="mailto:prints@artcaymanco.com">
                                     prints@artcaymanco.com
                                 </Link>
                             </Para>
-                            <Para ls="0.05rem" color="white" font="Roboto">
+                            <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                 <Link passHref href="tel:+3459232222">+1(345) 923-2222</Link>
                             </Para>
                         </Column>
@@ -36,22 +36,22 @@ function Footer() {
                                 Printing
                             </Title>
                             <Link passHref href="/products/canvas">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                     Canvas
                                 </Para>
                             </Link>
                             <Link passHref href="/products/framing">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                     Framing
                                 </Para>
                             </Link>
                             <Link passHref href="/products/paper">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                     Fine Art Papers
                                 </Para>
                             </Link>
                             <Link passHref href="/products/aluminum">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                     Aluminum
                                 </Para>
                             </Link>
@@ -66,12 +66,12 @@ function Footer() {
                                 Artists
                             </Title>
                             <Link passHref href="/contact">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                     Discounts
                                 </Para>
                             </Link>
                             <Link passHref href="/contact">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                     Prices
                                 </Para>
                             </Link>
@@ -86,22 +86,22 @@ function Footer() {
                                 The Printshop
                             </Title>
                             <Link passHref href="/about">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                     About Us
                                 </Para>
                             </Link>
                             <Link passHref href="/contact">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                     Contact
                                 </Para>
                             </Link>
                             <Link passHref href="/news">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                     News
                                 </Para>
                             </Link>
                             <Link passHref href="/privacy-policy">
-                                <Para ls="0.05rem" color="white" font="Roboto">
+                                <Para cursor='pointer' ls="0.05rem" color="white" font="Roboto">
                                     Privacy Policy
                                 </Para>
                             </Link>
@@ -112,12 +112,12 @@ function Footer() {
             <div>
                 <Flex m="0" radius="0" color="var(--off1)" pt="1rem" pb="1rem">
                     <div>
-                        <Para color="black" font="Roboto" ls="0.05rem">
+                        <Para cursor='pointer' color="black" font="Roboto" ls="0.05rem">
                             The Printshop™
                         </Para>
                     </div>
                     <div>
-                        <Para color="black" font="Roboto" ls="0.05rem">
+                        <Para cursor='pointer' color="black" font="Roboto" ls="0.05rem">
                             Art Cayman Co. - 2022
                         </Para>
                     </div>

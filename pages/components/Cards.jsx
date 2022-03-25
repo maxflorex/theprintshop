@@ -19,7 +19,7 @@ const Cards = () => {
     return (
         <Items mr="2rem" ml="2rem" p="0">
             {data.map((data, index) => (
-                <Link key={index} href={data.link}>
+                <Link key={index} href={data.link} passHref>
                     <Row
                         p="0"
                         m="0"

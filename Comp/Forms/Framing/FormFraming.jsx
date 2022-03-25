@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { colRefPaper, storage } from '../../../../firebase/config';
-import { Column, Flex, FlexItems, Items3 } from '../../../../Styled/divs/Styled';
-import { Title } from '../../../../Styled/fonts/Styled';
+import { colRefFraming, colRefPaper, storage } from '../../../firebase/config';
+import { Column, Flex, FlexItems, Items3, Row } from '../../../Styled/divs/Styled';
+import { Title } from '../../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
-import { dataPapers } from '../../../api/dataPapers';
 import Image from 'next/image';
-import { dataFloaters } from '../../../api/dataFloaters';
-import { dataMounts } from '../../../api/dataMounts';
-import { dataLamination } from '../../../api/dataLamination';
-import Instructions from '../../Instructions';
+import Instructions from '../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
-import { BtnBlack } from '../../../../Styled/buttons/Styled';
 
-const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
-    const [isType, setIsType] = useState(null);
+import { BtnBlack } from '../../../Styled/buttons/Styled';
+import { dataFraming } from '../../../pages/api/dataFraming';
+
+const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
+    const [isColor, setIsColor] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMFL, setIsOpenMFL] = useState(false);
     const [isOpenC, setIsOpenC] = useState(false);
-    const [isFramed, setIsFramed] = useState('');
-    const [isMounted, setIsMounted] = useState('');
-    const [isLaminated, setIsLaminated] = useState('');
+    const [isGlass, setIsGlass] = useState('');
+    const [isMoulding, setIsMoulding] = useState('');
+    const [isMat, setIsMat] = useState('');
+    const [isMatW, setIsMatW] = useState('');
 
     // UPLOAD FILES
     const uploadFiles = () => {
@@ -62,10 +61,11 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
     const [contactInfo, setContactInfo] = useState({
         name: '',
         email: '',
-        type: '',
-        mounts: '',
-        framing: '',
-        laminate: '',
+        color: '',
+        moulding: '',
+        glass: '',
+        mat: '',
+        matw: '',
         qty: '',
         tall: '',
         wide: '',
@@ -76,10 +76,11 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
     const {
         name,
         email,
-        type,
-        mounts,
-        framing,
-        laminate,
+        color,
+        moulding,
+        glass,
+        mat,
+        matw,
         qty,
         instructions,
         tall,
@@ -89,14 +90,14 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
     // ON SUBMIT EVENT
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        addDoc(colRefPaper, {
+        addDoc(colRefFraming, {
             name: name,
             email: email,
-            type: type,
-            mounts: mounts,
-            framing: framing,
-            laminate: laminate,
+            color: color,
+            moulding: moulding,
+            glass: glass,
+            mat: mat,
+            matw: matw,
             qty: qty,
             tall: tall,
             wide: wide,
@@ -109,10 +110,11 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
             setContactInfo({
                 name: '',
                 email: '',
-                type: '',
-                mounts: '',
-                framing: '',
-                laminate: '',
+                color: '',
+                moulding: '',
+                glass: '',
+                mat: '',
+                matw: '',
                 qty: '',
                 tall: '',
                 wide: '',
@@ -132,18 +134,22 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
     // USE EFFECT
     useEffect(() => {
         name = formName;
-        mounts = isMounted;
-        framing = isFramed;
-        laminate = isLaminated;
-        type = isType;
+        moulding = isMoulding;
+        glass = isGlass;
+        mat = isMat;
+        matw = isMatW;
+        color = isColor;
         email = user.email;
-        console.log(mounts, framing, laminate, type);
+        console.log(moulding, glass, mat, color);
         // console.log(qty, medium, borders, stretchers, floaters);
     });
+
+    console.log(dataFraming[0].color);
 
     return (
         <div>
             {/* ----------------------------------------------- */}
+            {/* TAB - COLORS & SIZE */}
             <Flex
                 color="none"
                 m="0"
@@ -162,45 +168,70 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                     justify="start"
                     gap="0"
                 >
-                    <Title m="2rem">Select Paper Type</Title>
+                    <Title m="2rem">Select Framing Color & Size</Title>
                     <FiChevronDown />
                 </Flex>
                 <Title font="Roboto" size="1rem" mr="2rem" w="400">
-                    Default: Photo Luster
+                    Default: None
                 </Title>
             </Flex>
 
-            {/* TAB - TYPES - CONTENT */}
+            {/* TAB - COLORS & SIZE - CONTENT */}
 
             {isOpen && (
-                <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
-                    {dataPapers.map((data, index) => (
-                        <FlexItems
-                            key={index}
-                            color={`${
-                                isType === data.title ? 'var(--off2)' : 'white'
-                            }`}
-                            p="1rem"
-                            onClick={() => setIsType(data.title)}
-                        >
-                            <Title m="1rem">{data.title}</Title>
-                            <Title size="1rem" m="1rem" font="Roboto">
-                                {data.finish}
-                            </Title>
-
-                            <Image
-                                alt={data.title}
-                                src={data.img}
-                                objectFit="cover"
-                                height={400}
-                                width={800}
-                            />
-                        </FlexItems>
-                    ))}
-                </Items3>
+                <Flex p="0" color="transparent" gap="0rem">
+                    <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
+                        {dataFraming[0].color.map((data, index) => (
+                            <FlexItems
+                                key={index}
+                                p="2rem"
+                                color={`${
+                                    isColor === data.color
+                                        ? 'var(--off2)'
+                                        : 'none'
+                                }`}
+                                onClick={() => setIsColor(data.color)}
+                            >
+                                <Column
+                                    m="auto"
+                                    p="0"
+                                    align="centre"
+                                    color="none"
+                                >
+                                    <Image src={data.frame} />
+                                    <Title>{data.color}</Title>
+                                </Column>
+                            </FlexItems>
+                        ))}
+                    </Items3>
+                    <Items3 m="auto" p="0" color="transparent">
+                        {dataFraming[2].moulding.map((data, index) => (
+                            <FlexItems
+                                key={index}
+                                p="2rem"
+                                color={`${
+                                    isMoulding === data.title
+                                        ? 'var(--off2)'
+                                        : 'none'
+                                }`}
+                                onClick={() => setIsMoulding(data.title)}
+                            >
+                                <Column
+                                    m="auto"
+                                    p="0"
+                                    align="centre"
+                                    color="none"
+                                >
+                                    <Image src={data.img} />
+                                    <Title>{data.title}</Title>
+                                </Column>
+                            </FlexItems>
+                        ))}
+                    </Items3>
+                </Flex>
             )}
             {/* ----------------------------------------------- */}
-
+            {/* TAB - GLASS & MATING */}
             <Flex
                 color="none"
                 m="0"
@@ -219,7 +250,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                     justify="start"
                     gap="0"
                 >
-                    <Title m="2rem">Select Mount / Framing / Lamination</Title>
+                    <Title m="2rem">Select Glass & Mating</Title>
                     <FiChevronDown />
                 </Flex>
                 <Title font="Roboto" size="1rem" mr="2rem" w="400">
@@ -227,32 +258,34 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                 </Title>
             </Flex>
 
-            {/* TAB - MFL - CONTENT */}
+            {/* TAB - GLASS & MATING - CONTENT */}
 
             {isOpenMFL && (
-                <Items3
-                    mt="2rem"
-                    ml="0"
-                    mr="0"
-                    p="0"
-                    color="transparent"
-                    gap="0"
-                >
+                <Items3 mt="2rem" ml="0" mr="0" p="0" color="transparent">
                     {/* #1 */}
-                    <Column m="0" color="none" gap="1rem" p="2rem">
-                        <Title mb="2rem"> Select Frames</Title>
-                        {dataFloaters.map((data, index) => (
+                    <Column
+                        m="0"
+                        color="none"
+                        justify="center"
+                        gap="1rem"
+                        p="2rem"
+                    >
+                        <Title mb="2rem">Select Glass Type</Title>
+                        {dataFraming[1].glass.map((data, index) => (
                             <FlexItems
                                 key={index}
                                 color={`${
-                                    isFramed === data.title
+                                    isGlass === data.reflection
                                         ? 'var(--off2)'
                                         : 'white'
                                 }`}
                                 p="2rem"
-                                onClick={() => setIsFramed(data.title)}
+                                onClick={() => setIsGlass(data.reflection)}
                             >
                                 <Title>{data.title}</Title>
+                                <Title font="Roboto" size="1rem">
+                                    {data.reflection}
+                                </Title>
                             </FlexItems>
                         ))}
                     </Column>
@@ -264,19 +297,19 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                         gap="1rem"
                         p="2rem"
                     >
-                        <Title mb="2rem"> Select Mount</Title>
-                        {dataMounts.map((data, index) => (
+                        <Title mb="2rem"> Select Matting</Title>
+                        {dataFraming[3].mat.map((data, index) => (
                             <FlexItems
                                 key={index}
                                 color={`${
-                                    isMounted === data.title
+                                    isMat === data.color
                                         ? 'var(--off2)'
                                         : 'white'
                                 }`}
-                                p="2rem"
-                                onClick={() => setIsMounted(data.title)}
+                                p="1rem"
+                                onClick={() => setIsMat(data.color)}
                             >
-                                <Title>{data.title}</Title>
+                                <Title m="1rem">{data.color}</Title>
                             </FlexItems>
                         ))}
                     </Column>
@@ -288,25 +321,27 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                         gap="1rem"
                         p="2rem"
                     >
-                        <Title mb="2rem"> Select Lamination</Title>
-                        {dataLamination.map((data, index) => (
+                        <Title mb="2rem"> Select Matting Width</Title>
+                        {dataFraming[3].size.map((data, index) => (
                             <FlexItems
                                 key={index}
                                 color={`${
-                                    isLaminated === data.title
+                                    isMatW === data.width
                                         ? 'var(--off2)'
                                         : 'white'
                                 }`}
-                                p="2rem"
-                                onClick={() => setIsLaminated(data.title)}
+                                p="1rem"
+                                onClick={() => setIsMatW(data.width)}
                             >
-                                <Title>{data.title}</Title>
+                                <Title m="1rem">{data.width}</Title>
                             </FlexItems>
                         ))}
                     </Column>
                 </Items3>
             )}
             {/* ----------------------------------------------- */}
+            {/* QTY / INSTRUCTIONS / FILE */}
+
             <Flex
                 color="none"
                 m="0"
@@ -356,4 +391,4 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
     );
 };
 
-export default FromPaper;
+export default FormFraming;

@@ -25,12 +25,12 @@ import {
     query,
     where,
 } from 'firebase/firestore';
-import OrderPreview from './OrderPreviews/OrderPreview';
-import OrderPreviewP from './OrderPreviews/OrderPreviewP';
+import OrderPreview from '../../Comp/OrderPreviews/OrderPreview';
+import OrderPreviewP from '../../Comp/OrderPreviews/OrderPreviewP';
+import OrderPreviewF from '../../Comp/OrderPreviews/OrderPreviewF';
+import OrderPreviewA from '../../Comp/OrderPreviews/OrderPreviewA';
 import { FiFileText } from 'react-icons/fi';
-import Form from './Form';
-import OrderPreviewF from './OrderPreviews/OrderPreviewF';
-import OrderPreviewA from './OrderPreviews/OrderPreviewA';
+import Form from '../../Comp/Form';
 
 const link =
     'https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80';

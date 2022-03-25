@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { colRefAluminum, storage } from '../../../../firebase/config';
-import { Column, Flex, FlexItems, Items3, Row } from '../../../../Styled/divs/Styled';
-import { Para, Title } from '../../../../Styled/fonts/Styled';
+import { colRefAluminum, storage } from '../../../firebase/config';
+import { Column, Flex, FlexItems, Items3, Row } from '../../../Styled/divs/Styled';
+import { Para, Title } from '../../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
 import Image from 'next/image';
-import Instructions from '../../Instructions';
+import Instructions from '../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
-import { dataFraming } from '../../../api/dataFraming';
-import { dataAluminum } from '../../../api/dataAluminum';
-import { BtnBlack } from '../../../../Styled/buttons/Styled';
+import { BtnBlack } from '../../../Styled/buttons/Styled';
+import { dataAluminum } from '../../../pages/api/dataAluminum';
+import { dataFraming } from '../../../pages/api/dataFraming';
 
 const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
     const [isFinish, setIsFinish] = useState(null);

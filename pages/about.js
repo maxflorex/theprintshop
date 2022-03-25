@@ -26,7 +26,7 @@ const about = () => {
                     <br />
                     Need something done the same day? Need a hand installing your artwork? Short on time and needing to have your artwork delivered to your home? Look no further, we&apos;re there for you.
                 </Para>
-                <img src={link} className='imageGallery' style={{ paddingTop: '2rem' }} />
+                <img src={link} className='imageGallery' alt={link} style={{ paddingTop: '2rem' }} />
             </Column>
             <Carousel />
         </section>

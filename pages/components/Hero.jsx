@@ -6,7 +6,6 @@ import Image from 'next/image';
 
 const HeroSection = () => {
     const link = '/_MX82804.jpg';
-    const link2 = '/aluminum/_MX82768.jpg';
     const colorOpa = 'rgba(0, 0, 0, 0.5)';
 
     return (
@@ -14,7 +13,7 @@ const HeroSection = () => {
             <Hero
                 mt="0"
                 mb="0"
-                img={link2}
+                img={link}
                 h="85vh"
                 display="none"
                 pt="0"
