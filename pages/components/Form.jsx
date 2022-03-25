@@ -100,7 +100,6 @@ const Form = ({ user }) => {
         stretchers = isStretchers;
         floaters = isFloaters;
         email = user.email;
-        console.log(qty, medium, borders, stretchers, floaters);
     });
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

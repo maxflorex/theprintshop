@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Column, Flex, Row } from '../Styled/divs/Styled'
 import { Para, Title } from '../Styled/fonts/Styled'
-import { SButton, SForm, SInput, STextArea } from '../Styled/buttons/Styled'
+import { SButton, SForm, SInput, STextArea } from '../Styled/forms/Styled'
 import { colMessages } from '../firebase/config'
 import { addDoc, serverTimestamp } from 'firebase/firestore'
 import { BtnBlack, Button } from '../Styled/buttons/Styled'
