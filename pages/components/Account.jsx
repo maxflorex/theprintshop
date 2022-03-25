@@ -11,7 +11,7 @@ import {
     colRefFraming,
     colRefOrder,
     colRefPaper,
-} from '../firebase/config';
+} from '../../firebase/config';
 import { Column, Flex } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';
 import { SButton, SForm, SInput } from './Styled/forms/Styled';
