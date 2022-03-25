@@ -9,8 +9,7 @@ const bg =
 
 const Carousel = () => {
     return (
-        <div>
-<<<<<<< Updated upstream
+        <container>
             <Column img={bg} imgMd={bg} p="4rem" attach="fixed" gap="2rem">
                 <Slideshow navigation={true}>
                     {data.map((data, index) => (
@@ -31,35 +30,7 @@ const Carousel = () => {
                     ))}
                 </Slideshow>
             </Column>
-=======
-            <container>
-                <Column img={bg} imgMd={bg} p="4rem" attach="fixed" gap="2rem">
-                    <Slideshow navigation={true}>
-                        {data.map((data, index) => (
-                            <Slide>
-                                <div key={index}>
-                                    <a href={data.link}>
-                                        <Column color="white" p="0">
-                                            <Title size="2rem">
-                                                {data.title}
-                                            </Title>
-                                            <Image
-                                                src={data.bg}
-                                                alt={data.title}
-                                                width={200}
-                                                height={100}
-                                                objectFit="cover"
-                                            />
-                                        </Column>
-                                    </a>
-                                </div>
-                            </Slide>
-                        ))}
-                    </Slideshow>
-                </Column>
-            </container>
->>>>>>> Stashed changes
-        </div>
+        </container>
     );
 };
 

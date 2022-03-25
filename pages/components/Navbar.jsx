@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import { Title, Menu } from './Styled/fonts/Styled';
 import { Flex } from './Styled/divs/Styled';
 import { ButtonS } from './Styled/buttons/Styled';
-<<<<<<< Updated upstream
 import { AnimatePresence, motion } from 'framer-motion';
 import Modal from './Menu/Modal';
 import { FiMenu } from 'react-icons/fi';
-=======
->>>>>>> Stashed changes
+import { UseMediaQuery } from './UseMediaQuery';
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -15,6 +13,30 @@ const Navbar = () => {
 
     const close = () => setModalOpen(false);
     const open = () => setModalOpen(true);
+
+    // const isSmall = UseMediaQuery(768);
+
+    // const variants = isSmall
+    //     ? {
+    //           animate: {
+    //               opacity: 1,
+    //               scale: 1,
+    //           },
+    //           exit: {
+    //               opacity: 0,
+    //               scale: 0,
+    //           },
+    //       }
+    //     : {
+    //           animate: {
+    //               opacity: 0,
+    //               scale: 0,
+    //           },
+    //           exit: {
+    //               opacity: 0,
+    //               scale: 0,
+    //           },
+    //       };
 
     return (
         <Flex
@@ -47,15 +69,10 @@ const Navbar = () => {
                     <li>
                         <Link href="/services">Services </Link>
                     </li>
+                    <ButtonS transform="uppercase" font="Oswald" href="/order">
+                        Order
+                    </ButtonS>
                     <li>
-<<<<<<< Updated upstream
-=======
-                        <Link href="/order" passHref>
-                            <ButtonS font='Oswald'>ORDER</ButtonS>
-                        </Link>
-                    </li>
-                    <li>
->>>>>>> Stashed changes
                         <Link href="/support">Support</Link>
                     </li>
                 </Menu>
