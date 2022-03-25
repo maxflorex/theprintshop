@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import FrameSizes from './FrameSizes';
-import { Column } from './Styled/divs/Styled';
+import { Column } from '../../Styled/divs/Styled';
 
 
 import bigframeN from './Images/frames/FRAMES-04-2.svg';

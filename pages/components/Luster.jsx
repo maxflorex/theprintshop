@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useEffect } from 'react';
-import { Column, Flex, Grid, Row } from './Styled/divs/Styled';
-import { P, Title, Title2 } from './Styled/fonts/Styled';
+import { Column, Flex, Grid, Row } from '../../Styled/divs/Styled';
+import { P, Title, Title2 } from '../../Styled/fonts/Styled';
 
 
 const Luster = () => {

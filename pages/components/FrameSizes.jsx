@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import { Flex, Column } from './Styled/divs/Styled';
-import { Title, Title2 } from './Styled/fonts/Styled';
+import { Flex, Column } from '../../Styled/divs/Styled';
+import { Title, Title2 } from '../../Styled/fonts/Styled';
 
 import frame1 from './Images/frames/FRAMES-01.svg';
 import frame2 from './Images/frames/FRAMES-02.svg';

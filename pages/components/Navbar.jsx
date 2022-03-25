@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Title, Menu } from './Styled/fonts/Styled';
-import { Flex } from './Styled/divs/Styled';
-import { ButtonS } from './Styled/buttons/Styled';
+import { Title, Menu } from './../../Styled/fonts/Styled';
+import { Flex } from '../../Styled/divs/Styled';
+import { ButtonS } from '../../Styled/buttons/Styled';
 import { AnimatePresence, motion } from 'framer-motion';
 import Modal from './Menu/Modal';
 import { FiMenu } from 'react-icons/fi';

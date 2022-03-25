@@ -1,8 +1,5 @@
-import Image from 'next/image';
-import { Column, Flex, Grid } from './Styled/divs/Styled';
-import { Title, Title2 } from './Styled/fonts/Styled';
-import floater1 from '../components/Images/stretchers/outlined-1-floaters.svg';
-import floater2 from '../components/Images/stretchers/outlined-2.floaters.svg';
+import { Column, Flex, Grid } from '../../Styled/divs/Styled';
+import { Title, Title2 } from '../../Styled/fonts/Styled';
 const link =
     'https://cdn.shopify.com/s/files/1/1419/1428/articles/in-the-making-studio-JWEMsn3ES1U-unsplash_1000x.jpg?v=1642594500';
 

@@ -2,8 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import { dataPrintDetailPaper } from '../api/dataPrintDetails';
 import Papers from '../components/Papers';
-import { Backdrop, Column, Hero, Items6 } from '../components/Styled/divs/Styled';
-import { Para, Title } from '../components/Styled/fonts/Styled';
+import { Backdrop, Column, Hero, Items6 } from '../../Styled/divs/Styled';
+import { Para, Title } from '../../Styled/fonts/Styled';
 import Carousel from '../components/CarouselOtherServices';
 
 const Paper = () => {

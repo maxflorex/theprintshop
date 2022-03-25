@@ -1,7 +1,7 @@
 import React from 'react';
-import { BtnBlack } from './Styled/buttons/Styled';
-import { Column, Flex, Grid, Row } from './Styled/divs/Styled';
-import { Para, Title } from './Styled/fonts/Styled';
+import { BtnBlack } from '../../Styled/buttons/Styled'
+import { Column, Flex, Grid, Row } from '../../Styled/divs/Styled';
+import { Para, Title } from '../../Styled/fonts/Styled';
 
 const link =
     'https://images.pexels.com/photos/2874998/pexels-photo-2874998.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&width=940';

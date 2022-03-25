@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { dataBorders } from '../api/dataBorders';
-import { Column, Items3 } from './Styled/divs/Styled';
-import { Title } from './Styled/fonts/Styled';
+import { Column, Items3 } from '../../Styled/divs/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 
 const GalleryWrap = () => {
     return (

@@ -1,10 +1,10 @@
 import BasicInfoForm from './BasicInfoForm';
 import React, { useEffect, useState } from 'react';
-import { Column, Flex, FlexItems, Grid, Items } from './Styled/divs/Styled';
-import { Title } from './Styled/fonts/Styled';
+import { Column, Flex, FlexItems, Grid, Items } from '../../Styled/divs/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 import { data } from '../api/dataServices';
 import FormCanvas from './Forms/Canvas/FormCanvas';
-import { SForm, SInput, SButton } from './Styled/forms/Styled';
+import { SForm, SInput, SButton } from '../../Styled/forms/Styled';
 import { colRefOrder } from '../../firebase/config';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import FormFraming from './Forms/Framing/FormFraming';

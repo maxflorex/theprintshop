@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { dataPrintDetailAluminum } from '../api/dataPrintDetails';
-import { Backdrop, Column, Hero, Items6, Flex, Row, Grid } from '../components/Styled/divs/Styled';
-import { Para, Title, Title2 } from '../components/Styled/fonts/Styled';
+import { Backdrop, Column, Hero, Items6, Flex, Row, Grid } from '../../Styled/divs/Styled';
+import { Para, Title, Title2 } from '../../Styled/fonts/Styled';
 import reflection1 from '../components/Images/reflections/mx-reflection-gloss.jpg'
 import reflection2 from '../components/Images/reflections/mx-reflection-satin.jpg'
 import inset1 from '../components/Images/inset/inset-01.svg'
 import inset2 from '../components/Images/inset/inset-02-01.svg'
-import { BtnBlack } from '../components/Styled/buttons/Styled';
+import { BtnBlack } from '../../Styled/buttons/Styled';
 import GalleryAluminum from '../components/Galleries/GalleryAluminum';
 import Modal from '../components/Modal';
 import Carousel from '../components/Carousel';

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Flex, Items3 } from './Styled/divs/Styled';
-import { Title } from './Styled/fonts/Styled';
+import { Flex, Items3 } from '../../Styled/divs/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 
 const Tabs = ({ setSelectedTab, selectedTab }) => {
     const stretcherTab = () => setSelectedTab('stretchers');

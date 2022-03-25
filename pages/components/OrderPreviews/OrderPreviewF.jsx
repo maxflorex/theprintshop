@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from '../Styled/divs/Styled';
+import { Flex } from '../../../Styled/divs/Styled';
 
 const OrderPreviewF = ({
     name,

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid } from './Styled/divs/Styled';
-import { SInput } from './Styled/forms/Styled';
+import { Grid } from '../../Styled/divs/Styled';
+import { SInput } from '../../Styled/forms/Styled';
 
 function BasicInfoForm({ user, setFormName, formName }) {
     return (

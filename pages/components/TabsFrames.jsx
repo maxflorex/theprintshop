@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import { Flex, Items3 } from './Styled/divs/Styled';
-import { Title, Title2 } from './Styled/fonts/Styled';
+import { Flex, Items3 } from '../../Styled/divs/Styled';
+import { Title, Title2 } from '../../Styled/fonts/Styled';
 
 const TabsFrames = ({ setSelectedTab, selectedTab }) => {
     const frameTab = () => setSelectedTab('black');

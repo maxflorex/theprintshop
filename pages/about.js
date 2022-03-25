@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from './components/Carousel'
-import { Column } from './components/Styled/divs/Styled'
-import { Para, Title } from './components/Styled/fonts/Styled'
+import { Column } from '../Styled/divs/Styled'
+import { Para, Title } from '../Styled/fonts/Styled'
 
 const about = () => {
 

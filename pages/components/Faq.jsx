@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Column, Flex, Grid } from './Styled/divs/Styled';
-import { Title } from './Styled/fonts/Styled';
+import { Column, Flex, Grid } from '../../Styled/divs/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 import { FiCornerRightDown } from 'react-icons/fi';
-import { BtnBlack } from '../components/Styled/buttons/Styled';
+import { BtnBlack } from '../../Styled/buttons/Styled';
 import Image from 'next/image';
 
 const Faq = ({ question, answers, link, img }) => {

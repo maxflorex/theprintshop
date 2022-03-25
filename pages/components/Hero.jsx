@@ -1,6 +1,6 @@
-import { Hero, Grid, Items, Backdrop, Column } from './Styled/divs/Styled';
-import { P, Para, Title } from './Styled/fonts/Styled';
-import { Btn, BtnBlack, Button } from './Styled/buttons/Styled';
+import { Hero, Grid, Items, Backdrop, Column } from '../../Styled/divs/Styled';
+import { P, Para, Title } from '../../Styled/fonts/Styled';
+import { Btn, BtnBlack, Button } from '../../Styled/buttons/Styled';
 import logo from '../../images/tps-logo.svg';
 import Image from 'next/image';
 

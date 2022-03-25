@@ -1,6 +1,6 @@
 import { dataFaq } from './api/dataFaq';
-import { Column, Flex, Grid } from './components/Styled/divs/Styled';
-import { Title } from './components/Styled/fonts/Styled'
+import { Column, Flex, Grid } from '../Styled/divs/Styled';
+import { Title } from '../Styled/fonts/Styled'
 import Carousel from './components/Carousel'
 
 import Faq from './components/Faq';

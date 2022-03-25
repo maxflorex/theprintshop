@@ -1,6 +1,6 @@
-import { Flex, Items, Column, Row, Backdrop } from './Styled/divs/Styled';
+import { Flex, Items, Column, Row, Backdrop } from '../../Styled/divs/Styled';
 import { data } from '../api/dataServices';
-import { Title } from './Styled/fonts/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 import Image from 'next/image';
 import { useState } from 'react';
 import { motion } from 'framer-motion';

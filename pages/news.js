@@ -1,6 +1,6 @@
 import React from 'react'
-import { Column } from './components/Styled/divs/Styled'
-import { Para, Title } from './components/Styled/fonts/Styled'
+import { Column } from '../Styled/divs/Styled'
+import { Para, Title } from '../Styled/fonts/Styled'
 
 const news = () => {
 

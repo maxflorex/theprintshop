@@ -12,10 +12,10 @@ import {
     colRefOrder,
     colRefPaper,
 } from '../../firebase/config';
-import { Column, Flex } from './Styled/divs/Styled';
-import { Title } from './Styled/fonts/Styled';
-import { SButton, SForm, SInput } from './Styled/forms/Styled';
-import { BtnBlack, Button } from './Styled/buttons/Styled';
+import { Column, Flex } from './../../Styled/divs/Styled';
+import { Title } from './../../Styled/fonts/Styled';
+import { SButton, SForm, SInput } from './../../Styled/forms/Styled';
+import { BtnBlack, Button } from './../../Styled/buttons/Styled';
 import RegisterForm from './RegisterForm';
 import {
     doc,

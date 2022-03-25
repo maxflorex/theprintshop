@@ -1,6 +1,6 @@
 import React from 'react';
-import { Column } from './Styled/divs/Styled';
-import { Title } from './Styled/fonts/Styled';
+import { Column } from '../../Styled/divs/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 
 const link2 =
     'https://images.pexels.com/photos/8947627/pexels-photo-8947627.jpeg?cs=srgb&dl=pexels-karolina-grabowska-8947627.jpg&fm=jpg';

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Column, Flex } from './Styled/divs/Styled';
-import { Title } from './Styled/fonts/Styled';
+import { Column, Flex } from '../../Styled/divs/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 import Image from 'next/image';
 
 import bigframe from './Images/frames/FRAMES-04-3.svg';

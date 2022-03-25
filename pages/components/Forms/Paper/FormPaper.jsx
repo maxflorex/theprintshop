@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { colRefPaper, storage } from '../../../../firebase/config';
-import { Column, Flex, FlexItems, Items3 } from '../../Styled/divs/Styled';
-import { Title } from '../../Styled/fonts/Styled';
+import { Column, Flex, FlexItems, Items3 } from '../../../../Styled/divs/Styled';
+import { Title } from '../../../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
 import { dataPapers } from '../../../api/dataPapers';
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import { dataLamination } from '../../../api/dataLamination';
 import Instructions from '../../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
-import { BtnBlack } from '../../Styled/buttons/Styled';
+import { BtnBlack } from '../../../../Styled/buttons/Styled';
 
 const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
     const [isType, setIsType] = useState(null);

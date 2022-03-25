@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import { dataPrintDetailFraming } from '../api/dataPrintDetails';
 import BlackFrames from '../components/BlackFrames';
 import NaturalFrames from '../components/NaturalFrames';
-import { Backdrop, Column, Flex, Hero, Items3, Items6, Row } from '../components/Styled/divs/Styled';
-import { Para, Title, Title2 } from '../components/Styled/fonts/Styled';
+import { Backdrop, Column, Flex, Hero, Items3, Items6, Row } from '../../Styled/divs/Styled';
+import { Para, Title, Title2 } from '../../Styled/fonts/Styled';
 import WhiteFrames from '../components/WhiteFrames';
 import TabsFrames from '../components/TabsFrames';
 import Floaters from '../components/Floaters'
-import { BtnBlack } from '../components/Styled/buttons/Styled';
+import { BtnBlack } from '../../Styled/buttons/Styled';
 import Mats from '../components/Mats';
 
 

@@ -1,8 +1,8 @@
-import { Slideshow, Slide } from './Slideshow';
+import Slideshow, { Slide } from './Slideshow';
 import Image from 'next/image';
-import { Column, Flex } from './Styled/divs/Styled';
+import { Column, Flex } from '../../Styled/divs/Styled';
 import { data } from '../api/dataServices';
-import { Title } from './Styled/fonts/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 
 const bg =
     'https://images.unsplash.com/photo-1618367588411-d9a90fefa881?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80';

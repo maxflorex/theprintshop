@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Column, Items3 } from "./Styled/divs/Styled";
+import { Column, Items3 } from "../../Styled/divs/Styled";
 import { dataStretchers } from '../api/dataStretchers'
-import { Title } from "./Styled/fonts/Styled";
+import { Title } from "../../Styled/fonts/Styled";
 
 const Stretchers = () => {
     return (

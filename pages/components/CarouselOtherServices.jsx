@@ -1,7 +1,7 @@
-import { Slideshow, Slide } from './Slideshow';
-import { Column, Flex } from './Styled/divs/Styled';
+import Slideshow, { Slide } from './Slideshow';
+import { Column, Flex } from '../../Styled/divs/Styled';
 import { slides } from '../api/dataOtherServices';
-import { Title } from './Styled/fonts/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 
 
 const colorOpa = 'rgba(0, 0, 0, 0.7)'

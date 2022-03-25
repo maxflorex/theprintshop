@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { colRefFraming, colRefPaper, storage } from '../../../../firebase/config';
-import { Column, Flex, FlexItems, Items3, Row } from '../../Styled/divs/Styled';
-import { Title } from '../../Styled/fonts/Styled';
+import { Column, Flex, FlexItems, Items3, Row } from '../../../../Styled/divs/Styled';
+import { Title } from '../../../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
 import Image from 'next/image';
 import Instructions from '../../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
-import { SButton, SForm } from '../../Styled/forms/Styled';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import { dataFraming } from '../../../api/dataFraming';
-import { BtnBlack } from '../../Styled/buttons/Styled';
+import { BtnBlack } from '../../../../Styled/buttons/Styled';
 
 const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
     const [isColor, setIsColor] = useState(null);

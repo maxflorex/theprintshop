@@ -1,8 +1,8 @@
 import React from 'react';
-import { BtnBlack } from './Styled/buttons/Styled';
-import { Column, Flex } from './Styled/divs/Styled';
-import { Title } from './Styled/fonts/Styled';
-import { SForm, SInput } from './Styled/forms/Styled';
+import { BtnBlack } from '../../Styled/buttons/Styled';
+import { Column, Flex } from '../../Styled/divs/Styled';
+import { Title } from '../../Styled/fonts/Styled';
+import { SForm, SInput } from '../../Styled/forms/Styled';
 
 function RegisterForm({
     setRegisterEmail,

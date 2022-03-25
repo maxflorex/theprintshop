@@ -6,9 +6,9 @@ import {
     Row,
     FlexItems,
     BackdropDark,
-} from './Styled/divs/Styled';
-import { Title, P, Para } from './Styled/fonts/Styled';
-import { BtnBlack, Button } from './Styled/buttons/Styled';
+} from '../../Styled/divs/Styled';
+import { Title, P, Para } from '../../Styled/fonts/Styled';
+import { BtnBlack, Button } from '../../Styled/buttons/Styled';
 import Link from 'next/link';
 
 const link =

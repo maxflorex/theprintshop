@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import styled from 'styled-components';
-import { Title } from './Styled/fonts/Styled';
+import { Title } from '../../Styled/fonts/Styled';
 
 const Slideshow = ({
     children,
@@ -115,7 +115,7 @@ const SlideContainer = styled.div`
     flex-wrap: nowrap;
 `;
 
-const Slide = styled.div`
+export const Slide = styled.div`
     overflow: hidden;
     transition: 0.8s ease all;
     z-index: 10;
@@ -174,4 +174,4 @@ const Btn = styled.button`
     ${(props) => (props.right ? 'right: 0' : 'left: 0')}
 `;
 
-export { Slideshow, Slide };
+export default Slideshow

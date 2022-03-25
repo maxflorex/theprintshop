@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Column, Items3, Flex, BackdropDark } from './components/Styled/divs/Styled';
-import { Para, Title, Title2 } from './components/Styled/fonts/Styled';
+import { Column, Items3, Flex, BackdropDark } from '../Styled/divs/Styled';
+import { Para, Title, Title2 } from '../Styled/fonts/Styled';
 import { slides } from './api/dataOtherServices';
-import { BiRightArrow } from "react-icons/bi";
-import { BtnBlack } from './components/Styled/buttons/Styled'
+import { BtnBlack } from '../Styled/buttons/Styled'
 import Carousel from './components/Carousel';
 
 const Services = () => {

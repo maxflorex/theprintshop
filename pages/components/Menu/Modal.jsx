@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { Btn, ButtonS } from '../Styled/buttons/Styled';
-import { Column } from '../Styled/divs/Styled';
-import { Menu, Para, Title } from '../Styled/fonts/Styled';
+import { Btn, ButtonS } from '../../../Styled/buttons/Styled';
+import { Column } from '../../../Styled/divs/Styled';
+import { Menu, Para, Title } from '../../../Styled/fonts/Styled';
 import Backdrop from './Backdrop';
 
 const dropIn = {

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Flex, Column, Items } from './Styled/divs/Styled';
-import { Title, Para } from './Styled/fonts/Styled';
+import { Flex, Column, Items } from '../../Styled/divs/Styled';
+import { Title, Para } from '../../Styled/fonts/Styled';
 
 function Footer() {
     return (

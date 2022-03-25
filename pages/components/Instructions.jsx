@@ -1,6 +1,6 @@
-import { Column, Flex } from './Styled/divs/Styled';
-import { Title } from './Styled/fonts/Styled';
-import { SInput, STextArea } from './Styled/forms/Styled';
+import { Column, Flex } from '../../Styled/divs/Styled';
+import { Title } from '../../Styled/fonts/Styled';
+import { SInput, STextArea } from '../../Styled/forms/Styled';
 import { FiDownloadCloud } from 'react-icons/fi';
 
 const Instructions = ({

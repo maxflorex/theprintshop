@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Column, Flex, Row } from './components/Styled/divs/Styled'
-import { Para, Title } from './components/Styled/fonts/Styled'
-import { SButton, SForm, SInput, STextArea } from './components/Styled/forms/Styled'
+import { Column, Flex, Row } from '../Styled/divs/Styled'
+import { Para, Title } from '../Styled/fonts/Styled'
+import { SButton, SForm, SInput, STextArea } from '../Styled/buttons/Styled'
 import { colMessages } from '../firebase/config'
 import { addDoc, serverTimestamp } from 'firebase/firestore'
-import { BtnBlack, Button } from './components/Styled/buttons/Styled'
+import { BtnBlack, Button } from '../Styled/buttons/Styled'
 import { FiPhone, FiMail } from 'react-icons/fi'
 
 const Contact = () => {

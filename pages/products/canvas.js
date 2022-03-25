@@ -1,8 +1,8 @@
-import { Backdrop, BackdropDark, Column, Flex, Hero, Items6 } from '../components/Styled/divs/Styled'
-import { Para, Title, Title2 } from '../components/Styled/fonts/Styled'
+import { Backdrop, BackdropDark, Column, Flex, Hero, Items6 } from '../../Styled/divs/Styled'
+import { Para, Title, Title2 } from '../../Styled/fonts/Styled'
 import Image from 'next/image';
 import { dataPrintDetails } from '../api/dataPrintDetails';
-import { BtnBlack } from '../components/Styled/buttons/Styled'
+import { BtnBlack } from '../../Styled/buttons/Styled'
 import Floaters from '../components/Floaters'
 import Stretchers from '../components/Stretchers'
 import GalleryWrap from '../components/GalleryWrap'
