@@ -11,7 +11,7 @@ import {
     colRefFraming,
     colRefOrder,
     colRefPaper,
-} from '../firebase/config';
+} from '../../firebase/config';
 import { Column, Flex } from './Styled/divs/Styled';
 import { Title } from './Styled/fonts/Styled';
 import { SButton, SForm, SInput } from './Styled/forms/Styled';
@@ -35,7 +35,7 @@ import OrderPreviewA from './OrderPreviews/OrderPreviewA';
 const link =
     'https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80';
 
-function App({ setIsAuth }) {
+function App() {
     const [registerEmail, setRegisterEmail] = useState('');
     const [registerPassword, setRegisterPassword] = useState('');
     const [loginEmail, setLoginEmail] = useState('');

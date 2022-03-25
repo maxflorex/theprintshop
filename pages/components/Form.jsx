@@ -5,7 +5,7 @@ import { Title } from './Styled/fonts/Styled';
 import { data } from '../api/dataServices';
 import FormCanvas from './Forms/Canvas/FormCanvas';
 import { SForm, SInput, SButton } from './Styled/forms/Styled';
-import { colRefOrder } from '../firebase/config';
+import { colRefOrder } from '../../firebase/config';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import FormFraming from './Forms/Framing/FormFraming';
 import FormPaper from './Forms/Paper/FormPaper';

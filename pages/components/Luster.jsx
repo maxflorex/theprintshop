@@ -8,22 +8,6 @@ const Luster = () => {
     const link =
         'https://images.unsplash.com/photo-1531845116688-48819b3b68d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80';
 
-    // STICKY HEADER
-
-    // useEffect(() => {
-    //     window.addEventListener('scroll', isSticky);
-    //     return () => {
-    //         window.removeEventListener('scroll', isSticky);
-    //     };
-    // });
-
-    // const isSticky = (e) => {
-    //     const stick = document.querySelector('.header-section');
-    //     const scrollTop = window.scrollY;
-    //     scrollTop >= 250
-    //         ? stick.classList.add('is-sticky')
-    //         : stick.classList.remove('is-sticky');
-    // };
 
     return (
         <>

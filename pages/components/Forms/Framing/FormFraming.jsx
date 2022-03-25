@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { colRefFraming, colRefPaper, storage } from '../../../firebase/config';
+import { colRefFraming, colRefPaper, storage } from '../../../../firebase/config';
 import { Column, Flex, FlexItems, Items3, Row } from '../../Styled/divs/Styled';
 import { Title } from '../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';

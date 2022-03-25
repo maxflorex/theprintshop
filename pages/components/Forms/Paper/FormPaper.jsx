@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { colRefPaper, storage } from '../../../firebase/config';
+import { colRefPaper, storage } from '../../../../firebase/config';
 import { Column, Flex, FlexItems, Items3 } from '../../Styled/divs/Styled';
 import { Title } from '../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
@@ -10,7 +10,6 @@ import { dataMounts } from '../../../api/dataMounts';
 import { dataLamination } from '../../../api/dataLamination';
 import Instructions from '../../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
-import { SButton, SForm } from '../../Styled/forms/Styled';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import { BtnBlack } from '../../Styled/buttons/Styled';
 

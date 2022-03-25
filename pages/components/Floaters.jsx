@@ -21,10 +21,6 @@ const Floaters = () => {
                         <span className="dot color2"></span>
                         <span className="dot color3"></span>
                     </Flex>
-                    {/* <Flex color="none" justify="center" gap="4rem">
-                        <Image src={floater2} objectFit="contain" />
-                        <Image src={floater1} objectFit="contain" />
-                    </Flex> */}
                 </Column>
             </Flex>
         </Grid>

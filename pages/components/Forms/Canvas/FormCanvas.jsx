@@ -12,7 +12,7 @@ import { Title } from '../../Styled/fonts/Styled';
 import { FiChevronDown, FiDownloadCloud } from 'react-icons/fi';
 import { dataStretchers } from '../../../api/dataStretchers';
 import { dataFloaters } from '../../../api/dataFloaters';
-import { storage } from '../../../firebase/config';
+import { storage } from '../../../../firebase/config';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import Image from 'next/image';
 import Instructions from '../../Instructions';

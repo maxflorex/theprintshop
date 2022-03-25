@@ -29,13 +29,9 @@ const Section = () => {
                         >
                             Museum Quality
                         </Para>
-<<<<<<< Updated upstream
-                        <BtnBlack href="/products/paper">Know more</BtnBlack>
-=======
                         <Link href="/products/paper" passHref>
                             <BtnBlack>Know more</BtnBlack>
                         </Link>
->>>>>>> Stashed changes
                     </Backdrop>
 
                     <Backdrop className="shadow" p="4rem">
@@ -48,13 +44,9 @@ const Section = () => {
                         >
                             Get the best deals and fastest turnarounds
                         </Para>
-<<<<<<< Updated upstream
-                        <BtnBlack href="/contact">Know more</BtnBlack>
-=======
                         <Link href="/contact" passHref>
                             <BtnBlack>Know more</BtnBlack>
                         </Link>
->>>>>>> Stashed changes
                     </Backdrop>
                 </Row>
             </BackdropDark>

@@ -15,7 +15,7 @@ const Slideshow = ({
 
     const next = useCallback(() => {
         // CHECK IF THE SLIDESHOW HAS SLIDES
-        if (slideshow.current.children.length > 0) {
+        if (slideshow.current?.children.length > 0) {
             // GET FIRST SLIDE OF SLIDER
             const firstSlide = slideshow.current.children[0];
             // SLIDESHOW TRANSITION - HANDLED BY PROPS

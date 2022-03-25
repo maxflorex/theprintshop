@@ -291,10 +291,7 @@ hr {
 
 .slideshowDot.active {
     background-color: #6a0dad;
-<<<<<<< Updated upstream
 }
-
-/* BURGER MENU */
 
 .burger {
     display: none;
@@ -304,7 +301,3 @@ hr {
         display: block;
     }
 }
-=======
-  }
-
->>>>>>> Stashed changes

@@ -1,6 +1,6 @@
 import { getDownloadURL, listAll } from 'firebase/storage';
 import { useEffect, useState } from 'react';
-import {  gsCanvasRef,  storage } from '../../firebase/config';
+import {  gsCanvasRef,  storage } from '../../../firebase/config';
 import { Column, Items6 } from '../Styled/divs/Styled';
 import Image from 'next/image';
 import { Title } from '../Styled/fonts/Styled';

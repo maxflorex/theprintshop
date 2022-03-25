@@ -111,7 +111,12 @@ const Navbar = () => {
                     color="transparent"
                 >
                     {/* <Image src={logo} /> */}
-                    <Title color="black" font="Roboto" ls="0.05rem">
+                    <Title
+                        color="black"
+                        font="Roboto"
+                        ls="0.05rem"
+                        style={{ cursor: 'pointer' }}
+                    >
                         The Printshop™
                     </Title>
                 </Flex>
