@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import React from 'react'
 import { Column } from '../Styled/divs/Styled'
 import { Para, Title, Title2 } from '../Styled/fonts/Styled'
 
