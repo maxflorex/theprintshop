@@ -1,4 +1,4 @@
-
+import Head from 'next/head'
 import React, { useState } from 'react';
 import { dataPrintDetailAluminum } from '../api/dataPrintDetails';
 import { Backdrop, Column, Hero, Items6, Flex, Row, Grid } from '../../Styled/divs/Styled';
@@ -10,12 +10,16 @@ import Carousel from '../components/Carousel';
 
 
 const Aluminum = () => {
-    const [selectedImg, setSelectedImg] = useState(null)
+    const [selectedImg, setSelectedImg] = useState(undefined)
 
     const link = 'https://images.unsplash.com/photo-1612504200882-d29bf3f2cc13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1056&q=80'
 
     return (
         <>
+            <Head>
+                <title>The Printshop - Aluminum</title>
+            </Head>
+
             {/* TITLE & HERO */}
 
             <section>
@@ -38,7 +42,7 @@ const Aluminum = () => {
                 <Items6 width='100%' color='white' m='2rem' p='0'>
                     {dataPrintDetailAluminum.map((data, index) => (
                         <Column gap='1rem' key={index} p='1rem'>
-                            <img src={data.img} alt={data.title} style={{maxWidth: '3rem', maxHeight:'3rem', margin: 'auto'}}/>
+                            <img src={data.img} alt={data.title} style={{ maxWidth: '3rem', maxHeight: '3rem', margin: 'auto' }} />
                             <div>
                                 <Title>{data.title}</Title>
                                 <Para color='dark' align='center' alignW='center' font='Roboto'>{data.sub}</Para>
@@ -81,7 +85,7 @@ const Aluminum = () => {
                     <Title size='2rem' pt='2rem'>Wall Display Option</Title>
                     <Title2 font='Roboto'>We offer a variety of contemporary ways to hang and display your MetalPrints.</Title2>
                     <Grid justify='center' width='50%' gap='4rem' m='auto' pt='2rem'>
-                        <img alt='Inset' src='/inset-01.svg'/>
+                        <img alt='Inset' src='/inset-01.svg' />
                         <img alt='Inset' src='/inset-02.svg' />
                     </Grid>
                 </Column>

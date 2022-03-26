@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react'
 import { Column } from '../Styled/divs/Styled'
 import { Para, Title, Title2 } from '../Styled/fonts/Styled'
@@ -5,6 +6,9 @@ import { Para, Title, Title2 } from '../Styled/fonts/Styled'
 const Privacy = () => {
     return (
         <section>
+            <Head>
+                <title>The Printshop - Privacy Policy</title>
+            </Head>
             <Column width='75%' widthMd='50%' widthSm='75%' m='auto'>
                 <Title size='3rem' m='2rem'>Privacy Policy for Art Cayman Company</Title>
 

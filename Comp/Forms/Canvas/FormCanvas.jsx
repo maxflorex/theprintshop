@@ -13,7 +13,7 @@ import { FiChevronDown, FiDownloadCloud } from 'react-icons/fi';
 
 import { storage } from '../../../firebase/config';
 import { ref, uploadBytesResumable } from 'firebase/storage';
- 
+
 import Instructions from '../Instructions';
 import { Button, BtnBlack } from '../../../Styled/buttons/Styled';
 import { dataBorders } from '../../../pages/api/dataBorders';
@@ -45,15 +45,16 @@ const FormCanvas = ({
     };
 
     // PREVIEW IMAGE UPLOADED
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [imageUrl, setImageUrl] = useState(null);
+    const [selectedImage, setSelectedImage] = useState(undefined);
+    const [imageUrl, setImageUrl] = useState(undefined);
     useEffect(() => {
         if (selectedImage) {
             setImageUrl(URL.createObjectURL(selectedImage));
         }
     }, [selectedImage]);
 
-    let txt = selectedImage === null ? 'Upload your image' : 'Image Uploaded!';
+    let txt =
+        selectedImage === undefined ? 'Upload your image' : 'Image Uploaded!';
 
     // FIREBASE STORAGE
     const upload = (e) => {
@@ -85,6 +86,7 @@ const FormCanvas = ({
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd="space-between"
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <Flex
@@ -120,11 +122,7 @@ const FormCanvas = ({
                         >
                             <Title mb="2rem">{data.title}</Title>
                             <div style={{ margin: '-2rem' }}>
-                                <img
-                                    src={data.img}
-                                    alt={data.title}
-                                
-                                />
+                                <img src={data.img} alt={data.title} />
                             </div>
                         </FlexItems>
                     ))}
@@ -141,6 +139,7 @@ const FormCanvas = ({
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd="space-between"
                 onClick={() => setIsOpenSb(!isOpenSb)}
             >
                 <Flex
@@ -184,12 +183,11 @@ const FormCanvas = ({
                                 justify="end"
                                 justifyMd="end"
                             >
-                                <div style={{ margin: '-1rem' }}>
-                                    <img
-                                        src={data.img2}
-                                                                              alt={data.title}
-                                    />
-                                </div>
+                                <img
+                                    src={data.img2}
+                                    alt={data.title}
+                                    style={{ width: '50%' }}
+                                />
                             </Flex>
                         </FlexItems>
                     ))}
@@ -206,6 +204,7 @@ const FormCanvas = ({
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd="space-between"
                 onClick={() => setIsOpenF(!isOpenF)}
             >
                 <Flex
@@ -258,6 +257,7 @@ const FormCanvas = ({
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd="space-between"
                 onClick={() => setIsOpenC(!isOpenC)}
             >
                 <Flex

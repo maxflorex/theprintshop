@@ -1,6 +1,7 @@
 import React from 'react'
 import { Column } from '../Styled/divs/Styled'
 import { Para, Title } from '../Styled/fonts/Styled'
+import Head from 'next/head'
 
 const news = () => {
 
@@ -8,6 +9,9 @@ const news = () => {
 
     return (
         <section>
+            <Head>
+                <title>The Printshop - News</title>
+            </Head>
             <Column img={link}>
                 <Column h='25vh' m='auto'>
                     <Title size='4rem'>The Printshop News</Title>

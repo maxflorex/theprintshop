@@ -1,4 +1,4 @@
-
+import Head from 'next/head'
 import React, { useState } from 'react';
 import { dataPrintDetailFraming } from '../api/dataPrintDetails';
 import BlackFrames from '../components/BlackFrames';
@@ -10,6 +10,7 @@ import TabsFrames from '../components/TabsFrames';
 import Floaters from '../components/Floaters'
 import { BtnBlack } from '../../Styled/buttons/Styled';
 import Mats from '../components/Mats';
+import FrameSizes from '../components/FrameSizes';
 
 
 
@@ -31,6 +32,9 @@ const Framing = () => {
 
 	return (
 		<>
+			<Head>
+				<title>The Printshop - Framing</title>
+			</Head>
 			{/* TITLE & HERO */}
 
 			<section>
@@ -53,7 +57,7 @@ const Framing = () => {
 				<Items6 width='100%' color='white' m='2rem' p='0'>
 					{dataPrintDetailFraming.map((dataPrintDetailFraming, index) => (
 						<Column gap='1rem' key={index} p='1rem'>
-							<img src={dataPrintDetailFraming.img} alt={dataPrintDetailFraming.title} style={{maxWidth: '3rem', maxHeight:'3rem', margin: 'auto'}} />
+							<img src={dataPrintDetailFraming.img} alt={dataPrintDetailFraming.title} style={{ maxWidth: '3rem', maxHeight: '3rem', margin: 'auto' }} />
 							<div>
 								<Title>{dataPrintDetailFraming.title}</Title>
 								<Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailFraming.sub}</Para>
@@ -71,6 +75,7 @@ const Framing = () => {
 					<TabsFrames setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
 					{TAB[selectedTab]}
 				</Column>
+				<FrameSizes />
 			</section>
 			<section>
 				<Column img={link3} p='2rem' attach='fixed'>

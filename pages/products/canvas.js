@@ -1,6 +1,6 @@
 import { Backdrop, BackdropDark, Column, Flex, Hero, Items6 } from '../../Styled/divs/Styled'
 import { Para, Title, Title2 } from '../../Styled/fonts/Styled'
- 
+import Head from 'next/head'
 import { dataPrintDetails } from '../api/dataPrintDetails';
 import { BtnBlack } from '../../Styled/buttons/Styled'
 import Floaters from '../components/Floaters'
@@ -27,11 +27,14 @@ const Canvas = () => {
 	const link = 'https://images.unsplash.com/photo-1525116848140-a3b75fdf4eb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80'
 
 	const [selectedTab, setSelectedTab] = useState('stretchers');
-	const [selectedImg, setSelectedImg] = useState(null)
+	const [selectedImg, setSelectedImg] = useState(undefined)
 
 	return (
 
 		<>
+			<Head>
+				<title>The Printshop - Canvas</title>
+			</Head>
 			{/* TITLE & HERO */}
 
 			<section>
@@ -54,7 +57,7 @@ const Canvas = () => {
 				<Items6 width='100%' color='white' m='2rem' p='0'>
 					{dataPrintDetails.map((dataPrintDetails, index) => (
 						<Column gap='1rem' key={index} p='1rem'>
-							<img src={dataPrintDetails.img} alt={dataPrintDetails.title} style={{maxWidth: '3rem', maxHeight:'3rem', margin: 'auto'}} />
+							<img src={dataPrintDetails.img} alt={dataPrintDetails.title} style={{ maxWidth: '3rem', maxHeight: '3rem', margin: 'auto' }} />
 							<div>
 								<Title>{dataPrintDetails.title}</Title>
 								<Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetails.sub}</Para>

@@ -2,6 +2,8 @@ import React from 'react'
 import Carousel from './components/Carousel'
 import { Column } from '../Styled/divs/Styled'
 import { Para, Title } from '../Styled/fonts/Styled'
+import SameDayPrint from './components/SameDayPrint'
+import Head from 'next/head'
 
 const about = () => {
 
@@ -11,6 +13,9 @@ const about = () => {
 
     return (
         <section>
+            			<Head>
+				<title>The Printshop - About Us</title>
+			</Head>
             <Column img={link} imgMd={link} p='0'>
                 <Column color={colorOpa} h='25vh' p='0' m='0'>
                     <Para font='Roboto' m='auto'>ABOUT US</Para>

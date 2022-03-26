@@ -1,4 +1,4 @@
-
+import Head from 'next/head'
 import React from 'react';
 import { dataPrintDetailPaper } from '../api/dataPrintDetails';
 import Papers from '../components/Papers';
@@ -12,6 +12,9 @@ const Paper = () => {
 
   return (
     <>
+      <Head>
+        <title>The Printshop - Paper</title>
+      </Head>
       {/* TITLE & HERO */}
 
       <section>
@@ -34,7 +37,7 @@ const Paper = () => {
         <Items6 width='100%' color='white' m='2rem' p='0'>
           {dataPrintDetailPaper.map((dataPrintDetailPaper, index) => (
             <Column gap='1rem' key={index} p='1rem'>
-              <img src={dataPrintDetailPaper.img} alt={dataPrintDetailPaper.title} style={{maxWidth: '3rem', maxHeight:'3rem', margin: 'auto'}} />
+              <img src={dataPrintDetailPaper.img} alt={dataPrintDetailPaper.title} style={{ maxWidth: '3rem', maxHeight: '3rem', margin: 'auto' }} />
               <div>
                 <Title>{dataPrintDetailPaper.title}</Title>
                 <Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailPaper.sub}</Para>

@@ -69,7 +69,7 @@ const Navbar = () => {
                         // animation before entering component is rendered
                         exitBeforeEnter={true}
                         // Fires when all exiting nodes have completed animating out
-                        onExitComplete={() => null}
+                        onExitComplete={() =>  undefined}
                     >
                         {modalOpen && (
                             <Modal modalOpen={modalOpen} handleClose={close} />

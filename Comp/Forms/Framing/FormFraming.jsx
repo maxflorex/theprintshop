@@ -18,7 +18,7 @@ import { BtnBlack } from '../../../Styled/buttons/Styled';
 import { dataFraming } from '../../../pages/api/dataFraming';
 
 const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
-    const [isColor, setIsColor] = useState(null);
+    const [isColor, setIsColor] = useState( undefined);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMFL, setIsOpenMFL] = useState(false);
     const [isOpenC, setIsOpenC] = useState(false);
@@ -33,15 +33,15 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
     };
 
     // PREVIEW IMAGE UPLOADED
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [imageUrl, setImageUrl] = useState(null);
+    const [selectedImage, setSelectedImage] = useState( undefined);
+    const [imageUrl, setImageUrl] = useState( undefined);
     useEffect(() => {
         if (selectedImage) {
             setImageUrl(URL.createObjectURL(selectedImage));
         }
     }, [selectedImage]);
 
-    let txt = selectedImage === null ? 'Upload your image' : 'Image Uploaded!';
+    let txt = selectedImage ===  undefined ? 'Upload your image' : 'Image Uploaded!';
 
     // FIREBASE STORAGE
     const upload = (e) => {
@@ -111,7 +111,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
             createdAt: serverTimestamp(),
         }).then(() => {
             alert('Message sent!');
-            setInUseForm(null);
+            setInUseForm( undefined);
             setFormName('');
             setContactInfo({
                 name: '',
@@ -146,11 +146,8 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
         matw = isMatW;
         color = isColor;
         email = user.email;
-        console.log(moulding, glass, mat, color);
-        // console.log(qty, medium, borders, stretchers, floaters);
     });
 
-    console.log(dataFraming[0].color);
 
     return (
         <div>
@@ -164,6 +161,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd='space-between'
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <Flex
@@ -204,7 +202,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                                     align="centre"
                                     color="none"
                                 >
-                                    <img src={data.frame} />
+                                    <img src={data.frame} style={{width: '100%'}} />
                                     <Title>{data.color}</Title>
                                 </Column>
                             </FlexItems>
@@ -215,6 +213,8 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                             <FlexItems
                                 key={index}
                                 p="2rem"
+                                width='75%'
+                                m='auto'
                                 color={`${
                                     isMoulding === data.title
                                         ? 'var(--off2)'
@@ -228,7 +228,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                                     align="centre"
                                     color="none"
                                 >
-                                    <img src={data.img} />
+                                    <img src={data.img} style={{width: '100%'}} />
                                     <Title>{data.title}</Title>
                                 </Column>
                             </FlexItems>
@@ -246,6 +246,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd='space-between'
                 onClick={() => setIsOpenMFL(!isOpenMFL)}
             >
                 <Flex
@@ -356,6 +357,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd='space-between'
                 onClick={() => setIsOpenC(!isOpenC)}
             >
                 <Flex

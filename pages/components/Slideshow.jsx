@@ -10,8 +10,8 @@ const Slideshow = ({
     speed = '500',
     interval = '5000',
 }) => {
-    const slideshow = useRef(null);
-    const slideshowIntervals = useRef(null);
+    const slideshow = useRef( undefined);
+    const slideshowIntervals = useRef( undefined);
 
     const next = useCallback(() => {
         // CHECK IF THE SLIDESHOW HAS SLIDES

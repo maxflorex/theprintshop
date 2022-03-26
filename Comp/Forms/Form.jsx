@@ -13,11 +13,11 @@ import FormAluminum from '../Forms/Aluminum/FormAluminum';
 import { data } from '../../pages/api/dataServices';
 
 const Form = ({ user }) => {
-    const [inUseForm, setInUseForm] = useState(null);
-    const [isBorder, setIsBorder] = useState(null);
-    const [isStretchers, setStretchers] = useState(null);
-    const [isFloaters, setIsFloaters] = useState(null);
-    const [formName, setFormName] = useState(null);
+    const [inUseForm, setInUseForm] = useState( undefined);
+    const [isBorder, setIsBorder] = useState( undefined);
+    const [isStretchers, setStretchers] = useState( undefined);
+    const [isFloaters, setIsFloaters] = useState( undefined);
+    const [formName, setFormName] = useState( undefined);
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -67,7 +67,7 @@ const Form = ({ user }) => {
             createdAt: serverTimestamp(),
         }).then(() => {
             alert('Message sent!');
-            setInUseForm(null);
+            setInUseForm( undefined);
             setFormName('');
             setContactInfo({
                 name: '',

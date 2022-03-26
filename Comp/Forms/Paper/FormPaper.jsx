@@ -14,7 +14,7 @@ import { dataMounts } from '../../../pages/api/dataMounts';
 import { dataLamination } from '../../../pages/api/dataLamination';
 
 const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
-    const [isType, setIsType] = useState(null);
+    const [isType, setIsType] = useState( undefined);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMFL, setIsOpenMFL] = useState(false);
     const [isOpenC, setIsOpenC] = useState(false);
@@ -28,15 +28,15 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
     };
 
     // PREVIEW IMAGE UPLOADED
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [imageUrl, setImageUrl] = useState(null);
+    const [selectedImage, setSelectedImage] = useState( undefined);
+    const [imageUrl, setImageUrl] = useState( undefined);
     useEffect(() => {
         if (selectedImage) {
             setImageUrl(URL.createObjectURL(selectedImage));
         }
     }, [selectedImage]);
 
-    let txt = selectedImage === null ? 'Upload your image' : 'Image Uploaded!';
+    let txt = selectedImage ===  undefined ? 'Upload your image' : 'Image Uploaded!';
 
     // FIREBASE STORAGE
     const upload = (e) => {
@@ -104,7 +104,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
             createdAt: serverTimestamp(),
         }).then(() => {
             alert('Message sent!');
-            setInUseForm(null);
+            setInUseForm( undefined);
             setFormName('');
             setContactInfo({
                 name: '',
@@ -137,8 +137,6 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
         laminate = isLaminated;
         type = isType;
         email = user.email;
-        console.log(mounts, framing, laminate, type);
-        // console.log(qty, medium, borders, stretchers, floaters);
     });
 
     return (
@@ -152,6 +150,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd='space-between'
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <Flex
@@ -188,7 +187,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                                 {data.finish}
                             </Title>
 
-                            <img alt={data.title} src={data.img} />
+                            <img alt={data.title} src={data.img} style={{height: '10rem', width: '100%'}} />
                         </FlexItems>
                     ))}
                 </Items3>
@@ -203,6 +202,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd='space-between'
                 onClick={() => setIsOpenMFL(!isOpenMFL)}
             >
                 <Flex
@@ -309,6 +309,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd='space-between'
                 onClick={() => setIsOpenC(!isOpenC)}
             >
                 <Flex

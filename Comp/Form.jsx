@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Column, Flex, FlexItems, Grid, Items } from '../Styled/divs/Styled';
 import { Title } from '../Styled/fonts/Styled';
 import { data } from '../pages/api/dataServices';
-import FormCanvas from './Forms/Canvas/FormCanvas'
+import FormCanvas from './Forms/Canvas/FormCanvas';
 import { SForm, SInput, SButton } from '../Styled/forms/Styled';
 import { colRefOrder } from '../firebase/config';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
@@ -12,11 +12,11 @@ import FormPaper from './Forms/Paper/FormPaper';
 import FormAluminum from './Forms/Aluminum/FormAluminum';
 
 const Form = ({ user }) => {
-    const [inUseForm, setInUseForm] = useState(null);
-    const [isBorder, setIsBorder] = useState(null);
-    const [isStretchers, setStretchers] = useState(null);
-    const [isFloaters, setIsFloaters] = useState(null);
-    const [formName, setFormName] = useState(null);
+    const [inUseForm, setInUseForm] = useState(undefined);
+    const [isBorder, setIsBorder] = useState(undefined);
+    const [isStretchers, setStretchers] = useState(undefined);
+    const [isFloaters, setIsFloaters] = useState(undefined);
+    const [formName, setFormName] = useState('');
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -66,7 +66,7 @@ const Form = ({ user }) => {
             createdAt: serverTimestamp(),
         }).then(() => {
             alert('Message sent!');
-            setInUseForm(null);
+            setInUseForm(undefined);
             setFormName('');
             setContactInfo({
                 name: '',

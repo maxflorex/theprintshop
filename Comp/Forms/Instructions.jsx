@@ -125,7 +125,7 @@ const Instructions = ({
                             }}
                         />
                         <Title font="Roboto" size="1rem">
-                            {selectedImage === null ? '' : selectedImage.name}
+                            {selectedImage ===  undefined ? '' : selectedImage.name}
                         </Title>
                     </Column>
                 </Column>

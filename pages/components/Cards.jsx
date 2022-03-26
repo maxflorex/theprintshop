@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const Cards = () => {
-    const [inUseCard, setInUseCard] = useState(null);
+    const [inUseCard, setInUseCard] = useState( undefined);
 
     const variants = {
         show: { display: 'block' },
@@ -26,7 +26,7 @@ const Cards = () => {
                         className="bg-white rounded"
                         align="center"
                         onMouseEnter={() => setInUseCard(data.title)}
-                        onMouseLeave={() => setInUseCard(null)}
+                        onMouseLeave={() => setInUseCard( undefined)}
                     >
                         <Title size="2rem">{data.title}</Title>
 

@@ -4,22 +4,26 @@ import { Para, Title, Title2 } from '../Styled/fonts/Styled';
 import { slides } from './api/dataOtherServices';
 import { BtnBlack } from '../Styled/buttons/Styled'
 import Carousel from './components/Carousel';
+import Head from 'next/head'
 
 const Services = () => {
 
 	const colorOpa = 'rgba(0, 0, 0, 0.5)'
 
-	const [onHover, setOnHover] = useState(null)
+	const [onHover, setOnHover] = useState( undefined)
 
 	return <>
 		<section>
+		<Head>
+			<title>The Printshop - Other Services</title>
+		</Head>
 			<Column p='2rem' attach='fixed'>
 				<Title size='4rem'>Other Services</Title>
 				<Para color='black' m='auto' font='Roboto'><span style={{ fontWeight: '600' }}>We do a lot more than awesome prints!</span> Hover over the cards to know more about our services</Para>
 			</Column>
 			<Items3 m='2rem' p='0'>
 				{slides.map((data, index) => (
-					<Column m='0' p='0' key={index} onMouseEnter={() => setOnHover(data.title)} onMouseLeave={() => setOnHover(null)}>
+					<Column m='0' p='0' key={index} onMouseEnter={() => setOnHover(data.title)} onMouseLeave={() => setOnHover( undefined)}>
 						{onHover !== data.title ? (
 							(<Flex img={data.img} p='0' m='0'>
 								<Flex color={colorOpa} h='40vh' p='0' m='0' width='100%'>

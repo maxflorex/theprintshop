@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { colRefAluminum, storage } from '../../../firebase/config';
-import { Column, Flex, FlexItems, Items3, Row } from '../../../Styled/divs/Styled';
+import {
+    Column,
+    Flex,
+    FlexItems,
+    Items3,
+    Row,
+} from '../../../Styled/divs/Styled';
 import { Para, Title } from '../../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
- 
 import Instructions from '../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import { BtnBlack } from '../../../Styled/buttons/Styled';
 import { dataAluminum } from '../../../pages/api/dataAluminum';
-import { dataFraming } from '../../../pages/api/dataFraming';
 
 const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
-    const [isFinish, setIsFinish] = useState(null);
+    const [isFinish, setIsFinish] = useState(undefined);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMFL, setIsOpenMFL] = useState(false);
     const [isOpenC, setIsOpenC] = useState(false);
@@ -24,15 +28,16 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
     };
 
     // PREVIEW IMAGE UPLOADED
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [imageUrl, setImageUrl] = useState(null);
+    const [selectedImage, setSelectedImage] = useState(undefined);
+    const [imageUrl, setImageUrl] = useState(undefined);
     useEffect(() => {
         if (selectedImage) {
             setImageUrl(URL.createObjectURL(selectedImage));
         }
     }, [selectedImage]);
 
-    let txt = selectedImage === null ? 'Upload your image' : 'Image Uploaded!';
+    let txt =
+        selectedImage === undefined ? 'Upload your image' : 'Image Uploaded!';
 
     // FIREBASE STORAGE
     const upload = (e) => {
@@ -87,7 +92,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
         }).then(() => {
             alert('Message sent!');
             setFormName('');
-            setInUseForm(null);
+            setInUseForm(undefined);
             setContactInfo({
                 name: '',
                 email: '',
@@ -117,8 +122,6 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
         email = user.email;
     });
 
-    console.log(dataFraming[0].color);
-
     return (
         <div>
             {/* TAB - FINISH*/}
@@ -131,6 +134,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd="space-between"
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <Flex
@@ -189,6 +193,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd="space-between"
                 onClick={() => setIsOpenMFL(!isOpenMFL)}
             >
                 <Flex
@@ -218,20 +223,30 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                         gap="2rem"
                         p="2rem"
                         width="75%"
+                        widthSm="100%"
                     >
                         {dataAluminum[1].inset.map((data, index) => (
                             <FlexItems
                                 p="2rem"
+                                width
                                 color={`${
                                     isInset === data.title
                                         ? 'var(--off2)'
-                                        : 'none'
+                                        : 'white'
                                 }`}
                                 key={index}
                                 onClick={() => setIsInset(data.title)}
                             >
                                 <Title m="1rem">{data.title}</Title>
-                                <img src={data.img} alt={data.title} />
+                                <Flex m='0' p='0'>
+                                    <img
+                                        src={data.img}
+                                        alt={data.title}
+                                        style={{
+                                            width: '16rem',
+                                        }}
+                                    />
+                                </Flex>
                             </FlexItems>
                         ))}
                     </Row>
@@ -248,6 +263,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                 radius="0"
                 colorH="var(--off2)"
                 cursor="pointer"
+                justifyMd="space-between"
                 onClick={() => setIsOpenC(!isOpenC)}
             >
                 <Flex

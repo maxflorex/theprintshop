@@ -1,12 +1,17 @@
-import React  from 'react';
+import Head from 'next/head';
+import React from 'react';
 import Account from './components/Account';
 
 
 
 const order = () => {
-	return (<section>
-		<Account />
-	</section>
+	return (
+		<>
+			<Head>
+				<title>The Printshop - Orders</title>
+			</Head>
+			<Account />
+		</>
 	)
 }
 
