@@ -1,6 +1,6 @@
 import { Backdrop, BackdropDark, Column, Flex, Hero, Items6 } from '../../Styled/divs/Styled'
 import { Para, Title, Title2 } from '../../Styled/fonts/Styled'
-import Image from 'next/image';
+ 
 import { dataPrintDetails } from '../api/dataPrintDetails';
 import { BtnBlack } from '../../Styled/buttons/Styled'
 import Floaters from '../components/Floaters'
@@ -54,7 +54,7 @@ const Canvas = () => {
 				<Items6 width='100%' color='white' m='2rem' p='0'>
 					{dataPrintDetails.map((dataPrintDetails, index) => (
 						<Column gap='1rem' key={index} p='1rem'>
-							<Image src={dataPrintDetails.img} alt={dataPrintDetails.title} objectFit='contain' />
+							<img src={dataPrintDetails.img} alt={dataPrintDetails.title} style={{maxWidth: '3rem', maxHeight:'3rem', margin: 'auto'}} />
 							<div>
 								<Title>{dataPrintDetails.title}</Title>
 								<Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetails.sub}</Para>

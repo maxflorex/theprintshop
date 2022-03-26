@@ -13,7 +13,7 @@ import { FiChevronDown, FiDownloadCloud } from 'react-icons/fi';
 
 import { storage } from '../../../firebase/config';
 import { ref, uploadBytesResumable } from 'firebase/storage';
-import Image from 'next/image';
+ 
 import Instructions from '../Instructions';
 import { Button, BtnBlack } from '../../../Styled/buttons/Styled';
 import { dataBorders } from '../../../pages/api/dataBorders';
@@ -120,12 +120,10 @@ const FormCanvas = ({
                         >
                             <Title mb="2rem">{data.title}</Title>
                             <div style={{ margin: '-2rem' }}>
-                                <Image
+                                <img
                                     src={data.img}
                                     alt={data.title}
-                                    objectFit="cover"
-                                    height={800}
-                                    width={800}
+                                
                                 />
                             </div>
                         </FlexItems>
@@ -187,10 +185,9 @@ const FormCanvas = ({
                                 justifyMd="end"
                             >
                                 <div style={{ margin: '-1rem' }}>
-                                    <Image
+                                    <img
                                         src={data.img2}
-                                        objectFit="contain"
-                                        alt={data.title}
+                                                                              alt={data.title}
                                     />
                                 </div>
                             </Flex>

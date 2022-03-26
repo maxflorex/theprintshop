@@ -2,7 +2,7 @@ import { getDownloadURL, listAll } from 'firebase/storage';
 import { useEffect, useState } from 'react';
 import { gsAluminumRef, gsCanvasRef, storage } from '../../../firebase/config';
 import { Column, Items6 } from '../../../Styled/divs/Styled';
-import Image from 'next/image';
+
 import { Title } from '../../../Styled/fonts/Styled';
 
 function GalleryAluminum({ setSelectedImg }) {
@@ -24,16 +24,15 @@ function GalleryAluminum({ setSelectedImg }) {
 
     return (
         <Column>
-            <Title size='3rem' mb='1rem'>Product Gallery</Title>
-            <Items6 p='0'>
+            <Title size="3rem" mb="1rem">
+                Product Gallery
+            </Title>
+            <Items6 p="0">
                 {dataAluminum.map((val, index) => (
-                    <Image
+                    <img
                         key={index}
                         src={val}
                         alt={val}
-                        width={100}
-                        height={200}
-                        objectFit="cover"
                         style={{ borderRadius: '0.6rem' }}
                         className="imageGallery"
                         onClick={() => setSelectedImg(val)}

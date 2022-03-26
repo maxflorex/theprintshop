@@ -1,14 +1,13 @@
-import Image from "next/image";
-import { Column, Items3 } from "../../Styled/divs/Styled";
-import { dataStretchers } from '../api/dataStretchers'
-import { Title } from "../../Styled/fonts/Styled";
+import Image from 'next/image';
+import { Column, Items3 } from '../../Styled/divs/Styled';
+import { dataStretchers } from '../api/dataStretchers';
+import { Title } from '../../Styled/fonts/Styled';
 
 const Stretchers = () => {
     return (
         <Column p="4rem" gap="2rem" attach="fixed">
             <Title size="3rem" mb="2rem">
                 Stretcher Bar Depths
-                
             </Title>
             <Items3 p="0" m="0" gap="4rem">
                 {dataStretchers.map((dataStretchers, index) => (
@@ -20,7 +19,10 @@ const Stretchers = () => {
                             m="auto"
                             p="0"
                         >
-                            <Image src={dataStretchers.img} alt={dataStretchers.title} objectFit="cover" />
+                            <img
+                                src={dataStretchers.img}
+                                alt={dataStretchers.title}
+                            />
                         </Column>
                         <Title>{dataStretchers.title}</Title>
                     </Column>

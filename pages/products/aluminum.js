@@ -1,12 +1,8 @@
-import Image from 'next/image';
+
 import React, { useState } from 'react';
 import { dataPrintDetailAluminum } from '../api/dataPrintDetails';
 import { Backdrop, Column, Hero, Items6, Flex, Row, Grid } from '../../Styled/divs/Styled';
 import { Para, Title, Title2 } from '../../Styled/fonts/Styled';
-import reflection1 from '../components/Images/reflections/mx-reflection-gloss.jpg'
-import reflection2 from '../components/Images/reflections/mx-reflection-satin.jpg'
-import inset1 from '../components/Images/inset/inset-01.svg'
-import inset2 from '../components/Images/inset/inset-02-01.svg'
 import { BtnBlack } from '../../Styled/buttons/Styled';
 import GalleryAluminum from '../components/Galleries/GalleryAluminum';
 import Modal from '../components/Modal';
@@ -40,12 +36,12 @@ const Aluminum = () => {
                 {/* DETAILS OF PRODUCT */}
 
                 <Items6 width='100%' color='white' m='2rem' p='0'>
-                    {dataPrintDetailAluminum.map((dataPrintDetailAluminum, index) => (
+                    {dataPrintDetailAluminum.map((data, index) => (
                         <Column gap='1rem' key={index} p='1rem'>
-                            <Image alt={dataPrintDetailAluminum.title} src={dataPrintDetailAluminum.img} objectFit='contain' />
+                            <img src={data.img} alt={data.title} style={{maxWidth: '3rem', maxHeight:'3rem', margin: 'auto'}}/>
                             <div>
-                                <Title>{dataPrintDetailAluminum.title}</Title>
-                                <Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailAluminum.sub}</Para>
+                                <Title>{data.title}</Title>
+                                <Para color='dark' align='center' alignW='center' font='Roboto'>{data.sub}</Para>
                             </div>
                         </Column>
                     ))}
@@ -57,14 +53,14 @@ const Aluminum = () => {
                     <Title2 font='Roboto'>Select between one of our finishes</Title2>
                     <Row wMd='50%' wSm='100%' m='auto'>
                         <Column p='0' m='2rem' color='white' gap='0' className='bg-white'>
-                            <Image alt={reflection1} src={reflection1} />
+                            <img alt='Reflection' src='/mx-reflection-gloss.jpg' />
                             <Flex color='none' p='2rem' m='0'>
                                 <Title size='3rem'>Gloss</Title>
                                 <Para color='black' font='Roboto'>• High Reflection / Vivid Colors</Para>
                             </Flex>
                         </Column>
                         <Column p='0' m='2rem' color='white' gap='0' className='bg-white'>
-                            <Image alt={reflection2} src={reflection2} />
+                            <img alt='Reflection' src='/mx-reflection-satin.jpg' />
                             <Flex color='none' p='2rem' m='0'>
                                 <Title size='3rem'>Satin</Title>
                                 <Para color='black' font='Roboto'>• Low Reflection / Great Contrast</Para>
@@ -85,8 +81,8 @@ const Aluminum = () => {
                     <Title size='2rem' pt='2rem'>Wall Display Option</Title>
                     <Title2 font='Roboto'>We offer a variety of contemporary ways to hang and display your MetalPrints.</Title2>
                     <Grid justify='center' width='50%' gap='4rem' m='auto' pt='2rem'>
-                        <Image objectFit='contain'alt={inset1} src={inset1} />
-                        <Image objectFit='contain'alt={inset2} src={inset2} />
+                        <img alt='Inset' src='/inset-01.svg'/>
+                        <img alt='Inset' src='/inset-02.svg' />
                     </Grid>
                 </Column>
                 <Carousel />

@@ -1,26 +1,19 @@
-import frame1 from '../components/Images/frames/FRAMES-01.svg'
-import frame2 from '../components/Images/frames/FRAMES-02.svg'
-import frame3 from '../components/Images/frames/FRAMES-03.svg'
-import frame4 from '../components/Images/frames/FRAMES-04.svg'
-import frame5 from '../components/Images/frames/FRAMES-04-2.svg'
-import frame6 from '../components/Images/frames/FRAMES-04-3.svg'
-
 export const dataFraming = [
     {
         color: [
             {
                 color: 'White',
-                frame: frame4,
+                frame: '/FRAMES-04.svg',
                 img: 'dot color2'
             },
             {
                 color: 'Black',
-                frame: frame6,
+                frame: '/FRAMES-04-2.svg',
                 img: 'dot color1'
             },
             {
                 color: 'Natural',
-                frame: frame5,
+                frame: '/FRAMES-04-2.svg',
                 img: 'dot color3'
             },
         ]
@@ -48,21 +41,21 @@ export const dataFraming = [
         moulding: [
             {
                 title: 'A',
-                img: frame1,
+                img: '/FRAMES-01.svg',
                 front: '1 5/16',
                 rabbet: '7/16',
                 side: '9/16'
             },
             {
                 title: 'B',
-                img: frame2,
+                img: '/FRAMES-02.svg',
                 front: '1 3/16',
                 rabbet: '1',
                 side: '1 3/16'
             },
             {
                 title: 'C',
-                img: frame3,
+                img: '/FRAMES-03.svg',
                 front: '1 15/16',
                 rabbet: '1/2',
                 side: '13/16'

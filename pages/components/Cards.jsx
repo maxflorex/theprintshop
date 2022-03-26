@@ -1,7 +1,7 @@
 import { Flex, Items, Column, Row, Backdrop } from '../../Styled/divs/Styled';
 import { data } from '../api/dataServices';
 import { Title } from '../../Styled/fonts/Styled';
-import Image from 'next/image';
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -37,8 +37,13 @@ const Cards = () => {
                             radius="0"
                             p="0"
                         >
-                            <Column m='0' p='0' color={colorOpa}  h="10rem" radius='0'>
-                                
+                            <Column
+                                m="0"
+                                p="0"
+                                color={colorOpa}
+                                h="10rem"
+                                radius="0"
+                            >
                                 <motion.div
                                     animate={
                                         inUseCard === data.title
@@ -55,11 +60,8 @@ const Cards = () => {
                                         h="10rem"
                                     >
                                         <Flex color="none" m="0" p="0">
-                                            <Image
-                                                src={data.image}
-                                                alt={data.title}
-                                                width={100}
-                                                height={60}
+                                            <img src={data.image}
+                                            alt={data.title}
                                             />
                                         </Flex>
                                     </Backdrop>

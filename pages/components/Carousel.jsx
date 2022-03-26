@@ -1,5 +1,5 @@
 import Slideshow, { Slide } from './Slideshow';
-import Image from 'next/image';
+
 import { Column, Flex } from '../../Styled/divs/Styled';
 import { data } from '../api/dataServices';
 import { Title } from '../../Styled/fonts/Styled';
@@ -17,13 +17,7 @@ const Carousel = () => {
                             <a href={data.link}>
                                 <Column color="white" p="0">
                                     <Title size="2rem">{data.title}</Title>
-                                    <Image
-                                        src={data.bg}
-                                        alt={data.title}
-                                        width={200}
-                                        height={100}
-                                        objectFit="cover"
-                                    />
+                                    <img src={data.bg} alt={data.title} style={{height: '10rem'}}/>
                                 </Column>
                             </a>
                         </Slide>

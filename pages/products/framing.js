@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import React, { useState } from 'react';
 import { dataPrintDetailFraming } from '../api/dataPrintDetails';
 import BlackFrames from '../components/BlackFrames';
@@ -53,7 +53,7 @@ const Framing = () => {
 				<Items6 width='100%' color='white' m='2rem' p='0'>
 					{dataPrintDetailFraming.map((dataPrintDetailFraming, index) => (
 						<Column gap='1rem' key={index} p='1rem'>
-							<Image src={dataPrintDetailFraming.img} alt={dataPrintDetailFraming.title} objectFit='contain' />
+							<img src={dataPrintDetailFraming.img} alt={dataPrintDetailFraming.title} style={{maxWidth: '3rem', maxHeight:'3rem', margin: 'auto'}} />
 							<div>
 								<Title>{dataPrintDetailFraming.title}</Title>
 								<Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailFraming.sub}</Para>

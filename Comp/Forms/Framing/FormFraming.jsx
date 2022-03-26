@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { colRefFraming, colRefPaper, storage } from '../../../firebase/config';
-import { Column, Flex, FlexItems, Items3, Row } from '../../../Styled/divs/Styled';
+import {
+    Column,
+    Flex,
+    FlexItems,
+    Items3,
+    Row,
+} from '../../../Styled/divs/Styled';
 import { Title } from '../../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
-import Image from 'next/image';
+
 import Instructions from '../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
@@ -198,7 +204,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                                     align="centre"
                                     color="none"
                                 >
-                                    <Image src={data.frame} />
+                                    <img src={data.frame} />
                                     <Title>{data.color}</Title>
                                 </Column>
                             </FlexItems>
@@ -222,7 +228,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                                     align="centre"
                                     color="none"
                                 >
-                                    <Image src={data.img} />
+                                    <img src={data.img} />
                                     <Title>{data.title}</Title>
                                 </Column>
                             </FlexItems>

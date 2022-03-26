@@ -3,7 +3,7 @@ import { colRefPaper, storage } from '../../../firebase/config';
 import { Column, Flex, FlexItems, Items3 } from '../../../Styled/divs/Styled';
 import { Title } from '../../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
-import Image from 'next/image';
+
 import Instructions from '../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
@@ -188,13 +188,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                                 {data.finish}
                             </Title>
 
-                            <Image
-                                alt={data.title}
-                                src={data.img}
-                                objectFit="cover"
-                                height={400}
-                                width={800}
-                            />
+                            <img alt={data.title} src={data.img} />
                         </FlexItems>
                     ))}
                 </Items3>

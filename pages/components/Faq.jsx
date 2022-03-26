@@ -3,7 +3,7 @@ import { Column, Flex, Grid } from '../../Styled/divs/Styled';
 import { Title } from '../../Styled/fonts/Styled';
 import { FiCornerRightDown } from 'react-icons/fi';
 import { BtnBlack } from '../../Styled/buttons/Styled';
-import Image from 'next/image';
+ 
 
 const Faq = ({ question, answers, link, img }) => {
     const [answer, setAnswer] = useState(false);
@@ -28,7 +28,7 @@ const Faq = ({ question, answers, link, img }) => {
                         style={{ borderLeft: '1px solid var(--off3)', transitionDuration: '5s' }}
                         onMouseLeave={() => setAnswer(false)}
                     >
-                        <Image src={img} alt={img} style={{margin: '2rem'}}/>
+                        <img src={img} alt={img} style={{margin: '2rem'}}/>
                         <Title font="Roboto" lh="2rem">
                             {answers}
                         </Title>

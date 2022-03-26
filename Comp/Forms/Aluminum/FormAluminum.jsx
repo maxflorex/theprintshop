@@ -3,7 +3,7 @@ import { colRefAluminum, storage } from '../../../firebase/config';
 import { Column, Flex, FlexItems, Items3, Row } from '../../../Styled/divs/Styled';
 import { Para, Title } from '../../../Styled/fonts/Styled';
 import { FiChevronDown } from 'react-icons/fi';
-import Image from 'next/image';
+ 
 import Instructions from '../Instructions';
 import { ref, uploadBytesResumable } from 'firebase/storage';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
@@ -172,7 +172,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                                 onClick={() => setIsFinish(data.title)}
                             >
                                 <Title m="1rem">{data.title}</Title>
-                                <Image src={data.img} alt={data.title} />
+                                <img src={data.img} alt={data.title} />
                             </FlexItems>
                         ))}
                     </Row>
@@ -231,7 +231,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                                 onClick={() => setIsInset(data.title)}
                             >
                                 <Title m="1rem">{data.title}</Title>
-                                <Image src={data.img} alt={data.title} />
+                                <img src={data.img} alt={data.title} />
                             </FlexItems>
                         ))}
                     </Row>

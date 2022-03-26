@@ -85,7 +85,6 @@ const Navbar = () => {
                     justify="end"
                     color="transparent"
                 >
-                    {/* <Image src={logo} /> */}
                     <Title
                         color="black"
                         font="Roboto"

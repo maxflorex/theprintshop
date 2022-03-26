@@ -1,9 +1,3 @@
-
-import canvasIcon from '../components/Images/icons-color/tps-icons-canvas.svg'
-import framingIcon from '../components/Images/icons-color/tps-icons-framing.svg'
-import paperIcon from '../components/Images/icons-color/tps-icons-paper.svg'
-import aluminumIcon from '../components/Images/icons-color/tps-icons-metalic.svg'
-
 const canvasBg = 'https://images.unsplash.com/photo-1525116848140-a3b75fdf4eb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80'
 const framingBg = 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80'
 const aluminumBg = 'https://images.unsplash.com/photo-1612504200882-d29bf3f2cc13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1056&q=80'
@@ -15,7 +9,7 @@ export const data = [
         title: 'Canvas',
         subtitle: 'Subtitle',
         link: '/products/canvas',
-        image: canvasIcon,
+        image: '/tps-icons-canvas.svg',
         bg: canvasBg,
     },
     {
@@ -23,7 +17,7 @@ export const data = [
         title: 'Framing',
         subtitle: 'Subtitle',
         link: '/products/framing',
-        image: framingIcon,
+        image: '/tps-icons-framing.svg',
         bg: framingBg,
     },
     {
@@ -31,7 +25,7 @@ export const data = [
         title: 'Paper',
         subtitle: 'Subtitle',
         link: '/products/paper',
-        image: paperIcon,
+        image: '/tps-icons-paper.svg',
         bg: paperBg,
     },
     {
@@ -39,7 +33,7 @@ export const data = [
         title: 'Aluminum',
         subtitle: 'Subtitle',
         link: '/products/aluminum',
-        image: aluminumIcon,
+        image: '/tps-icons-metalic.svg',
         bg: aluminumBg,
     }
 ]

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+ 
 import { useEffect } from 'react';
 import { dataPapers } from '../api/dataPapers';
 import { Column, Flex, Grid, Row } from '../../Styled/divs/Styled';

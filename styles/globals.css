@@ -49,6 +49,12 @@ a:hover {
     color: var(--accent);
 }
 
+img {
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
 .highlight {
     position: relative;
     background-color: var(--off1);
