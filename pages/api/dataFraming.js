@@ -8,7 +8,7 @@ export const dataFraming = [
             },
             {
                 color: 'Black',
-                frame: '/FRAMES-04-2.svg',
+                frame: '/FRAMES-04-3.svg',
                 img: 'dot color1'
             },
             {

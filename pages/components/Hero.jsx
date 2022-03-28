@@ -18,11 +18,7 @@ const HeroSection = () => {
                 pt="0"
                 pb="0"
                 position="center"
-            >
-                <div className="absolute">
-                    <img src={logo} alt="logo" className="heroImg" />
-                </div>
-            </Hero>
+            ></Hero>
 
             <Column imgMd={link} m="0" p="0" attach="fixed">
                 <Hero
@@ -47,7 +43,7 @@ const HeroSection = () => {
                         color="black"
                         width="300"
                         align="center"
-                        displayMd="none"
+                        displayL="none"
                     >
                         Handcrafted in the{' '}
                         <span className="spotlight">Cayman Islands</span>

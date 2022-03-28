@@ -9,7 +9,7 @@ export const data = [
         title: 'Canvas',
         subtitle: 'Subtitle',
         link: '/products/canvas',
-        image: '/tps-icons-canvas.svg',
+        img: '/tps-icons-canvas.svg',
         bg: canvasBg,
     },
     {
@@ -17,7 +17,7 @@ export const data = [
         title: 'Framing',
         subtitle: 'Subtitle',
         link: '/products/framing',
-        image: '/tps-icons-framing.svg',
+        img: '/tps-icons-framing.svg',
         bg: framingBg,
     },
     {
@@ -25,7 +25,7 @@ export const data = [
         title: 'Paper',
         subtitle: 'Subtitle',
         link: '/products/paper',
-        image: '/tps-icons-paper.svg',
+        img: '/tps-icons-paper.svg',
         bg: paperBg,
     },
     {
@@ -33,7 +33,7 @@ export const data = [
         title: 'Aluminum',
         subtitle: 'Subtitle',
         link: '/products/aluminum',
-        image: '/tps-icons-metalic.svg',
+        img: '/tps-icons-metalic.svg',
         bg: aluminumBg,
     }
 ]

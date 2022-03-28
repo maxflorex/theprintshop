@@ -1,4 +1,11 @@
-import { Flex, Items, Column, Row, Backdrop } from '../../Styled/divs/Styled';
+import {
+    Flex,
+    Items,
+    Column,
+    Row,
+    Backdrop,
+    BackdropDark,
+} from '../../Styled/divs/Styled';
 import { data } from '../api/dataServices';
 import { Title } from '../../Styled/fonts/Styled';
 
@@ -7,11 +14,21 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const Cards = () => {
-    const [inUseCard, setInUseCard] = useState( undefined);
+    const [inUseCard, setInUseCard] = useState(null);
 
-    const variants = {
-        show: { display: 'block' },
-        hide: { display: 'none' },
+    const container = {
+        hidden: { y: '-100%', opacity: 0 },
+        show: {
+            y: '0', opacity: 1,
+            transition: {
+                delayChildren: 0.1,
+            },
+        },
+    };
+
+    const item = {
+        hidden: { y: '-100%' },
+        show: { y: '0' },
     };
 
     const colorOpa = 'rgba(0, 0, 0, 0.4)';
@@ -26,7 +43,7 @@ const Cards = () => {
                         className="bg-white rounded"
                         align="center"
                         onMouseEnter={() => setInUseCard(data.title)}
-                        onMouseLeave={() => setInUseCard( undefined)}
+                        onMouseLeave={() => setInUseCard(null)}
                     >
                         <Title size="2rem">{data.title}</Title>
 
@@ -45,26 +62,33 @@ const Cards = () => {
                                 radius="0"
                             >
                                 <motion.div
+                                    variants={container}
+                                    initial="hidden"
                                     animate={
                                         inUseCard === data.title
                                             ? 'show'
-                                            : 'hide'
+                                            : 'hidden'
                                     }
-                                    variants={variants}
                                 >
-                                    <Backdrop
-                                        align="center"
-                                        m="0"
-                                        p="0"
-                                        radius="0"
-                                        h="10rem"
-                                    >
-                                        <Flex color="none" m="0" p="0">
-                                            <img src={data.image}
-                                            alt={data.title}
+                                    <motion.div variants={item}>
+                                        <Backdrop
+                                            align="center"
+                                            m="0"
+                                            p="0"
+                                            radius="0"
+                                            h="10rem"
+                                        >
+                                            <img
+                                                src={data.img}
+                                                alt={data.title}
+                                                style={{
+                                                    maxWidth: '6rem',
+                                                    height: '100%',
+                                                    margin: 'auto',
+                                                }}
                                             />
-                                        </Flex>
-                                    </Backdrop>
+                                        </Backdrop>
+                                    </motion.div>
                                 </motion.div>
                             </Column>
                         </Column>

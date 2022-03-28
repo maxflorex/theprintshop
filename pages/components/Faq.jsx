@@ -25,10 +25,10 @@ const Faq = ({ question, answers, link, img }) => {
                         p="4rem"
                         m="1rem"
                         radius="0"
-                        style={{ borderLeft: '1px solid var(--off3)', transitionDuration: '5s' }}
+                        style={{ borderLeft: '1px solid var(--off3)', transition: '5000s ease all' }}
                         onMouseLeave={() => setAnswer(false)}
                     >
-                        <img src={img} alt={img} style={{margin: '2rem'}}/>
+                        <img src={img} alt={img} style={{ maxWidth: '3rem', maxHeight: '3rem', margin: 'auto'}} />
                         <Title font="Roboto" lh="2rem">
                             {answers}
                         </Title>

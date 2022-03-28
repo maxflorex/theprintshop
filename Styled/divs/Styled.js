@@ -336,6 +336,7 @@ const Hero = styled.div`
    };
    @media (max-width: 1024px) {
       width: ${props => props.widthMd};
+      display: ${props => props.displayL};
    }
 `
 
