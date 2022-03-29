@@ -17,8 +17,8 @@ const SameDayPrint = () => {
             p="0"
             attach="fixed"
         >
-            <BackdropDark p="8rem" m="0">
-                <Title size="4rem" color="white">
+            <BackdropDark p="8rem" m="0" pSm='4rem'>
+                <Title size="3rem" sizeSm='2rem' color="white" mb='1rem'>
                     Same Day <span className="highlight2">Print</span>
                 </Title>
                 <P font="Roboto" align="center">

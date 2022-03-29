@@ -16,11 +16,11 @@ const link =
 
 const Section = () => {
     return (
-        <Column img={link} imgMd={link} p="0" m="2rem" attach="fixed">
-            <BackdropDark>
-                <Row gap="4rem" p="4rem">
+        <Column img={link} imgMd={link} p="0" m="2rem" mSm='1rem' attach="fixed">
+            <BackdropDark mSm='0'>
+                <Row gap="4rem" p="4rem" pSm='2rem' gapSm='2rem'>
                     <Backdrop p="4rem">
-                        <Title size="3.2rem">Hand-picked Art Papers</Title>
+                        <Title size="3rem" sizeSm='2rem' mb='1rem'>Hand-picked Art Papers</Title>
                         <Para
                             size="1.2rem"
                             color="black"
@@ -35,7 +35,7 @@ const Section = () => {
                     </Backdrop>
 
                     <Backdrop className="shadow" p="4rem">
-                        <Title size="3.2rem">For Artists & Photographers</Title>
+                        <Title size="3rem" sizeSm='2rem' mb='1rem'>For Artists & Photographers</Title>
                         <Para
                             size="1.2rem"
                             color="black"

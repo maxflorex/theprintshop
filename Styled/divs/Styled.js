@@ -32,6 +32,8 @@ const Row = styled.div`
    }
    @media (max-width: 758px) {
       width: ${props => props.wSm};
+      padding: ${props => props.pSm};
+      gap: ${props => props.gapSm};
    }
 `
 
@@ -77,6 +79,9 @@ const Column = styled.div`
       width: ${props => props.widthSm};
       position: ${props => props.positionSm};
       background-color: ${props => props.color || 'inherit'};
+      max-height: ${props => props.hMaxSm};
+      margin: ${props => props.mSm};
+      padding: ${props => props.pSm};
    }
    &:hover{
       background-color: ${props => props.colorH};
@@ -116,9 +121,10 @@ const Grid = styled.div`
       width: ${props => props.widthSm};
       position: ${props => props.positionSm};
       background-color: ${props => props.color || 'inherit'};
+      margin: ${props => props.mSm};
       
    }
-`
+   `
 
 const Items = styled.div`
    display: grid;
@@ -138,9 +144,15 @@ const Items = styled.div`
    font-family: ${props => props.font || 'Oswald'};
    font-weight: ${props => props.weight || 100};
    font-size: ${props => props.size || '1.4rem'};
+   justify-items: ${props => props.justify || 'center'};
    @media (max-width: 1024px) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
    };
+   @media (max-width: 758px) {
+      margin: ${props => props.mSm};
+      grid-template-columns: ${props => props.gridSm};
+      gap: ${props => props.gapSm}; 
+   }
 
 `
 const Items6 = styled.div`
@@ -164,6 +176,8 @@ const Items6 = styled.div`
    font-size: ${props => props.size || '1.4rem'};
    @media (max-width: 1024px) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: ${props => props.gapSm};
+      margin: ${props => props.mSm};
    };
 `
 
@@ -191,6 +205,7 @@ const Items3 = styled.div`
       grid-template-columns: repeat(2, minmax(0, 1fr));
    };
    @media (max-width: 758px) {
+      min-height: ${props => props.hSm};
       grid-template-columns: repeat(1, minmax(0, 1fr));
       gap: ${props => props.gapSm};
    };
@@ -335,6 +350,8 @@ const Hero = styled.div`
       height: ${props => props.hMd};
    };
    @media (max-width: 1024px) {
+      margin: ${props => props.mSm};
+      border-radius: ${props => props.radius || '0.6rem'};
       width: ${props => props.widthMd};
       display: ${props => props.displayL};
    }
@@ -358,6 +375,11 @@ const Backdrop = styled.div`
    border-radius: ${props => props.radius || '0.6rem'};
    min-height: ${props => props.h};
    display: ${props => props.display};
+   @media (max-width: 768px) {
+      padding: ${props => props.pSm};
+      margin: ${props => props.mSm};
+   
+   }
 `
 
 const BackdropDark = styled.div`
@@ -378,6 +400,10 @@ const BackdropDark = styled.div`
    margin: ${props => props.m};
    border-radius: ${props => props.radius || '0.6rem'};
    display: ${props => props.display};
+   @media (max-width: 768px) {
+      margin: ${props => props.mSm};
+      padding: ${props => props.pSm};
+      }
    &:hover {
       display: ${props => props.displayH};
    }

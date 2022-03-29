@@ -33,7 +33,7 @@ function GalleryAluminum({ setSelectedImg }) {
                         key={index}
                         src={val}
                         alt={val}
-                        style={{ borderRadius: '0.6rem' }}
+                        style={{ borderRadius: '0.6rem', width: '100%', height: '10rem' }}
                         className="imageGallery"
                         onClick={() => setSelectedImg(val)}
                     />

@@ -45,7 +45,7 @@ const Modal = ({ handleClose }) => {
                         whileTap={{ scale: 0.9 }}
                         href="/products/canvas"
                     >
-                        <Title size="3rem" color="white">
+                        <Title size="2rem" color="white">
                             Canvas
                         </Title>
                     </motion.a>
@@ -58,7 +58,7 @@ const Modal = ({ handleClose }) => {
                         whileTap={{ scale: 0.9 }}
                         href="/products/paper"
                     >
-                        <Title size="3rem" color="white">
+                        <Title size="2rem" color="white">
                             Paper
                         </Title>
                     </motion.a>
@@ -71,7 +71,7 @@ const Modal = ({ handleClose }) => {
                         whileTap={{ scale: 0.9 }}
                         href="/products/aluminum"
                     >
-                        <Title size="3rem" color="white">
+                        <Title size="2rem" color="white">
                             Aluminum
                         </Title>
                     </motion.a>
@@ -84,7 +84,7 @@ const Modal = ({ handleClose }) => {
                         whileTap={{ scale: 0.9 }}
                         href="/products/framing"
                     >
-                        <Title size="3rem" color="white">
+                        <Title size="2rem" color="white">
                             Framing
                         </Title>
                     </motion.a>
@@ -97,7 +97,7 @@ const Modal = ({ handleClose }) => {
                         whileTap={{ scale: 0.9 }}
                         href="/services"
                     >
-                        <Title size="3rem" color="white">
+                        <Title size="2rem" color="white">
                             Services
                         </Title>
                     </motion.a>
@@ -110,10 +110,10 @@ const Modal = ({ handleClose }) => {
                         whileTap={{ scale: 0.9 }}
                         href="/contact"
                     >
-                        <Title size="3rem" color="white">Contact</Title>
+                        <Title size="2rem" color="white">Contact</Title>
                     </motion.a>
 
-                    <Btn font="Oswald" size="3rem" href="/order">
+                    <Btn font="Oswald" size="2rem" href="/order">
                         Order
                     </Btn>
 
@@ -125,7 +125,7 @@ const Modal = ({ handleClose }) => {
                         whileTap={{ scale: 0.9 }}
                         href="/support"
                     >
-                        <Title size="3rem" color="white">
+                        <Title size="2rem" color="white">
                             Support
                         </Title>
                     </motion.a>

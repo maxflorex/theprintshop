@@ -19,7 +19,8 @@ const Cards = () => {
     const container = {
         hidden: { y: '-100%', opacity: 0 },
         show: {
-            y: '0', opacity: 1,
+            y: '0',
+            opacity: 1,
             transition: {
                 delayChildren: 0.1,
             },
@@ -45,7 +46,9 @@ const Cards = () => {
                         onMouseEnter={() => setInUseCard(data.title)}
                         onMouseLeave={() => setInUseCard(null)}
                     >
-                        <Title size="2rem">{data.title}</Title>
+                        <Title size="2rem" sizeSm="1.4rem" mt='0.4rem'>
+                            {data.title}
+                        </Title>
 
                         <Column
                             m="0"
@@ -59,6 +62,7 @@ const Cards = () => {
                                 p="0"
                                 color={colorOpa}
                                 h="10rem"
+                                hSm="4rem"
                                 radius="0"
                             >
                                 <motion.div
@@ -77,13 +81,14 @@ const Cards = () => {
                                             p="0"
                                             radius="0"
                                             h="10rem"
+                                            hSm="4rem"
                                         >
                                             <img
                                                 src={data.img}
                                                 alt={data.title}
                                                 style={{
                                                     maxWidth: '6rem',
-                                                    height: '100%',
+                                                    minHeight: '100%',
                                                     margin: 'auto',
                                                 }}
                                             />

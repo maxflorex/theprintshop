@@ -9,7 +9,7 @@ const Stretchers = () => {
             <Title size="3rem" mb="2rem">
                 Stretcher Bar Depths
             </Title>
-            <Items3 p="0" m="0" gap="4rem">
+            <Items3 p="0" m="0" gap="4rem" gapSm='0'>
                 {dataStretchers.map((dataStretchers, index) => (
                     <Column m="0" p="0" key={index}>
                         <Column
@@ -22,6 +22,7 @@ const Stretchers = () => {
                             <img
                                 src={dataStretchers.img}
                                 alt={dataStretchers.title}
+                                style={{ width: '100%' }}                                
                             />
                         </Column>
                         <Title>{dataStretchers.title}</Title>

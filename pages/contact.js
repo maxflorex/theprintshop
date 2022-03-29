@@ -49,7 +49,7 @@ const Contact = () => {
 						</Column>
 					</SForm>
 				</Column>
-				<Column img={link2} imgMd={link2} h='80vh' hMd='60vh' align='start'>
+				<Column img={link2} imgMd={link2} h='80vh' hMd='20vh' align='start' mSm='2rem'>
 					<Title size='2rem'>The Printshop</Title>
 					<Para color='black' font='Roboto' m='auto'>By Art Cayman Co.</Para>
 

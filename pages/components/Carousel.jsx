@@ -10,7 +10,7 @@ const bg =
 const Carousel = () => {
     return (
         <div>
-            <Column img={bg} imgMd={bg} p="4rem" attach="fixed" gap="2rem">
+            <Column img={bg} imgMd={bg} p="4rem" attach="fixed" gap="2rem"  pSm='1rem'>
                 <Slideshow navigation={true}>
                     {data.map((data, index) => (
                         <Slide key={index}>

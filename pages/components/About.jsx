@@ -8,9 +8,9 @@ const link =
 
 const About = () => {
     return (
-        <Grid mt="6rem" mb="6rem" mr="2rem" ml="2rem" gap="4rem">
+        <Grid mt="6rem" mb="6rem" mr="2rem" ml="2rem" gap="4rem" mSm='0'>
             <Column p="2rem">
-                <Title size="3.2rem" align="left" mb="0.6rem">
+                <Title size="3rem" align="left" mb="0.6rem">
                     The Printshop
                 </Title>
                 <Para color="black" font="Roboto">

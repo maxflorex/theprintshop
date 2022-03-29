@@ -30,10 +30,10 @@ const HeroSection = () => {
                     pb="0"
                     colorMd={colorOpa}
                 >
-                    <Title size="2rem" colorMd="white">
+                    <Title size="2rem" sizeSm='2rem' colorMd="white">
                         Fine Art
                     </Title>
-                    <Title size="4rem" colorMd="white">
+                    <Title size="4rem" sizeSm='3rem' colorMd="white">
                         Printing & Framing
                     </Title>
                     <Para

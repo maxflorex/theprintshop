@@ -18,7 +18,7 @@ const Paper = () => {
       {/* TITLE & HERO */}
 
       <section>
-        <Hero img={link} imgMd={link} m='2rem' h='25vh'>
+        <Hero img={link} imgMd={link} m='2rem' h='25vh' mSm='0' radius='0'>
           <Column>
             <Backdrop w='100%' p='4rem' >
               <Title size='4rem'>Fine Art Papers</Title>
@@ -34,7 +34,7 @@ const Paper = () => {
 
         {/* DETAILS OF PRODUCT */}
 
-        <Items6 width='100%' color='white' m='2rem' p='0'>
+        <Items6 width='100%' color='white' m='2rem' p='0' gapSm='0'>
           {dataPrintDetailPaper.map((dataPrintDetailPaper, index) => (
             <Column gap='1rem' key={index} p='1rem'>
               <img src={dataPrintDetailPaper.img} alt={dataPrintDetailPaper.title} style={{ maxWidth: '3rem', maxHeight: '3rem', margin: 'auto' }} />

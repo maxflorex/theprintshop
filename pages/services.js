@@ -26,12 +26,12 @@ const Services = () => {
 					<Column m='0' p='0' key={index} onMouseEnter={() => setOnHover(data.title)} onMouseLeave={() => setOnHover( undefined)}>
 						{onHover !== data.title ? (
 							(<Flex img={data.img} p='0' m='0'>
-								<Flex color={colorOpa} h='40vh' p='0' m='0' width='100%'>
+								<Flex color={colorOpa} h='24vh'p='0' m='0' width='100%'>
 									<Title size='2rem' color='white' align='center' m='auto'>{data.title}</Title>
 								</Flex>
 							</Flex>)
-						) : (<Flex img={data.img} h='40vh' m='0' gap='2rem' p='0'>
-							<BackdropDark h='40vh' m='0' p='4rem'>
+						) : (<Flex img={data.img} m='0' gap='2rem' p='0'>
+							<BackdropDark m='0' p='4rem'>
 								<Flex color='none' p='0' m='0' justify='start'>
 
 									<Title size='2rem' color='white'>{data.title}</Title>
