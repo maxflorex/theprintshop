@@ -38,16 +38,16 @@ const Framing = () => {
 			{/* TITLE & HERO */}
 
 			<section>
-				<Hero img={link} imgMd={link} m='2rem' h='25vh' mSm='0' radius='0' >
-					<Column>
-						<Backdrop w='100%' p='4rem'>
-							<Title size='4rem'>Custom Framing</Title>
-						</Backdrop>
-					</Column>
+				<Hero img={link} imgMd={link} m='2rem' mSm='0' radius='0' >
+
+					<Backdrop width='auto' h='100%' p='4rem'>
+						<Title size='4rem' sizeSm='3rem'>Custom Framing</Title>
+					</Backdrop>
+
 				</Hero>
 			</section>
 			<section>
-				<Hero width='50%' gap='2rem' m='auto' widthMd='100%'>
+				<Hero width='50%' gap='2rem' m='auto' widthMd='100%' pSm='2rem'>
 					<Title size='2rem'>Proffessional Quality Fine Art Framing</Title>
 					<Para color='dark' font='Roboto' alignW='center'>Get your pictures framed with the bests! Choose between moulding and floaters frames for your canvas up to three colors (Custom moulding types on request). From old and trusted glass to acrylic (Regular and Nonreflective) to enhance the longevity of your beloved piece of art or photo.</Para>
 				</Hero>
@@ -78,7 +78,7 @@ const Framing = () => {
 				<FrameSizes />
 			</section>
 			<section>
-				<Column img={link3} p='2rem' attach='fixed'>
+				<Column img={link3} imgMd={link3} p='2rem' attach='fixed'>
 					<Floaters />
 				</Column>
 			</section>

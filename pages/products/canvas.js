@@ -38,16 +38,16 @@ const Canvas = () => {
 			{/* TITLE & HERO */}
 
 			<section>
-				<Hero img={link} imgMd={link} m='2rem' h='25vh' mSm='0' radius='0' >
-					<Column>
-						<Backdrop w='100%' p='4rem'>
-							<Title size='4rem'>Canvas</Title>
-						</Backdrop>
-					</Column>
+				<Hero img={link} imgMd={link} m='2rem' mSm='0' radius='0' >
+
+					<Backdrop width='auto' h='100%' p='4rem'>
+						<Title size='4rem' sizeSm='3rem'>Canvas</Title>
+					</Backdrop>
+
 				</Hero>
 			</section>
 			<section>
-				<Hero width='50%' gap='2rem' m='auto' widthMd='100%'>
+				<Hero width='50%' gap='2rem' m='auto' widthMd='100%' pSm='2rem'>
 					<Title size='2rem'>Get High Quality Canvas Prints With Us.</Title>
 					<Para color='dark' font='Roboto' alignW='center'>You can display your photos like fine art or repreduce your very own artwork. Canvas Prints can be made from prints on Professional Photo Papers bonded onto museum quality canvas, or Fine Art Prints printed directly onto the canvas material. The resulting prints can then be stretched and stapled onto a wood artists stretcher bar frame, mounted on gatorfoam board, or delivered loose (unmounted).</Para>
 				</Hero>

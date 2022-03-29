@@ -34,6 +34,7 @@ const Row = styled.div`
       width: ${props => props.wSm};
       padding: ${props => props.pSm};
       gap: ${props => props.gapSm};
+      margin: ${props => props.mSm};
    }
 `
 
@@ -82,6 +83,11 @@ const Column = styled.div`
       max-height: ${props => props.hMaxSm};
       margin: ${props => props.mSm};
       padding: ${props => props.pSm};
+      gap: ${props => props.gapSm};
+      margin-top: ${props => props.mtSm};
+      margin-bottom: ${props => props.mbSm};
+      display: ${props => props.displaySm};
+      justify-items: ${props => props.itemsSm};
    }
    &:hover{
       background-color: ${props => props.colorH};
@@ -122,7 +128,7 @@ const Grid = styled.div`
       position: ${props => props.positionSm};
       background-color: ${props => props.color || 'inherit'};
       margin: ${props => props.mSm};
-      
+      gap: ${props => props.gapSm};
    }
    `
 
@@ -206,8 +212,10 @@ const Items3 = styled.div`
    };
    @media (max-width: 758px) {
       min-height: ${props => props.hSm};
-      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-template-columns: ${props => props.columns || 'repeat(1, minmax(0, 1fr))'};
       gap: ${props => props.gapSm};
+      margin: ${props => props.mSm};
+      padding: ${props => props.pSm};
    };
 `
 
@@ -249,6 +257,14 @@ const Flex = styled.div`
       background-color: ${props => props.colorMd};
       gap: ${props => props.gapMd || '0'};
 
+   }
+   @media (max-width: 758px) {
+      margin-top: ${props => props.mtSm};
+      margin-bottom: ${props => props.mbSm};
+      justify-content: ${props => props.justifySm};
+      padding: ${props => props.pSm};
+      margin: ${props => props.mSm};
+      display: ${props => props.displaySm};
    }
    &:hover{
       background-color: ${props => props.colorH};
@@ -354,11 +370,14 @@ const Hero = styled.div`
       border-radius: ${props => props.radius || '0.6rem'};
       width: ${props => props.widthMd};
       display: ${props => props.displayL};
+   };
+   @media (max-width: 768px) {
+      padding: ${props => props.pSm};
    }
 `
 
 const Backdrop = styled.div`
-   width: 100%;
+   width: ${props => props.width || '100%'};
    height: 100%;
    backdrop-filter: blur(16px) saturate(180%);
    -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -378,8 +397,7 @@ const Backdrop = styled.div`
    @media (max-width: 768px) {
       padding: ${props => props.pSm};
       margin: ${props => props.mSm};
-   
-   }
+      }
 `
 
 const BackdropDark = styled.div`

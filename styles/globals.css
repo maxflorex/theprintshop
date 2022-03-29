@@ -284,4 +284,17 @@ hr {
     .burger {
         display: block;
     }
+    .burgerIcon {
+        font-size: 1rem;
+    }
+}
+
+.burger:hover {
+    background-color: var(--off3);
+    border-radius: 0.6rem;
+}
+
+.burgerIcon {
+    cursor: pointer;
+    font-size: 2rem;
 }

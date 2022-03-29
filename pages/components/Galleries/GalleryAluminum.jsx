@@ -27,13 +27,17 @@ function GalleryAluminum({ setSelectedImg }) {
             <Title size="3rem" mb="1rem">
                 Product Gallery
             </Title>
-            <Items6 p="0">
+            <Items6 p="0" mSm="0">
                 {dataAluminum.map((val, index) => (
                     <img
                         key={index}
                         src={val}
                         alt={val}
-                        style={{ borderRadius: '0.6rem', width: '100%', height: '10rem' }}
+                        style={{
+                            borderRadius: '0.6rem',
+                            width: '100%',
+                            height: '10rem',
+                        }}
                         className="imageGallery"
                         onClick={() => setSelectedImg(val)}
                     />

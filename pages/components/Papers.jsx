@@ -8,8 +8,8 @@ const Papers = () => {
     return (
         <>
             {dataPapers.map((data, index) => (
-                <Column color="none" m="0" key={index}>
-                    <Grid gap="2rem" ml="2rem" mr="2rem" p="0">
+                <Column color="none" m="0" key={index} mSm='0' pSm='0'>
+                    <Grid gap="2rem" ml="2rem" mr="2rem" p="0"  gapSm='0'>
                         <Column
                             img={data.img}
                             imgMd={data.img}
@@ -17,9 +17,10 @@ const Papers = () => {
                             hMd="40vh"
                             width="100%"
                             m="0"
+                            mtSm='4rem'
                         />
 
-                        <Column p="4rem">
+                        <Column p="4rem" pSm='0'>
                             <Title align="left" size="4rem">
                                 {data.title}
                             </Title>

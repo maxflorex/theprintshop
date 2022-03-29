@@ -7,7 +7,7 @@ const link2 =
 
 const Mats = () => {
     return (
-        <Column img={link2} imgMd={link2} m="2rem" p="0" attach='fixed'>
+        <Column img={link2} imgMd={link2} m="2rem" p="0" attach='fixed' displaySm='none'>
             <Column color="var(--gradient2)" p="0" m="0" h="25vh">
                 <Title size="6rem" w="100" sizeSm="3rem">
                     Custom Sized Mats

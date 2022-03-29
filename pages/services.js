@@ -18,8 +18,8 @@ const Services = () => {
 			<title>The Printshop - Other Services</title>
 		</Head>
 			<Column p='2rem' attach='fixed'>
-				<Title size='4rem'>Other Services</Title>
-				<Para color='black' m='auto' font='Roboto'><span style={{ fontWeight: '600' }}>We do a lot more than awesome prints!</span> Hover over the cards to know more about our services</Para>
+				<Title size='4rem' sizeSm='3rem' >Other Services</Title>
+				<Para color='black' m='auto' font='Roboto' align='center' alignW='center'><span style={{ fontWeight: '600' }}>We do a lot more than awesome prints!<br /></span> Hover over the cards to know more about our services</Para>
 			</Column>
 			<Items3 m='2rem' p='0'>
 				{slides.map((data, index) => (

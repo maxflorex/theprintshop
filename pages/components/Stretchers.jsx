@@ -5,11 +5,11 @@ import { Title } from '../../Styled/fonts/Styled';
 
 const Stretchers = () => {
     return (
-        <Column p="4rem" gap="2rem" attach="fixed">
-            <Title size="3rem" mb="2rem">
+        <Column p="4rem" gap="2rem" attach="fixed" mSm='4rem' pSm='0'>
+            <Title size="3rem" mb="2rem" sizeSm='2rem'>
                 Stretcher Bar Depths
             </Title>
-            <Items3 p="0" m="0" gap="4rem" gapSm='0'>
+            <Items3 p="0" m="0" gap="4rem" gapSm='2rem' columns='repeat(2, minmax(0, 1fr))'>
                 {dataStretchers.map((dataStretchers, index) => (
                     <Column m="0" p="0" key={index}>
                         <Column

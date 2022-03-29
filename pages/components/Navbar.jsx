@@ -4,7 +4,7 @@ import { Flex } from '../../Styled/divs/Styled';
 import { ButtonS } from '../../Styled/buttons/Styled';
 import { AnimatePresence, motion } from 'framer-motion';
 import Modal from './Menu/Modal';
-import { FiMenu } from 'react-icons/fi';
+import { FiMinus } from 'react-icons/fi';
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -19,6 +19,8 @@ const Navbar = () => {
             colorMd="transparent"
             mt="2rem"
             mb="2rem"
+            mtSm="1rem"
+            mbSm="1rem"
             color="transparent"
             justifyMd="space-between"
         >
@@ -56,8 +58,8 @@ const Navbar = () => {
                         whileHover={{ scale: 2 }}
                         onClick={() => (modalOpen ? close() : open())}
                     >
-                        <FiMenu
-                            style={{ cursor: 'pointer', fontSize: '2rem' }}
+                        <FiMinus
+                        className='burgerIcon'
                         />
                     </motion.a>
                     <AnimatePresence
@@ -90,6 +92,7 @@ const Navbar = () => {
                         font="Roboto"
                         ls="0.05rem"
                         style={{ cursor: 'pointer' }}
+                        sizeSm='1.4rem'
                     >
                         The Printshop™
                     </Title>

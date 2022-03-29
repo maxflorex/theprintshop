@@ -207,9 +207,9 @@ function App() {
             {/* WELCOME & LOGOUT & SHOW ORDERS */}
 
             {user && (
-                <Flex color="none" img={link} attach="fixed" m="0" justifyMd='space-between'>
-                    <Column m="0" p="2rem" items="start">
-                        <Title size="2rem"> Welcome! </Title>
+                <Flex color="none" img={link} attach="fixed" m="0" justifyMd='space-between' justifySm='center'>
+                    <Column m="0" p="2rem" items="start" itemsSm='center' gapSm='0' pSm='0'>
+                        <Title size="2rem" align='center'> Welcome! </Title>
                         <Title>{user?.email}</Title>
                         <BtnBlack w="100%" onClick={logout}>
                             Sign Out
@@ -220,6 +220,7 @@ function App() {
                         p="2rem"
                         cursor="pointer"
                         onClick={() => setShowOrders(!showOrders)}
+                        pSm='0'
                     >
                         <FiFileText
                             style={{

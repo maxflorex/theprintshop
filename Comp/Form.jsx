@@ -106,7 +106,7 @@ const Form = ({ user }) => {
 
     return (
         <>
-            <Title size="4rem" m="2rem">
+            <Title size="4rem" sizeSm='3rem' m="2rem">
                 Place an Order
             </Title>
             <SForm>

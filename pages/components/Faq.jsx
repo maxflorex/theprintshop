@@ -10,7 +10,7 @@ const Faq = ({ question, answers, link, img }) => {
 
     return (
         <section>
-            <Column m="0" p="0">
+            <Column m="0" p="0" mSm='0'>
                 <Flex
                     m="1rem"
                     gapMd="1rem"
@@ -25,6 +25,7 @@ const Faq = ({ question, answers, link, img }) => {
                         p="4rem"
                         m="1rem"
                         radius="0"
+                        mSm="2rem"
                         style={{ borderLeft: '1px solid var(--off3)', transition: '5000s ease all' }}
                         onMouseLeave={() => setAnswer(false)}
                     >

@@ -38,8 +38,8 @@ const Contact = () => {
                 <title>The Printshop - Contact</title>
             </Head>
 			<Row p='0' align='center'>
-				<Column m='0' p='0' hMd='60vh'>
-					<Title size='4rem' mb='2rem'>Get In Touch</Title>
+				<Column m='0' p='0' hMd='60vh' mbSm='4rem' mtSm='2rem'>
+					<Title size='4rem' mb='2rem' sizeSm='3rem'>Get In Touch</Title>
 					<SForm>
 						<Column m='0' p='0' gap='1rem'>
 							<SInput type='text' required placeholder='Enter your name...' onChange={(e) => setIsName(e.target.value)} />
@@ -49,7 +49,7 @@ const Contact = () => {
 						</Column>
 					</SForm>
 				</Column>
-				<Column img={link2} imgMd={link2} h='80vh' hMd='20vh' align='start' mSm='2rem'>
+				<Column img={link2} imgMd={link2} h='80vh' hMd='20vh' align='start' mSm='2rem' displaySm='none'>
 					<Title size='2rem'>The Printshop</Title>
 					<Para color='black' font='Roboto' m='auto'>By Art Cayman Co.</Para>
 

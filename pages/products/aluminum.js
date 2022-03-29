@@ -23,16 +23,14 @@ const Aluminum = () => {
             {/* TITLE & HERO */}
 
             <section>
-                <Hero img={link} imgMd={link} m='2rem' h='25vh' mSm='0' radius='0' >
-                    <Column>
-                        <Backdrop w='100%' p='4rem'>
-                            <Title size='4rem'>Aluminum Prints</Title>
-                        </Backdrop>
-                    </Column>
+                <Hero img={link} imgMd={link} m='2rem' mSm='0' radius='0' >
+                    <Backdrop width='auto' h='100%' p='4rem'>
+                        <Title size='4rem' sizeSm='3rem'>Aluminum Prints</Title>
+                    </Backdrop>
                 </Hero>
             </section>
             <section>
-                <Hero width='50%' gap='2rem' m='auto' widthMd='100%'>
+                <Hero width='50%' gap='2rem' m='auto' widthMd='100%' pSm='2rem' >
                     <Title size='2rem'>State  Of The Art Images</Title>
                     <Para color='dark' font='Roboto' alignW='center'>Get the most modern aluminum prints with us! Take advantage of the eye-popping vibrance and definition that&apos;s only possible though this medium. With up to three different finishes to select from; get the best look for your photography or artwork of your choice and showcase it like a pro</Para>
                 </Hero>
@@ -42,7 +40,7 @@ const Aluminum = () => {
                 <Items6 width='100%' color='white' m='2rem' p='0' gapSm='0'>
                     {dataPrintDetailAluminum.map((data, index) => (
                         <Column gap='1rem' key={index} p='1rem'>
-                            <img src={data.img} alt={data.title} style={{ maxWidth: '3rem', maxHeight: '3rem', margin: 'auto' }} />
+                            <img src={data.img} alt={data.title} style={{ maxWidth: '100%', maxHeight: '3rem', margin: 'auto' }} />
                             <div>
                                 <Title>{data.title}</Title>
                                 <Para color='dark' align='center' alignW='center' font='Roboto'>{data.sub}</Para>
@@ -55,16 +53,16 @@ const Aluminum = () => {
                 <Column m='auto'>
                     <Title size='2rem'>Available Surfaces</Title>
                     <Title2 font='Roboto'>Select between one of our finishes</Title2>
-                    <Row wMd='50%' wSm='100%' m='auto'>
+                    <Row wMd='50%' wSm='100%' m='auto' pSm='0'>
                         <Column p='0' m='2rem' color='white' gap='0' className='bg-white'>
-                            <img alt='Reflection' src='/mx-reflection-gloss.jpg' />
+                            <img style={{ width: '100%', height: '24rem', objectFit: 'cover' }} alt='Reflection' src='/mx-reflection-gloss.jpg' />
                             <Flex color='none' p='2rem' m='0'>
                                 <Title size='3rem'>Gloss</Title>
                                 <Para color='black' font='Roboto'>• High Reflection / Vivid Colors</Para>
                             </Flex>
                         </Column>
                         <Column p='0' m='2rem' color='white' gap='0' className='bg-white'>
-                            <img alt='Reflection' src='/mx-reflection-satin.jpg' />
+                            <img style={{ width: '100%', height: '24rem', objectFit: 'cover' }} alt='Reflection' src='/mx-reflection-satin.jpg' />
                             <Flex color='none' p='2rem' m='0'>
                                 <Title size='3rem'>Satin</Title>
                                 <Para color='black' font='Roboto'>• Low Reflection / Great Contrast</Para>
@@ -81,9 +79,9 @@ const Aluminum = () => {
                 </Hero>
             </section>
             <section>
-                <Column p='4rem' mt='2rem'>
+                <Column p='4rem' mt='2rem' mSm='0'>
                     <Title size='2rem' pt='2rem'>Wall Display Option</Title>
-                    <Title2 font='Roboto'>We offer a variety of contemporary ways to hang and display your MetalPrints.</Title2>
+                    <Title2 font='Roboto' size='1rem'>We offer a variety of contemporary ways to hang and display your MetalPrints.</Title2>
                     <Grid justify='center' width='50%' gap='4rem' m='auto' pt='2rem'>
                         <img alt='Inset' src='/inset-01.svg' />
                         <img alt='Inset' src='/inset-02.svg' />

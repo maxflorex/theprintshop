@@ -18,16 +18,16 @@ const Paper = () => {
       {/* TITLE & HERO */}
 
       <section>
-        <Hero img={link} imgMd={link} m='2rem' h='25vh' mSm='0' radius='0'>
-          <Column>
-            <Backdrop w='100%' p='4rem' >
-              <Title size='4rem'>Fine Art Papers</Title>
-            </Backdrop>
-          </Column>
+        <Hero img={link} imgMd={link} m='2rem' mSm='0' radius='0'>
+
+          <Backdrop width='auto' h='100%' p='4rem'>
+            <Title size='4rem' sizeSm='3rem'>Fine Art Papers</Title>
+          </Backdrop>
+
         </Hero>
       </section>
       <section>
-        <Hero m='auto' width='50%' gap='2rem' widthMd='100%'>
+        <Hero m='auto' width='50%' gap='2rem' widthMd='100%' pSm='2rem'>
           <Title size='2rem'>Museum Quality Fine Art Prints</Title>
           <Para color='dark' font='Roboto' alignW='center'>The Printshop by ACC, has been providing professional and enthusiasts enthusiasts in the Cayman Islands with the highest quality prints, mounting, and photo finishing services, so you can trust us when it comes to making the best prints possible from your images. We offer the largest range of sizes, including custom sizes, as well as a large variety of texture, coating, and other options to enhance the appearance of your prints.</Para>
         </Hero>

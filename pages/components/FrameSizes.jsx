@@ -5,7 +5,7 @@ import { Title, Title2 } from '../../Styled/fonts/Styled';
 const FrameSizes = () => {
     return (
         <>
-            <Flex color="none" gap="4rem" align="start" mb='2rem' p='8rem'>
+            <Flex color="none" gap="4rem" align="start" mb='2rem' p='8rem' pSm='4rem' mSm='0'>
                 <div p='2rem'>
                     <Title2 mb="1rem" w="400">
                         A
