@@ -36,7 +36,7 @@ const Modal = ({ handleClose }) => {
                 animate="visible"
                 exit="exit"
             >
-                <Column gap="2rem" overflow="visible">
+                <Column gap="1.4rem" overflow="visible">
                     <motion.a
                         whileHover={{
                             scale: 1.4,

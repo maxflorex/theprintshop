@@ -88,6 +88,7 @@ const Column = styled.div`
       margin-bottom: ${props => props.mbSm};
       display: ${props => props.displaySm};
       justify-items: ${props => props.itemsSm};
+      padding-bottom: ${props => props.pbSm};
    }
    &:hover{
       background-color: ${props => props.colorH};

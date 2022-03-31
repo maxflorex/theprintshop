@@ -23,7 +23,7 @@ function GalleryAluminum({ setSelectedImg }) {
     }, []);
 
     return (
-        <Column>
+        <Column pb='0' pbSm='8rem'>
             <Title size="3rem" mb="1rem">
                 Product Gallery
             </Title>

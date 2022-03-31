@@ -7,6 +7,7 @@ import { BtnBlack } from '../../Styled/buttons/Styled';
 import GalleryAluminum from '../components/Galleries/GalleryAluminum';
 import Modal from '../components/Modal';
 import Carousel from '../components/Carousel';
+import CarouselDetails from '../components/CarouselDetails/CarouselAluminum';
 
 
 const Aluminum = () => {
@@ -37,7 +38,9 @@ const Aluminum = () => {
 
                 {/* DETAILS OF PRODUCT */}
 
-                <Items6 width='100%' color='white' m='2rem' p='0' gapSm='0'>
+                <CarouselDetails />
+
+                {/* <Items6 width='100%' color='white' m='2rem' p='0' gapSm='0'>
                     {dataPrintDetailAluminum.map((data, index) => (
                         <Column gap='1rem' key={index} p='1rem'>
                             <img src={data.img} alt={data.title} style={{ maxWidth: '100%', maxHeight: '3rem', margin: 'auto' }} />
@@ -47,7 +50,7 @@ const Aluminum = () => {
                             </div>
                         </Column>
                     ))}
-                </Items6>
+                </Items6> */}
             </section>
             <section>
                 <Column m='auto'>

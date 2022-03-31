@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Flex, Items3 } from '../../Styled/divs/Styled';
 import { Title } from '../../Styled/fonts/Styled';
 
@@ -44,7 +43,5 @@ const Tabs = ({ setSelectedTab, selectedTab }) => {
         </div>
     );
 };
-
-// lassName={`${!stretcherTab ? "bg-black" : "bg-white"}`}
 
 export default Tabs;

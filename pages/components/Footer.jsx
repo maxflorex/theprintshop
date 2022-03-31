@@ -97,7 +97,7 @@ function Footer() {
                                 </Para>
                             </Link>
                         </Column>
-                        <Column m="0" items="center" p='2rem'>
+                        <Column m="0" items="center" p='2rem' displaySm='none' >
                             <Title
                                 mb="1rem"
                                 color="white"

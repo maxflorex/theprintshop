@@ -68,6 +68,7 @@ const Para = styled.p`
     line-height: ${props => props.lh};
     text-align: ${props => props.alignW || 'justify'};
     margin: ${props => props.m};
+    text-align: ${props => props.alignW};
     @media (max-width: 1280px) {
         display: ${props => props.displayL};
     }

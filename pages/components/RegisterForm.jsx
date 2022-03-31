@@ -21,8 +21,8 @@ function RegisterForm({
     
     return (
         <div>
-            <SForm>
-                <Column gap="2rem">
+            <SForm wSm='100%' mSM='0'>
+                <Column gap="2rem" mSm='2rem' p='0'>
                     <Title size="2rem">Register User</Title>
                     <SInput
                         type="email"

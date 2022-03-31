@@ -128,6 +128,7 @@ const Form = ({ user }) => {
                         <FlexItems
                             key={index}
                             p="1rem"
+                            width='100%'
                             color={`${
                                 inUseForm === data.title
                                     ? 'var(--off2)'

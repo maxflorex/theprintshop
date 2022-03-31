@@ -5,6 +5,8 @@ import Papers from '../components/Papers';
 import { Backdrop, Column, Hero, Items6 } from '../../Styled/divs/Styled';
 import { Para, Title } from '../../Styled/fonts/Styled';
 import Carousel from '../components/CarouselOtherServices';
+import CarouselDetails from '../components/CarouselDetails/CarouselPaper';
+
 
 const Paper = () => {
 
@@ -34,17 +36,7 @@ const Paper = () => {
 
         {/* DETAILS OF PRODUCT */}
 
-        <Items6 width='100%' color='white' m='2rem' p='0' gapSm='0'>
-          {dataPrintDetailPaper.map((dataPrintDetailPaper, index) => (
-            <Column gap='1rem' key={index} p='1rem'>
-              <img src={dataPrintDetailPaper.img} alt={dataPrintDetailPaper.title} style={{ maxWidth: '3rem', maxHeight: '3rem', margin: 'auto' }} />
-              <div>
-                <Title>{dataPrintDetailPaper.title}</Title>
-                <Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetailPaper.sub}</Para>
-              </div>
-            </Column>
-          ))}
-        </Items6>
+      <CarouselDetails />
 
         {/* PAPER DETAILS */}
 

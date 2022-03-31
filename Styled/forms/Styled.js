@@ -3,6 +3,10 @@ import styled from "styled-components";
 const SForm = styled.form`
     margin: ${props => props.m || 'auto'};
     width: ${props => props.w || '75%'};
+    @media (max-width: 768px) {
+        width: ${props => props.wSm};
+        margin: ${props => props.mSm};
+    }
 `
 
 const SInput = styled.input`
@@ -90,7 +94,7 @@ const SButton = styled.input`
     line-height: ${props => props.lh};
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};    
-    background-color:${props => props.bgColor ||' var(--off2)'};
+    background-color:${props => props.bgColor || ' var(--off2)'};
     cursor: 'pointer';
     &:focus{
         outline: none;

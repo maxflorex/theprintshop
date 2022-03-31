@@ -10,7 +10,8 @@ import Tabs from '../components/Tabs';
 import { useState } from 'react';
 import Modal from '../components/Modal';
 import GalleryCanvas from '../components/Galleries/GalleryCanvas';
-import Carousel from '../components/CarouselOtherServices';
+import CarouselDetails from '../components/CarouselDetails/CarouselCanvas';
+import Carousel from '../components/Carousel';
 
 
 
@@ -54,17 +55,7 @@ const Canvas = () => {
 
 				{/* DETAILS OF PRODUCT */}
 
-				<Items6 width='100%' color='white' m='2rem' p='0' gapSm='0'>
-					{dataPrintDetails.map((dataPrintDetails, index) => (
-						<Column gap='1rem' key={index} p='1rem'>
-							<img src={dataPrintDetails.img} alt={dataPrintDetails.title} style={{ maxWidth: '3rem', maxHeight: '3rem', margin: 'auto' }} />
-							<div>
-								<Title>{dataPrintDetails.title}</Title>
-								<Para color='dark' align='center' alignW='center' font='Roboto'>{dataPrintDetails.sub}</Para>
-							</div>
-						</Column>
-					))}
-				</Items6>
+				<CarouselDetails />
 
 				{/* COMPONENTS */}
 
