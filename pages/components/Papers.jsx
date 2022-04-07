@@ -9,7 +9,7 @@ const Papers = () => {
         <>
             {dataPapers.map((data, index) => (
                 <Column color="none" m="0" key={index} mSm='0' pSm='0'>
-                    <Grid gap="2rem" ml="2rem" mr="2rem" p="0"  gapSm='0'>
+                    <Grid gap="2rem" ml="1rem" mr="1rem" p="0"  gapSm='0'>
                         <Column
                             img={data.img}
                             imgMd={data.img}

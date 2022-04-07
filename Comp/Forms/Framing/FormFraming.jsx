@@ -175,7 +175,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                     <Title m="2rem">Select Framing Color & Size</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Default: None
                 </Title>
             </Flex>
@@ -260,7 +260,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                     <Title m="2rem">Select Glass & Mating</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Default: None
                 </Title>
             </Flex>
@@ -371,7 +371,7 @@ const FormFraming = ({ user, setInUseForm, formName, setFormName }) => {
                     <Title m="2rem">Select Size & Quantity</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Complete to Order
                 </Title>
             </Flex>

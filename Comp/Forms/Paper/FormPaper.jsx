@@ -164,7 +164,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                     <Title m="2rem">Select Paper Type</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Default: Photo Luster
                 </Title>
             </Flex>
@@ -216,7 +216,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                     <Title m="2rem">Select Mount / Framing / Lamination</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Default: None
                 </Title>
             </Flex>
@@ -323,7 +323,7 @@ const FromPaper = ({ user, myName, setInUseForm, formName, setFormName }) => {
                     <Title m="2rem">Select Size & Quantity</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Complete to Order
                 </Title>
             </Flex>

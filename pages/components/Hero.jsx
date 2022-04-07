@@ -8,7 +8,7 @@ const HeroSection = () => {
     const colorOpa = 'rgba(0, 0, 0, 0.5)';
 
     return (
-        <Grid mr="2rem" ml="2rem" gap="2rem">
+        <Grid mr="1rem" ml="1rem" gap="2rem">
             <Hero
                 mt="0"
                 mb="0"
@@ -20,7 +20,7 @@ const HeroSection = () => {
                 position="center"
             ></Hero>
 
-            <Column imgMd={link} m="0" p="0" attach="fixed">
+            <Column imgMd={link} m="0" p="0" attach="fixed" attachSm='scroll'>
                 <Hero
                     mt="0"
                     mb="0"
@@ -28,6 +28,8 @@ const HeroSection = () => {
                     hMd="60vh"
                     pt="0"
                     pb="0"
+                    p='0'
+                    m='0'
                     colorMd={colorOpa}
                 >
                     <Title size="2rem" sizeSm='2rem' colorMd="white">

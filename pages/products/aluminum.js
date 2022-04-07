@@ -40,41 +40,28 @@ const Aluminum = () => {
 
                 <CarouselDetails />
 
-                {/* <Items6 width='100%' color='white' m='2rem' p='0' gapSm='0'>
-                    {dataPrintDetailAluminum.map((data, index) => (
-                        <Column gap='1rem' key={index} p='1rem'>
-                            <img src={data.img} alt={data.title} style={{ maxWidth: '100%', maxHeight: '3rem', margin: 'auto' }} />
-                            <div>
-                                <Title>{data.title}</Title>
-                                <Para color='dark' align='center' alignW='center' font='Roboto'>{data.sub}</Para>
-                            </div>
-                        </Column>
-                    ))}
-                </Items6> */}
             </section>
-            <section>
-                <Column m='auto'>
+            <section style={{padding: '4rem 0'}}>
                     <Title size='2rem'>Available Surfaces</Title>
                     <Title2 font='Roboto'>Select between one of our finishes</Title2>
-                    <Row wMd='50%' wSm='100%' m='auto' pSm='0'>
-                        <Column p='0' m='2rem' color='white' gap='0' className='bg-white'>
-                            <img style={{ width: '100%', height: '24rem', objectFit: 'cover' }} alt='Reflection' src='/mx-reflection-gloss.jpg' />
-                            <Flex color='none' p='2rem' m='0'>
+                    <Row wMd='50%' wSm='auto' m='auto' pSm='0' mSm='1rem'>
+                        <Column p='0' pSm='0' m='2rem' mSm='0' color='white' gap='0' className='bg-white'>
+                            <img style={{ width: '100%', height: '16rem', objectFit: 'cover' }} alt='Reflection' src='/mx-reflection-gloss.jpg' />
+                            <Flex color='none' p='2rem' m='0' justifyMd='space-between'>
                                 <Title size='3rem'>Gloss</Title>
                                 <Para color='black' font='Roboto'>• High Reflection / Vivid Colors</Para>
                             </Flex>
                         </Column>
-                        <Column p='0' m='2rem' color='white' gap='0' className='bg-white'>
-                            <img style={{ width: '100%', height: '24rem', objectFit: 'cover' }} alt='Reflection' src='/mx-reflection-satin.jpg' />
-                            <Flex color='none' p='2rem' m='0'>
+                        <Column p='0' pSm='0' m='2rem' mSm='0' color='white' gap='0' className='bg-white'>
+                            <img style={{ width: '100%', height: '16rem', objectFit: 'cover' }} alt='Reflection' src='/mx-reflection-satin.jpg' />
+                            <Flex color='none' p='2rem' m='0' justifyMd='space-between'>
                                 <Title size='3rem'>Satin</Title>
                                 <Para color='black' font='Roboto'>• Low Reflection / Great Contrast</Para>
                             </Flex>
                         </Column>
                     </Row>
-                </Column>
             </section>
-            <section>
+            <section style={{padding: '2rem 0'}}>
                 <Hero color='none' m='auto' p='0'>
                     <BtnBlack m='auto' font='Oswald' href='/order'>
                         PLACE AN ORDER NOW
@@ -84,7 +71,7 @@ const Aluminum = () => {
             <section>
                 <Column p='4rem' mt='2rem' mSm='0'>
                     <Title size='2rem' pt='2rem'>Wall Display Option</Title>
-                    <Title2 font='Roboto' size='1rem'>We offer a variety of contemporary ways to hang and display your MetalPrints.</Title2>
+                    <Title2 font='Roboto' size='1rem'>Different ways of displaying your MetalPrints.</Title2>
                     <Grid justify='center' width='50%' gap='4rem' m='auto' pt='2rem'>
                         <img alt='Inset' src='/inset-01.svg' />
                         <img alt='Inset' src='/inset-02.svg' />

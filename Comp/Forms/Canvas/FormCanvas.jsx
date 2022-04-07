@@ -100,7 +100,7 @@ const FormCanvas = ({
                     <Title m="2rem">Select Borders</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Default: Mirrored
                 </Title>
             </Flex>
@@ -153,7 +153,7 @@ const FormCanvas = ({
                     <Title m="2rem">Select Stretchers</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Default: 1.5&quot;
                 </Title>
             </Flex>
@@ -218,7 +218,7 @@ const FormCanvas = ({
                     <Title m="2rem">Select Floaters</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Default: No Floaters
                 </Title>
             </Flex>
@@ -271,7 +271,7 @@ const FormCanvas = ({
                     <Title m="2rem">Select Size & Quantity</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Complete to Order
                 </Title>
             </Flex>

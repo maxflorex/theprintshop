@@ -12,8 +12,8 @@ const SameDayPrint = () => {
             img={link}
             imgMd={link}
             mt="0"
-            ml="2rem"
-            mr="2rem"
+            ml="1rem"
+            mr="1rem"
             p="0"
             attach="fixed"
         >

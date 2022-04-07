@@ -148,7 +148,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                     <Title m="2rem">Select Surface Finish</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Default: None
                 </Title>
             </Flex>
@@ -207,7 +207,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                     <Title m="2rem">Select Hanging Option</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Default: None
                 </Title>
             </Flex>
@@ -277,7 +277,7 @@ const FormAluminum = ({ user, setInUseForm, formName, setFormName }) => {
                     <Title m="2rem">Select Size & Quantity</Title>
                     <FiChevronDown />
                 </Flex>
-                <Title font="Roboto" size="1rem" mr="2rem" w="400">
+                <Title font="Roboto" size="1rem" mr="1rem" w="400">
                     Complete to Order
                 </Title>
             </Flex>

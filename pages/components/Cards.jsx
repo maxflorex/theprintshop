@@ -35,7 +35,7 @@ const Cards = () => {
     const colorOpa = 'rgba(0, 0, 0, 0.4)';
 
     return (
-        <Items mr="2rem" ml="2rem" p="0">
+        <Items mr="1rem" ml="1rem" p="0">
             {data.map((data, index) => (
                 <Link key={index} href={data.link} passHref>
                     <Row
@@ -46,7 +46,7 @@ const Cards = () => {
                         onMouseEnter={() => setInUseCard(data.title)}
                         onMouseLeave={() => setInUseCard(null)}
                     >
-                        <Title size="2rem" sizeSm="1.4rem" mt='0.4rem'>
+                        <Title size="2rem" sizeSm="1.4rem" mt="0.4rem">
                             {data.title}
                         </Title>
 
@@ -81,15 +81,15 @@ const Cards = () => {
                                             p="0"
                                             radius="0"
                                             h="10rem"
-                                            hSm="4rem"
+                                            hSm="2rem"
                                         >
                                             <img
                                                 src={data.img}
                                                 alt={data.title}
                                                 style={{
-                                                    maxWidth: '6rem',
-                                                    minHeight: '100%',
                                                     margin: 'auto',
+                                                    height: '100%',
+                                                    padding: '3rem',
                                                 }}
                                             />
                                         </Backdrop>

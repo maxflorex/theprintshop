@@ -35,6 +35,7 @@ const Row = styled.div`
       padding: ${props => props.pSm};
       gap: ${props => props.gapSm};
       margin: ${props => props.mSm};
+      
    }
 `
 
@@ -89,6 +90,8 @@ const Column = styled.div`
       display: ${props => props.displaySm};
       justify-items: ${props => props.itemsSm};
       padding-bottom: ${props => props.pbSm};
+      background-attachment: ${props => props.attachSm};
+      height: ${props => props.hSm};
    }
    &:hover{
       background-color: ${props => props.colorH};
@@ -397,7 +400,8 @@ const Backdrop = styled.div`
    display: ${props => props.display};
    @media (max-width: 768px) {
       padding: ${props => props.pSm};
-      margin: ${props => props.mSm};
+      margin: ${props => props.mSm};      
+      height: ${props => props.hSm};
       }
 `
 
@@ -421,7 +425,8 @@ const BackdropDark = styled.div`
    display: ${props => props.display};
    @media (max-width: 768px) {
       margin: ${props => props.mSm};
-      padding: ${props => props.pSm};
+      padding: ${props => props.pSm};      
+      height: ${props => props.hSm};
       }
    &:hover {
       display: ${props => props.displayH};

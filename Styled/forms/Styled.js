@@ -4,7 +4,7 @@ const SForm = styled.form`
     margin: ${props => props.m || 'auto'};
     width: ${props => props.w || '75%'};
     @media (max-width: 768px) {
-        width: ${props => props.wSm};
+        width: ${props => props.wSm || '100%'};
         margin: ${props => props.mSm};
     }
 `

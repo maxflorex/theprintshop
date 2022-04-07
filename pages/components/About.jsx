@@ -8,8 +8,8 @@ const link =
 
 const About = () => {
     return (
-        <Grid mt="6rem" mb="6rem" mr="2rem" ml="2rem" gap="4rem" mSm='0'>
-            <Column p="2rem">
+        <Grid mt="6rem" mb="6rem" mr="1rem" ml="1rem" gap="4rem" mSm='0'>
+            <Column p="2rem" mt='3rem'>
                 <Title size="3rem" align="left" mb="0.6rem">
                     The Printshop
                 </Title>

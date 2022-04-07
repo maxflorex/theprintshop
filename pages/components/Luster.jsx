@@ -12,7 +12,7 @@ const Luster = () => {
     return (
         <>
             <Column color="none" m="0">
-                <Grid gap="2rem" ml="2rem" mr="2rem" p="0">
+                <Grid gap="2rem" ml="1rem" mr="1rem" p="0">
                     <Column
                         img={link}
                         h="85vh"

@@ -11,7 +11,7 @@ const bg =
 const Carousel = () => {
     return (
         <div>
-            <Column img={bg} imgMd={bg} p="4rem" attach="fixed" gap="2rem" gapMd='0' mt='8rem' mb='8rem' pSm='1rem' mSm='2rem'>
+            <Column img={bg} imgMd={bg} p="4rem" attach="fixed" gap="2rem" gapMd='0' mt='8rem' mb='8rem' pSm='1rem' mSm='1rem'>
                 <Slideshow navigation={true} autoplay={true}>
                     {slides.map((data, index) => (
                         <Slide key={index}>

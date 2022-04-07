@@ -242,7 +242,7 @@ hr {
     position: fixed;
     margin: auto;
     width: 100vw;
-    height: 100vh;
+    height:50vh;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.8);
@@ -252,7 +252,7 @@ hr {
 .backdropBurger {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     position: fixed;
     margin: auto;
     width: 100vw;

@@ -148,7 +148,7 @@ function App() {
     });
 
     return (
-        <Column p="0">
+        <Column p="0" mSm='1rem'>
             {/* REGISTER FORM */}
 
             {openRegForm === true && (
@@ -165,7 +165,7 @@ function App() {
 
             {user === null && openRegForm === false ? (
                 <SForm wSm='100%' mSM='0'>
-                    <Column gap="2rem" mSm='2rem' p='0'>
+                    <Column gap="2rem" gapSm='1rem' mSm='2rem' p='0'>
                         <Title size="2rem"> Login </Title>
                         <SInput
                             type="email"
@@ -188,7 +188,7 @@ function App() {
                             p="0"
                             justify="center"
                             gap="2rem"
-                            gapMd="2rem"
+                            gapMd="1rem"
                         >
                             <BtnBlack onClick={login}>Login</BtnBlack>
                             <BtnBlack
@@ -207,7 +207,7 @@ function App() {
             {/* WELCOME & LOGOUT & SHOW ORDERS */}
 
             {user && (
-                <Flex color="none" img={link} attach="fixed" m="0" justifyMd='space-between' justifySm='center'>
+                <Flex color="none" img={link} attach="fixed" m="0" justifyMd='space-between' justifySm='space-between'>
                     <Column m="0" p="2rem" items="start" itemsSm='center' gapSm='0' pSm='0'>
                         <Title size="2rem" align='center'> Welcome! </Title>
                         <Title>{user?.email}</Title>
@@ -235,7 +235,7 @@ function App() {
                         </Title>
                     </Column>
                 </Flex>
-            )}
+            )} 
 
             {/* DISPLAY ORDERS */}
 

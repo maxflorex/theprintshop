@@ -17,7 +17,7 @@ const support = () => {
 			<title>The Printshop - Support</title>
 		</Head>
 		<Grid mt='0' gap='0' ac='start'>
-			<Column img={bg} imgMd={bg} h='100%' hMd='40vh' hMax='80vh' mt='0' />
+			<Column img={bg} imgMd={bg} h='100%' hMd='40vh' hMax='80vh' mt='0' mSm='1rem' />
 			<Column mt='0' mb='0' gap='0' mSm='0' pSm='1rem'>
 				<Title size='4rem' sizeSm='3rem' mb='2rem'>Frequently Asked Questions</Title>
 				{dataFaq.map((data, index) => (
