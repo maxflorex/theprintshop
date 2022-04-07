@@ -133,6 +133,7 @@ const Grid = styled.div`
       background-color: ${props => props.color || 'inherit'};
       margin: ${props => props.mSm};
       gap: ${props => props.gapSm};
+      padding: ${props => props.pSm};
    }
    `
 

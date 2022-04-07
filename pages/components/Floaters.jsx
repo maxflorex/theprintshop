@@ -5,8 +5,8 @@ const link =
 
 const Floaters = () => {
     return (
-        <Grid>
-            <Flex img={link} h="25vh" mt="6rem" mb='6rem' bgSize='100%' p='4rem' mSm='2rem'/>
+        <Grid mSm='1rem' pSm='0'>
+            <Flex img={link} h="25vh" mt="6rem" mb='6rem' bgSize='100%' p='4rem' mSm='0'/>
             <Flex ml='0' mr='0' color='none'>
                 <Column color="none" justify="center" p='0' m='auto'>
                     <Title align="center" size="3rem">

@@ -6,7 +6,7 @@ const TabsFrames = ({ setSelectedTab, selectedTab }) => {
     const selected = selectedTab;
 
     return (
-        <Items3 m="2rem" gap="2rem" p="0">
+        <Items3 m="2rem" gap="2rem" p="0" mSm='1rem'> 
             <Flex
                 className="bg-white"
                 justifyMd='space-between'

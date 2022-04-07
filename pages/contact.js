@@ -38,7 +38,7 @@ const Contact = () => {
                 <title>The Printshop - Contact</title>
             </Head>
 			<Row p='0' align='center'>
-				<Column m='0' p='0' hMd='60vh' mbSm='4rem' mtSm='2rem'>
+				<Column m='0' p='0' hMd='60vh' mbSm='4rem' mtSm='2rem' pSm='1rem'>
 					<Title size='4rem' mb='2rem' sizeSm='3rem'>Get In Touch</Title>
 					<SForm>
 						<Column m='0' p='0' gap='1rem'>

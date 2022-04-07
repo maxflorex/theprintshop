@@ -23,7 +23,7 @@ function GalleryCanvas({ setSelectedImg }) {
     }, []);
 
     return (
-        <Column pb='0' pbSm='8rem'>
+        <Column pb='0' pbSm='8rem' mSm='1rem'>
             <Title size="3rem" mb="1rem">
                 Product Gallery
             </Title>

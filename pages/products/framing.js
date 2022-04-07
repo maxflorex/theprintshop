@@ -68,7 +68,7 @@ const Framing = () => {
 				<FrameSizes />
 			</section>
 			<section>
-				<Column img={link3} imgMd={link3} p='2rem' attach='fixed'>
+				<Column img={link3} imgMd={link3} p='2rem' attach='fixed' mSm='1rem'>
 					<Floaters />
 				</Column>
 			</section>

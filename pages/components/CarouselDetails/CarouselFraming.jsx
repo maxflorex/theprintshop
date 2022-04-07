@@ -7,8 +7,8 @@ import { dataPrintDetailFraming } from '../../api/dataPrintDetails';
 const CarouselDetails = () => {
     return (
         <div>
-            <Column color="white" p="2rem" gap="2rem" pSm="1rem">
-                <SlideshowDetails autoplay={true}>
+            <Column color="white" p="2rem" gap="2rem" pSm="0" mSm='1rem'>
+                <SlideshowDetails autoplay={true} interval={3000}>
                     {dataPrintDetailFraming.map((data, index) => (
                         <Slide key={index}>
                             <Column p="0" mSm="1rem">
