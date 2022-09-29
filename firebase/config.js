@@ -2,12 +2,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyC3pxKX8giHBYNfIR6BCDkAFybp4kb5Q2g",
-    authDomain: "acc---the-printshop.firebaseapp.com",
-    projectId: "acc---the-printshop",
-    storageBucket: "acc---the-printshop.appspot.com",
-    messagingSenderId: "87606147099",
-    appId: "1:87606147099:web:fa7f93617bcc251abd60be"
+    apiKey: process.env.NEXT_PUBLIC_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_MESSENGER_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_APP_ID
 };
 
 import {
