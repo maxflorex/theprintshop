@@ -10,19 +10,16 @@ function RegisterForm({
     register,
     setOpenRegForm,
     openRegForm,
-}) 
-
-{
-
+}) {
     const handleClick = () => {
-        register()
-        setOpenRegForm(!openRegForm)
-    }
-    
+        register();
+        setOpenRegForm(!openRegForm);
+    };
+
     return (
         <div>
-            <SForm wSm='100%' mSM='0'>
-                <Column gap="2rem" mSm='2rem' p='0'>
+            <SForm wSm="100%" mSM="0" w="32rem">
+                <Column gap="2rem" mSm="2rem" p="0">
                     <Title size="2rem">Register User</Title>
                     <SInput
                         type="email"
@@ -49,10 +46,11 @@ function RegisterForm({
                         gap="2rem"
                         gapMd="2rem"
                     >
-                        <BtnBlack onClick={handleClick}>
-                            Sign Up
-                        </BtnBlack>
-                        <BtnBlack bg='var(--color)' onClick={() => setOpenRegForm(!openRegForm)}>
+                        <BtnBlack onClick={handleClick}>Sign Up</BtnBlack>
+                        <BtnBlack
+                            bg="var(--color)"
+                            onClick={() => setOpenRegForm(!openRegForm)}
+                        >
                             Already registered?
                         </BtnBlack>
                     </Flex>
@@ -62,4 +60,4 @@ function RegisterForm({
     );
 }
 
-export default RegisterForm
+export default RegisterForm;

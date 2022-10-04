@@ -5,7 +5,7 @@ const Button = styled.a`
     border-width: 1px;
     border-color: var(--off2);
     padding: 1rem;
-    border-radius: 0.6rem;
+    border-radius: 0.3rem;
     font-family: ${props => props.font || 'Roboto'};
     font-weight: ${props => props.weight || 300};
     font-size: ${props => props.size || '1rem'};
@@ -20,7 +20,6 @@ const Button = styled.a`
         border-color: var(--accent);
         color: var(--accent);
         padding: 1rem;
-        border-radius: 0.6rem;
     }
     
 `
@@ -30,7 +29,7 @@ const ButtonS = styled.a`
     border-width: 1px;
     border-color: var(--off2);
     padding: 1rem;
-    border-radius: 0.6rem;
+    border-radius: 0.3rem;
     font-family: ${props => props.font || 'Roboto'};
     font-weight: ${props => props.weight || 300};
     font-size: ${props => props.size || '1rem'};
@@ -45,14 +44,13 @@ const ButtonS = styled.a`
         border-color: var(--accent);
         color: var(--accent);
         padding: 1rem;
-        border-radius: 0.6rem;
     }
     
 `
 const Btn = styled.a`
     background-color: var(--accent);
     padding: 1rem;
-    border-radius: 0.6rem;
+    border-radius: 0.3rem;
     font-family: ${props => props.font || 'Roboto'};
     font-weight: ${props => props.weight || 300};
     font-size: ${props => props.size || '1rem'};
@@ -67,14 +65,13 @@ const Btn = styled.a`
         background-color: var(--off1);
         color: black;
         padding: 1rem;
-        border-radius: 0.6rem;
     }
     
 `
 const BtnS = styled.a`
     background-color: var(--accent);
     padding: 1rem;
-    border-radius: 0.6rem;
+    border-radius: 0.3rem;
     font-family: ${props => props.font || 'Roboto'};
     font-weight: ${props => props.weight || 300};
     font-size: ${props => props.size || '1rem'};
@@ -89,7 +86,6 @@ const BtnS = styled.a`
         background-color: var(--off1);
         color: black;
         padding: 1rem;
-        border-radius: 0.6rem;
     }
     
 `
@@ -97,7 +93,7 @@ const BtnS = styled.a`
 const BtnBlack = styled.a`
     background-color: ${props => props.bg || 'black'};
     padding: 1rem;
-    border-radius: 0.6rem;
+    border-radius: 0.3rem;
     font-family: ${props => props.font || 'Roboto'};
     font-weight: ${props => props.weight || 300};
     font-size: ${props => props.size || '1rem'};
@@ -115,7 +111,6 @@ const BtnBlack = styled.a`
         background-color: ${props => props.bgH || 'var(--accent)'};
         color: white;
         padding: 1rem;
-        border-radius: 0.6rem;
         background-color: ${props => props.bgH};
     }
     

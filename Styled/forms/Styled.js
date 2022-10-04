@@ -13,7 +13,7 @@ const SInput = styled.input`
     border: ${props => props.border || 'solid var(--off1) 1px'};
     width: ${props => props.w || '100%'};
     margin: ${props => props.m};
-    padding: ${props => props.p || '2rem'};
+    padding: ${props => props.p || '1rem'};
     border-radius: 0.6rem;
     font-family: ${props => props.font || 'Roboto'};
     font-weight: ${props => props.w || 400};

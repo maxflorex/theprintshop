@@ -28,23 +28,23 @@ const Navbar = () => {
                 <Menu
                     transform="uppercase"
                     weight="300"
-                    ls="0.1rem"
+                    ls="2px"
                     size="1rem"
                 >
                     <li>
-                        <Link href="/products/canvas">Canvas </Link>
+                        <Link href="/products/canvas">Canvas</Link>
                     </li>
                     <li>
-                        <Link href="/products/paper"> Paper </Link>
+                        <Link href="/products/paper">Paper</Link>
                     </li>
                     <li>
-                        <Link href="/products/aluminum"> Aluminum </Link>
+                        <Link href="/products/aluminum">Aluminum</Link>
                     </li>
                     <li>
-                        <Link href="/products/framing"> Framing </Link>
+                        <Link href="/products/framing">Framing</Link>
                     </li>
                     <li>
-                        <Link href="/services">Services </Link>
+                        <Link href="/services">Services</Link>
                     </li>
                     <ButtonS transform="uppercase" font="Oswald" href="/order">
                         Order

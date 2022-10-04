@@ -89,7 +89,7 @@ const Menu = styled.ul`
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
     font-weight: ${props => props.w || 300};
     font-size: ${props => props.size || '1rem'};
     font-weight: ${props => props.weight || 100};
